@@ -1,3 +1,20 @@
+Skip to content
+ This repository
+Explore
+Gist
+Blog
+Help
+Sananya Sananya
+ 
+You don't have any verified emails. We recommend verifying at least one email.
+Email verification helps our support team verify ownership if you lose account access and allows you to receive all the notifications you ask for.
+5  Unwatch 
+  Star 0
+ Fork 0stargatefreak/OzzyGaming PRIVATE
+ branch: master  OzzyGaming / extDB-Build / Altis_Life.Altis / core / config / fn_weaponShopCfg.sqf
+Aaronstargatefreak 30 minutes ago many many fixed and changes
+1 contributor
+857 lines (844 sloc)  36.336 kb RawBlameHistory   
 #include <macro.h>
 /*
 	File: fn_weaponShopCfg.sqf
@@ -569,7 +586,7 @@ switch(_shop) do
 			case (!license_civ_rebel): {"You don't have a Rebel training license!"};
 			default
 			{
-				["Mohammed's Jihadi Shop",
+				["Millers's Jihadi Shop",
 					[
 						["arifle_TRG21_F",nil,35000],
 						["arifle_Katiba_F",nil,30000],
@@ -605,6 +622,7 @@ switch(_shop) do
 					    ["200Rnd_65x39_cased_Box",nil,100000],
 						["srifle_EBR_F",nil,500000],
 						["20Rnd_762x51_Mag",nil,9000]
+						["SatchelCharge_Remote_Mag","Explosive Satchel"50000]
 					]
 				];
 			};
@@ -855,3 +873,5 @@ switch(_shop) do
 		];
 	};
 };
+Status API Training Shop Blog About
+© 2014 GitHub, Inc. Terms Privacy Security Contact
