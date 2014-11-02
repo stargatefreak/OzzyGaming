@@ -6,6 +6,7 @@
 	Description:
 	Opens the admin menu, sorry nothing special in here. Take a look for yourself.
 */
+queryCompleted = false;
 if(__GETC__(life_adminlevel) < 1) exitWith {closeDialog 0;};
 private["_display","_list","_side"];
 disableSerialization;

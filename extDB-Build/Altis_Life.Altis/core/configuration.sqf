@@ -345,9 +345,9 @@ buy_array =
 	["defusekit",2500],
 	["storagesmall",75000],
 	["storagebig",150000],
-	["bottledshine",12500], 
-	["bottledwhiskey",8000], 
-	["bottledbeer",8000], 
+	["bottledshine",18500], 
+	["bottledwhiskey",14000], 
+	["bottledbeer",12500], 
 	["moonshine",7500], 
 	["whiskey",5500], 
 	["beerp",5000], 
@@ -501,3 +501,23 @@ life_garage_sell =
 	["O_Heli_Light_02_unarmed_F",300000]
 ];
 __CONST__(life_garage_sell,life_garage_sell);
+
+typeHouses = 
+[
+	"Land_i_House_Big_02_V1_F",
+	"Land_i_House_Big_02_V2_F",
+	"Land_i_House_Big_02_V3_F",
+	"Land_i_House_Big_01_V1_F",
+	"Land_i_House_Big_01_V2_F",
+	"Land_i_House_Big_01_V3_F",
+	"Land_i_Garage_V1_F",
+	"Land_i_Garage_V2_F",
+	"Land_i_House_Small_02_V1_F",
+	"Land_i_House_Small_02_V2_F",
+	"Land_i_House_Small_02_V3_F",
+	"Land_i_House_Small_03_V1_F",
+	"Land_i_Stone_HouseSmall_V2_F",
+	"Land_i_Stone_HouseSmall_V1_F",
+	"Land_i_Stone_HouseSmall_V3_F"
+];
+__CONST__(typeHouses,typeHouses);

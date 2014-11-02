@@ -65,6 +65,7 @@ if((life_veh_shop select 0) == "med_air_hs") then {
 	[[_vehicle,"trunk_in_use",false,true],"TON_fnc_setObjVar",false,false] spawn life_fnc_MP;
 	[[_vehicle,"vehicle_info_owners",[[getPlayerUID player,profileName]],true],"TON_fnc_setObjVar",false,false] spawn life_fnc_MP;
 	_vehicle disableTIEquipment true; //No Thermals.. They're cheap but addictive.
+	if(_className == "C_SUV_01_F") then {_vehicle setCenterOfMass [-0.011,-0.0507,-1]};
 };
 
 //Side Specific actions.

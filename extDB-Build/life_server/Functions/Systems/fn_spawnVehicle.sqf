@@ -92,6 +92,7 @@ _vehicle lock 2;
 _vehicle setVariable["vehicle_info_owners",[[_pid,_name]],true];
 _vehicle setVariable["dbInfo",[(_vInfo select 4),_vInfo select 7]];
 //_vehicle addEventHandler["Killed","_this spawn TON_fnc_vehicleDead"]; //Obsolete function?
+	if(typeOf _vehicle == "C_SUV_01_F") then {_vehicle setCenterOfMass [-0.011,-0.0507,-1]};
 [_vehicle] call life_fnc_clearVehicleAmmo;
 
 //Sets of animations

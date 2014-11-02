@@ -1,5 +1,8 @@
 /*File: fn_drinkwhiskey.sqf author:[midgetgrimm] drinkypoo*/
 closeDialog 0;
+speedCamInterupt = false;
+sober = false;
+["whiskey"] spawn life_fnc_drunkSpeedCam;
 hintSilent parseText format["Your BAC is now<br/> <t size='1.4'><t color='#FF0000'>%1</t></t>",[life_drink] call life_fnc_numberText];
 sleep 4;
 "chromAbberation" ppEffectEnable true;
@@ -53,6 +56,7 @@ player setVariable["inDrink",false,true];
 "radialBlur" ppEffectCommit 5;
 sleep 6;
 
+sober = true;
 //Deactivate ppEffects
 //"chromAberration" ppEffectEnable false;
 //"radialBlur" ppEffectEnable false;

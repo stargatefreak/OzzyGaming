@@ -94,18 +94,17 @@ switch (_shop) do
     case "cop_car":
     {
         switch(true) do {
-            case (__GETC__(life_coplevel) == 1):
+            case (__GETC__(life_coplevel) == 0):
+			{
+                _return = [
+                    ["C_Offroad_01_F",5000]
+                ];
+			};
+            case ((__GETC__(life_coplevel) > 0) AND (__GETC__(life_coplevel) < 5)):
 			{
                 _return = [
                     ["C_Offroad_01_F",4500],
-                    ["C_SUV_01_F",10000]
-                ];
-			};
-            case ((__GETC__(life_coplevel) > 1) AND (__GETC__(life_coplevel) < 5)):
-			{
-                _return = [
-                    ["C_Offroad_01_F",4200],
-                    ["C_SUV_01_F",9500],
+                    ["C_SUV_01_F",10000],
                     ["C_Hatchback_01_sport_F",20000]
                 ];
 			};
@@ -114,15 +113,15 @@ switch (_shop) do
                 _return = [
                     ["C_Offroad_01_F",4000],
                     ["C_SUV_01_F",9000],
-                    ["C_Hatchback_01_sport_F",17500],
+                    ["C_Hatchback_01_sport_F",17000],
                     ["B_MRAP_01_F",70000]
                 ];
 			};
-            case (__GETC__(life_coplevel) == 7):
+            case (__GETC__(life_coplevel) > 6):
 			{
                 _return = [
-                    ["C_Offroad_01_F",3800],
-                    ["C_SUV_01_F",8500],
+                    ["C_Offroad_01_F",3500],
+                    ["C_SUV_01_F",8000],
                     ["C_Hatchback_01_sport_F",14000],
                     ["B_MRAP_01_F",60000]
                 ];
@@ -132,7 +131,7 @@ switch (_shop) do
 
     case "civ_air":
     {
-        _return =[
+        _return = [
             ["B_Heli_Light_01_F",425000],
             ["O_Heli_Light_02_unarmed_F",1000000],
             ["I_Heli_Transport_02_F",3200000]
@@ -144,7 +143,7 @@ switch (_shop) do
         switch(true) do {
             case ((__GETC__(life_coplevel) > 1) AND (__GETC__(life_coplevel) < 6)):
 			{
-                _return = ["B_Heli_Light_01_F",80000];
+                _return = [["B_Heli_Light_01_F",80000]];
 			};
             case (__GETC__(life_coplevel) >= 6):
 			{
@@ -162,7 +161,7 @@ switch (_shop) do
         switch(true) do {
             case ((__GETC__(life_coplevel) > 1) AND (__GETC__(life_coplevel) < 6)):
 			{
-                _return = ["B_Heli_Light_01_F",80000];
+                _return = [["B_Heli_Light_01_F",80000]];
 			};
             case (__GETC__(life_coplevel) >= 6):
 			{
@@ -188,9 +187,9 @@ switch (_shop) do
     case "cop_ship":
     {
 		switch(true) do {
-			case (__GETC__(life_coplevel) == 1):
+			case (__GETC__(life_coplevel) < 2):
 			{
-                _return = ["B_Boat_Transport_01_F",1000];
+                _return = [["B_Boat_Transport_01_F",1000]];
 			};
 			case (__GETC__(life_coplevel) == 2):
 			{

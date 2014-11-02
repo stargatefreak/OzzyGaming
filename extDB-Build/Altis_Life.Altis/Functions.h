@@ -378,6 +378,7 @@ class Life_Client_Core
 		class drinkbeer {};
 		class drinkmoonshine {};
 		class drinkwhiskey {};
+		class drunkSpeedCam {};
 	};
 	
 	class Dialog_Controls

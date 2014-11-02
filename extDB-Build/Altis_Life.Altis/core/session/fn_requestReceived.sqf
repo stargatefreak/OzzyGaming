@@ -73,7 +73,7 @@ switch(playerSide) do {
 	};
 	
 	case independent: {
-		medicTimer = _this select 8;
+		medicTimer = _this select 9;
 		__CONST__(life_medicLevel, parseNumber(_this select 7));
 		__CONST__(life_coplevel,0);
 	};

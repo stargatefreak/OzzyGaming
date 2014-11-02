@@ -7,8 +7,8 @@
 */
 if(life_action_inUse) exitWith {hint localize "STR_NOTF_ActionInProc"};
 disableSerialization;
-private["_nearVehicles","_control"];
-_nearVehicles = nearestObjects [getMarkerPos (_this select 3),["Car","Truck"],25];
+private["_nearVehicles","_control","_price"];
+_nearVehicles = nearestObjects [getMarkerPos (_this select 3),["Car","Truck","Air","Ship"],25];
 
 life_chopShop = (_this select 3);
 //Error check
@@ -24,6 +24,14 @@ _control = ((findDisplay 39400) displayCtrl 39402);
 		_ind = [_className,(call life_garage_sell)] call TON_fnc_index;
 		
 		if(_ind != -1 && count crew _x == 0) then {
+			if(_x getVariable["purpose","sexytime"] == "truck_mission") then
+			{
+				_price = 12500;
+			}
+			else
+			{
+				_price = ((call life_garage_sell) select _ind) select 1;
+			};
 			_price = ((call life_garage_sell) select _ind) select 1;
 			_control lbAdd _displayName;
 			_control lbSetData [(lbSize _control)-1,str(_forEachIndex)];

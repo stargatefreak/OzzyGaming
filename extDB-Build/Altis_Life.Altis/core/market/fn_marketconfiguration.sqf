@@ -166,6 +166,27 @@ life_market_resources = [
 		]
 	],
 	
+	["bottledshine", 5000, 0, 8000, 10, 7,   
+		[
+			["bottledwhiskey",1], 
+			["bottledbeer",1]
+		]
+	],
+	
+	["bottledwhiskey", 4000, 0, 8000, 10, 7,   
+		[
+			["bottledshine",1], 
+			["bottledbeer",1]
+		]
+	],
+	
+	["bottledbeer", 4000, 0, 6000, 10, 7,   
+		[
+			["bottledwhiskey",1], 
+			["bottledshine",1]
+		]
+	],
+	
 	["heroinp", 4000, 0, 10200, 12, 9,   
 		[ 
 			["marijuana",1], 

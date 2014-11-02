@@ -46,6 +46,6 @@ switch (playerSide) do
 	
 	case independent:
 	{
-		life_actions = life_actions + [player addAction["<t color='#00FF00'>Kidney Operation</t>",life_fnc_kidneyOperation,"",1,false,true,"",' playerSide == independent && !isNull cursorTarget && cursorTarget isKindOf "Man" ']];
+		life_actions = life_actions + [player addAction["<t color='#00FF00'>Kidney Operation</t>",life_fnc_kidneyOperation,"",1,false,true,"",' playerSide == independent && !isNull cursorTarget && cursorTarget isKindOf "Man" && (player distance CursorTarget) <= 2']];
 	};
 };

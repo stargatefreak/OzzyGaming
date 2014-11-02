@@ -39,6 +39,7 @@ switch (life_veh_shop select 0) do
 			_ret = true;
 		};
 	};
+	case "donator_1": {_ret = true;};
 };
 
 _ret;

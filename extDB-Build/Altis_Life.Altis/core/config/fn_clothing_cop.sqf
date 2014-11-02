@@ -24,13 +24,13 @@ switch (_filter) do
 	{
 		_ret set[count _ret,["U_Rangemaster","Cop Uniform",25]];
 		
-        if(__GETC__(life_coplevel) > 0) then
+        if(__GETC__(life_coplevel) > 0) then //Whitelisted
         {
             _ret set[count _ret,["U_B_Wetsuit","Wetsuit",100]];
         };
 		if(__GETC__(life_coplevel) > 3) then
         {
-            _ret set[count _ret,["U_B_HeliPilotCoveralls","Pilot Overalls",100]];
+            _ret set[count _ret,["U_B_HeliPilotCoveralls","Blue Uniform",100]];
         };
 		if(__GETC__(life_coplevel) > 4) then
         {
@@ -60,9 +60,8 @@ switch (_filter) do
 		_ret = [
 			["H_Cap_police",nil,100]
 		];
-		if(__GETC__(life_coplevel) > 0) then
+		if(__GETC__(life_coplevel) > 0) then //Whitelisted
         {
-			_ret set[count _ret,["H_Beret_blk_POLICE",nil,100]];
             _ret set[count _ret,["H_HelmetB_plain_blk",nil,100]]; 
         };
         if(__GETC__(life_coplevel) > 3) then
@@ -70,7 +69,7 @@ switch (_filter) do
             _ret set[count _ret,["H_Hat_tan",nil,0]];
             _ret set[count _ret,["H_HelmetB_light_black",nil,100]];
         };
-		if(__GETC__(life_coplevel) == 7) then
+		if(__GETC__(life_coplevel) > 6) then
         {
 			_ret set[count _ret,["H_Beret_blk_POLICE",nil,100]];
         };
@@ -92,7 +91,8 @@ switch (_filter) do
 			["G_Lowprofile",nil,30],
 			["G_Combat",nil,55]
 		];
-		if(__GETC__(life_coplevel) == 5) then
+
+		if(__GETC__(life_coplevel) > 0) then //Whitelisted
         {
             _ret set[count _ret,["G_Diving",nil,250]];
         };
@@ -102,11 +102,12 @@ switch (_filter) do
 	case 3:
 	{
 		_ret set[count _ret,["V_Rangemaster_belt",nil,800]];
-        _ret set[count _ret,["V_RebreatherB",nil,2500]];
-		_ret set[count _ret,["V_HarnessO_brn",nil,1500]];
-		if(__GETC__(life_coplevel) > 1) then
+        _ret set[count _ret,["V_HarnessO_brn",nil,1500]];
+
+		if(__GETC__(life_coplevel) > 0) then //Whitelisted
         {
             _ret set[count _ret,["V_TacVest_blk_POLICE",nil,2500]];
+            _ret set[count _ret,["V_RebreatherB",nil,2500]];
         };
 	};
 	
