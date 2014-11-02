@@ -13,6 +13,8 @@ life_versionInfo = "Altis Life RPG v3.1.4.8";
 [] execVM "scripts\DynWeather.sqf";
 [] execVM "scripts\fn_addATMS.sqf";
 [] execVM "KRON_Strings.sqf";
+[] execVM "zlt_fastrope.sqf";
+[] execVM "nosidechat.sqf";
 _igiload = execVM "core\IgiLoad\IgiLoadInit.sqf";
 
 if(isDedicated && isNil("life_market_prices")) then
