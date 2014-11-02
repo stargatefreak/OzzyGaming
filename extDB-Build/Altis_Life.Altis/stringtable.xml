@@ -1,5 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="Altis Life RPG">
+	<Package name="Admin_Menu">
+		<Key ID="STR_Admin_Title">
+			<Original>Admin Menu</Original>
+		</Key>
+		<Key ID="STR_Admin_GetID">
+			<Original>Get ID</Original>
+		</Key>
+		<Key ID="STR_Admin_Spectate">
+			<Original>Spectate</Original>
+		</Key>
+		<Key ID="STR_Admin_Teleport">
+			<Original>Teleport</Original>
+		</Key>
+		<Key ID="STR_Admin_TpHere">
+			<Original>TP Here</Original>
+		</Key>
+		<Key ID="STR_Admin_Debug">
+			<Original>Debug</Original>
+		</Key>
+		<Key ID="STR_Admin_Compensate">
+			<Original>Comp</Original>
+		</Key>
+		<Key ID="STR_Admin_God">
+			<Original>GodMode</Original>
+		</Key>
+		<Key ID="STR_Admin_Freeze">
+			<Original>Freeze</Original>
+		</Key>
+		<Key ID="STR_Admin_Markers">
+			<Original>Markers</Original>
+		</Key>
+	</Package>
+	<Package name="Admin_Notifications">
+		<Key ID="STR_ANOTF_Query">
+			<Original>Querying...</Original>
+		</Key>
+		<Key ID="STR_ANOTF_QueryGarage">
+			<Original>Searching Database for vehicles...</Original>
+		</Key>
+		<Key ID="STR_ANOTF_Query_2">
+			<Original>You are already querying a player.</Original>
+		</Key>
+		<Key ID="STR_ANOTF_QueryFail">
+			<Original>Player no longer exists?</Original>
+		</Key>
+		<Key ID="STR_ANOTF_CompWarn">
+			<Original>You are about to give yourself $%1 to compensate to another player &lt;br/&gt;&lt;br/&gt;You must give this cash to the person you are compensating manually.</Original>
+		</Key>
+		<Key ID="STR_ANOTF_CompWarn1">
+			<Original>You are about to give %2 a comp of $%1.</Original>
+		</Key>
+		<Key ID="STR_ANOTF_Success">
+			<Original>You have added $%1 to your account.</Original>
+		</Key>
+		<Key ID="STR_ANOTF_Success1">
+			<Original>You have added $%1 to %2 account.</Original>
+		</Key>
+		<Key ID="STR_ANOTF_Fail">
+			<Original>You can not go above 999999.</Original>
+		</Key>
+		<Key ID="STR_ANOTF_Amount">
+			<Original>Please type in the amount to compensate.</Original>
+		</Key>
+		<Key ID="STR_ANOTF_Frozen">
+			<Original>You have disabled %1's input.</Original>
+		</Key>
+		<Key ID="STR_ANOTF_Unfrozen">
+			<Original>You have enabled %1's input.</Original>
+		</Key>
+		<Key ID="STR_ANOTF_Error">
+			<Original>You can't do that dumbass.</Original>
+		</Key>
+		<Key ID="STR_ANOTF_ErrorLevel">
+			<Original>Your Admin Level is not high enough.</Original>
+		</Key>
+		<Key ID="STR_ANOTF_MDisabled">
+			<Original>Player Markers Disabled.</Original>
+		</Key>
+		<Key ID="STR_ANOTF_MEnabled">
+			<Original>Player Markers Enabled.</Original>
+		</Key>
+	</Package>	
 	<Package name="Global">
 		<Key ID="STR_Global_Close">
 			<Original>Close</Original>
@@ -104,58 +186,6 @@
 			<French>Annulée</French>
 			<Italian>Annulla</Italian>
 			<Portuguese>Cancelar</Portuguese>
-		</Key>
-	</Package>
-	<Package name="Admin_Menu">
-		<Key ID="STR_Admin_Title">
-			<Original>Admin Menu</Original>
-			<English>Admin Menu</English>
-			<German>Admin Menü</German>
-			<Italian>Menu Admin</Italian>
-			<French>Menu Admin</French>
-			<Portuguese>Menu do Admin</Portuguese>
-		</Key>
-		<Key ID="STR_Admin_GetID">
-			<Original>Get ID</Original>
-			<English>Get ID</English>
-			<German>ID abfragen</German>
-			<French>Obtenir ID</French>
-			<Italian>Vedi ID</Italian>
-			<Portuguese>Menu do Admin</Portuguese>
-		</Key>
-	</Package>
-	<Package name="Admin_Notifications">
-		<Key ID="STR_ANOTF_Query">
-			<Original>Querying...</Original>
-			<English>Querying...</English>
-			<German>Abfrage läuft...</German>
-			<French>Interrogation...</French>
-			<Italian>Ricerca...</Italian>
-			<Portuguese>Pesquisando...</Portuguese>
-		</Key>
-		<Key ID="STR_ANOTF_QueryGarage">
-			<Original>Searching Database for vehicles...</Original>
-			<English>Searching Database for vehicles...</English>
-			<German>Durchsuche nach Fahrzeugen...</German>
-			<French>Recherche des véhicules dans le garage...</French>
-			<Italian>Ricerca di veicoli nel Database...</Italian>
-			<Portuguese>Buscando por veículo no banco de dados...</Portuguese>
-		</Key>
-		<Key ID="STR_ANOTF_Query_2">
-			<Original>You are already querying a player.</Original>
-			<English>You are already querying a player.</English>
-			<German>Du fragst bereits einen Spieler ab.</German>
-			<French>Vous avez déjà interrogé ce joueur.</French>
-			<Italian>Stai già ispezionando un giocatore.</Italian>
-			<Portuguese>Você já está buscando por um jogador.</Portuguese>
-		</Key>
-		<Key ID="STR_ANOTF_QueryFail">
-			<Original>Player no longer exists?</Original>
-			<English>Player no longer exists?</English>
-			<German>Spieler existiert nicht mehr?</German>
-			<French>Le joueur ne semble pas exister</French>
-			<Italian>Il giocatore non esiste più</Italian>
-			<Portuguese>Jogador não existe mais?</Portuguese>
 		</Key>
 	</Package>
 	<Package name="ATM_Strings">
@@ -5061,5 +5091,64 @@
 			<Italian>Rob Person</Italian>		
 			<Portuguese>Roubar Jogador</Portuguese>
 		</Key>
+	</Package>
+	<Package name="Breathalyzing_System">
+		<Key ID="STR_Item_Rye">
+			<Original>Rye Plants</Original>
+		</Key>
+		<Key ID="STR_Item_Hops">
+			<Original>Hops</Original>
+		</Key>
+		<Key ID="STR_Item_Yeast">
+			<Original>Yeast</Original>
+		</Key>
+		<Key ID="STR_Gather_Rye">
+			<Original>Gather Rye</Original>
+			<English>Gather Rye</English>
+		</Key>
+		<Key ID="STR_Gather_Hops">
+			<Original>Pick Hops</Original>
+			<English>Pick Hops</English>
+		</Key>
+		<Key ID="STR_Gather_Yeast">
+			<Original>Gather Yeast</Original>
+			<English>Gather Yeast</English>
+		</Key>
+		<Key ID="STR_MISC_StPubIntox">
+			<Original>%1 has passed out drunk in public!</Original>
+			<English>%1 has passed out drunk in public!</English>
+			<German>%1 hat sich betrunken im öffentlichen bestanden!</German>
+		</Key>
+		<Key ID="STR_MISC_AlreadyDrinking">
+			<Original>You are already drinking some booze</Original>
+			<English>You are already drinking some booze</English>
+			<German>Du bist schon etwas trinken Alkohol</German>
+		</Key>
+		<Key ID="STR_MISC_WestIndNoNo">
+			<Original>No drinking on duty</Original>
+			<English>No drinking on duty</English>
+			<German>Kein Trinkwasser im Dienst</German>
+			<French>Pas boire pendant le travail</French>
+		</Key>
+		<Key ID="STR_MISC_DrunkBlackOut">
+			<Original>You have passed out</Original>
+			<English>You have passed out</English>
+		</Key>
+		<Key ID="STR_MISC_DrunkBlackOut1">
+			<Original>What the hell happened to me??</Original>
+			<English>What the hell happened to me??</English>
+		</Key>
+		<Key ID="STR_pInAct_Breathalyzer">
+			<Original>Breathalyze Player</Original>
+			<English>Breathalyze Player</English>
+		</Key>
+	</Package>
+	<Package name="Speed_Camera_System">
+		<Key ID="STR_Civ_LicenseRemove_1a">
+			<Original>You have lost all your motor vehicle licenses for habitual speeding.</Original>
+			<English>You have lost all your motor vehicle licenses for habitual speeding</English>
+			<German>Durch Deine wiederholte Überschreitung der Geschwindigkeit, wurde Dir dein Führerschein entzogen</German>
+			<French>Vous avez perdu toutes vos licences de vehicules pour excès de vitesses fréquent</French>
+		</Key> 
 	</Package>
 </Project>

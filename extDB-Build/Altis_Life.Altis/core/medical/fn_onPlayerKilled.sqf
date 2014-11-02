@@ -18,6 +18,8 @@ _unit setVariable["restrained",FALSE,TRUE];
 _unit setVariable["Escorting",FALSE,TRUE];
 _unit setVariable["transporting",FALSE,TRUE]; //Why the fuck do I have this? Is it used?
 _unit setVariable["steam64id",(getPlayerUID player),true]; //Set the UID.
+_unit setVariable["missingOrgan",FALSE,TRUE]; //I DONT KNOW WHY SOMETIMES THEY ARE CAPS or not
+_unit setVariable["hasOrgan",FALSE,TRUE]; 
 
 //Setup our camera view
 life_deathCamera  = "CAMERA" camCreate (getPosATL _unit);
@@ -35,11 +37,13 @@ life_deathCamera camCommit 0;
 //Create a thread for something?
 _unit spawn
 {
-	private["_maxTime","_RespawnBtn","_Timer"];
+	private["_maxTime","_RespawnBtn","_MedicBtn","_Timer","_Medics"];
 	disableSerialization;
 	_RespawnBtn = ((findDisplay 7300) displayCtrl 7302);
+	_MedicBtn = ((findDisplay 7300) displayCtrl 7303);
 	_Timer = ((findDisplay 7300) displayCtrl 7301);
-	
+	_Medics = [independent] call life_fnc_playerCount;
+	if(_Medics == 0) then {_MedicBtn ctrlEnable false} else {_MedicBtn ctrlEnable true};
 	_maxTime = time + (life_respawn_timer * 60);
 	_RespawnBtn ctrlEnable false;
 	waitUntil {_Timer ctrlSetText format[localize "STR_Medic_Respawn",[(_maxTime - time),"MM:SS.MS"] call BIS_fnc_secondsToString]; 

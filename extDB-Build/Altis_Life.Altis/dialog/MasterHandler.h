@@ -24,3 +24,7 @@
 #include "vehicleShop.h"
 #include "settings.h"
 #include "federalReserve.h"
+#include "compensate.hpp"
+#include "veh_repaint.hpp"
+#include "common_EditorWrapper.hpp"
+#include "market.hpp"

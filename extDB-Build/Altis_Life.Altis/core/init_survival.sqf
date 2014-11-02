@@ -1,4 +1,5 @@
-[] spawn  {
+[] spawn
+{
 	private["_fnc_food","_fnc_water"];
 	_fnc_food = 
 	{
@@ -51,6 +52,30 @@
 		_bp = backpack player;
 		_cfg = getNumber(configFile >> "CfgVehicles" >> (backpack player) >> "maximumload");
 		_load = round(_cfg / 8);
+			if(_bp == 'B_AssaultPack_cbr') then {
+				_load = 30;
+			};
+			if(_bp == 'B_Kitbag_mcamo') then {
+				_load = 54;
+			};
+			if(_bp == 'B_TacticalPack_oli') then {
+				_load = 42;
+			};
+			if(_bp == 'B_FieldPack_ocamo') then {
+				_load = 36;
+			};
+			if(_bp == 'B_Bergen_sgg') then {
+				_load = 54;
+			};
+			if(_bp == 'B_Kitbag_cbr') then {
+				_load = 54;
+			};
+			if(_bp == 'B_Carryall_oli') then {
+				_load = 60;
+			};
+			if(_bp == 'B_Carryall_khk') then {
+				_load = 60;
+			};
 		life_maxWeight = life_maxWeightT + _load;
 		waitUntil {backpack player != _bp};
 		if(backpack player == "") then 
@@ -103,5 +128,58 @@
 			};
 			_myLastPos = (getPos player select 0) + (getPos player select 1);
 		};
+	};
+};
+
+[] spawn
+{
+	while{true} do
+	{
+		waitUntil {(player getVariable ["missingOrgan",FALSE])};
+		while{(player getVariable "missingOrgan")} do {
+			life_max_health = 0.50;
+			if(damage player < (1 - life_max_health)) then {player setDamage (1 - life_max_health);};
+			player setDamage ((damage player) + 0.01);
+			/* 
+			[] call life_fnc_hudUpdate;
+			 */
+			"dynamicBlur" ppEffectEnable true;
+			"dynamicBlur" ppEffectAdjust [2];
+			"dynamicBlur" ppEffectCommit 1;
+			sleep 5;
+		};
+		"dynamicBlur" ppEffectEnable false;
+		life_max_health = 1;
+	};
+};
+
+//part of alcohol system written by [midgetgrimm]
+[] spawn
+{
+	while {true} do
+	{
+		waitUntil {(life_drink > 0)};  /* life_drink undeclared variable */
+		while{(life_drink > 0)} do {
+		
+			if(life_drink > 0.08) then {
+			"radialBlur" ppEffectEnable true;
+			"radialBlur" ppEffectAdjust[0.08, 0,0.35,0.37];
+			"radialBlur" ppEffectCommit 3;
+			sleep 240;
+			life_drink = life_drink - 0.02;
+			} else {
+			"radialBlur" ppEffectEnable true;
+			"radialBlur" ppEffectAdjust[0.05, 0,0.36,0.38];
+			"radialBlur" ppEffectCommit 1;
+			sleep 180;
+			life_drink = life_drink - 0.02;
+			};
+		};
+		
+		"radialBlur" ppEffectAdjust  [0,0,0,0];
+		"radialBlur" ppEffectCommit 5;
+		"radialBlur" ppEffectEnable false;
+		life_drink = 0;
+		
 	};
 };

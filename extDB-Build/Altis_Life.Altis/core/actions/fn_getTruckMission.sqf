@@ -1,0 +1,113 @@
+/*
+	File: fn_getTruckMission.sqf
+	Author: [GSN] Paronity
+
+	Description:
+	Selects a random freight yard legal/illegal delivery mission.
+*/
+private["_yard","_target","_type","_spawn","_sp","_newTruck","_civCar","_points","_giveGarage"];
+_target = [_this,0,ObjNull] call BIS_fnc_param;
+_type =  _this select 3 select 0;
+_spawn = _this select 3 select 1;
+_sp = getMarkerPos _spawn;
+
+_points = life_truck_points - [(str(_target))];
+_yard = _points call BIS_fnc_selectRandom;
+
+life_truck_in_progress = true;
+life_truck_point = call compile format["%1",_yard];
+
+if(vehicle player != player) then
+{
+	_civCar = vehicle player;
+}
+	else
+{
+	_nearVehicles = nearestObjects[getPos (_this select 0),["Car","Air"],30]; //Fetch vehicles within 30m.
+	if(count _nearVehicles > 0) then
+	{
+		{
+			private["_vehData","_vehOwner"];
+			if(!isNil "_civCar") exitWith {}; //Kill the loop.
+			_vehData = _x getVariable["vehicle_info_owners",[]];
+			if(count _vehData  > 0) then
+			{
+				_vehOwner = (_vehData select 0) select 0;
+				if((getPlayerUID player) == _vehOwner) exitWith
+				{
+					_civCar = _x;
+				};
+			};
+		} foreach _nearVehicles;
+	};
+};
+
+if(!isNil "_civCar") then
+{
+	[[_civCar,false,(_this select 1)],"TON_fnc_vehicleStore",false,false] spawn life_fnc_MP;
+    _giveGarage = "1";
+}
+else
+{
+    _giveGarage = "0";
+};
+
+sleep 3;
+
+_newTruck = "I_Truck_02_covered_F" createVehicle _sp;
+_newTruck setVectorUp (surfaceNormal _sp);
+_newTruck setPos _sp;
+[_newTruck] call life_fnc_clearVehicleAmmo;
+
+_newTruck setVariable["purpose","truck_mission",true];
+_newTruck setVariable["driver",name player,true];
+_newTruck setVariable["startYard",_target,true];
+_newTruck setVariable["goodsRemoved","0",true];
+_newTruck setVariable["giveGarage",_giveGarage,true];
+_newTruck setVariable["vehicle_info_owners","truck_mission",true];
+_newTruck setObjectTextureGlobal[0,"\A3\Soft_F_Beta\Truck_02\data\truck_02_kab_co.paa"];
+_newTruck setObjectTextureGlobal[1,"textures\civ\truck_02_kuz_mission.jpg"];
+
+if(_type == "legal") then
+{
+	_newTruck setVariable["type","legal",true];
+}
+else
+{
+	_newTruck setVariable["type","illegal",true];
+	
+	hint "You have chosen an illegal mission. This means the cops have been alerted to your activities. Completing the mission will immediately clear it from your record. RUN!!";
+	[[format["%1 has accepted an illegal truck mission. They are leaving from the freight yard now. Catch them!",name player], "Anonymous Tipper",1],"TON_fnc_clientMessage",true,false] spawn life_fnc_MP;
+	[[getPlayerUID player,name player,"485"],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;
+};
+
+life_cur_task = player createSimpleTask [format["Truck_%1",life_truck_point]];
+life_cur_task setSimpleTaskDescription [format["You are to deliver this truck to the %1 freight yard.",toUpper _yard],"Truck Job",""];
+life_cur_task setTaskState "Assigned";
+player setCurrentTask life_cur_task;
+["DeliveryAssigned",[format["Deliver this truck to the %1 freight yard.",toUpper _yard]]] call bis_fnc_showNotification;
+
+[_newTruck] spawn
+{
+	_truckToWatch = _this select 0;
+	waitUntil {!life_truck_in_progress OR !alive player OR !alive _truckToWatch};
+	if(life_truck_in_progress) then
+	{
+		if(!alive player) then
+		{
+			life_cur_task setTaskState "Failed";
+			player removeSimpleTask life_cur_task;
+			["DeliveryFailed",["You failed to deliver the truck because you died."]] call BIS_fnc_showNotification;
+			life_truck_in_progress = false;
+			life_truck_point = nil;
+		};
+		if(!alive _truckToWatch) then
+		{
+			life_cur_task setTaskState "Failed";
+			player removeSimpleTask life_cur_task;
+			["DeliveryFailed",["Truck exploded or was impounded. Mission failed."]] call BIS_fnc_showNotification;
+			life_truck_in_progress = false;
+			life_truck_point = nil;
+		};
+	};
+};

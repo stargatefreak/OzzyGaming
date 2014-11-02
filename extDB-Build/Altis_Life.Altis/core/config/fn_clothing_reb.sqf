@@ -19,6 +19,9 @@ switch (_filter) do
 	{
 		[
 			["U_IG_Guerilla1_1",nil,5000],
+            ["U_IG_Guerilla2_2",nil,5000],
+            ["U_IG_Guerilla2_3",nil,5000],
+            ["U_IG_Guerilla3_1",nil,5000],
 			["U_I_G_Story_Protagonist_F",nil,7500],
 			["U_I_G_resistanceLeader_F",nil,11500],
 			["U_O_SpecopsUniform_ocamo",nil,17500],
@@ -37,7 +40,12 @@ switch (_filter) do
 			["H_ShemagOpen_khk",nil,800],
 			["H_HelmetO_ocamo",nil,2500],
 			["H_MilCap_oucamo",nil,1200],
-			["H_Bandanna_camo",nil,650]
+			["H_Bandanna_camo",nil,650],
+            ["H_Bandanna_cbr",nil,650],
+            ["H_Bandanna_gry",nil,650],
+            ["H_Bandanna_khk",nil,650],
+            ["H_Bandanna_sgg",nil,650],
+            ["H_Bandanna_surfer",nil,650]
 		];
 	};
 	
@@ -53,7 +61,19 @@ switch (_filter) do
 			["G_Sport_BlackWhite",nil,20],
 			["G_Squares",nil,10],
 			["G_Lowprofile",nil,30],
-			["G_Combat",nil,55]
+			["G_Combat",nil,55],
+			["G_Balaclava_blk",nil,650],
+			["G_Balaclava_combat",nil,650],
+			["G_Balaclava_lowprofile",nil,650],
+			["G_Balaclava_oli",nil,650],
+			["G_Bandanna_aviator",nil,650],
+			["G_Bandanna_beast",nil,650],
+			["G_Bandanna_blk",nil,650],
+			["G_Bandanna_khk",nil,650],
+			["G_Bandanna_oli",nil,650],
+			["G_Bandanna_shades",nil,650],
+			["G_Bandanna_sport",nil,650],
+			["G_Bandanna_tan",nil,650]
 		];
 	};
 	
@@ -63,7 +83,8 @@ switch (_filter) do
 		[
 			["V_TacVest_khk",nil,12500],
 			["V_BandollierB_cbr",nil,4500],
-			["V_HarnessO_brn",nil,7500]
+			["V_HarnessO_brn",nil,7500],
+            ["V_Rangemaster_belt",nil,850]
 		];
 	};
 	

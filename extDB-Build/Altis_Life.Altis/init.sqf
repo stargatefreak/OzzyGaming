@@ -10,8 +10,24 @@ enableSaving[false,false];
 
 life_versionInfo = "Altis Life RPG v3.1.4.8";
 [] execVM "briefing.sqf"; //Load Briefing
+[] execVM "scripts\DynWeather.sqf";
+[] execVM "scripts\fn_addATMS.sqf";
 [] execVM "KRON_Strings.sqf";
+_igiload = execVM "core\IgiLoad\IgiLoadInit.sqf";
+
+if(isDedicated && isNil("life_market_prices")) then
+{
+	[] call life_fnc_marketconfiguration;
+	diag_log "Market prices generated!";
+	
+	"life_market_prices" addPublicVariableEventHandler
+	{
+		diag_log format["Market prices updated! %1", _this select 1];
+	};
+	
+	//Start server fsm	
+	[] execFSM "core\fsm\server.fsm";
+	diag_log "Server FSM executed";
+};
 
 StartProgress = true;
-
-"BIS_fnc_MP_packet" addPublicVariableEventHandler {_this call life_fnc_MPexec};

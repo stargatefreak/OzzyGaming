@@ -42,7 +42,7 @@ class Life_Client_Core
 		class initCiv {};
 		class initCop {};
 		class initMedic {};
-		class welcomeNotification {};
+		class IntroCam {};
 	};
 	
 	class Admin
@@ -53,6 +53,14 @@ class Life_Client_Core
 		class admingetID {};
 		class adminMenu {};
 		class adminQuery {};
+		class adminSpectate {};
+		class adminTeleport {};
+		class adminTpHere {};
+		class adminDebugCon {};
+		class adminCompensate {};
+		class adminGodMode {};
+		class adminFreeze {};
+		class adminMarkers {};
 	};
 	
 	class Medical_System
@@ -71,6 +79,7 @@ class Life_Client_Core
 		class medicSirenLights {};
 		class medicLights {};
 		class medicSiren {};
+		class kidneyOperation {};
 	};
 	
 	class Actions
@@ -95,9 +104,11 @@ class Life_Client_Core
 		class putInCar {};
 		class stopEscorting {};
 		class restrainAction {};
+		class restrainActionCiv {};
 		class searchAction {};
 		class searchVehAction {};
 		class unrestrain {};
+		class unrestrainCiv {};
 		class pickupItem {};
 		class pickupMoney {};
 		class ticketAction {};
@@ -106,6 +117,11 @@ class Life_Client_Core
 		class robAction {};
 		class captureHideout {};
 		class gather {};
+		class robShops {};
+		class getTruckMission {};
+		class truckFinish {};
+		class gatherGoldbar {};
+		class takeOrgans {};
 	};
 	
 	class Housing
@@ -219,6 +235,10 @@ class Life_Client_Core
 		class saveGear {};
 		class loadGear {};
 		class stripDownPlayer {};
+		class autoSave {};
+		class crashSite {};
+		class sonar {};
+		class randomRound {};
 	};
 	
 	class Network
@@ -249,6 +269,9 @@ class Life_Client_Core
 		class removeLicenses {};
 		class demoChargeTimer {};
 		class civLoadout {};
+		class zoneCreator {};
+		class hasOrgan {};
+		class civInteractionMenu {};
 	};
 	
 	class Vehicle
@@ -293,6 +316,10 @@ class Life_Client_Core
 		class fedCamDisplay {};
 		class copLoadout {};
 		class ticketPaid {};
+		class breathalyzer {};
+		class copUniform {};
+		class radarCam {};
+		class copOpener {};
 	};
 	
 	class Gangs
@@ -348,6 +375,9 @@ class Life_Client_Core
 		class blastingCharge {};
 		class defuseKit {};
 		class storageBox {};
+		class drinkbeer {};
+		class drinkmoonshine {};
+		class drinkwhiskey {};
 	};
 	
 	class Dialog_Controls
@@ -374,4 +404,32 @@ class Life_Client_Core
 		class vehicleGarage {};
 		class gangDeposit {};
 	};
+	
+	class anstrich
+	{
+		file = "core\repaint";
+		
+		class RepaintMenu;
+		class Repaintcolor;
+		class RepaintVehicle;		
+	};
+	
+	class Market
+	{
+		file = "core\market";
+		class openMarketView;
+		class refreshMarketView;
+		class marketShortView;
+		class marketBuy;
+		class marketSell;
+		class marketGetBuyPrice;
+		class marketGetSellPrice;
+		class marketconfiguration;
+		class marketReset;
+		class marketChange;
+		class marketGetRow;
+		class marketGetPriceRow;
+		class marketSetPriceRow;
+	};
+
 };

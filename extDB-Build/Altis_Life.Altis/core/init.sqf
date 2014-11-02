@@ -67,6 +67,7 @@ switch (playerSide) do
 };
 
 player setVariable["restrained",false,true];
+player setVariable["restrainedCiv",false,true];
 player setVariable["Escorting",false,true];
 player setVariable["transporting",false,true];
 diag_log "Past Settings Init";
@@ -88,6 +89,12 @@ LIFE_ID_RevealObjects = ["LIFE_RevealObjects","onEachFrame","life_fnc_revealObje
 [] call life_fnc_settingsInit;
 player setVariable["steam64ID",getPlayerUID player];
 player setVariable["realname",profileName,true];
+
+player setVariable["missingOrgan",false,true];//sets variables to false on start
+player setVariable["hasOrgan",false,true];
+
+[] execVM "scripts\fn_disableSnakes.sqf";
+
 life_fnc_moveIn = compileFinal
 "
 	player moveInCargo (_this select 0);
@@ -102,5 +109,15 @@ life_fnc_garageRefund = compileFinal
 ";
 
 [] execVM "core\init_survival.sqf";
+[] execVM "scripts\fn_activeCounter.sqf";
+
+// Init automatically saving gear
+[] spawn life_fnc_autoSave;
+diag_log "Initialized AutoSave";
+
+[] spawn life_fnc_crashSite;
+diag_log "Initialized crashsites";
+[] spawn life_fnc_sonar;
+diag_log "Initialized sonar";
 
 __CONST__(life_paycheck,life_paycheck); //Make the paycheck static.

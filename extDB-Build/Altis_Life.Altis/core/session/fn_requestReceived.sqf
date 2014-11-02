@@ -34,7 +34,7 @@ if(!isServer && (!isNil "life_adminlevel" OR !isNil "life_coplevel" OR !isNil "l
 life_cash = parseNumber (_this select 2);
 life_atmcash = parseNumber (_this select 3);
 __CONST__(life_adminlevel,parseNumber(_this select 4));
-__CONST__(life_donator,0);
+__CONST__(life_donator,parseNumber(_this select 5));
 
 //Loop through licenses
 if(count (_this select 6) > 0) then {
@@ -50,26 +50,30 @@ switch(playerSide) do {
 		__CONST__(life_coplevel, parseNumber(_this select 7));
 		__CONST__(life_medicLevel,0);
 		life_blacklisted = _this select 9;
+		copTimer = _this select 10;
 	};
 	
 	case civilian: {
 		life_is_arrested = _this select 7;
+		civTimer = _this select 9;
 		__CONST__(life_coplevel, 0);
 		__CONST__(life_medicLevel, 0);
-		life_houses = _this select 9;
+		life_houses = _this select 10;
 		{
 			_house = nearestBuilding (call compile format["%1", _x select 0]);
 			life_vehicles pushBack _house;
 		} foreach life_houses;
 		
-		life_gangData = _This select 10;
+		life_gangData = _This select 11;
 		if(count life_gangData != 0) then {
 			[] spawn life_fnc_initGang;
 		};
 		[] spawn life_fnc_initHouses;
+		life_paycheck = life_paycheck + ((__GETC__(life_donator)) * 750);
 	};
 	
 	case independent: {
+		medicTimer = _this select 8;
 		__CONST__(life_medicLevel, parseNumber(_this select 7));
 		__CONST__(life_coplevel,0);
 	};

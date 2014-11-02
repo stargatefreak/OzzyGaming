@@ -43,7 +43,7 @@ class Life_Clothing {
 			idc = 3101;
 			text = "";
 			sizeEx = 0.035;
-			onLBSelChanged = "[_this] call life_fnc_changeClothes;";
+			onLBSelChanged = "[_this] call life_fnc_changeClothes; [] call life_fnc_copUniform;";
 			
 			x = 0.01 + (1 / 250 / (safezoneW / safezoneH));
 			y = 0.05;
@@ -101,7 +101,7 @@ class Life_Clothing {
 		{
 			idc = -1;
 			text = "$STR_Global_Buy";
-			onButtonClick = "[] call life_fnc_buyClothes;";
+			onButtonClick = "[] call life_fnc_buyClothes; [] call life_fnc_copUniform;";
 			x = (1 / 250 / (safezoneW / safezoneH));
 			y = 0.54 - (1 / 25);
 			w = (6.25 / 40);

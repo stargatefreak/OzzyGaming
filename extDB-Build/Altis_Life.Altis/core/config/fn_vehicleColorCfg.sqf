@@ -33,7 +33,7 @@ switch (_vehicle) do
 			[_path + "hatchback_01_ext_sport04_co.paa","civ"],
 			[_path + "hatchback_01_ext_sport05_co.paa","civ"],
 			[_path + "hatchback_01_ext_sport06_co.paa","civ"],
-			["#(ai,64,64,1)Fresnel(1.3,7)","cop"]
+			["textures\cop\hatch_cop_sport.jpg","cop","textures\cop\hatch_cop_sport.jpg"]
 		];
 	};
 		
@@ -47,9 +47,9 @@ switch (_vehicle) do
 			["\A3\soft_F\Offroad_01\Data\offroad_01_ext_BASE03_CO.paa","civ"],
 			["\A3\soft_F\Offroad_01\Data\offroad_01_ext_BASE04_CO.paa","civ"],
 			["\A3\soft_F\Offroad_01\Data\offroad_01_ext_BASE05_CO.paa","civ"],
-			["#(ai,64,64,1)Fresnel(0.3,3)","fed"],
-			["#(ai,64,64,1)Fresnel(1.3,7)","cop"],
-			["#(argb,8,8,3)color(0.6,0.3,0.01,1)","civ"]
+			["#(argb,8,8,3)color(0.6,0.3,0.01,1)","civ"],
+			["textures\cop\police_offroad.jpg","cop","textures\cop\police_offroad.jpg"],
+			["textures\medic\med_offroad.paa","med"]
 		];
 	};
 	
@@ -64,7 +64,8 @@ switch (_vehicle) do
 			["\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base06_co.paa","civ"],
 			["\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base07_co.paa","civ"],
 			["\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base08_co.paa","civ"],
-			["\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base09_co.paa","civ"]
+			["\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base09_co.paa","civ"],
+			["textures\cop\hatch_cop_sport.jpg","cop","textures\cop\hatch_cop_sport.jpg"]
 		];
 	};
 	
@@ -73,10 +74,17 @@ switch (_vehicle) do
 		_ret =
 		[
 			["\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_co.paa","civ"],
-			["\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_02_co.paa","cop"],
+			["\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_02_co.paa","civ"],
 			["\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_03_co.paa","civ"],
 			["\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_04_co.paa","civ"],
-			["#(ai,64,64,1)Fresnel(1.3,7)","cop"]
+			["textures\cop\police_suv.jpg","cop","textures\cop\police_suv.jpg"],
+			["textures\civ\suv_blue.jpg","civ","textures\civ\suv_blue.jpg"],
+			["textures\cop\swat_suv.jpg","cop","textures\cop\swat_suv.jpg"],
+			["\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_03_co.paa","cop"],
+			["\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_02_co.paa","cop"],
+			["\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_co.paa","cop"],
+			["\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_04_co.paa","cop"],
+			["textures\cop\hwp_suv.jpg","cop","textures\cop\hwp_suv.jpg"]
 		];
 	};
 	
@@ -118,7 +126,7 @@ switch (_vehicle) do
 	{
 		_ret = 
 		[
-			["\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_sheriff_co.paa","cop"],
+			["textures\cop\heli_light_cop.jpg","cop","textures\cop\heli_light_cop.jpg"],
 			["\a3\air_f\Heli_Light_01\Data\heli_light_01_ext_ion_co.paa","fed"],
 			["\a3\air_f\Heli_Light_01\Data\heli_light_01_ext_blue_co.paa","civ"],
 			["\a3\air_f\Heli_Light_01\Data\heli_light_01_ext_co.paa","civ"],
@@ -132,7 +140,7 @@ switch (_vehicle) do
 			["\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_vrana_co.paa","civ"],
 			["\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_wave_co.paa","civ"],
 			["\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_digital_co.paa","reb"],
-			["#(argb,8,8,3)color(1,1,1,0.8)","med"]
+			["textures\medic\med_hummingbird.paa","med"]
 		];
 	};
 	
@@ -144,7 +152,7 @@ switch (_vehicle) do
 			["\a3\air_f\Heli_Light_02\Data\heli_light_02_ext_civilian_co.paa","civ"],
 			["\a3\air_f\Heli_Light_02\Data\heli_light_02_ext_indp_co.paa","donate"],
 			["\a3\air_f\Heli_Light_02\Data\heli_light_02_ext_opfor_co.paa","reb"],
-			["#(argb,8,8,3)color(1,1,1,0.8)","med"]
+			["textures\medic\med_orca.paa","med"]
 		];
 	};
 	
@@ -152,8 +160,8 @@ switch (_vehicle) do
 	{
 		_ret = 
 		[
-			["\A3\Soft_F\MRAP_01\Data\mrap_01_base_co.paa","cop"],
-			["#(argb,8,8,3)color(0.05,0.05,0.05,1)","fed"]
+			["textures\cop\hunter_cop_1.jpg","cop","textures\cop\hunter_cop_2.jpg"],
+			["textures\cop\hunter_swat_1.jpg","cop","textures\cop\hunter_swat_2.jpg"]
 		];
 	};
 	
@@ -188,6 +196,23 @@ switch (_vehicle) do
 		_ret = 
 		[
 			["#(argb,8,8,3)color(0.05,0.05,0.05,1)","fed"]
+		];
+	};
+	
+	case "I_Heli_light_03_unarmed_F":
+	{
+		_ret = 
+		[
+			["textures\cop\news7.jpg","cop"],
+			["textures\civ\heli_light_03.jpg","civ"]
+		];
+	};
+	
+	case "B_Heli_Transport_01_F":
+	{
+		_ret = 
+		[
+			["textures\cop\swat_ghosthawk_1.jpg","cop","textures\cop\swat_ghosthawk_2.jpg"]
 		];
 	};
 };

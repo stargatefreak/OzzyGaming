@@ -21,3 +21,11 @@
 		[_x,_index] spawn life_fnc_colorVehicle;
 	};
 } foreach (allMissionObjects "Air");
+
+{
+	if (_x != player) then {
+		if (side _x == west) then {
+			[_x] call life_fnc_copUniform;
+		};
+	};
+} forEach playableUnits;

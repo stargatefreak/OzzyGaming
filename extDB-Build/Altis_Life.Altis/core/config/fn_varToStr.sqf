@@ -56,11 +56,45 @@ switch (_var) do
 	case "life_inv_rock": {(localize "STR_Item_Rock")};
 	case "life_inv_cement": {(localize "STR_Item_CementBag")};
 	case "life_inv_goldbar": {(localize "STR_Item_GoldBar")};
+	case "life_inv_goldbarp": {"GoldBar Ingot"};
+	case "life_inv_uranium": {"Uranium"};
+	case "life_inv_euranium": {"Enriched Uranium"};
 	case "life_inv_blastingcharge": {(localize "STR_Item_BCharge")};
 	case "life_inv_boltcutter": {(localize "STR_Item_BCutter")};
 	case "life_inv_defusekit": {(localize "STR_Item_DefuseKit")};
 	case "life_inv_storagesmall": {(localize "STR_Item_StorageBS")};
 	case "life_inv_storagebig": {(localize "STR_Item_StorageBL")};
+	case "life_inv_mash": {"Grain Mash Mixture"};
+	case "life_inv_yeast": {"Yeast"};
+	case "life_inv_rye": {"Rye"};
+	case "life_inv_hops": {"Hops"};
+	case "life_inv_whiskey": {"Distilled Whiskey"};
+	case "life_inv_beerp": {"Fermented Beer"};
+	case "life_inv_bottles": {"Glass Bottles"};
+	case "life_inv_cornmeal": {"Cornmeal Grains"};
+	case "life_inv_bottledwhiskey": {"Bottled Whiskey"};
+	case "life_inv_bottledbeer": {"Bottled Beer"};
+	case "life_inv_bottledshine": {"Bottled Moonshine"};
+	case "life_inv_moonshine": {"Distilled Moonshine"};
+	case "life_inv_kidney": {"Black Market Kidney"}; 
+	case "life_inv_ziptie": {"Ziptie"};
+	case "life_inv_hazmat_gloves": {"HazMat Gloves"};
+	//Fast Food
+	case "life_inv_fries": {"Deep-fried Chips"};
+	case "life_inv_redburger": {"Bloody Red Burger"};
+	case "life_inv_pizza": {"Pizza"};
+	case "life_inv_nuggets": {"Chicken Nuggets"};
+	case "life_inv_fishchips": {"Fish & Chips"}; 
+	case "life_inv_calzone": {"Calzone"};
+	case "life_inv_noodles": {"Chinese Noodles"};
+	case "life_inv_cake": {"Cake"};
+	case "life_inv_worksburger": {"Whopa Burga"};
+	case "life_inv_cola": {"Ozzy-Cola"};
+	case "life_inv_pipsi": {"Pipsi"};
+	case "life_inv_franta": {"Franta"};
+	case "life_inv_zolo": {"Zolo"};
+	case "life_inv_zift": {"Zift"};
+	
 	
 	//License Block
 	case "license_civ_driver": {(localize "STR_License_Driver")};
@@ -85,4 +119,9 @@ switch (_var) do
 	case "license_civ_cement": {(localize "STR_License_Cement")};
 	case "license_med_air": {(localize "STR_License_Pilot")};
 	case "license_civ_home": {(localize "STR_License_Home")};
+	case "license_civ_stiller": {"Distillers License"};
+	case "license_civ_liquor": {"Liquor License"};
+	case "license_civ_bottler": {"Bottling License"};
+	case "license_civ_uranium": {"Uranium Enriching Training"};
+	case "license_civ_goldbar": {"Goldbar Processing"};
 };

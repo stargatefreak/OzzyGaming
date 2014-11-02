@@ -106,6 +106,10 @@ switch (_code) do
 		{
 			[] call life_fnc_restrainAction;
 		};
+		if(_shift && playerSide == civilian && !isNull cursorTarget && cursorTarget isKindOf "Man" && (isPlayer cursorTarget) && alive cursorTarget && cursorTarget distance player < 3.5 && !(cursorTarget getVariable "Escorting") && (!(cursorTarget getVariable "restrained") OR !(cursorTarget getVariable "restrainedCiv")) && speed cursorTarget < 1) then
+		{
+			[] call life_fnc_restrainActionCiv;
+		};
 	};
 	
 	//Knock out, this is experimental and yeah...
@@ -150,7 +154,7 @@ switch (_code) do
 	{
 		//If cop run checks for turning lights on.
 		if(_shift && playerSide in [west,independent]) then {
-			if(vehicle player != player && (typeOf vehicle player) in ["C_Offroad_01_F","B_MRAP_01_F","C_SUV_01_F"]) then {
+			if(vehicle player != player && (typeOf vehicle player) in ["C_Offroad_01_F","B_MRAP_01_F","C_SUV_01_F","C_Hatchback_01_sport_F"]) then {
 				if(!isNil {vehicle player getVariable "lights"}) then {
 					if(playerSide == west) then {
 						[vehicle player] call life_fnc_sirenLights;
@@ -185,6 +189,7 @@ switch (_code) do
 				life_siren_active = false;
 			};
 			_veh = vehicle player;
+			if (_veh isKindOf "Air") exitWith{ hint "Helicopters do not have sirens." };
 			if(isNil {_veh getVariable "siren"}) then {_veh setVariable["siren",false,true];};
 			if((_veh getVariable "siren")) then
 			{
@@ -198,8 +203,8 @@ switch (_code) do
 				if(playerSide == west) then {
 					[[_veh],"life_fnc_copSiren",nil,true] spawn life_fnc_MP;
 				} else {
-					//I do not have a custom sound for this and I really don't want to go digging for one, when you have a sound uncomment this and change medicSiren.sqf in the medical folder.
-					//[[_veh],"life_fnc_medicSiren",nil,true] spawn life_fnc_MP;
+					/* I do not have a custom sound for this and I really don't want to go digging for one, when you have a sound uncomment this and change medicSiren.sqf in the medical folder.
+					[[_veh],"life_fnc_medicSiren",nil,true] spawn life_fnc_MP; */
 				};
 			};
 		};
@@ -239,6 +244,7 @@ switch (_code) do
 							[[_veh,0],"life_fnc_lockVehicle",_veh,false] spawn life_fnc_MP;
 						};
 						systemChat localize "STR_MISC_VehUnlock";
+						player say3D "unlock";
 					} else {
 						if(local _veh) then {
 							_veh lock 2;
@@ -246,9 +252,17 @@ switch (_code) do
 							[[_veh,2],"life_fnc_lockVehicle",_veh,false] spawn life_fnc_MP;
 						};	
 						systemChat localize "STR_MISC_VehLock";
+						player say3D "car_lock";
 					};
 				};
 			};
+		};
+	};
+	// O  police gate opener
+	case 24:
+	{
+		if (!_shift && !_alt && !_ctrlKey && (playerSide == west) && (vehicle player != player)) then {
+			[] call life_fnc_copOpener;
 		};
 	};
 };

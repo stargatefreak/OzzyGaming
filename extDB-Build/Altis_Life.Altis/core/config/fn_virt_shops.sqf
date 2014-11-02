@@ -10,11 +10,11 @@ _shop = _this select 0;
 
 switch (_shop) do
 {
-	case "market": {["Altis Market",["water","rabbit","apple","redgull","tbacon","lockpick","pickaxe","fuelF","peach","boltcutter","storagesmall","storagebig"]]};
-	case "rebel": {["Rebel Market",["water","rabbit","apple","redgull","tbacon","lockpick","pickaxe","fuelF","peach","boltcutter","blastingcharge"]]};
-	case "gang": {["Gang Market", ["water","rabbit","apple","redgull","tbacon","lockpick","pickaxe","fuelF","peach","blastingcharge","boltcutter"]]};
+	case "market": {["Marco's Market",["water","rabbit","apple","redgull","tbacon","lockpick","pickaxe","fuelF","peach","hazmatg","storagesmall","storagebig","bottles"]]};
+	case "rebel": {["Rebel Market",["water","rabbit","apple","redgull","tbacon","lockpick","pickaxe","fuelF","peach","hazmatg","ziptie","boltcutter","blastingcharge"]]};
+	case "gang": {["Gang Market", ["water","rabbit","apple","redgull","tbacon","lockpick","pickaxe","fuelF","peach","hazmatg","ziptie","blastingcharge","boltcutter"]]};
 	case "wongs": {["Wong's Food Cart",["turtlesoup","turtle"]]};
-	case "coffee": {["Stratis Coffee Club",["coffee","donuts"]]};
+	case "coffee": {["DeadShot's Coffee Club",["coffee","donuts"]]};
 	case "heroin": {["Drug Dealer",["cocainep","heroinp","marijuana"]]};
 	case "oil": {["Oil Trader",["oilp","pickaxe","fuelF"]]};
 	case "fishmarket": {["Altis Fish Market",["salema","ornate","mackerel","mullet","tuna","catshark"]]};
@@ -25,4 +25,10 @@ switch (_shop) do
 	case "cop": {["Cop Item Shop",["donuts","coffee","spikeStrip","water","rabbit","apple","redgull","fuelF","defusekit"]]};
 	case "cement": {["Cement Dealer",["cement"]]};
 	case "gold": {["Gold Buyer",["goldbar"]]};
+	case "bar": {["The Lounge",["bottledbeer","bottledwhiskey","cornmeal","bottles"]]};
+	case "speakeasy": {["Speakeasy's",["bottledwhiskey","bottledshine","bottledbeer","moonshine"]]};
+	case "organ": {["Organ Dealer",["kidney"]]}; 
+	case "uranium": {["Uranium Trader",["euranium","uranium"]]};
+	case "Prospector": {["Gold Dealer",["goldbarp"]]};
+	case "burger": {["Red Burger",["fries","redburger","pizza","nuggets","fishchips","calzone","noodles","cake","worksburger","cola","pipsi","franta","zolo","zift"]]}; 
 };

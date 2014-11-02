@@ -1,6 +1,7 @@
 author = "Tonic";
-onLoadName = "Altis Life RPG v3.1.4.8";
-onLoadMission = "A RPG game mode developed by Tonic";
+onLoadName = "OzzyGaming 3.0";
+onLoadMission = "A RPG game mode developed by Tonic - edited by Aaron";
+loadScreen = "textures\loadScreen.jpg"; 
 joinUnassigned = 1;
 respawn = BASE;
 respawndelay = 5;
@@ -39,31 +40,129 @@ class CfgFunctions
 
 class CfgSounds
 {
-	sounds[] = {};
+  sounds[] = {};
 	class SirenLong
 	{
 		name = "SirenLong";
 		sound[] = {"\sounds\Siren_Long.ogg", 1.0, 1};
 		titles[] = {};
 	};
-	
-	class tazersound
+	class getOut
 	{
+		name = "getOut";
+		sound[] = {"\sounds\getOut.ogg", 1.0, 1};
+		titles[] = {};
+	};
+	class Intro
+	{
+		name = "Intro";
+		sound[] = {"\sounds\Intro.ogg", 0.8, 1};
+		titles[] = {};
+    };
+	class MedicSiren
+	{
+		name = "MedicSiren";
+		sound[] = {"\sounds\medicsiren.ogg", 1.0, 1};
+		titles[] = {};
+    };
+	class tazersound
+    {
 		name = "Tazersound";
 		sound[] = {"\sounds\tazer.ogg", 0.25, 1};
 		titles[] = {};
+    };
+	class car_lock
+    {
+		name = "car_lock";
+		sound[] = {"\sounds\car_lock.ogg", 1.0, 1};
+		titles[] = {};
+    };
+	class unlock
+    {
+		name = "unlock";
+		sound[] = {"\sounds\unlock.ogg", 1.0, 1};
+		titles[] = {};
+    };
+	class caralarm
+    {
+		name = "caralarm";
+		sound[] = {"\sounds\caralarm.ogg", 1, 1};
+		titles[] = {};
+    };
+	class Cuff 
+    {
+		name = "cuff";
+		sound[] = {"\sounds\cuff.ogg", 0.95, 0.95};
+		titles[] = {};
 	};
-	
+	class Ziptie 
+    {
+		name = "ziptie";
+		sound[] = {"\sounds\ziptie.ogg", 0.95, 0.95};
+		titles[] = {};
+	};
+	class bag 
+	{
+		name = "bag";
+		sound[] = {"\sounds\bag.ogg", 0.95, 0.95};
+		titles[] = {};
+	};
+	class gold
+    {
+		name = "gold";
+		sound[] = {"\sounds\gold.ogg", 1.0, 1};
+		titles[] = {};
+	};
+	class uranium
+    {
+		name = "uranium";
+		sound[] = {"\sounds\uranium.ogg", 1.0, 1};
+		titles[] = {};
+	};
+	class empwarn
+	{
+		name = "empwarn";
+		sound[] = {"\sounds\empwarn.ogg", 1.0, 1};
+		titles[] = {};
+	};
+	class empacsound
+	{
+		name = "empacsound";
+		sound[] = {"sounds\empac.ogg", db-5, 1};
+		titles[] = {};
+	};
 	class flashbang
 	{
 		name = "flashbang";
 		sound[] = {"\sounds\flashbang.ogg", 1.0, 1};
 		titles[] = {};
 	};
+	class PhotoSound
+	{
+		name = "PhotoSound";
+		sound[] = {"\sounds\camera_shot.ogg",0.5011872,1.0};
+		titles[] = {};
+	};
+    class spraycan
+	{
+		name = "spraycan";	
+		sound[] = {"\sounds\spraycan.ogg", db-20, 1};
+		titles[] = {};
+	};
 };
 
 class CfgDebriefing
 {
+	class NotAdmin
+	{
+		title = "Mission Failed";
+		subtitle = "You are not a high enough admin";
+		description = "You need to have an Admin level 3 clearance or higher to join this slot, Contact Aaron if you believe this is an error.";
+		pictureBackground = "";
+		picture = "";
+		pictureColor[] = {0,0.3,0.6,1};
+	};
+	
 	class NotWhitelisted
 	{
 		title = "Mission Failed";
@@ -144,7 +243,7 @@ class CfgNotifications
 	
 	class PoliceDispatch
 	{
-		title = "911 Dispatch Center";
+		title = "000 Dispatch Center";
 		iconPicture = "icons\messagepolice.paa";
 		description = "%1";
 		duration = 10;
@@ -168,4 +267,4 @@ class CfgNotifications
 		duration = 10;
 		priority = 5;
 	};
-};
+}
