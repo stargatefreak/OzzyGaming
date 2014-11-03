@@ -14,6 +14,7 @@ life_versionInfo = "Altis Life RPG v3.1.4.8";
 [] execVM "scripts\fn_addATMS.sqf";
 [] execVM "scripts\fn_disableSnakes.sqf";
 [] execVM "scripts\fn_noSideVoice.sqf";
+[] execVM "scripts\fn_statusBar.sqf";
 [] execVM "scripts\zlt_fastrope.sqf";
 [] execVM "KRON_Strings.sqf";
 
