@@ -520,4 +520,3 @@ typeHouses =
 	"Land_i_Stone_HouseSmall_V1_F",
 	"Land_i_Stone_HouseSmall_V3_F"
 ];
-__CONST__(typeHouses,typeHouses);

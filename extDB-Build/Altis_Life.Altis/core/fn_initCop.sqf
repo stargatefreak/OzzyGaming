@@ -16,7 +16,7 @@ if(life_blacklisted) exitWith
 	sleep 30;
 };
 if((str(player) in ["cop_20","cop_20"])) then {
-	if(!(__GETC__(life_adminlevel) >= 3)) then {
+	if(__GETC__(life_adminlevel) < 3) then {
 		[[format["%1 has attempted to join as Zeus: %2, please report him.",name player,getPlayerUID player],player],"life_fnc_broadcast",true,false] spawn BIS_fnc_MP;
 		["NotAdmin",false,true] call BIS_fnc_endMission;
 		sleep 35;

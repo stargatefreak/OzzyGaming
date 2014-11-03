@@ -53,9 +53,8 @@ switch (_state) do
 	{
 		if(license_civ_driver OR license_civ_air OR license_civ_truck OR license_civ_boat) then {
 			license_civ_driver = false;
-			license_civ_air = false;
 			license_civ_truck = false;
-			license_civ_boat = false;
+			license_civ_rebel = true;
 			systemChat localize "STR_Civ_LicenseRemove_1a";
 		};
 	};
