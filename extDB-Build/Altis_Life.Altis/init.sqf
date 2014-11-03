@@ -16,6 +16,9 @@ life_versionInfo = "Altis Life RPG v3.1.4.8";
 [] execVM "scripts\fn_noSideVoice.sqf";
 [] execVM "scripts\fn_statusBar.sqf";
 [] execVM "scripts\zlt_fastrope.sqf";
+[] execVM "scripts\h_drop.sqf";
+[] execVM "scripts\h_lift.sqf";
+[] execVM "scripts\h_lift_init.sqf";
 [] execVM "KRON_Strings.sqf";
 
 _igiload = execVM "core\IgiLoad\IgiLoadInit.sqf";
