@@ -570,6 +570,7 @@ switch(_shop) do
 			{
 				["Millers's Jihadi Shop",
 					[
+					        ["hgun_Pistol_Signal_F","Flare Gun",3000],
 						["arifle_TRG21_F",nil,35000],
 						["arifle_Katiba_F",nil,30000],
 						["srifle_DMR_01_F",nil,50000],
@@ -629,6 +630,7 @@ switch(_shop) do
 						["9Rnd_45ACP_Mag",nil,45],
 						["6Rnd_45ACP_Cylinder",nil,50],
 						["30Rnd_9x21_Mag",nil,75]
+						["hgun_Pistol_Signal_F","Flare Gun",2700],
 					]
 				];
 			};
@@ -733,13 +735,13 @@ switch(_shop) do
 					    ["LMG_Mk200_F",nil,500000],
 					    ["200Rnd_65x39_cased_Box_Tracer",nil,6000],
 					    ["200Rnd_65x39_cased_Box",nil,10000],
-						["srifle_DMR_01_F",nil,150000],
+						["srifle_DMR_01_F",nil,130000],
 						["10Rnd_762x51_Mag",nil,1500],
 						["arifle_TRG21_F",nil,20000],
 						["30Rnd_556x45_Stanag_Tracer_Yellow",nil,50],
 						["arifle_Katiba_F",nil,95000],
 						["30Rnd_65x39_caseless_green",nil,50],
-						["srifle_EBR_F",nil,200000],
+						["srifle_EBR_F",nil,10000],
 						["20Rnd_762x51_Mag",nil,1000],
 						["hgun_Rook40_F",nil,2000],
 						["16Rnd_9x21_Mag",nil,25],
