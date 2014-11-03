@@ -58,3 +58,5 @@ switch (_boxType) do {
 		clearBackpackCargoGlobal _container;
 	};
 };
+_rscLayer = "osefStatusBar" call BIS_fnc_rscLayer;
+_rscLayer cutRsc["osefStatusBar","PLAIN"];

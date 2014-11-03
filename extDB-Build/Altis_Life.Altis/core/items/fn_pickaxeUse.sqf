@@ -40,3 +40,5 @@ if(([true,_mine,_diff] call life_fnc_handleInv)) then
 };
 
 life_action_inUse = false;
+_rscLayer = "osefStatusBar" call BIS_fnc_rscLayer;
+_rscLayer cutRsc["osefStatusBar","PLAIN"];

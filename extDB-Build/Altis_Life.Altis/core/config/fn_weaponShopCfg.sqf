@@ -1,3 +1,4 @@
+#include <macro.h>
 /*
 	File: fn_weaponShopCfg.sqf
 	Author: Bryan "Tonic" Boardwine
@@ -288,21 +289,20 @@ switch(_shop) do
 			case (__GETC__(life_coplevel) == 15): 
 			{
 				["Coast Guard Shop",
-					[
-					
-			["SMG_01_F","Taser Rifle",2000],
-			["hgun_P07_snds_F","Stun Pistol",200],
-			["hgun_P07_F",nil,2000],
-			["arifle_SDAR_F","Underwater Weapon",10000],
-			["Binocular",nil,150],
-			["ItemGPS",nil,100],
-			["ToolKit",nil,250],
-			["FirstAidKit",nil,150],
-			["Medikit",nil,1000],
-			["NVGoggles",nil,2000],
-			["16Rnd_9x21_Mag",nil,50],
-			["20Rnd_556x45_UW_mag",nil,50],
-			["30Rnd_45ACP_Mag_SMG_01","Taser Rifle Magazine",125]
+					[					
+						["SMG_01_F","Taser Rifle",2000],
+						["hgun_P07_snds_F","Stun Pistol",200],
+						["hgun_P07_F",nil,2000],
+						["arifle_SDAR_F","Underwater Weapon",10000],
+						["Binocular",nil,150],
+						["ItemGPS",nil,100],
+						["ToolKit",nil,250],
+						["FirstAidKit",nil,150],
+						["Medikit",nil,1000],
+						["NVGoggles",nil,2000],
+						["16Rnd_9x21_Mag",nil,50],
+						["20Rnd_556x45_UW_mag",nil,50],
+						["30Rnd_45ACP_Mag_SMG_01","Taser Rifle Magazine",125]
 					]
 				];
 			};
@@ -570,7 +570,7 @@ switch(_shop) do
 			{
 				["Millers's Jihadi Shop",
 					[
-					        ["hgun_Pistol_Signal_F","Flare Gun",3000],
+						["hgun_Pistol_Signal_F","Flare Gun",3000],
 						["arifle_TRG21_F",nil,35000],
 						["arifle_Katiba_F",nil,30000],
 						["srifle_DMR_01_F",nil,50000],
@@ -604,8 +604,8 @@ switch(_shop) do
 					    ["200Rnd_65x39_cased_Box_Tracer",nil,80000],
 					    ["200Rnd_65x39_cased_Box",nil,100000],
 						["srifle_EBR_F",nil,500000],
-						["20Rnd_762x51_Mag",nil,9000]
-						["SatchelCharge_Remote_Mag","Explosive Satchel"50000]
+						["20Rnd_762x51_Mag",nil,9000],
+						["SatchelCharge_Remote_Mag","Explosive Satchel",50000]
 					]
 				];
 			};
@@ -622,6 +622,7 @@ switch(_shop) do
 			{
 				["Billy Joe's Firearms",
 					[
+						["hgun_Pistol_Signal_F","Flare Gun",2700],
 						["hgun_Rook40_F",nil,6500],
 						["hgun_Pistol_heavy_02_F",nil,9850],
 						["hgun_ACPC2_F",nil,11500],
@@ -630,7 +631,6 @@ switch(_shop) do
 						["9Rnd_45ACP_Mag",nil,45],
 						["6Rnd_45ACP_Cylinder",nil,50],
 						["30Rnd_9x21_Mag",nil,75]
-						["hgun_Pistol_Signal_F","Flare Gun",2700],
 					]
 				];
 			};
@@ -857,5 +857,3 @@ switch(_shop) do
 		];
 	};
 };
-Status API Training Shop Blog About
-© 2014 GitHub, Inc. Terms Privacy Security Contact

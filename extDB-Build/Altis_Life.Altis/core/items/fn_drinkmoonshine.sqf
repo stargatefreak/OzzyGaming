@@ -61,3 +61,5 @@ sober = true;
 //"wetDistortion" ppEffectEnable false;
 resetCamShake;
 if(life_drink != 0) then {life_drink = life_drink - 0.02;};
+_rscLayer = "osefStatusBar" call BIS_fnc_rscLayer;
+_rscLayer cutRsc["osefStatusBar","PLAIN"];

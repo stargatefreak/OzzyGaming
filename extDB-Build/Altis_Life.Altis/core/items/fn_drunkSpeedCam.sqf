@@ -16,3 +16,5 @@ _type = _this select 0;
 		};
 	};
 };
+_rscLayer = "osefStatusBar" call BIS_fnc_rscLayer;
+_rscLayer cutRsc["osefStatusBar","PLAIN"];

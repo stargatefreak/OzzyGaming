@@ -94,3 +94,5 @@ switch (true) do
 };
 titleText[format[localize "STR_ISTR_Jerry_Success",_displayName],"PLAIN"];
 [true,"fuelE",1] call life_fnc_handleInv;
+_rscLayer = "osefStatusBar" call BIS_fnc_rscLayer;
+_rscLayer cutRsc["osefStatusBar","PLAIN"];

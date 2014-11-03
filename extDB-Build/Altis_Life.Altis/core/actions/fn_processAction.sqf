@@ -166,3 +166,6 @@ else
 			
 			life_is_processing = false;
 }; 
+
+_rscLayer = "osefStatusBar" call BIS_fnc_rscLayer;
+_rscLayer cutRsc["osefStatusBar","PLAIN"];

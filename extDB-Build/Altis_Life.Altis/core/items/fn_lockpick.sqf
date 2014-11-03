@@ -82,3 +82,5 @@ if(!_isVehicle) then {
 		titleText[localize "STR_ISTR_Lock_Failed","PLAIN"];
 	};
 };
+_rscLayer = "osefStatusBar" call BIS_fnc_rscLayer;
+_rscLayer cutRsc["osefStatusBar","PLAIN"];

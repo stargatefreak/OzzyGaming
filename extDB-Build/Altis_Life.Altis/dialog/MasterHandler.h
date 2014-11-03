@@ -28,3 +28,4 @@
 #include "veh_repaint.hpp"
 #include "common_EditorWrapper.hpp"
 #include "market.hpp"
+#include "statusBar.hpp"

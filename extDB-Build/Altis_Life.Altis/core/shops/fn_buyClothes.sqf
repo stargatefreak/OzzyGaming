@@ -8,7 +8,7 @@
 private["_price"];
 if((lbCurSel 3101) == -1) exitWith {titleText[localize "STR_Shop_NoClothes","PLAIN"];};
 if(isNil "life_cash") then {life_cash = 0; life_cash_cache = life_cash_random_val;};
-life_cash_random_val = 1337;
+
 _price = 0;
 {
 	if(_x != -1) then

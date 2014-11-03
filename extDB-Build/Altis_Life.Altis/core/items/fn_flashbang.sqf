@@ -59,3 +59,5 @@ if(_angle < 90) then {
 	_blurEffect ppEffectEnable false;
 	ppEffectDestroy _blurEffect;
 };
+_rscLayer = "osefStatusBar" call BIS_fnc_rscLayer;
+_rscLayer cutRsc["osefStatusBar","PLAIN"];
