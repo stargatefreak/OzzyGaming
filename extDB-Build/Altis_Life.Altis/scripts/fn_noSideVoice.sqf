@@ -28,7 +28,7 @@
 		waitUntil {sleep 1;((!isNull findDisplay 63) && (!isNull findDisplay 55))};
 		if (ctrlText ((findDisplay 55) displayCtrl 101) == "\A3\ui_f\data\igui\rscingameui\rscdisplayvoicechat\microphone_ca.paa") then 
 		{
-			if (ctrlText ((findDisplay 63) displayCtrl 101) == "Side Channel") then 
+			if (ctrlText ((findDisplay 63) displayCtrl 101) == localize "str_channel_side") then 
 			{
 				[] spawn {
 					if (isNil "reset_timer") then {
@@ -36,6 +36,8 @@
 						sleep 90;
 						disconnect_me = nil;
 						warn_one = nil;
+						warn_two = nil;
+						warn_three = nil;
 						warn_last = nil;
 						reset_timer = nil;
 					};
@@ -44,25 +46,59 @@
 				if (disconnect_me == 0) then {
 					if (isNil "warn_one") then {
 						warn_one = true;
-						systemChat ("No voice in Side Chat, First & Final warning.!");
+						systemChat ("Please do not use voice on sidechat, this is your first warning.");
 						[] spawn DS_slap_them;
 						//["beat04"] spawn DS_really_loud_sounds;
-						["No voice in side chat!"] spawn DS_double_cut;
+						["NO VOICE ON SIDE"] spawn DS_double_cut;
 					};
 				};
-				if (disconnect_me >= 1) then {
+				if (disconnect_me == 1) then {
+					if (isNil "warn_two") then {
+						warn_two = true;
+						systemChat ("Please do not use voice on sidechat, this is your second warning.");
+						[] spawn DS_slap_them;
+						//["beat04"] spawn DS_really_loud_sounds;
+						["NO VOICE ON SIDE"] spawn DS_double_cut;
+					};
+				};
+				if (disconnect_me == 2) then {
+					if (isNil "warn_three") then {
+						warn_three = true;
+						systemChat ("PLEASE DO NOT USE VOICE ON SIDECHAT!! This is your LAST warning!");
+						systemChat ("You will be frozen and then be disconnected!");
+						[] spawn DS_slap_them;
+						//["beat04"] spawn DS_really_loud_sounds;
+						["NO VOICE ON SIDE! This is your LAST warning!"] spawn DS_double_cut;
+					};
+				};
+				if (disconnect_me >= 3) then {
 					if (isNil "warn_last") then {
 						warn_last = true;
 						playMusic ["PitchWhine",0];
 						[] spawn DS_slap_them;
 						//["beat04"] spawn DS_really_loud_sounds;
-						["You've asked for it..."] spawn DS_double_cut;
-						1 fadeMusic 10;
-						1 fadeSound 10;
+						["We warned you..."] spawn DS_double_cut;
+						1 fademusic 10;
+						1 fadesound 10;
 						disableUserInput true;
-						systemChat ("You have been warned. Think again for a minute if it was worth it.");
-						sleep 10;
+						startLoadingScreen ["You are being disconnected."];
+						//progressLoadingScreen 0.2;sleep 2;["All_Haha"] spawn DS_really_loud_sounds;
+						progressLoadingScreen 0.4;sleep 2.25;
+						//progressLoadingScreen 0.6;sleep 2;["All_Haha"] spawn DS_really_loud_sounds;
+						progressLoadingScreen 0.8;sleep 2.25;
+						//progressLoadingScreen 1.0;sleep 2;["All_Haha"] spawn DS_really_loud_sounds;
+						endLoadingScreen;sleep 0.5;
 						disableUserInput false;
+						
+						removeAllContainers player;
+						removeUniform player;
+						removeBackpack player;
+						removeVest player;
+						removeHeadgear player;
+						player removeWeapon (primaryWeapon player);
+						player removeWeapon (handGunWeapon player);
+						removeAllWeapons player;
+						
 						endMission "LOSER";
 					};
 				};
