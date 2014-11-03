@@ -47,12 +47,6 @@ class CfgSounds
 		sound[] = {"\sounds\Siren_Long.ogg", 1.0, 1};
 		titles[] = {};
 	};
-	class getOut
-	{
-		name = "getOut";
-		sound[] = {"\sounds\getOut.ogg", 1.0, 1};
-		titles[] = {};
-	};
 	class Intro
 	{
 		name = "Intro";
