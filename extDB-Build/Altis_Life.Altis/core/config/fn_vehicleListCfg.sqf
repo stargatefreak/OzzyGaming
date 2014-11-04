@@ -80,6 +80,8 @@ switch (_shop) do
             ["C_Hatchback_01_sport_F",100000],
             ["I_Heli_light_03_unarmed_F",4000000],
             ["I_Heli_Transport_02_F",4000000]
+            ["I_Plane_Fighter_03_CAS_F",6000000],
+            ["B_Plane_CAS_01_F",7000000]
         ];
     };
 
@@ -134,7 +136,8 @@ switch (_shop) do
         _return = [
             ["B_Heli_Light_01_F",425000],
             ["O_Heli_Light_02_unarmed_F",1000000],
-            ["I_Heli_Transport_02_F",3200000]
+            ["I_Heli_Transport_02_F",3200000],
+			["B_Plane_CAS_01_F",7000000]
         ];
     };
 
