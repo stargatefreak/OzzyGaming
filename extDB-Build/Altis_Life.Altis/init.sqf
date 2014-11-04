@@ -38,5 +38,8 @@ if(isDedicated && isNil("life_market_prices")) then
 	diag_log "Server FSM executed";
 };
 
+// mod cruise control
+call mod_cruiseControl;
+
 StartProgress = true;
 enableRadio false
