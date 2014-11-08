@@ -32,8 +32,7 @@ switch (_filter) do
 		["U_C_WorkerCoveralls","Mechanic Coveralls",2500],
 		["U_OrestesBody","Surfing On Land",1100],
 		["U_NikosAgedBody","Casual Wears",5000],
-		["U_I_G_Story_Protagonist_F","Workers Camos",5000],
-		["U_NikosAgedBody","Casual Wears",5000]
+		["U_I_G_Story_Protagonist_F","Workers Camos",5000]
 		];
 	};
 	
@@ -42,7 +41,6 @@ switch (_filter) do
 	{
 		[
 			["H_Bandanna_camo","Camo Bandanna",120],
-			["H_Bandanna_surfer","Surfer Bandanna",130],
 			["H_Bandanna_gry","Grey Bandanna",150],
 			["H_Bandanna_cbr",nil,165],
 			["H_Bandanna_surfer",nil,135],
