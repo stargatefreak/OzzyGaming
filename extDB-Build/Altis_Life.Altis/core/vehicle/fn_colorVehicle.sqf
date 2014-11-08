@@ -5,7 +5,7 @@
 	Description:
 	Reskins the vehicle
 */
-private["_vehicle","_index","_texture","_texture2","_texture3"];
+private["_vehicle","_index","_texture","_texture2","_texture3","_texture4","_texture5"];
 _vehicle = [_this,0,Objnull,[Objnull]] call BIS_fnc_param;
 _index = [_this,1,-1,[0]] call BIS_fnc_param;
 if(isNull _vehicle OR !alive _vehicle OR _index == -1) exitWith {};
@@ -29,6 +29,8 @@ if(isNil "_texture") exitWith {};
 if(count _texture == 0) exitWith {};
 if(count (_texture select _index) > 2) then {_texture2 = (_texture select _index) select 2;};
 if(count (_texture select _index) > 3) then {_texture3 = (_texture select _index) select 3;};
+if(count (_texture select _index) > 4) then {_texture4 = (_texture select _index) select 4;};
+if(count (_texture select _index) > 5) then {_texture5 = (_texture select _index) select 5;};
 _texture = _texture select _index;
 if(typeName _texture == "ARRAY") then { _texture = _texture select 0;};
 
@@ -48,6 +50,14 @@ if(!isNil "_texture2") then
 if(!isNil "_texture3") then
 {
 	_vehicle setObjectTexture[2,_texture3];
+};
+if(!isNil "_texture4") then
+{
+	_vehicle setObjectTexture[3,_texture4];
+};
+if(!isNil "_texture5") then
+{
+	_vehicle setObjectTexture[4,_texture5];
 };
 
 if(typeOf _vehicle == "C_Offroad_01_F") then

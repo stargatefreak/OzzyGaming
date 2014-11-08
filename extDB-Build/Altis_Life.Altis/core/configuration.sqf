@@ -454,7 +454,10 @@ life_garage_prices =
 	["I_Heli_light_03_unarmed_F",100000],
 	["I_Heli_Transport_02_F",100000],
 	["B_Heli_Light_01_F",10625],
-	["O_Heli_Light_02_unarmed_F",25000]
+	["O_Heli_Light_02_unarmed_F",25000],
+	["B_Heli_Transport_03_unarmed_F",91750],
+	["O_Heli_Transport_04_F",61440],
+	["O_Heli_Transport_04_covered_F",62259]
 ];
 
 __CONST__(life_garage_prices,life_garage_prices);
@@ -498,7 +501,10 @@ life_garage_sell =
 	["I_Heli_light_03_unarmed_F",1200000],
 	["I_Heli_Transport_02_F",1200000],
 	["B_Heli_Light_01_F",127500],
-	["O_Heli_Light_02_unarmed_F",300000]
+	["O_Heli_Light_02_unarmed_F",300000],
+	["B_Heli_Transport_03_unarmed_F",917504],
+	["O_Heli_Transport_04_F",614400],
+	["O_Heli_Transport_04_covered_F",622592]
 ];
 __CONST__(life_garage_sell,life_garage_sell);
 

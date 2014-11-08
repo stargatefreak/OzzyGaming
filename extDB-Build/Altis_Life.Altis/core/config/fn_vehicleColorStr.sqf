@@ -106,6 +106,35 @@ switch (_vehicle) do
 		};
 	};
 	
+	case "B_Heli_Transport_03_unarmed_F":
+	{
+		switch (_index) do
+		{
+			case 0: {_color = "Black"};
+			case 1: {_color = "Cop"};
+		};
+	};
+	
+	case "O_Heli_Transport_04_F":
+	{
+		switch (_index) do
+		{
+			case 0: {_color = "Camo"};
+			case 1: {_color = "Grey"};
+			case 2: {_color = "Cop"};
+		};
+	};
+	
+	case "O_Heli_Transport_04_covered_F":
+	{
+		switch (_index) do
+		{
+			case 0: {_color = "Camo"};
+			case 1: {_color = "Grey"};
+			case 2: {_color = "Cop"};
+		};
+	};
+	
 	case "B_Quadbike_01_F" :
 	{
 		switch (_index) do

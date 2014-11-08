@@ -78,10 +78,11 @@ switch (_shop) do
             ["B_Truck_01_box_F",1350000],
             ["O_Heli_Light_02_unarmed_F",1000000],
             ["C_Hatchback_01_sport_F",100000],
-            ["I_Heli_light_03_unarmed_F",4000000],
-            ["I_Heli_Transport_02_F",4000000]
-            ["I_Plane_Fighter_03_CAS_F",6000000],
-            ["B_Plane_CAS_01_F",7000000]
+            ["I_Heli_light_03_unarmed_F",3000000],
+            ["I_Heli_Transport_02_F",3000000],
+			["B_Heli_Transport_03_unarmed_F",2800000],
+			["O_Heli_Transport_04_F",1500000],
+			["O_Heli_Transport_04_covered_F",1900000]
         ];
     };
 
@@ -137,7 +138,10 @@ switch (_shop) do
             ["B_Heli_Light_01_F",425000],
             ["O_Heli_Light_02_unarmed_F",1000000],
             ["I_Heli_Transport_02_F",3200000],
-			["B_Plane_CAS_01_F",7000000]
+			["B_Heli_Transport_01_F",150000],
+			["B_Heli_Transport_03_unarmed_F",2800000],
+			["O_Heli_Transport_04_F",1500000],
+			["O_Heli_Transport_04_covered_F",1900000]
         ];
     };
 
@@ -152,7 +156,10 @@ switch (_shop) do
 			{
                 _return = [
                     ["B_Heli_Light_01_F",70000],
-                    ["B_Heli_Transport_01_F",150000]
+                    ["B_Heli_Transport_01_F",150000],
+					["B_Heli_Transport_03_unarmed_F",2200000],
+					["O_Heli_Transport_04_F",1100000],
+					["O_Heli_Transport_04_covered_F",1500000]
                 ];
 			};
             default { _return = ""; };
@@ -170,7 +177,10 @@ switch (_shop) do
 			{
                 _return = [
                     ["B_Heli_Light_01_F",70000],
-                    ["B_Heli_Transport_01_F",150000]
+                    ["B_Heli_Transport_01_F",150000],
+					["B_Heli_Transport_03_unarmed_F",2200000],
+					["O_Heli_Transport_04_F",1100000],
+					["O_Heli_Transport_04_covered_F",1500000]
                 ];
 			};
             default { _return = ""; };
@@ -228,7 +238,10 @@ switch (_shop) do
                     ["C_Hatchback_01_sport_F",17500],
                     ["I_Heli_Transport_02_F",2800000],
                     ["I_Heli_light_03_unarmed_F",2400000],
-                    ["I_MRAP_03_F",2500000]
+                    ["I_MRAP_03_F",2500000],
+					["B_Heli_Transport_03_unarmed_F",2240000],
+					["O_Heli_Transport_04_F",1200000],
+					["O_Heli_Transport_04_covered_F",1520000]
                 ];
 			};
             case (__GETC__(life_donator) == 2):
@@ -244,7 +257,10 @@ switch (_shop) do
                     ["C_Hatchback_01_sport_F",15000],
                     ["I_Heli_Transport_02_F",2000000],
                     ["I_Heli_light_03_unarmed_F",2000000],
-                    ["I_MRAP_03_F",2000000]
+                    ["I_MRAP_03_F",2000000],
+                    ["B_Heli_Transport_03_unarmed_F",1792000],
+                    ["O_Heli_Transport_04_F",960000],
+                    ["O_Heli_Transport_04_covered_F",1216000]
                 ];
 			};
             case (__GETC__(life_donator) == 3):
@@ -260,7 +276,10 @@ switch (_shop) do
                     ["C_Hatchback_01_sport_F",8000],
                     ["I_Heli_Transport_02_F",1000000],
                     ["I_Heli_light_03_unarmed_F",1700000],
-                    ["I_MRAP_03_F",1000000]
+                    ["I_MRAP_03_F",1000000],
+                    ["B_Heli_Transport_03_unarmed_F",1433600],
+                    ["O_Heli_Transport_04_F",768000],
+                    ["O_Heli_Transport_04_covered_F",972800]
                 ];
 			};
             case (__GETC__(life_donator) > 3):
@@ -276,7 +295,10 @@ switch (_shop) do
                     ["C_Hatchback_01_sport_F",7000],
                     ["I_Heli_Transport_02_F",800000],
                     ["I_Heli_light_03_unarmed_F",1400000],
-                    ["I_MRAP_03_F",800000]
+                    ["I_MRAP_03_F",800000],
+                    ["B_Heli_Transport_03_unarmed_F",1146880],
+                    ["O_Heli_Transport_04_F",768000],
+                    ["O_Heli_Transport_04_covered_F",778240]
                 ];
 			};
 		};

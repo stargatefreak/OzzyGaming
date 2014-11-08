@@ -22,6 +22,38 @@ switch (_vehicle) do
 		];
 	};
 	
+	case "B_Heli_Transport_03_unarmed_F":
+	{
+		_path = "\A3\Air_F_Heli\Heli_Transport_03\Data\";
+		_ret =
+		[
+			[_path + "Heli_Transport_03_ext01_black_CO.paa","civ",_path + "Heli_Transport_03_ext02_black_CO.paa"],
+			[_path + "Heli_Transport_03_ext01_black_CO.paa","cop",_path + "Heli_Transport_03_ext02_black_CO.paa"]
+		];
+	};
+	
+	case "O_Heli_Transport_04_F":
+	{
+		_path = "\A3\Air_F_Heli\Heli_Transport_04\Data\";
+		_ret =
+		[
+			[_path + "Heli_Transport_04_base_01_co.paa","reb",_path + "Heli_Transport_04_base_02_co.paa",_path + "Heli_Transport_04_base_03_co.paa"],
+			["textures\colours\Taru1.jpg","civ","textures\colours\Taru2.jpg","textures\colours\Taru2.jpg"],
+			["textures\colours\Taru1.jpg","cop","textures\colours\Taru2.jpg","textures\colours\Taru2.jpg"]
+		];
+	};
+	
+	case "O_Heli_Transport_04_covered_F":
+	{
+		_path = "\A3\Air_F_Heli\Heli_Transport_04\Data\";
+		_ret =
+		[
+			[_path + "Heli_Transport_04_base_01_co.paa","reb",_path + "Heli_Transport_04_base_02_co.paa",_path + "Heli_Transport_04_Pod_Ext01_CO.paa",_path + "Heli_Transport_04_Pod_Ext02_CO.paa"],
+			["textures\colours\Taru1.jpg","civ","textures\colours\Taru2.jpg","textures\colours\Taru2.jpg","textures\colours\Taru2.jpg"],
+			["textures\colours\Taru1.jpg","cop","textures\colours\Taru2.jpg","textures\colours\Taru2.jpg","textures\colours\Taru2.jpg"]
+		];
+	};
+	
 	case "C_Hatchback_01_sport_F":
 	{
 		_path = "\a3\soft_f_gamma\Hatchback_01\data\";
