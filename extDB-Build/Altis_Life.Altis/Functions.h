@@ -320,6 +320,7 @@ class Life_Client_Core
 		class copUniform {};
 		class radarCam {};
 		class copOpener {};
+		class dropRebel {};
 	};
 	
 	class Gangs

@@ -53,7 +53,7 @@ switch(_shop) do
                         ["ToolKit",nil,250],
                         //["MineDetector",nil,500],
                         // NON LETHALS
-                        ["hgun_P07_snds_F","Stun Pistol",300],
+                        ["hgun_P07_snds_F","Stun Pistol",1300],
                         ["SMG_01_F","Taser Rifle",2200],
                                 ["30Rnd_45ACP_Mag_SMG_01","Taser Rifle Magazine",300],
                         // SIGNALS
@@ -62,7 +62,7 @@ switch(_shop) do
                         //        ["6Rnd_RedSignal_F","6Rnd Signal Cylinder (Red)",300],
                         // LETHALS
                                 // Pistols
-                        ["hgun_P07_F",nil,400],
+                        ["hgun_P07_F",nil,3400],
                              ["16Rnd_9x21_Mag",nil,150],
                                 // Assault Rifles
                         ["SMG_02_F",nil,21000],
@@ -104,7 +104,7 @@ switch(_shop) do
                         //["muzzle_snds_B",nil,1400],
                         ["optic_ACO_grn",nil,900],
                         ["optic_ACO_grn_smg",nil,600],
-                        ["optic_MRCO",nil,600],
+                        ["optic_MRCO",nil,15000],
                         ["optic_MRD",nil,600],
                         //["optic_NVS",nil,2500],
                         //["optic_SOS",nil,4000],
@@ -135,7 +135,7 @@ switch(_shop) do
                         ["ToolKit",nil,250],
                         //["MineDetector",nil,500],
                         // NON LETHALS
-                        ["hgun_P07_snds_F","Stun Pistol",250],
+                        ["hgun_P07_snds_F","Stun Pistol",1250],
                         ["SMG_01_F","Taser Rifle",2100],
                                 ["30Rnd_45ACP_Mag_SMG_01","Taser Rifle Magazine",200],
                         // SIGNALS
@@ -144,7 +144,7 @@ switch(_shop) do
                                 ["6Rnd_RedSignal_F","6Rnd Signal Cylinder (Red)",200],
                         // LETHALS
                                 // Pistols
-                        ["hgun_P07_F",nil,300],
+                        ["hgun_P07_F",nil,3000],
                              ["16Rnd_9x21_Mag",nil,100],
                                 // Assault Rifles
                         ["SMG_02_F",nil,20000],
@@ -186,7 +186,7 @@ switch(_shop) do
                         ["muzzle_snds_B",nil,1300],
                         ["optic_ACO_grn",nil,800],
                         ["optic_ACO_grn_smg",nil,500],
-                        ["optic_MRCO",nil,500],
+                        ["optic_MRCO",nil,14000],
                         ["optic_MRD",nil,500],
                         ["optic_NVS",nil,2400],
                         ["optic_SOS",nil,4000],
@@ -217,7 +217,7 @@ switch(_shop) do
                         ["ToolKit",nil,250],
                         //["MineDetector",nil,500],
                         // NON LETHALS
-                        ["hgun_P07_snds_F","Stun Pistol",250],
+                        ["hgun_P07_snds_F","Stun Pistol",1250],
                         ["SMG_01_F","Taser Rifle",2100],
                                 ["30Rnd_45ACP_Mag_SMG_01","Taser Rifle Magazine",200],
                         // SIGNALS
@@ -226,7 +226,7 @@ switch(_shop) do
                                 ["6Rnd_RedSignal_F","6Rnd Signal Cylinder (Red)",200],
                         // LETHALS
                                 // Pistols
-                        ["hgun_P07_F",nil,300],
+                        ["hgun_P07_F",nil,2800],
                              ["16Rnd_9x21_Mag",nil,100],
                                 // Assault Rifles
                         ["SMG_02_F",nil,19000],
@@ -268,7 +268,7 @@ switch(_shop) do
                         ["muzzle_snds_B",nil,1200],
                         ["optic_ACO_grn",nil,700],
                         ["optic_ACO_grn_smg",nil,400],
-                        ["optic_MRCO",nil,400],
+                        ["optic_MRCO",nil,13000],
                         ["optic_MRD",nil,400],
                         ["optic_NVS",nil,2300],
                         ["optic_SOS",nil,4000],
@@ -291,7 +291,7 @@ switch(_shop) do
 				["Coast Guard Shop",
 					[					
 						["SMG_01_F","Taser Rifle",2000],
-						["hgun_P07_snds_F","Stun Pistol",200],
+						["hgun_P07_snds_F","Stun Pistol",1200],
 						["hgun_P07_F",nil,2000],
 						["arifle_SDAR_F","Underwater Weapon",10000],
 						["Binocular",nil,150],
@@ -319,7 +319,7 @@ switch(_shop) do
                         ["ToolKit",nil,250],
                         ["MineDetector",nil,500],
                         // NON LETHALS
-                        ["hgun_P07_snds_F","Stun Pistol",200],
+                        ["hgun_P07_snds_F","Stun Pistol",1200],
                         ["SMG_01_F","Taser Rifle",2000],
                                 ["30Rnd_45ACP_Mag_SMG_01","Taser Rifle Magazine",150],
                         // SIGNALS
@@ -328,7 +328,7 @@ switch(_shop) do
                                 ["6Rnd_RedSignal_F","6Rnd Signal Cylinder (Red)",150],
                         // LETHALS
                                 // Pistols
-                        ["hgun_P07_F",nil,250],
+                        ["hgun_P07_F",nil,2500],
                              ["16Rnd_9x21_Mag",nil,60],
                                 // Assault Rifles
                         ["SMG_02_F",nil,18000],
@@ -370,7 +370,7 @@ switch(_shop) do
                         ["muzzle_snds_B",nil,1100],
                         ["optic_ACO_grn",nil,550],
                         ["optic_ACO_grn_smg",nil,300],
-                        ["optic_MRCO",nil,300],
+                        ["optic_MRCO",nil,12000],
                         ["optic_MRD",nil,300],
                         ["optic_NVS",nil,2200],
                         ["optic_SOS",nil,3000],
@@ -401,7 +401,7 @@ switch(_shop) do
                         ["ToolKit",nil,250],
                         ["MineDetector",nil,500],
                         // NON LETHALS
-                        ["hgun_P07_snds_F","Stun Pistol",200],
+                        ["hgun_P07_snds_F","Stun Pistol",1200],
                         ["SMG_01_F","Taser Rifle",2000],
                                 ["30Rnd_45ACP_Mag_SMG_01","Taser Rifle Magazine",150],
                         // SIGNALS
@@ -410,7 +410,7 @@ switch(_shop) do
                                 ["6Rnd_RedSignal_F","6Rnd Signal Cylinder (Red)",150],
                         // LETHALS
                                 // Pistols
-                        ["hgun_P07_F",nil,200],
+                        ["hgun_P07_F",nil,2000],
                              ["16Rnd_9x21_Mag",nil,50],
                                 // Assault Rifles
                         ["SMG_02_F",nil,17500],
@@ -452,7 +452,7 @@ switch(_shop) do
                         ["muzzle_snds_B",nil,1000],
                         ["optic_ACO_grn",nil,500],
                         ["optic_ACO_grn_smg",nil,200],
-                        ["optic_MRCO",nil,200],
+                        ["optic_MRCO",nil,12000],
                         ["optic_MRD",nil,250],
                         ["optic_NVS",nil,2000],
                         ["optic_SOS",nil,2500],
@@ -487,7 +487,7 @@ switch(_shop) do
                         ["ToolKit",nil,300],
                         //["MineDetector",nil,500],
                         // NON LETHALS
-                        ["hgun_P07_snds_F","Stun Pistol",350],
+                        ["hgun_P07_snds_F","Stun Pistol",1350],
                         ["SMG_01_F","Taser Rifle",2500],
                                 ["30Rnd_45ACP_Mag_SMG_01","Taser Rifle Magazine",400],
                         // SIGNALS
@@ -496,7 +496,7 @@ switch(_shop) do
                         //        ["6Rnd_RedSignal_F","6Rnd Signal Cylinder (Red)",300],
                         // LETHALS
                                 // Pistols
-                        //["hgun_P07_F",nil,400],
+                        //["hgun_P07_F",nil,4000],
                        ["16Rnd_9x21_Mag",nil,150],
                                 // Assault Rifles
                         //["SMG_02_F",nil,21000],
@@ -538,7 +538,7 @@ switch(_shop) do
                         //["muzzle_snds_B",nil,1400],
                         //["optic_ACO_grn",nil,900],
                         //["optic_ACO_grn_smg",nil,600],
-                        //["optic_MRCO",nil,600],
+                        //["optic_MRCO",nil,16000],
                         //["optic_MRD",nil,600],
                         //["optic_NVS",nil,2500],
                         //["optic_SOS",nil,4000],
@@ -661,11 +661,11 @@ switch(_shop) do
 						["6Rnd_45ACP_Cylinder",nil,40],
 						["optic_Holosight",nil,1500],
 						["optic_ACO_grn_smg",nil,750],
-						["optic_MRCO",nil,5500],
+						["optic_MRCO",nil,15500],
 						["ToolKit",nil,2000],
 						["itemgps",nil,500],
 						["FirstAidKit",nil,100],
-						["NVGoggles",nil,500],
+						["NVGoggles",nil,1500],
 						["Chemlight_green",nil,500],
 						["Chemlight_red",nil,500],
 						["Chemlight_yellow",nil,500],
@@ -710,7 +710,7 @@ switch(_shop) do
 						["ToolKit",nil,2000],
 						["itemgps",nil,500],
 						["FirstAidKit",nil,250],
-						["NVGoggles",nil,500],
+						["NVGoggles",nil,1500],
 						["Rangefinder",nil,1000],
 						["MineDetector",nil,1000],
 						["SmokeShell",nil,500],
@@ -772,7 +772,7 @@ switch(_shop) do
 						["ToolKit",nil,1000],
 						["itemgps",nil,300],
 						["FirstAidKit",nil,250],
-						["NVGoggles",nil,200],
+						["NVGoggles",nil,1200],
 						["Rangefinder",nil,500],
 						["MineDetector",nil,0],
 						["SatchelCharge_Remote_Mag",nil,25000],

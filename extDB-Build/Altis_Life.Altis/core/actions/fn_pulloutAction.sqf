@@ -6,6 +6,7 @@
 	Pulls civilians out of a car if it's stopped.
 */
 private["_crew"];
+if(cursorTarget distance player > 3) exitWith {hint "Vehicle not close enough"};
 _crew = crew cursorTarget;
 
 {

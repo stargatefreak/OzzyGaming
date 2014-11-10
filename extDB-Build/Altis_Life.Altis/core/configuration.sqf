@@ -417,8 +417,6 @@ __CONST__(life_weapon_shop_array,life_weapon_shop_array);
 
 life_garage_prices =
 [
-	["O_Heli_Light_02_unarmed_F",25000],
-	["I_Heli_Transport_02_F",80000],
 	["B_Quadbike_01_F",63],
 	["C_Hatchback_01_F",238],
 	["C_Offroad_01_F",400],
@@ -464,8 +462,6 @@ __CONST__(life_garage_prices,life_garage_prices);
 
 life_garage_sell =
 [
-	["O_Heli_Light_02_unarmed_F",300000],
-	["I_Heli_Transport_02_F",960000],
 	["B_Quadbike_01_F",750],
 	["C_Hatchback_01_F",2850],
 	["C_Offroad_01_F",4800],
