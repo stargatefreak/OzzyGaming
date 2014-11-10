@@ -138,7 +138,6 @@ switch (_shop) do
             ["B_Heli_Light_01_F",425000],
             ["O_Heli_Light_02_unarmed_F",1000000],
             ["I_Heli_Transport_02_F",3200000],
-			["B_Heli_Transport_01_F",150000],
 			["B_Heli_Transport_03_unarmed_F",2800000],
 			["O_Heli_Transport_04_F",1500000],
 			["O_Heli_Transport_04_covered_F",1900000]
