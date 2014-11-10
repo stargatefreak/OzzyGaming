@@ -30,7 +30,6 @@ switch (_filter) do
 			["U_O_PilotCoveralls",nil,15610],
 			["U_B_PilotCoveralls",nil,15610],
 			["U_IG_leader","Guerilla Leader",15340],
-			["U_I_G_resistanceLeader_F",nil,11500],
 			["U_O_GhillieSuit",nil,50000],
 			["U_I_GhillieSuit",nil,50000]
 		];

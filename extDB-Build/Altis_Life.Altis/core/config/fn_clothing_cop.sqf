@@ -66,11 +66,11 @@ switch (_filter) do
         };
         if(__GETC__(life_coplevel) > 3) then
         {
-            _ret set[count _ret,["H_Hat_tan",nil,0]];
             _ret set[count _ret,["H_HelmetB_light_black",nil,100]];
         };
-		if(__GETC__(life_coplevel) > 6) then
+        if(__GETC__(life_coplevel) > 6) then
         {
+            _ret set[count _ret,["H_Hat_tan",nil,100]];
 			_ret set[count _ret,["H_Beret_blk_POLICE",nil,100]];
         };
 	};
