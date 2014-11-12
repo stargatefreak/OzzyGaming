@@ -5253,7 +5253,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=916;
+		items=920;
 		class Item0
 		{
 			position[]={8065.1616,35.674362,24985.314};
@@ -14762,6 +14762,42 @@ class Mission
 			syncId=10;
 			synchronizations[]={9};
 		};
+		class Item916
+		{
+			position[]={16038.926,13.410644,16968.551};
+			azimut=-125.42477;
+			id=1200;
+			side="EMPTY";
+			vehicle="Land_HBarrier_5_F";
+			skill=0.60000002;
+		};
+		class Item917
+		{
+			position[]={16041.68,13.424376,16964.75};
+			azimut=-125.42477;
+			id=1201;
+			side="EMPTY";
+			vehicle="Land_HBarrier_5_F";
+			skill=0.60000002;
+		};
+		class Item918
+		{
+			position[]={15999.046,13.629365,16940.004};
+			azimut=-125.42477;
+			id=1202;
+			side="EMPTY";
+			vehicle="Land_HBarrier_5_F";
+			skill=0.60000002;
+		};
+		class Item919
+		{
+			position[]={16001.8,13.66469,16936.203};
+			azimut=-125.42477;
+			id=1203;
+			side="EMPTY";
+			vehicle="Land_HBarrier_5_F";
+			skill=0.60000002;
+		};
 	};
 	class Markers
 	{
@@ -15426,7 +15462,7 @@ class Mission
 		};
 		class Item84
 		{
-			position[]={14166.416,19.370966,16293.32};
+			position[]={14171.052,19.521893,16289.715};
 			name="cop_air_2";
 			type="Empty";
 			angle=131.20648;
@@ -17830,7 +17866,7 @@ class Mission
 		class Item376
 		{
 			position[]={6002.2876,23.514898,14726.154};
-			name="maze_1";
+			name="corn_1";
 			text="Corn Field";
 			type="loc_Tree";
 			colorName="ColorYellow";
@@ -18214,8 +18250,8 @@ class Mission
 		};
 		class Item18
 		{
-			position[]={3971.3604,17.811972,13604.32};
-			a=10;
+			position[]={3937.1631,16.492144,13570.498};
+			a=13;
 			angle=224.526;
 			rectangular=1;
 			activationBy="CIV";

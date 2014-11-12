@@ -20,7 +20,9 @@ _unit setVariable["transporting",FALSE,TRUE]; //Why the fuck do I have this? Is 
 _unit setVariable["steam64id",(getPlayerUID player),true]; //Set the UID.
 _unit setVariable["missingOrgan",FALSE,TRUE]; //I DONT KNOW WHY SOMETIMES THEY ARE CAPS or not
 _unit setVariable["hasOrgan",FALSE,TRUE]; 
+life_onDeath = true;
 
+[8] call SOCK_fnc_updatePartial;
 //Setup our camera view
 life_deathCamera  = "CAMERA" camCreate (getPosATL _unit);
 showCinemaBorder TRUE;

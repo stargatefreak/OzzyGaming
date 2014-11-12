@@ -4330,12 +4330,8 @@
 			<Portuguese>Enviar p/ Prisão</Portuguese>
 		</Key>
 		<Key ID="STR_pInAct_DropRebel">
-			<Original>Drop Weapons & Mask</Original>
-			<English>Drop Weapons & Mask</English>
-			<German>Tropfen Waffen & Mask</German>
-			<French>Déposer les armes et le masque</French>
-			<Italian>Goccia Armi & Mask</Italian>
-			<Portuguese>Gota Armas e Máscara</Portuguese>
+			<Original>Drop Weapons / Mask</Original>
+			<English>Drop Weapons / Mask</English>
 		</Key>
 		<Key ID="STR_pInAct_Repair">
 			<Original>Repair Door</Original>

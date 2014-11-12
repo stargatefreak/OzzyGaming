@@ -125,7 +125,7 @@ switch(_shop) do
 			case (__GETC__(life_coplevel) == 3): 
 			{
 				["Patrol Officer",
-					[
+					[10000
 			// ITEMS
                         ["NVGoggles",nil,2000],
                         ["Binocular",nil,150],
@@ -636,7 +636,7 @@ switch(_shop) do
 			};
 		};
 	};
-	
+	// ALL PRICES ARE TO BE REBALANCED;
 	case "donator":
 	{
 		switch(true) do

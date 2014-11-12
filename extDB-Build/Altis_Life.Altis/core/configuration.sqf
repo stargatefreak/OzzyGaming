@@ -73,6 +73,7 @@ life_siren_active = false;
 life_bank_fail = false;
 life_use_atm = true;
 life_is_arrested = false;
+life_onDeath = false;
 life_delivery_in_progress = false;
 life_action_in_use = false;
 life_thirst = 100;

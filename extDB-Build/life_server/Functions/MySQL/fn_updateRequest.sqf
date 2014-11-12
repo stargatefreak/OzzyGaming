@@ -33,9 +33,9 @@ for "_i" from 0 to count(_licenses)-1 do {
 _licenses = [_licenses] call DB_fnc_mresArray;
 
 switch (_side) do {
-	case west: {_query = format["UPDATE players SET name='%1', cash='%2', bankacc='%3', cop_gear='%4', cop_licenses='%5', copCounter='%7' WHERE playerid='%6'",_name,_cash,_bank,_gear,_licenses,_uid,_timer];};
-	case civilian: {_query = format["UPDATE players SET name='%1', cash='%2', bankacc='%3', civ_licenses='%4', civ_gear='%6', civCounter='%7', arrested='%8' WHERE playerid='%5'",_name,_cash,_bank,_licenses,_uid,_gear,_timer,[_this select 8] call DB_fnc_bool];};
-	case independent: {_query = format["UPDATE players SET name='%1', cash='%2', bankacc='%3', med_licenses='%4', med_gear='%6', medCounter='%7' WHERE playerid='%5'",_name,_cash,_bank,_licenses,_uid,_gear,_timer];};
+	case west: {_query = format["UPDATE players SET name='%1', cash='%2', bankacc='%3', cop_gear='%4', cop_licenses='%5', copCounter='%7', lastonline = NOW() WHERE playerid='%6'",_name,_cash,_bank,_gear,_licenses,_uid,_timer];};
+	case civilian: {_query = format["UPDATE players SET name='%1', cash='%2', bankacc='%3', civ_licenses='%4', civ_gear='%6', civCounter='%7', arrested='%8', lastonline = NOW() WHERE playerid='%5'",_name,_cash,_bank,_licenses,_uid,_gear,_timer,[_this select 8] call DB_fnc_bool];};
+	case independent: {_query = format["UPDATE players SET name='%1', cash='%2', bankacc='%3', med_licenses='%4', med_gear='%6', medCounter='%7', lastonline = NOW() WHERE playerid='%5'",_name,_cash,_bank,_licenses,_uid,_gear,_timer];};
 };
 
 waitUntil {sleep (random 0.3); !DB_Async_Active};

@@ -2185,6 +2185,104 @@ if (_obj_main_type in IL_Supported_Vehicles_CHINOOK) then
 		];
 	};
 	
+	
+	if (typeOf _obj_main in ["B_Heli_Transport_03_unarmed_F"]) then
+	{
+		_obj_main addAction [
+		"<img image='core\IgiLoad\images\load.paa' /><t color=""#007f0e"">  Load cargo on Huron</t>",
+		{
+			[_this select 0, IL_Supported_Cargo_NonVeh_CHINOOK] call IL_Do_Load;
+		},[],IL_Action_LU_Priority,true,true,"",
+		"(count(nearestObjects[ _target modelToWorld [0,-9,-3], IL_Supported_Cargo_NonVeh_CHINOOK, IL_SDistL + IL_SDistL_Heli_offset]) > 0) && (abs(speed _target) <= IL_LU_Speed) && ((IL_Can_Inside && (driver _target == _this)) || (IL_Can_Inside && ('Turret' in (assignedVehicleRole _this)) && (vehicle _this == _target) && (_target getVariable 'can_copilot')) || ((_this in (nearestObjects[ _target modelToWorld [0,-9,-3], [], IL_SDistL + IL_SDistL_Heli_offset])) && (_target getVariable 'can_outside'))) && (_target getVariable 'box_num' > _target getVariable 'slots_num') && (_target getVariable 'can_load') && (((getPos _target) select 2) <= IL_LU_Alt) && (_target animationPhase 'Door_rear_source' < 0.43)"
+		];
+
+		_obj_main addAction [
+		"<img image='core\IgiLoad\images\load.paa' /><t color=""#007f0e"">  Load vehicle on Huron</t>",
+		{
+			[_this select 0, IL_Supported_Cargo_Veh_CHINOOK] call IL_Do_Load;
+		},[],IL_Action_LU_Priority,true,true,"",
+		"(count(nearestObjects[ _target modelToWorld [0,-9,-3], IL_Supported_Cargo_Veh_CHINOOK, IL_SDistL + IL_SDistL_Heli_offset]) > 0) && (abs(speed _target) <= IL_LU_Speed) && ((IL_Can_Inside && (driver _target == _this)) || (IL_Can_Inside && ('Turret' in (assignedVehicleRole _this)) && (vehicle _this == _target) && (_target getVariable 'can_copilot')) || ((_this in (nearestObjects[ _target modelToWorld [0,-9,-3], [], IL_SDistL + IL_SDistL_Heli_offset])) && (_target getVariable 'can_outside'))) && (_target getVariable 'box_num' > _target getVariable 'slots_num') && (_target getVariable 'can_load') && (((getPos _target) select 2) <= IL_LU_Alt) && (_target animationPhase 'Door_rear_source' < 0.43)"
+		];
+
+		_obj_main addAction [
+		"<t color=""#007f0e"">Get in Huron Ride in back</t>",
+		{
+			(_this select 1) moveInCargo (_this select 0);
+		},[],IL_Action_LU_Priority,false,true,"",
+		"(_this in (nearestObjects[ _target modelToWorld [0,-9,-3], [], IL_SDistL + IL_SDistL_Heli_offset])) && ((_target emptyPositions 'cargo') > 0) && (abs(speed _target) <= IL_LU_Speed) && (((getPos _target) select 2) <= IL_LU_Alt) && (_target animationPhase 'Door_rear_source' < 0.43) && (_target getVariable 'usable_ramp')"
+		];
+		
+		_obj_main addAction [
+		"<t color=""#007f0e"">Get in Huron</t>",
+		{
+			(_this select 1) setDir (getDir (_this select 0));
+			_pos = ([(_this select 0), 4.5, (getDir (_this select 0))] call BIS_fnc_relPos);
+			_pos = [_pos select 0, _pos select 1, ((getpos (_this select 0)) select 2) + 1];
+			(_this select 1) setpos _pos;
+		},[],IL_Action_LU_Priority,false,true,"",
+		"(_this in (nearestObjects[ _target modelToWorld [0,-9,-3], [], IL_SDistL + IL_SDistL_Heli_offset])) && ((_target emptyPositions 'cargo') > 0) && (abs(speed _target) <= IL_LU_Speed) && (((getPos _target) select 2) <= IL_LU_Alt) && (_target animationPhase 'Door_rear_source' < 0.43) && (_target getVariable 'usable_ramp')"
+		];
+		
+		_obj_main addAction [
+		"<t color=""#ff0000"">Get out Huron</t>",
+		{
+			[_this select 0, _this select 1, false] call IL_GetOut;
+		},[],IL_Action_LU_Priority,false,true,"",
+		"('Cargo' in (assignedVehicleRole _this)) && (vehicle _this == _target) && (abs(speed _target) <= IL_LU_Speed) && (((getPos _target) select 2) <= IL_LU_Alt) && (_target animationPhase 'Door_rear_source' < 0.43) && (_target getVariable 'usable_ramp')"
+		];
+
+		_obj_main addAction [
+		"<img image='core\IgiLoad\images\unload_para.paa' /><t color=""#b200ff""> Eject</t>",
+		{
+			[_this select 0, _this select 1, true] call IL_GetOut;
+		},[],IL_Action_LU_Priority,false,true,"",
+		"('Cargo' in (assignedVehicleRole _this)) && (vehicle _this == _target) && (((getpos _target) select 2) >= IL_Para_Jump_ATL) && (_target animationPhase 'Door_rear_source' < 0.43) && (_target getVariable 'usable_ramp')"
+		];
+		
+		_obj_main addAction [
+		"<img image='core\IgiLoad\images\unload.paa' /><t color=""#ff0000"">  Unload cargo from Huron</t>",
+		{
+			[_this select 0] call IL_Do_Unload;
+		},[],IL_Action_LU_Priority,false,true,"",
+		"(_target getVariable 'box_num' < 0) && ((IL_Can_Inside && (driver _target == _this)) || (IL_Can_Inside && ('Turret' in (assignedVehicleRole _this)) && (vehicle _this == _target) && (_target getVariable 'can_copilot')) || ((_this in (nearestObjects[ _target modelToWorld [0,-9,-3], [], IL_SDistL + IL_SDistL_Heli_offset])) && (_target getVariable 'can_outside'))) && (_target getVariable 'can_load') && (abs(speed _target) <= IL_LU_Speed) && (((getPos _target) select 2) <= IL_LU_Alt) && (_target animationPhase 'Door_rear_source' < 0.43)"
+		];
+
+		_obj_main addAction [
+		"<img image='core\IgiLoad\images\unload_para.paa' /><t color=""#b200ff"">  Unload cargo with parachute</t>",
+		{
+			[_this select 0, true] call IL_Do_Unload;
+		},[],IL_Action_LU_Priority,false,true,"",
+		"(_target getVariable 'box_num' < 0) && ((driver _target == _this) || (('Turret' in (assignedVehicleRole _this)) && (vehicle _this == _target) && (_target getVariable 'can_copilot'))) && (_target getVariable 'can_load') && (((getpos _target) select 2) >= IL_Para_Drop_ATL) && (_target animationPhase 'Door_rear_source' < 0.43)"
+		];
+		
+		_obj_main addAction [
+		"<img image='core\IgiLoad\images\unload_all_para.paa' /><t color=""#a50b00"">  Unload ALL cargo with parachute</t>",
+		{
+			while {((_this select 0) getVariable "box_num") != 0} do
+			{
+				[_this select 0, true] call IL_Do_Unload;
+			};
+		},[],IL_Action_LU_Priority,false,true,"",
+		"(_target getVariable 'box_num' < 0) && ((driver _target == _this) || (('Turret' in (assignedVehicleRole _this)) && (vehicle _this == _target) && (_target getVariable 'can_copilot'))) && (_target getVariable 'can_load') && (((getpos _target) select 2) >= IL_Para_Drop_ATL) && (_target animationPhase 'Door_rear_source' < 0.43)"
+		];
+
+		_obj_main addAction [
+		"<t color=""#0000ff"">Open cargo ramp in Huron</t>",
+		{
+			_this select 0 animateDoor ['Door_rear_source', 0];
+		},[],IL_Action_O_Priority,false,true,"",
+		"((driver _target == _this) || (('Turret' in (assignedVehicleRole _this)) && (vehicle _this == _target) && (_target getVariable 'can_copilot')) || ((_this in (nearestObjects[ _target modelToWorld [0,-9,-3], [], IL_SDistL + IL_SDistL_Heli_offset])) && (_target getVariable 'can_outside'))) && (_target animationPhase 'Door_rear_source' == 1) && (_target getVariable 'can_load')"
+		];
+
+		_obj_main addAction [
+		"<t color=""#0000ff"">Close cargo ramp in Huron</t>",
+		{
+			_this select 0 animateDoor ['Door_rear_source', 1];
+		},[],IL_Action_O_Priority,false,true,"",
+		"((driver _target == _this) || (('Turret' in (assignedVehicleRole _this)) && (vehicle _this == _target) && (_target getVariable 'can_copilot')) || ((_this in (nearestObjects[ _target modelToWorld [0,-9,-3], [], IL_SDistL + IL_SDistL_Heli_offset])) && (_target getVariable 'can_outside'))) && (_target animationPhase 'Door_rear_source' == 0) && (_target getVariable 'can_load')"
+		];
+	};
+	
 	_obj_main addAction [
 	"<t color=""#0000ff"">Enable loading for Co-Pilot</t>",
 	{
@@ -2233,6 +2331,7 @@ if (_obj_main_type in IL_Supported_Vehicles_CHINOOK) then
 	"(((driver _target == _this) || (('Turret' in (assignedVehicleRole _this)) && (vehicle _this == _target) && (_target getVariable 'can_copilot'))) && (_target getVariable 'usable_ramp') && IL_Ramp)"
 	];
 };
+
 if (_obj_main_type in IL_Supported_Vehicles_C130J) then
 {
 	if (IL_DevMod) then

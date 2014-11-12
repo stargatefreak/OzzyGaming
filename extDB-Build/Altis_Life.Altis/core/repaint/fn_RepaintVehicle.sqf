@@ -33,6 +33,7 @@ if ((getPlayerUID player) != _vehOwner) exitWith {hint "You are not the owner of
 		_cP = 0.01;
 		
 		life_action_inUse = true;  //<---------MOVE THIS TO HERE
+		player say3D "spraycan";
 		
 		while{true} do
 		{
@@ -41,7 +42,6 @@ if ((getPlayerUID player) != _vehOwner) exitWith {hint "You are not the owner of
 				player playMoveNow "AinvPknlMstpSnonWnonDnon_medic_1";
 			};						
 			sleep 0.29;
-			[player,"spraycan"] call life_fnc_globalSound; //Globaler Sound
 
 			_cP = _cP + 0.01;
 			_progress progressSetPosition _cP;

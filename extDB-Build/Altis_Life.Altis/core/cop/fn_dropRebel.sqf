@@ -5,7 +5,7 @@
 	Description:
 	Drops Mask and Equipped Weapons into a pile on the ground
 */
-private["_unit","weapon","_loot","_primary","_secondary","_secondaryWeapon","_secondarySupp","_secondaryAttach","_secondaryOptic","_secondaryAmmo","_secondaryAmmoCount","_primaryWeapon","_primarySupp","_primaryAttach","_primaryOptic","_primaryAmmo","_primaryAmmoCount","_items","_holder","_masks","_headgear","_goggleslist","_headgearlist","_goggles"];
+private["_unit","_primary","_secondary","_secondaryWeapon","_secondarySupp","_secondaryAttach","_secondaryOptic","_secondaryAmmo","_secondaryAmmoCount","_primaryWeapon","_primarySupp","_primaryAttach","_primaryOptic","_primaryAmmo","_primaryAmmoCount","_items","_holder","_masks","_headgear","_goggleslist","_headgearlist","_goggles"];
 _unit = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
 if(_unit distance player > 3) exitWith {hint "Player not close enough"};
 _goggleslist = ["G_Balaclava_blk","G_Balaclava_combat","G_Balaclava_lowprofile","G_Balaclava_oli","G_Bandanna_aviator","G_Bandanna_beast","G_Bandanna_blk","G_Bandanna_khk","G_Bandanna_oli","G_Bandanna_shades","G_Bandanna_sport","G_Bandanna_tan"];
@@ -43,7 +43,7 @@ _holder addMagazineAmmoCargo [_secondaryAmmo,1,_secondaryAmmoCount];
 _holder addMagazineAmmoCargo [_primaryAmmo,1,_primaryAmmoCount];
 
 {
-_holder additemcargo _x;
+_holder addItemCargo [_x,1];
 } forEach _items;
 
 if(headgear _unit in _headgearlist) then {removeHeadgear _unit};

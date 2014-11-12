@@ -69,7 +69,6 @@ switch(playerSide) do {
 			[] spawn life_fnc_initGang;
 		};
 		[] spawn life_fnc_initHouses;
-		life_paycheck = life_paycheck + ((__GETC__(life_donator)) * 750);
 	};
 	
 	case independent: {
@@ -81,6 +80,12 @@ switch(playerSide) do {
 
 if(count (_this select 12) > 0) then {
 	{life_vehicles pushBack _x;} foreach (_this select 12);
+};
+
+if(__GETC__(life_donator) < 5) then {
+	life_paycheck = life_paycheck + (__GETC__(life_donator) * 750);
+} else {
+	life_paycheck = life_paycheck + ((__GETC__(life_donator) * 1500) - 3000);
 };
 
 life_session_completed = true;

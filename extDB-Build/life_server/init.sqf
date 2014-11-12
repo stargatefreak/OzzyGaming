@@ -7,9 +7,6 @@ publicVariable "life_server_isReady";
 [] execVM "\life_server\functions.sqf";
 [] execVM "\life_server\eventhandlers.sqf";
 
-// cruise control
-[] execVM "\life_server\mods\mod_cruiseControl.sqf";
-
 //I am aiming to confuse people including myself, ignore the ui checks it's because I test locally.
 _extDBversion = "extDB" callExtension "9:VERSION";
 if(isNil {uiNamespace getVariable "life_sql_id"}) then {
@@ -33,10 +30,10 @@ if(isNil {uiNamespace getVariable "life_sql_id"}) then {
 };
 
 //Run procedures for SQL cleanup on mission start.
-["CALL resetLifeVehicles",1] spawn DB_fnc_asyncCall;
+/* ["CALL resetLifeVehicles",1] spawn DB_fnc_asyncCall;
 ["CALL deleteDeadVehicles",1] spawn DB_fnc_asyncCall;
 ["CALL deleteOldHouses",1] spawn DB_fnc_asyncCall;
-["CALL deleteOldGangs",1] spawn DB_fnc_asyncCall; //Maybe delete old gangs
+["CALL deleteOldGangs",1] spawn DB_fnc_asyncCall; //Maybe delete old gangs */
 
 //Custom Content
 [] execVM "\life_server\Functions\Custom\fn_spawnGold2.sqf";

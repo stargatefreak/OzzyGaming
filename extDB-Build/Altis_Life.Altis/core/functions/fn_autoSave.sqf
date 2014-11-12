@@ -8,7 +8,9 @@ Saves the player's gear every 5 minutes.
 */
 
 while {true} do {
-sleep 300;
-[] call SOCK_fnc_updateRequest;
-hint "Game Autosaved."
+	sleep 300;
+	if(!life_onDeath) then {
+		[] call SOCK_fnc_updateRequest;
+		hint "Game Autosaved."
+	};
 };

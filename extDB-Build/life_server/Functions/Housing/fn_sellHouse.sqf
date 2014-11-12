@@ -17,7 +17,8 @@ if(_houseID == -1) then {
 	//systemChat format[":SERVER:sellHouse: house_id does not exist, query: %1",_query];
 } else {
 	//systemChat format[":SERVER:sellHouse: house_id is %1",_houseID];
-	_query = format["UPDATE houses SET owned='0', pos='[]' WHERE id='%1'",_houseID];
+	/* _query = format["UPDATE houses SET owned='0', pos='[]' WHERE id='%1'",_houseID]; */
+	_query = format["DELETE FROM houses WHERE id='%1'",_houseID];
 };
 
 _house setVariable["house_id",nil,true];

@@ -11,8 +11,8 @@ _driver = _this select 0;
 _speed = _this select 1;
 _limit = _this select 2;
 //_ticket = 1500;//perm set amount ticket
-_ticket = (_speed - _limit) * 100;//variable ticket for licensed driver
-_ticketWL = (_speed - _limit) * 200;//variable ticket for unlicensed driver
+_ticket = (_speed - _limit) * 40;//variable ticket for licensed driver
+_ticketWL = (_speed - _limit) * 120;//variable ticket for unlicensed driver
 //diag_log format["Ticket Fine: %1 - Sp: %2 -- Limit: %3",_ticket,_speed,_limit];
 if (_speed > _limit) then {
 	if (side _driver == civilian) then {
@@ -42,8 +42,8 @@ if (_speed > _limit) then {
 			
 			life_speedTicket = life_speedTicket + 1;
 			if(life_speedTicket <= 3) then {systemChat format["This is ticket number %1 for you, keep it up and you'll lose more than money",life_speedTicket];};
-			if(life_speedTicket == 4) then {systemChat format["This is ticket number %1 for you, next one will take away your licenses",life_speedTicket];};
-			if(life_speedTicket > 4 && life_speedTicket < 8) exitWith {
+			if(life_speedTicket == 6) then {systemChat format["This is ticket number %1 for you, next one will take away your licenses",life_speedTicket];};
+			if(life_speedTicket > 6 && life_speedTicket < 10) exitWith {
 					
 					systemChat format["This is ticket number %1 for you",life_speedTicket];
 					hint parseText format ["<t color='#ffffff'><t size='2'><t align='center'>Speed Radar<br/><t color='#ff0000'><t align='center'><t size='1.5'>Speed: %1 km/h<br/><t color='#ffffff'><t align='center'><t size='1'>Speed Limit: %2 km/h<br/><t color='#ffffff'><t align='center'><t size='1'>Driver: %3<br/><t color='#ffffff'><t align='center'><t size='1'>You are a habitual speeder and will be stripped of your vehicle licenses and are now wanted",round _speed,_limit,name _driver];
@@ -51,7 +51,7 @@ if (_speed > _limit) then {
 					[[getPlayerUID _driver,name _driver,"120H"],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;
 					[2] call SOCK_fnc_updatePartial;
 			};
-			if(life_speedTicket > 8) exitWith {
+			if(life_speedTicket > 9) exitWith {
 					
 					vehicle _driver setFuel 0.1;
 					systemChat format["THIS IS YOUR %1th TICKET --- STAHP!!!",life_speedTicket];
