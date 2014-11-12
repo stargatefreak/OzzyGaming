@@ -30,6 +30,9 @@ switch(_shop) do
 						["Medikit",nil,500],
 						["NVGoggles",nil,1200],
 						["B_FieldPack_ocamo",nil,3000]
+						["V_RebreatherB",nil,2500]
+						["G_Diving",nil,250]
+						["U_B_Wetsuit",nil,1000]
 					]
 				];
 			};
