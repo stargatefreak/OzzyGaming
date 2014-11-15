@@ -3656,7 +3656,7 @@ class Mission
 					side="CIV";
 					vehicle="C_man_1";
 					skill=0.60000002;
-					init="this enableSimulation false; this allowDamage false; this addAction[""Donator Vehicle Shop"",life_fnc_vehicleShopMenu,[""donator_1"",civilian,""donatspawn_1_1"",""civ"",""Donator Vehicle Shop""]]; this addAction[""Donator Weapon Shop"",life_fnc_weaponShopMenu,""donator"",0,false,false,"""",' _target distance _this < 5 && !isNil ""life_donator"" &&  (call life_donator) > 0 && playerSide == civilian']; this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu]; this addAction[""Market"",life_fnc_virt_menu,""market""]; this allowDamage false; this enableSimulation false; this addAction[""Clothing Store"",life_fnc_clothingMenu,""bruce""];";
+					init="this enableSimulation false; this allowDamage false; this addAction[""Donator Vehicle Shop"",life_fnc_vehicleShopMenu,[""donator_1"",civilian,""donatspawn_1_1"",""civ"",""Donator Vehicle Shop""]]; this addAction[""Donator Weapon Shop"",life_fnc_weaponShopMenu,""donator"",0,false,false,"""",' _target distance _this < 5 && !isNil ""life_ozDonator"" &&  (call life_ozDonator) > 0 && playerSide == civilian']; this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu]; this addAction[""Market"",life_fnc_virt_menu,""market""]; this allowDamage false; this enableSimulation false; this addAction[""Clothing Store"",life_fnc_clothingMenu,""bruce""];";
 				};
 				class Item129
 				{
@@ -3667,7 +3667,7 @@ class Mission
 					side="CIV";
 					vehicle="C_man_1";
 					skill=0.60000002;
-					init="this allowDamage false; this enableSimulation false; this addAction[""Donator Weapon Shop"",life_fnc_weaponShopMenu,""donator"",0,false,false,"""",' _target distance _this < 5 && !isNil ""life_donator"" &&  (call life_donator) > 0 && playerSide == civilian']; this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu]; this addAction[""Market"",life_fnc_virt_menu,""market""]; this allowDamage false; this enableSimulation false; this addAction[""Clothing Store"",life_fnc_clothingMenu,""bruce""];";
+					init="this allowDamage false; this enableSimulation false; this addAction[""Donator Weapon Shop"",life_fnc_weaponShopMenu,""donator"",0,false,false,"""",' _target distance _this < 5 && !isNil ""life_ozDonator"" &&  (call life_ozDonator) > 0 && playerSide == civilian']; this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu]; this addAction[""Market"",life_fnc_virt_menu,""market""]; this allowDamage false; this enableSimulation false; this addAction[""Clothing Store"",life_fnc_clothingMenu,""bruce""];";
 				};
 				class Item130
 				{
@@ -16938,10 +16938,10 @@ class Mission
 		};
 		class Item267
 		{
-			position[]={14152,77.275635,21243.9};
+			position[]={14149.715,77.266495,21243.9};
 			name="donatspawn_1_1";
 			type="Empty";
-			angle=88.1213;
+			angle=82;
 		};
 		class Item268
 		{
@@ -16969,10 +16969,10 @@ class Mission
 		};
 		class Item271
 		{
-			position[]={14158.6,77.330132,21257.301};
+			position[]={14156.024,77.318459,21259.102};
 			name="car_g_5";
 			type="Empty";
-			angle=98.226196;
+			angle=82;
 		};
 		class Item272
 		{
@@ -17866,7 +17866,7 @@ class Mission
 		class Item376
 		{
 			position[]={6002.2876,23.514898,14726.154};
-			name="corn_1";
+			name="maze_1";
 			text="Corn Field";
 			type="loc_Tree";
 			colorName="ColorYellow";

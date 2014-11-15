@@ -7,7 +7,7 @@
 	Figure it out.
 */
 private["_value","_action","_unit"];
-if(__GETC__(life_adminlevel) < 2) exitWith {closeDialog 0; hint localize "STR_ANOTF_ErrorLevel";};
+if(__GETC__(life_ozAdminlvl) < 2) exitWith {closeDialog 0; hint localize "STR_ANOTF_ErrorLevel";};
 _value = parseNumber(ctrlText 9922);
 if(_value < 0) exitWith {};
 if(_value > 999999) exitWith {hint localize "STR_ANOTF_Fail"};
@@ -28,7 +28,7 @@ if(_unit == player) exitWith {
 	] call BIS_fnc_guiMessage;
 
 	if(_action) then {
-		life_cash = life_cash + _value;
+		life_ozCash = life_ozCash + _value;
 		hint format [localize "STR_ANOTF_Success",[_value] call life_fnc_numberText];
 		closeDialog 0;
 	} else {
@@ -46,7 +46,7 @@ if(_unit != player) exitWith {
 	] call BIS_fnc_guiMessage;
 
 	if(_action) then {
-		[{life_cash = life_cash + _value;},"BIS_fnc_Spawn",_unit,false] call life_fnc_MP;
+		[{life_ozCash = life_ozCash + _value;},"BIS_fnc_Spawn",_unit,false] call life_fnc_MP;
 		hint format [localize "STR_ANOTF_Success1",[_value] call life_fnc_numberText,_unit getVariable["realname",name _unit]];
 		closeDialog 0;
 	} else {

@@ -72,7 +72,7 @@ if(!isNil "_deliveryTruck") then
 	["DeliverySucceeded",[format[(localize "STR_NOTF_Earned_1"),[_price] call life_fnc_numberText]]] call bis_fnc_showNotification;
 	life_cur_task setTaskState "Succeeded";
 	player removeSimpleTask life_cur_task;
-	life_cash = life_cash + _price;
+	life_ozCash = life_ozCash + _price;
 
 
 	if(_vid == "1") then

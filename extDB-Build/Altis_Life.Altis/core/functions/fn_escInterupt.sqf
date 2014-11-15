@@ -8,7 +8,6 @@
 */
 private["_abortButton","_respawnButton","_fieldManual","_escSync","_canUseControls"];
 disableSerialization;
-
 _escSync = {
 	private["_abortButton","_thread","_syncManager"];
 	disableSerialization;
@@ -17,20 +16,32 @@ _escSync = {
 		disableSerialization;
 		private["_abortButton","_timeStamp"];
 		_abortButton = (findDisplay 49) displayCtrl 104;
+		_respawnButton = (findDisplay 49) displayCtrl 1010;
 		_timeStamp = time + 10;
+	_respawnButton ctrlEnable false;
 		
+		life_onDeath = true;
+		[8] call SOCK_fnc_updatePartial;
+
 		waitUntil {
 			_abortButton ctrlSetText format[localize "STR_NOTF_AbortESC",[(_timeStamp - time),"SS.MS"] call BIS_fnc_secondsToString];
+			_respawnButton ctrlSetText localize "STR_NOTF_RespawnESC";
 			_abortButton ctrlCommit 0;
+			_respawnButton ctrlCommit 0;
+			_respawnButton ctrlEnable false;
 			round(_timeStamp - time) <= 0 || isNull (findDisplay 49)
 		};
 		
 		_abortButton ctrlSetText localize "STR_DISP_INT_ABORT";
+		_respawnButton ctrlSetText localize "STR_DISP_INT_RESPAWN";
 		_abortButton ctrlCommit 0;
+		_respawnButton ctrlCommit 0;
+		life_onDeath = false;
+		[8] call SOCK_fnc_updatePartial;		
+
 	};
 	
 	_abortButton = (findDisplay 49) displayCtrl 104;
-	[] call SOCK_fnc_updateRequest; //call our silent sync.
 	
 	if(_this) then {
 		_thread = [] spawn _syncManager;
@@ -38,6 +49,7 @@ _escSync = {
 		_abortButton ctrlEnable true;
 	};
 };
+[] call SOCK_fnc_updateRequest; //call our silent sync.
 
 _canUseControls = {
 	if(playerSide == west) exitWith {true};
@@ -63,4 +75,7 @@ while {true} do
 		_respawnButton ctrlEnable true; //Enable the button.
 	};
 	waitUntil{isNull (findDisplay 49)};
+	life_onDeath = false;
+	[8] call SOCK_fnc_updatePartial;		
+	
 };

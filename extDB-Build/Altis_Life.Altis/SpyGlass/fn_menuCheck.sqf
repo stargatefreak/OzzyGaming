@@ -53,7 +53,7 @@
 //Debug Menu
 [] spawn {
 	waitUntil {life_session_completed};
-	if(__GETC__(life_adminlevel) >= 3) exitWith {};
+	if(__GETC__(life_ozAdminlvl) >= 3) exitWith {};
 	waitUntil {!isNull (uiNamespace getVariable "RscDisplayDebugPublic")};
 	closeDialog 0;
 	[[profileName,getPlayerUID player,"MenuBasedHack_RscDisplayDebugPublic"],"SPY_fnc_cookieJar",false,false] call life_fnc_MP;

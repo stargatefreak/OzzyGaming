@@ -1650,6 +1650,14 @@
 			<Italian>Abbandona disponibile in %1</Italian>
 			<Portuguese>Abortar disponível em %1</Portuguese>
 		</Key>
+		<Key ID="STR_NOTF_RespawnESC">
+			<Original>OzzyGaming.com AntiAbort</Original>
+			<English>OzzyGaming.com AntiAbort</English>
+			<German>OzzyGaming.com Anti Abbruch</German>
+			<French>OzzyGaming.com Anti Abandonner</French>
+			<Italian>OzzyGaming.com Anti Abbandona</Italian>
+			<Portuguese>OzzyGaming.com Anti Abortar</Portuguese>
+		</Key>
 		<Key ID="STR_NOTF_DeviceIsMining">
 			<Original>This vehicle is already mining</Original>
 			<English>This vehicle is already mining</English>

@@ -29,9 +29,9 @@ switch(_shop) do
 						["FirstAidKit",nil,150],
 						["Medikit",nil,500],
 						["NVGoggles",nil,1200],
-						["B_FieldPack_ocamo",nil,3000]
-						["V_RebreatherB",nil,2500]
-						["G_Diving",nil,250]
+						["B_FieldPack_ocamo",nil,3000],
+						["V_RebreatherB",nil,2500],
+						["G_Diving",nil,250],
 						["U_B_Wetsuit",nil,1000]
 					]
 				];
@@ -43,7 +43,7 @@ switch(_shop) do
 		switch(true) do
 		{
 			case (playerSide != west): {"You are not a cop!"};
-			case (__GETC__(life_coplevel) == 2): 
+			case (__GETC__(life_ozCoplvl) == 2): 
 			{
 				["Corrections Officer Shop",
 					[
@@ -125,10 +125,10 @@ switch(_shop) do
 					]
 				];
 			};
-			case (__GETC__(life_coplevel) == 3): 
+			case (__GETC__(life_ozCoplvl) == 3): 
 			{
 				["Patrol Officer",
-					[10000
+					[
 			// ITEMS
                         ["NVGoggles",nil,2000],
                         ["Binocular",nil,150],
@@ -207,7 +207,7 @@ switch(_shop) do
 					]
 				];
 			};
-			case (__GETC__(life_coplevel) == 4): 
+			case (__GETC__(life_ozCoplvl) == 4): 
 			{
 				["Air Patrol Shop",
 					[
@@ -289,7 +289,7 @@ switch(_shop) do
 					]
 				];
 			};
-			case (__GETC__(life_coplevel) == 15): 
+			case (__GETC__(life_ozCoplvl) == 15): 
 			{
 				["Coast Guard Shop",
 					[					
@@ -309,7 +309,7 @@ switch(_shop) do
 					]
 				];
 			};
-			case (__GETC__(life_coplevel) == 5): 
+			case (__GETC__(life_ozCoplvl) == 5): 
 			{
 				["S.W.A.T Shop",
 					[
@@ -391,7 +391,7 @@ switch(_shop) do
                                         ]
                                 ];
                         };
-                        case (__GETC__(life_coplevel) >= 6): 
+                        case (__GETC__(life_ozCoplvl) >= 6): 
                         {
                                 ["Anti-Terror Task Force Shop",
                                         [
@@ -644,8 +644,8 @@ switch(_shop) do
 	{
 		switch(true) do
 		{
-			case (__GETC__(life_donator) == 0): {"You are not a donator!"};
-			case (__GETC__(life_donator) == 1):
+			case (__GETC__(life_Ozdonator) == 0): {"You are not a donator!"};
+			case (__GETC__(life_Ozdonator) == 1):
 			{
 				["OGC Donator Shop Tier 1",
 					[
@@ -677,7 +677,7 @@ switch(_shop) do
 				];
 			};
 
-			case (__GETC__(life_donator) == 2):
+			case (__GETC__(life_Ozdonator) == 2):
 			{
 				["OGC Donator Shop Tier 2",
 					[
@@ -729,7 +729,7 @@ switch(_shop) do
 				];
 			};
 
-			case (__GETC__(life_donator) >= 3):
+			case (__GETC__(life_Ozdonator) >= 3):
 			{
 				["OGC Donator Shop Tier 3",
 					[

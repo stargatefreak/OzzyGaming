@@ -7,15 +7,15 @@
 */
 if (playerSide == west) then 
 {
-	if ((__GETC__(life_coplevel) < 2) && ((uniform player) == "U_Rangemaster")) then {
+	if ((__GETC__(life_ozCoplvl) < 2) && ((uniform player) == "U_Rangemaster")) then {
 		player setObjectTextureGlobal [0, "textures\cop\cadet_shirt.jpg"];
 	};	
 	
-	if ((__GETC__(life_coplevel) > 1) && ((uniform player) == "U_Rangemaster")) then {
+	if ((__GETC__(life_ozCoplvl) > 1) && ((uniform player) == "U_Rangemaster")) then {
 		player setObjectTextureGlobal [0, "textures\cop\police_shirt.jpg"];
 	};	
 	
-	if ((__GETC__(life_coplevel) > 1) && ((uniform player) == "U_B_CombatUniform_mcam_worn")) then {
+	if ((__GETC__(life_ozCoplvl) > 1) && ((uniform player) == "U_B_CombatUniform_mcam_worn")) then {
 		player setObjectTextureGlobal [0, "textures\cop\police_uniform.jpg"];
 	};
 	

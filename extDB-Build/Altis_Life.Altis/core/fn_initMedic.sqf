@@ -10,17 +10,17 @@ private["_end"];
 player addRating 99999999;
 waitUntil {!(isNull (findDisplay 46))};
 
-if((__GETC__(life_medicLevel)) < 1) exitWith {
+if((__GETC__(life_ozMediclvl)) < 1) exitWith {
 	["Notwhitelisted",FALSE,TRUE] call BIS_fnc_endMission;
 	sleep 35;
 };
 /* 
 // Set Paycheck for Medic
-switch(__GETC__(life_medicLevel)) do
+switch(__GETC__(life_ozMediclvl)) do
 {
-	case 1: {life_paycheck = life_paycheck + 1000;};
-	case 2: {life_paycheck = life_paycheck + 1500;};
-	case 3: {life_paycheck = life_paycheck + 2000;};
+	case 1: {life_ozPaycheck = life_ozPaycheck + 1000;};
+	case 2: {life_ozPaycheck = life_ozPaycheck + 1500;};
+	case 3: {life_ozPaycheck = life_ozPaycheck + 2000;};
 };
  */
 [] call life_fnc_spawnMenu;

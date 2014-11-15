@@ -14,7 +14,7 @@ closeDialog 0;
 _baseprice = 10000;
 _vehicleData = _veh getVariable["vehicle_info_owners",[]];
 _vehOwner = (_vehicleData select 0) select 0;
-if(life_cash < _basePrice) exitWith {hint "You do not have $10000 to pay the painter."};
+if(life_ozCash < _basePrice) exitWith {hint "You do not have $10000 to pay the painter."};
 
 if(isNil {_vehicleData}) exitWith {hint "There is no information about this vehicle, it is either rented or cheat."};
 if ((getPlayerUID player) != _vehOwner) exitWith {hint "You are not the owner of the vehicle that is to be painted."};
@@ -59,7 +59,7 @@ if ((getPlayerUID player) != _vehOwner) exitWith {hint "You are not the owner of
 		if(life_interrupted) exitWith {life_interrupted = false; titleText["Canceled!","PLAIN"]; life_action_inUse = false;};
 		if(player != vehicle player) exitWith {titleText["You got to get out of the vehicle to be able to paint it!","PLAIN"];};
 	
-		life_cash = life_cash - _basePrice;
+		life_ozCash = life_ozCash - _basePrice;
 		//Send toDB
 		[[_veh,_color_index],"TON_fnc_vehicleRepaint",false,false] spawn life_fnc_MP;
 		

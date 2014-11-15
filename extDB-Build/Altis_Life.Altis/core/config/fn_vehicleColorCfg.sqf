@@ -37,7 +37,7 @@ switch (_vehicle) do
 		_path = "\A3\Air_F_Heli\Heli_Transport_04\Data\";
 		_ret =
 		[
-			[_path + "Heli_Transport_04_base_01_co.paa","reb",_path + "Heli_Transport_04_base_02_co.paa",_path + "Heli_Transport_04_base_03_co.paa"],
+			[_path + "Heli_Transport_04_base_01_co.paa","reb",_path + "Heli_Transport_04_base_02_co.paa",_path + "Heli_Transport_04_Pod_Ext01_CO.paa"],
 			["textures\colours\Taru1.jpg","civ","textures\colours\Taru2.jpg","textures\colours\Taru2.jpg"],
 			["textures\colours\Taru1.jpg","cop","textures\colours\Taru2.jpg","textures\colours\Taru2.jpg"]
 		];
@@ -151,6 +151,28 @@ switch (_vehicle) do
 			["\A3\Soft_F_beta\Quadbike_01\Data\quadbike_01_indp_co.paa","civ"],
 			["\a3\soft_f_gamma\Quadbike_01\data\quadbike_01_indp_hunter_co.paa","civ"],
 			["\a3\soft_f_gamma\Quadbike_01\data\quadbike_01_indp_hunter_co.paa","reb"]
+		];
+	};
+	
+	case "C_Heli_Light_01_civil_F":
+	{
+		_ret = 
+		[
+			["textures\cop\heli_light_cop.jpg","cop","textures\cop\heli_light_cop.jpg"],
+			["\a3\air_f\Heli_Light_01\Data\heli_light_01_ext_ion_co.paa","fed"],
+			["\a3\air_f\Heli_Light_01\Data\heli_light_01_ext_blue_co.paa","civ"],
+			["\a3\air_f\Heli_Light_01\Data\heli_light_01_ext_co.paa","civ"],
+			["\a3\air_f\Heli_Light_01\Data\heli_light_01_ext_indp_co.paa","donate"],
+			["\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_blueline_co.paa","civ"],
+			["\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_elliptical_co.paa","civ"],
+			["\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_furious_co.paa","civ"],
+			["\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_jeans_co.paa","civ"],
+			["\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_speedy_co.paa","civ"],
+			["\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_sunset_co.paa","civ"],
+			["\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_vrana_co.paa","civ"],
+			["\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_wave_co.paa","civ"],
+			["\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_digital_co.paa","reb"],
+			["textures\medic\med_hummingbird.paa","med"]
 		];
 	};
 	

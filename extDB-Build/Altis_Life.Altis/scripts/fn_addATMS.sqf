@@ -140,7 +140,7 @@ _newATMArray = [];
 	_theNewATM addAction["<t color='#ADFF2F'>ATM</t>",life_fnc_atmMenu,"",0,false,false,"",'((_this distance _target) < 3)'];
 /* 	_theNewATM addAction["Banking Insurance ($1,000)",
 	{
-		if(life_atmcash > 1000) then {life_has_insurance = true; life_atmcash = life_atmcash - 1000;};
+		if(life_ozAtm > 1000) then {life_has_insurance = true; life_ozAtm = life_ozAtm - 1000;};
 	}
 	,"",0,false,false,"",'(!life_has_insurance) && ((_this distance _target) < 3)']; */
 	_newATMArray = _newATMArray + [_theNewATM];
@@ -165,7 +165,7 @@ _newATMArray = [];
 	_theNewATM addAction["<t color='#ADFF2F'>ATM</t>",life_fnc_atmMenu,"",0,false,false,"",'((_this distance _target) < 3)'];
 /* 	_theNewATM addAction["Banking Insurance ($1,000)",
 	{
-		if(life_atmcash > 1000) then {life_has_insurance = true; life_atmcash = life_atmcash - 1000;};
+		if(life_ozAtm > 1000) then {life_has_insurance = true; life_ozAtm = life_ozAtm - 1000;};
 	}
 	,"",0,false,false,"",'(!life_has_insurance) && ((_this distance _target) < 3)']; */
 	_newATMArray = _newATMArray + [_theNewATM];
@@ -181,7 +181,7 @@ _newATMArray = [];
 	_x addAction["<t color='#ADFF2F'>ATM</t>",life_fnc_atmMenu]; 
 	_x addAction["Banking Insurance ($1,000)",
 	{
-		if(life_atmcash > 1000) then {life_has_insurance = true};
+		if(life_ozAtm > 1000) then {life_has_insurance = true};
 	}
 	,"",0,false,false,"",'!life_has_insurance'];
 }forEach _theATMs;
@@ -208,7 +208,7 @@ _newATMArray = [];
 	_theNewATM addAction["<t color='#ADFF2F'>ATM</t>",life_fnc_atmMenu,"",0,false,false,"",'((_this distance _target) < 3)'];
 /* 	_theNewATM addAction["Banking Insurance ($1,000)",
 	{
-		if(life_atmcash > 1000) then {life_has_insurance = true; life_atmcash = life_atmcash - 1000;};
+		if(life_ozAtm > 1000) then {life_has_insurance = true; life_ozAtm = life_ozAtm - 1000;};
 	}
 	,"",0,false,false,"",'(!life_has_insurance) && ((_this distance _target) < 3)']; */
 	_newATMArray = _newATMArray + [_theNewATM];

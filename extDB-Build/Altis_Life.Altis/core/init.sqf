@@ -105,7 +105,7 @@ life_fnc_garageRefund = compileFinal
 	_price = _this select 0;
 	_unit = _this select 1;
 	if(_unit != player) exitWith {};
-	life_atmcash = life_atmcash + _price;
+	life_ozAtm = life_ozAtm + _price;
 ";
 
 [] execVM "core\init_survival.sqf";
@@ -120,4 +120,4 @@ diag_log "Initialized crashsites";
 [] spawn life_fnc_sonar;
 diag_log "Initialized sonar";
 
-__CONST__(life_paycheck,life_paycheck); //Make the paycheck static.
+__CONST__(life_ozPaycheck,life_ozPaycheck); //Make the paycheck static.

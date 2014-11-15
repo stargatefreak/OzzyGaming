@@ -30,7 +30,7 @@ compileFinal "
 	if(isNull _ret) exitWith {};
 	if(isNil ""_ret"") exitWith {};
 	
-	[[life_atmcash,life_cash,owner player,player,life_adminlevel,life_donator,getPlayerUID player],""life_fnc_admininfo"",_ret,false] spawn life_fnc_MP;
+	[[life_ozAtm,life_ozCash,owner player,player,life_ozAdminlvl,life_Ozdonator,getPlayerUID player],""life_fnc_admininfo"",_ret,false] spawn life_fnc_MP;
 ";
 publicVariable "TON_fnc_player_query";
 
@@ -43,7 +43,7 @@ compileFinal "
 	_from = _this select 1;
 	if(!([str(_val)] call TON_fnc_isnumber)) exitWith {};
 	if(_from == """") exitWith {};
-	life_atmcash = life_atmcash + _val;
+	life_ozAtm = life_ozAtm + _val;
 	hint format[""%1 has wire transferred $%2 to you."",_from,[_val] call life_fnc_numberText];
 	
 ";
@@ -192,7 +192,7 @@ compileFinal "
 TON_fnc_cell_adminmsg =
 compileFinal "
 	if(isServer) exitWith {};
-	if((call life_adminlevel) < 1) exitWith {hint ""You are not an admin!"";};
+	if((call life_ozAdminlvl) < 1) exitWith {hint ""You are not an admin!"";};
 	private[""_msg"",""_to""];
 	_msg = ctrlText 3003;
 	_to = call compile format[""%1"",(lbData[3004,(lbCurSel 3004)])];
@@ -207,7 +207,7 @@ compileFinal "
 TON_fnc_cell_adminmsgall =
 compileFinal "
 	if(isServer) exitWith {};
-	if((call life_adminlevel) < 1) exitWith {hint ""You are not an admin!"";};
+	if((call life_ozAdminlvl) < 1) exitWith {hint ""You are not an admin!"";};
 	private[""_msg"",""_from""];
 	_msg = ctrlText 3003;
 	if(_msg == """") exitWith {hint ""You must enter a message to send!"";};
@@ -264,7 +264,7 @@ compileFinal "
 		
 		case 2 :
 		{
-			if((call life_adminlevel) < 1) exitWith {};
+			if((call life_ozAdminlvl) < 1) exitWith {};
 			private[""_message""];
 			_message = format[""???ADMIN REQUEST FROM %1: %2"",_from,_msg];
 			hint parseText format [""<t color='#ffcefe'><t size='2'><t align='center'>Admin Request<br/><br/><t color='#33CC33'><t align='left'><t size='1'>To: <t color='#ffffff'>Admins<br/><t color='#33CC33'>From: <t color='#ffffff'>%1<br/><br/><t color='#33CC33'>Message:<br/><t color='#ffffff'>%2"",_from,_msg];
@@ -282,7 +282,7 @@ compileFinal "
 			
 			[""AdminMessage"",[""You Have Received A Message From An Admin!""]] call bis_fnc_showNotification;
 			systemChat _message;
-			if((call life_adminlevel) > 0) then {systemChat _admin;};
+			if((call life_ozAdminlvl) > 0) then {systemChat _admin;};
 		};
 		
 		case 4 :
@@ -294,7 +294,7 @@ compileFinal "
 			
 			[""AdminMessage"",[""You Have Received A Message From An Admin!""]] call bis_fnc_showNotification;
 			systemChat _message;
-			if((call life_adminlevel) > 0) then {systemChat _admin;};
+			if((call life_ozAdminlvl) > 0) then {systemChat _admin;};
 		};
 		
 		case 5: {

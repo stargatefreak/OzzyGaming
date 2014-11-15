@@ -15,11 +15,11 @@ _flag = switch(playerSide) do {case west: {"cop"}; case civilian: {"civ"}; case 
 
 switch(_mode) do {
 	case 0: {
-		_packet set[2,life_cash];
+		_packet set[2,life_ozCash];
 	};
 	
 	case 1: {
-		_packet set[2,life_atmcash];
+		_packet set[2,life_ozAtm];
 	};
 	
 	case 2: {
@@ -47,8 +47,8 @@ switch(_mode) do {
 	};
 	
 	case 6: {
-		_packet set[2,life_cash];
-		_packet set[4,life_atmcash];
+		_packet set[2,life_ozCash];
+		_packet set[4,life_ozAtm];
 	};
 	
 	case 8: {

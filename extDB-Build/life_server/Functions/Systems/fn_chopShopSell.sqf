@@ -33,7 +33,7 @@ if(_mode == 2) then {
 
 	deleteVehicle _vehicle;
 	[["life_action_inUse",false],"life_fnc_netSetVar",_unit,false] spawn life_fnc_MP;
-	[["life_cash",_cash],"life_fnc_netSetVar",_unit,false] spawn life_fnc_MP;
+	[["life_ozCash",_cash],"life_fnc_netSetVar",_unit,false] spawn life_fnc_MP;
 	[[2,format[(localize "STR_NOTF_ChopSoldCar"),_displayName,[_price] call life_fnc_numberText]],"life_fnc_broadcast",_unit,false] spawn life_fnc_MP;
 } else {
 	_dbInfo = _vehicle getVariable["dbInfo",[]];
@@ -48,6 +48,6 @@ if(_mode == 2) then {
 
 	deleteVehicle _vehicle;
 	[["life_action_inUse",false],"life_fnc_netSetVar",_unit,false] spawn life_fnc_MP;
-	[["life_cash",_cash],"life_fnc_netSetVar",_unit,false] spawn life_fnc_MP;
+	[["life_ozCash",_cash],"life_fnc_netSetVar",_unit,false] spawn life_fnc_MP;
 	[[2,format[(localize "STR_NOTF_ChopSoldCar"),_displayName,[_price] call life_fnc_numberText]],"life_fnc_broadcast",_unit,false] spawn life_fnc_MP;
 };

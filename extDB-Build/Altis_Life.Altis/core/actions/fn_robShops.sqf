@@ -64,7 +64,7 @@ if(_robber distance _shop > 10.5) exitWith { deleteMarker "Marker200"; _shop swi
 
 titleText[format["You have stolen $%1, now get away before the cops arrive!",[_kassa] call life_fnc_numberText],"PLAIN"];
 deleteMarker "Marker200"; // by ehno delete maker
-life_cash = life_cash + _kassa;
+life_ozCash = life_ozCash + _kassa;
 
 _rip = false;
 life_use_atm = false;

@@ -131,7 +131,7 @@ if(_hasLicense) then
 }
 else
 {
-	if(life_cash < _cost) exitWith {hint format[localize "STR_Process_License",[_cost] call life_fnc_numberText]; 5 cutText ["","PLAIN"]; life_is_processing = false;};
+	if(life_ozCash < _cost) exitWith {hint format[localize "STR_Process_License",[_cost] call life_fnc_numberText]; 5 cutText ["","PLAIN"]; life_is_processing = false;};
 
 			while{true} do
 			{
@@ -144,7 +144,7 @@ else
 			};
 
 	if(player distance _vendor > 10) exitWith {hint localize "STR_Process_Stay"; 5 cutText ["","PLAIN"]; life_is_processing = false;};
-	if(life_cash < _cost) exitWith {hint format[localize "STR_Process_License",[_cost] call life_fnc_numberText]; 5 cutText ["","PLAIN"]; life_is_processing = false;};
+	if(life_ozCash < _cost) exitWith {hint format[localize "STR_Process_License",[_cost] call life_fnc_numberText]; 5 cutText ["","PLAIN"]; life_is_processing = false;};
 			if(!([false,_oldItem,_NewVal] call life_fnc_handleInv)) exitWith {5 cutText ["","PLAIN"]; life_is_processing = false;};
 			if(!([true,_newItem,_NewVal] call life_fnc_handleInv)) exitWith {5 cutText ["","PLAIN"]; [true,_oldItem,_NewVal] call life_fnc_handleInv; life_is_processing = false;};
 			//2vars
@@ -162,7 +162,7 @@ else
 				5 cutText ["","PLAIN"];
 	titleText[format[localize "STR_Process_Processed2",_NewVal,_itemName,[_cost] call life_fnc_numberText],"PLAIN"];
 			};
-			life_cash = life_cash - _cost;
+			life_ozCash = life_ozCash - _cost;
 			
 			life_is_processing = false;
 }; 

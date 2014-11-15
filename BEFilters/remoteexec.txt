@@ -1,1 +1,5 @@
 1 ""
+7 "isDedicated"
+7 "compile"
+7 "isServer"
+7 "extdb-conf.ini"
