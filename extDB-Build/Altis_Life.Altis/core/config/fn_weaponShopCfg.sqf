@@ -172,7 +172,7 @@ switch(_shop) do
                         //        ["200Rnd_65x39_cased_Box_Tracer",nil,12000],
                                 // DMRs
                         ["arifle_MXM_F",nil,43000],
-                                ["10Rnd_762x51_Mag",nil, 4300],
+                        //        ["10Rnd_762x51_Mag",nil, 4300],
                         //["srifle_EBR_F",nil,63000],
                         //        ["20Rnd_762x51_Mag",nil,5300],
                                 // Snipers
