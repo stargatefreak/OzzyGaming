@@ -711,7 +711,7 @@ case (__GETC__(life_Ozdonator) == 2):
 [
 ["arifle_TRG21_F",nil,22400],
 ["30Rnd_556x45_Stanag_Tracer_Yellow",nil,192],
-["arifle_Katiba_F",nil,192000],
+["arifle_Katiba_F",nil,19200],
 ["30Rnd_65x39_caseless_green_mag_Tracer",nil,150],
 ["srifle_DMR_01_F",nil,32000],
 ["10Rnd_762x51_Mag",nil,320],
