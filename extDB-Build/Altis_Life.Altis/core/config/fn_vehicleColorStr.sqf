@@ -76,6 +76,7 @@ switch (_vehicle) do
 			case 9: {_color = "Dark Red"};
 			case 10: {_color = "Orange"};
 			case 11: {_color = "Highway Patrol"};
+			case 12: {_color = "Red Sports"};
 		};
 	};
 	
@@ -254,8 +255,9 @@ switch (_vehicle) do
 	{
 		switch (_index) do
 		{
-			case 0: {_color = "News Crew"};
+			case 0: {_color = "POLAIR 1"};
 			case 1: {_color = "Purple"};
+			case 2: {_color = "News Crew"};
 		};
 	};
 	
@@ -277,6 +279,14 @@ switch (_vehicle) do
 	};
 	
 	case "B_Heli_Transport_01_F":
+	{
+		switch (_index) do
+		{
+			case 0: {_color = "Swat"};
+		};
+	};
+	
+	case "B_APC_Tracked_01_rcws_F":
 	{
 		switch (_index) do
 		{

@@ -26,6 +26,8 @@ switch (_filter) do
 			["U_I_G_resistanceLeader_F",nil,11500],
 			["U_O_SpecopsUniform_ocamo",nil,17500],
 			["U_B_SpecopsUniform_sgg",nil,50000],
+	/*		["U_O_SpecopsUniform_blk",nil,50000],
+			["U_O_OfficerUniform_ocamo",nil,50000], */
 			["U_O_CombatUniform_oucamo",nil,50000],
 			["U_O_PilotCoveralls",nil,15610],
 			["U_B_PilotCoveralls",nil,15610],
@@ -50,6 +52,9 @@ switch (_filter) do
             ["H_Bandanna_khk",nil,650],
             ["H_Bandanna_sgg",nil,650],
             ["H_Bandanna_surfer",nil,650],
+	/*		["H_PilotHelmetHeli_I",nil,1000],
+			["H_MilCap_rucamo",nil,1000],
+			["H_CrewHelmetHeli_I",nil,1000], */
 			["H_PilotHelmetFighter_B",nil,2500]
 		];
 	};
@@ -87,6 +92,8 @@ switch (_filter) do
 	{
 		[
 			["V_TacVest_khk",nil,12500],
+		/*	["V_PlateCarrierIA1_dgtl",nil,10500],
+			["V_PlateCarrierIA2_dgtl",nil,10500], */
 			["V_BandollierB_cbr",nil,4500],
 			["V_HarnessO_brn",nil,7500],
             ["V_Rangemaster_belt",nil,850]

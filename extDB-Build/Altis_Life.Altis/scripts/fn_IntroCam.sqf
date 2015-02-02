@@ -15,7 +15,7 @@ if(!life_firstSpawn) then {
 	_camTime = 6;
 };
 //intro move
-showCinemaBorder true;
+showCinemaBorder false;
 camUseNVG false;
 
 _camera = "camera" camCreate [(position player select 0)+_randCamX, (position player select 1)+_randCamY,(position player select 2)+_camDistance];

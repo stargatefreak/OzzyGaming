@@ -10,7 +10,17 @@ _onScreenTime = 5;
  
 [] spawn life_fnc_IntroCam;
 sleep 0.1; //Wait in seconds before the credits start after player is in-game
-playSound "Intro"; // This calls the code inside of description.ext //
+switch(playerSide) do {
+	case west: {
+		playSound "police";
+	};
+	case independent: {
+		playSound "ems";
+	};
+	case civilian: {
+		playSound "civilian";
+	};
+};
 sleep 0.3; 
 _role1 = "Welcome"; //In yellow
 _role1names = ["Thank you for joining the OzzyGaming Altis Life Server."]; //In white

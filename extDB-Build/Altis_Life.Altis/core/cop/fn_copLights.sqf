@@ -13,9 +13,11 @@ if(isNil "_vehicle" OR isNull _vehicle OR !(_vehicle getVariable "lights")) exit
 _lightRed = [20, 0.1, 0.1];
 _lightBlue = [0.1, 0.1, 20];
 
-_lightleft = "#lightpoint" createVehicle getpos _vehicle;   
-_lightleftfront = "#lightpoint" createVehicle getpos _vehicle;   
 sleep 0.2;
+_lightleft = "#lightpoint" createVehicle getpos _vehicle;
+_lightleft setVelocity velocity _vehicle;
+_lightleftfront = "#lightpoint" createVehicle getpos _vehicle;
+_lightleftfront setVelocity velocity _vehicle;
 _lightleft setLightColor _lightRed; 
 _lightleft setLightBrightness 0.2;  
 _lightleft setLightAmbient [0.1,0.1,1];
@@ -48,6 +50,12 @@ switch (typeOf _vehicle) do
 		_lightleft lightAttachObject [_vehicle, [-0.37,-0.3,0.3]];
 		_lightleftfront lightAttachObject [_vehicle, [-0.37,2.1,-0.6]];
 	};
+	
+	case "B_APC_Tracked_01_rcws_F":
+	{
+		_lightleft lightAttachObject [_vehicle, [-1.42, -5, -0.5]];
+		_lightleftfront lightAttachObject [_vehicle, [-0.8, 2.4, -1.5]];
+	};
 };
 
 _lightleft setLightAttenuation [0.181, 0, 1000, 130]; 
@@ -55,15 +63,19 @@ _lightleft setLightIntensity 10;
 _lightleft setLightFlareSize 0.38;
 _lightleft setLightFlareMaxDistance 150;
 _lightleft setLightUseFlare true;
+_lightleft setLightDayLight true;
 _lightleftfront setLightAttenuation [0.181, 0, 1000, 130]; 
 _lightleftfront setLightIntensity 10;
 _lightleftfront setLightFlareSize 0.38;
 _lightleftfront setLightFlareMaxDistance 150;
 _lightleftfront setLightUseFlare true;
+_lightleftfront setLightDayLight true;
 
-_lightright = "#lightpoint" createVehicle getpos _vehicle;   
-_lightrightfront = "#lightpoint" createVehicle getpos _vehicle;   
 sleep 0.2;
+_lightright = "#lightpoint" createVehicle getpos _vehicle;
+_lightright setVelocity velocity _vehicle;
+_lightrightfront = "#lightpoint" createVehicle getpos _vehicle;
+_lightrightfront setVelocity velocity _vehicle;
 _lightright setLightColor _lightBlue; 
 _lightright setLightBrightness 0.2;  
 _lightright setLightAmbient [0.1,0.1,1]; 
@@ -96,6 +108,12 @@ switch (typeOf _vehicle) do
 		_lightright lightAttachObject [_vehicle, [0.37,-0.3,0.3]];
 		_lightrightfront lightAttachObject [_vehicle, [0.37,2.1,-0.6]];
 	};
+	
+	case "B_APC_Tracked_01_rcws_F":
+	{
+		_lightright lightAttachObject [_vehicle, [1.42, -5, -0.5]];
+		_lightrightfront lightAttachObject [_vehicle, [0.8, 2.4, -1.5]];
+	};
 };
   
 _lightright setLightAttenuation [0.181, 0, 1000, 130]; 
@@ -103,16 +121,12 @@ _lightright setLightIntensity 10;
 _lightright setLightFlareSize 0.38;
 _lightright setLightFlareMaxDistance 150;
 _lightright setLightUseFlare true;
+_lightright setLightDayLight true;
 _lightrightfront setLightAttenuation [0.181, 0, 1000, 130]; 
 _lightrightfront setLightIntensity 10;
 _lightrightfront setLightFlareSize 0.38;
 _lightrightfront setLightFlareMaxDistance 150;
 _lightrightfront setLightUseFlare true;
-
-//ARE YOU ALL HAPPY?!?!?!?!?!?!?!?!?%#?@WGD?TGD?BN?ZDHBFD?GA
-_lightleft setLightDayLight true;
-_lightleftfront setLightDayLight true;
-_lightright setLightDayLight true;
 _lightrightfront setLightDayLight true;
 
 _leftRed = true;  

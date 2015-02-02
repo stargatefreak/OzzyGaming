@@ -490,6 +490,9 @@ class Life_RscListBox
 	w = 0.275;
 	h = 0.04;
 	font = "PuristaMedium";
+    colorPicture[] = {1,1,1,1};
+    colorPictureSelected[] = {1,1,1,1};
+    colorPictureDisabled[] = {1,1,1,1};
 	colorSelect[] = {1, 1, 1, 1};
 	colorText[] = {1, 1, 1, 1};
 	colorBackground[] = {0.28,0.28,0.28,0.28};

@@ -1,30 +1,47 @@
-/*%FSM<COMPILE "D:\Bohemia Interactive\Tools\FSM Editor Personal Edition\scriptedFSM.cfg, Server-Side Cleanup">*/
+/*%FSM<COMPILE "C:\Program Files (x86)\Bohemia Interactive\Tools\FSM Editor Personal Edition\scriptedFSM.cfg, Server-Side Cleanup">*/
 /*%FSM<HEAD>*/
 /*
-item0[] = {"init",0,250,-65.004578,-391.651611,24.995417,-341.651672,0.000000,"init"};
-item1[] = {"true",8,218,-62.976639,-315.185364,27.023363,-265.185364,0.000000,"true"};
-item2[] = {"Share__Work_load",2,250,-64.183350,-224.681931,25.816656,-174.681931,0.000000,"Share " \n "Work-load"};
-item3[] = {"true",8,218,-54.709698,75.189262,35.290302,125.189262,0.000000,"true"};
-item4[] = {"Time_Check",4,218,-219.425827,-133.310532,-129.425964,-83.310455,0.000000,"Time Check"};
-item5[] = {"Delete_Dead_Cars",2,4346,-220.186951,-29.248400,-130.187195,20.751413,0.000000,"Delete" \n "Dead" \n "Cars"};
-item6[] = {"",7,210,-312.538239,95.295059,-304.538239,103.295059,0.000000,""};
-item7[] = {"",7,210,-311.750000,-203.033707,-303.750000,-195.033707,0.000000,""};
-link0[] = {0,1};
-link1[] = {1,2};
-link2[] = {2,4};
-link3[] = {3,6};
-link4[] = {4,5};
-link5[] = {5,3};
-link6[] = {6,7};
-link7[] = {7,2};
-globals[] = {0.000000,0,0,0,0,640,480,1,46,6316128,1,-629.444153,611.207214,293.309357,-434.050568,1243,911,1};
-window[] = {2,-1,-1,-32000,-32000,910,150,1793,150,3,1261};
+item0[] = {"Disabled",1,250,125.839256,-206.050797,293.492798,34.623047,0.000000,"Disabled"};
+item1[] = {"init",0,250,-65.004578,-391.651611,24.995417,-341.651672,0.000000,"init"};
+item2[] = {"true",8,218,-63.974659,-323.170135,26.025249,-273.170197,0.000000,"true"};
+item3[] = {"Share__Work_load",2,250,-64.183380,-244.644073,25.816669,-194.644073,0.000000,"Share " \n "Work-load"};
+item4[] = {"true",8,218,-63.692684,27.537014,26.307331,77.537033,0.000000,"true"};
+item5[] = {"Time_Check",4,218,-63.720837,-161.257568,26.279291,-111.257530,0.000000,"Time Check"};
+item6[] = {"Delete_Dead_Cars",2,250,-67.557068,-80.543396,29.362297,-10.553605,0.000000,"Delete" \n "Dead Cars" \n "And " \n "Empty Groups"};
+item7[] = {"",7,210,-138.866959,48.411667,-130.866959,56.411682,0.000000,""};
+item8[] = {"",7,210,-139.076874,-223.764694,-131.076874,-215.764694,0.000000,""};
+item9[] = {"Time_Check",4,218,162.660355,-171.602737,252.660660,-121.602753,0.000000,"Time Check"};
+item10[] = {"Delete_Empty_Gro",2,250,163.895706,-50.572571,253.895584,-0.572525,0.000000,"Delete" \n "Empty" \n "Groups"};
+item11[] = {"____FAKE____",9,440,0.000000,0.000000,0.000000,0.000000,0.000000,"____FAKE____"};
+link0[] = {1,2};
+link1[] = {2,3};
+link2[] = {3,5};
+link3[] = {4,7};
+link4[] = {5,6};
+link5[] = {6,4};
+link6[] = {7,8};
+link7[] = {8,3};
+link8[] = {9,10};
+link9[] = {11,9};
+globals[] = {0.000000,0,0,0,0,640,480,1,62,6316128,1,-444.644745,511.031311,170.683899,-528.966309,1243,910,1};
+window[] = {2,-1,-1,-1,-1,763,-7,1636,3,3,1261};
 *//*%FSM</HEAD>*/
 class FSM
 {
   fsmName = "Server-Side Cleanup";
   class States
   {
+    /*%FSM<STATE "Disabled">*/
+    class Disabled
+    {
+      name = "Disabled";
+      init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+      };
+    };
+    /*%FSM</STATE>*/
     /*%FSM<STATE "init">*/
     class init
     {
@@ -32,6 +49,7 @@ class FSM
       init = /*%FSM<STATEINIT""">*/"private[""_impound"",""_cars"",""_objs"",""_totCars"",""_thread""];" \n
        "_impound = time;" \n
        "_cars = time;" \n
+       "_groups = time;" \n
        "_objs = time;"/*%FSM</STATEINIT""">*/;
       precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
       class Links
@@ -116,6 +134,13 @@ class FSM
        "	};" \n
        "} foreach allMissionObjects ""Air"";" \n
        "" \n
+       "{" \n
+       "	if (count units _x==0) then {" \n
+       "		deleteGroup _x;" \n
+       "		//diag_log (""CUSTOM: GROUP CLEANUP"");" \n
+       "	};" \n
+       "} forEach allGroups;" \n
+       "" \n
        "_cars = time;"/*%FSM</STATEINIT""">*/;
       precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
       class Links
@@ -133,10 +158,50 @@ class FSM
       };
     };
     /*%FSM</STATE>*/
+    /*%FSM<STATE "Delete_Empty_Gro">*/
+    class Delete_Empty_Gro
+    {
+      name = "Delete_Empty_Gro";
+      init = /*%FSM<STATEINIT""">*/"{" \n
+       "	if (count units _x==0) then {" \n
+       "		deleteGroup _x;" \n
+       "		//diag_log (""CUSTOM: GROUP CLEANUP"");" \n
+       "	};" \n
+       "} forEach allGroups;" \n
+       "" \n
+       "_groups = time;"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "____FAKE____">*/
+    class ____FAKE____
+    {
+      name = "____FAKE____";
+      init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "Time_Check">*/
+        class Time_Check
+        {
+          priority = 0.000000;
+          to="Delete_Empty_Gro";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"((time - _groups) > 30)"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
   };
   initState="init";
   finalStates[] =
   {
+    "Disabled",
   };
 };
 /*%FSM</COMPILE>*/

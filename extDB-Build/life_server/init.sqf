@@ -33,10 +33,10 @@ if(isNil {uiNamespace getVariable "life_sql_id"}) then {
 /* ["CALL resetLifeVehicles",1] spawn DB_fnc_asyncCall;
 ["CALL deleteDeadVehicles",1] spawn DB_fnc_asyncCall;
 ["CALL deleteOldHouses",1] spawn DB_fnc_asyncCall;
-["CALL deleteOldGangs",1] spawn DB_fnc_asyncCall; //Maybe delete old gangs */
+["CALL deleteOldGangs",1] spawn DB_fnc_asyncCall; //Maybe delete old gangs
 
 waitUntil {!DB_Async_Active};
-["DELETE FROM vehicles WHERE alive = 0",1] call DB_fnc_asyncCall;
+["DELETE FROM vehicles WHERE alive = 0",1] call DB_fnc_asyncCall; */
 ["UPDATE vehicles SET active = 0 WHERE active = 1 and alive = 1",1] call DB_fnc_asyncCall;
 
 //Custom Content
@@ -51,9 +51,9 @@ __CONST__(JxMxE_PublishVehicle,"No");
 
 //[] execVM "\life_server\fn_initHC.sqf";
 
-life_radio_west = radioChannelCreate [[0, 0.95, 1, 0.8], "Side Channel", "%UNIT_NAME", []];
-life_radio_civ = radioChannelCreate [[0, 0.95, 1, 0.8], "Side Channel", "%UNIT_NAME", []];
-life_radio_indep = radioChannelCreate [[0, 0.95, 1, 0.8], "Side Channel", "%UNIT_NAME", []];
+life_radio_west = radioChannelCreate [[0, 0.95, 1, 0.8], "Police Channel", "%UNIT_NAME", []];
+life_radio_civ = radioChannelCreate [[0, 0.95, 1, 0.8], "Civilian Channel", "%UNIT_NAME", []];
+life_radio_indep = radioChannelCreate [[0, 0.95, 1, 0.8], "Medic Channel", "%UNIT_NAME", []];
 
 serv_sv_use = [];
 

@@ -8,8 +8,8 @@
 private["_medic","_dir"];
 _medic = [_this,0,"Unknown Medic",[""]] call BIS_fnc_param;
 _oldGear = [life_corpse] call life_fnc_fetchDeadGear;
-life_onDeath = false;
-[8] call SOCK_fnc_updatePartial;
+/* life_onDeath = false;
+[8] call SOCK_fnc_updatePartial; */
 [_oldGear] spawn life_fnc_loadDeadGear;
 life_corpse setVariable["realname",nil,true]; //Should correct the double name sinking into the ground.
 [[life_corpse],"life_fnc_corpse",nil,FALSE] spawn life_fnc_MP;

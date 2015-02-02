@@ -10,7 +10,7 @@ private["_unit","_killer"];
 disableSerialization;
 _unit = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
 _killer = [_this,1,ObjNull,[ObjNull]] call BIS_fnc_param;
-
+life_death_pos = getPos _unit;
 //Set some vars
 _unit setVariable["Revive",FALSE,TRUE]; //Set the corpse to a revivable state.
 _unit setVariable["name",profileName,TRUE]; //Set my name so they can say my name.
@@ -20,9 +20,9 @@ _unit setVariable["transporting",FALSE,TRUE]; //Why the fuck do I have this? Is 
 _unit setVariable["steam64id",(getPlayerUID player),true]; //Set the UID.
 _unit setVariable["missingOrgan",FALSE,TRUE]; //I DONT KNOW WHY SOMETIMES THEY ARE CAPS or not
 _unit setVariable["hasOrgan",FALSE,TRUE]; 
-life_onDeath = true;
+/* life_onDeath = true;
 
-[8] call SOCK_fnc_updatePartial;
+[8] call SOCK_fnc_updatePartial; */
 //Setup our camera view
 life_deathCamera  = "CAMERA" camCreate (getPosATL _unit);
 showCinemaBorder TRUE;

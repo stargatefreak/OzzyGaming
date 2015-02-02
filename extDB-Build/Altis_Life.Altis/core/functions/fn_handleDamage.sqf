@@ -14,14 +14,15 @@ _projectile = _this select 4;
 
 //Internal Debugging.
 if(!isNil "TON_Debug") then {
-	systemChat format["PART: %1 || DAMAGE: %2 || SOURCE: %3 || PROJECTILE: %4 || FRAME: %5",_part,_damage,_source,_projectile,diag_frameno];
+	systemChat format["PART: %1 || DAMAGE: %2 || SOURCE: %3 || PROJECTILE: %4 || WEAPON: %5 || FRAME: %6",_part,_damage,_source,_projectile,currentWeapon _source,diag_frameno];
 };
 
 //Handle the tazer first (Top-Priority).
 if(!isNull _source) then {
 	if(_source != _unit) then {
 		_curWep = currentWeapon _source;
-		if(_projectile in ["B_45ACP_Ball","B_9x21_Ball"] && _curWep in ["hgun_P07_snds_F","SMG_01_F"]) then {
+		/* hint format["W: %1<br/>P: %2",_curWep,_projectile]; */
+		if(_projectile in ["B_45ACP_Ball","B_9x21_Ball","B_127x99_Ball_Tracer_Red"] && _curWep in ["hgun_P07_snds_F","SMG_01_F","HMG_127_APC"]) then {
 			/* if(side _source == west && playerSide != west) then { */
 				private["_distance","_isVehicle","_isQuad"];
 				_distance = if(_projectile == "30Rnd_45ACP_Mag_SMG_01") then {100} else {35};

@@ -1,6 +1,6 @@
 author = "Tonic";
-onLoadName = "OzzyGaming 3.0";
-onLoadMission = "A RPG game mode developed by Tonic - edited by Aaron";
+onLoadName = "OzzyGaming 3.1";
+onLoadMission = "Altis Life by Tonic - modified by OzzyGaming";
 loadScreen = "textures\loadScreen.jpg"; 
 joinUnassigned = 1;
 respawn = BASE;
@@ -14,7 +14,7 @@ class Header
 {
 	gameType = RPG;
 	minPlayers = 1;
-	maxPlayers = 75;
+	maxPlayers = 150;
 };
 
 wreckLimit = 3;
@@ -48,10 +48,22 @@ class CfgSounds
 		sound[] = {"\sounds\Siren_Long.ogg", 1.0, 1};
 		titles[] = {};
 	};
-	class Intro
+	class civilian
 	{
-		name = "Intro";
-		sound[] = {"\sounds\Intro.ogg", 0.8, 1};
+		name = "civilian";
+		sound[] = {"\sounds\civilian.ogg", 0.8, 1};
+		titles[] = {};
+    };
+	class police
+	{
+		name = "police";
+		sound[] = {"\sounds\police.ogg", 0.8, 1};
+		titles[] = {};
+    };
+		class ems
+	{
+		name = "ems";
+		sound[] = {"\sounds\ems.ogg", 0.8, 1};
 		titles[] = {};
     };
 	class MedicSiren
@@ -180,9 +192,9 @@ class CfgDebriefing
 	
 	class SpyGlass
 	{
-		title = "The SpyGlass sees you";
-		subTitle = "You were detected by the SpyGlass";
-		description = "You were detected for cheating and have been reported to the server. Enjoy your day.";
+		title = "BEC Detected";
+		subTitle = "Malicious injection detected by BEC";
+		description = "*Penalty Box* When one is in the penalty box, tears are permitted. - Picard";
 		pictureBackground = "";
 		picture = "";
 		pictureColor[] = {0,0.3,0.6,1};
@@ -263,3 +275,14 @@ class CfgNotifications
 		priority = 5;
 	};
 }
+
+class Params
+{
+    class HeadlessClient
+    {
+        title = ”Headless Client”;
+        values[]={0,1};
+        texts[]={”OFF”,”ON”};
+        default=0;
+    };
+};

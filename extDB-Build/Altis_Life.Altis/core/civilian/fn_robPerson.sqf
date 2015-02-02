@@ -15,6 +15,7 @@ if(life_ozCash > 0) then
 	[[getPlayerUID _robber,_robber getVariable["realname",name _robber],"488"],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;
 	[[1,format[localize "STR_NOTF_Robbed",_robber getVariable["realname",name _robber],profileName,[life_ozCash] call life_fnc_numberText]],"life_fnc_broadcast",nil,false] spawn life_fnc_MP;
 	life_ozCash = 0;
+    [0] call SOCK_fnc_updatePartial;
 }
 	else
 {

@@ -5,17 +5,42 @@ X_Client = false;
 X_JIP = false;
 StartProgress = false;
 
+if (isNil ”paramsArray” ) then { paramsArray = [0,0,0]};
+if (paramsArray select 0 == 1) then {
+    if (isServer) then {
+        HCPresent = true;
+        publicVariable ”HCPresent”;
+    };
+
+        if (!hasInterface && !isServer ) then {
+            HCName = name player ;
+            publicVariable ”HCName” ;
+    };
+} else {
+    if (isServer) then {
+        HCPresent = false;
+        HCName = ”NOONE” ;
+        publicVariable ”HCPresent”;
+        publicVariable ”HCName”;
+    };
+};
+
+
+
 if(!isDedicated) then { X_Client = true;};
 enableSaving[false,false];
 
+player enableFatigue false;
+
 life_versionInfo = "Altis Life RPG v3.1.4.8";
 [] execVM "briefing.sqf"; //Load Briefing
-[] execVM "scripts\DynWeather.sqf";
 [] execVM "scripts\fn_addATMS.sqf";
+[] execVM "scripts\DynWeather.sqf";
 [] execVM "scripts\fn_disableSnakes.sqf";
 [] execVM "scripts\fn_noSideVoice.sqf";
 [] execVM "scripts\fn_statusBar.sqf";
 [] execVM "KRON_Strings.sqf";
+/* [] execVM "scripts\clean.sqf"; */	
 
 _igiload = execVM "core\IgiLoad\IgiLoadInit.sqf";
 

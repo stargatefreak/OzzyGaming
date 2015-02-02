@@ -116,7 +116,8 @@ switch (_vehicle) do
 			["\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_02_co.paa","cop"],
 			["\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_co.paa","cop"],
 			["\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_04_co.paa","cop"],
-			["textures\cop\hwp_suv.jpg","cop","textures\cop\hwp_suv.jpg"]
+			["textures\cop\hwp_suv.jpg","cop","textures\cop\hwp_suv.jpg"],
+			["textures\civ\suv_red-black2.jpg","civ","textures\civ\suv_red-black2.jpg"]
 		];
 	};
 	
@@ -257,8 +258,9 @@ switch (_vehicle) do
 	{
 		_ret = 
 		[
-			["textures\cop\news7.jpg","cop"],
-			["textures\civ\heli_light_03.jpg","civ"]
+			["textures\cop\police_hellcat.jpg","cop"],
+			["textures\civ\heli_light_03.jpg","civ"],
+			["textures\cop\news7.jpg","civ"]
 		];
 	};
 	
@@ -267,6 +269,14 @@ switch (_vehicle) do
 		_ret = 
 		[
 			["textures\cop\swat_ghosthawk_1.jpg","cop","textures\cop\swat_ghosthawk_2.jpg"]
+		];
+	};
+	
+	case "B_APC_Tracked_01_rcws_F":
+	{
+		_ret = 
+		[
+			["textures\cop\apc_body.jpg","cop","textures\cop\apc_crv.jpg","textures\cop\apc_co.jpg"]
 		];
 	};
 };

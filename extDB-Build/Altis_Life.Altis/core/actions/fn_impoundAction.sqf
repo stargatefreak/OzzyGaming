@@ -7,9 +7,9 @@
 */
 private["_vehicle","_type","_time","_price","_vehicleData","_vehicleName","_upp","_ui","_progress","_pgText","_cP"];
 _vehicle = cursorTarget;
-if(!((_vehicle isKindOf "Car") || (_vehicle isKindOf "Air") || (_vehicle isKindOf "Ship") || (typeOf _vehicle == "Box_IND_AmmoVeh_F"))) exitWith {};
+if(!((_vehicle isKindOf "Car") || (_vehicle isKindOf "Air") || (_vehicle isKindOf "Ship") || (_vehicle isKindOf "Tank") || (typeOf _vehicle == "Box_IND_AmmoVeh_F"))) exitWith {};
 if(player distance cursorTarget > 10) exitWith {};
-if((_vehicle isKindOf "Car") || (_vehicle isKindOf "Air") || (_vehicle isKindOf "Ship") || (typeOf _vehicle == "Box_IND_AmmoVeh_F")) then
+if((_vehicle isKindOf "Car") || (_vehicle isKindOf "Air") || (_vehicle isKindOf "Ship") || (_vehicle isKindOf "Tank") || (typeOf _vehicle == "Box_IND_AmmoVeh_F")) then
 {
 		_vehicleData = _vehicle getVariable["vehicle_info_owners",[]];
 		_vehicleName = getText(configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "displayName");
@@ -51,12 +51,13 @@ if((_vehicle isKindOf "Car") || (_vehicle isKindOf "Air") || (_vehicle isKindOf 
 
 		if((count crew _vehicle) == 0) then
 		{
-			if(!((_vehicle isKindOf "Car") || (_vehicle isKindOf "Air") || (_vehicle isKindOf "Ship") || (typeOf _vehicle == "Box_IND_AmmoVeh_F"))) exitWith {life_action_inUse = false;};
+			if(!((_vehicle isKindOf "Car") || (_vehicle isKindOf "Air") || (_vehicle isKindOf "Ship") || (_vehicle isKindOf "Tank") || (typeOf _vehicle == "Box_IND_AmmoVeh_F"))) exitWith {life_action_inUse = false;};
 			switch (true) do
 			{
 				case (_vehicle isKindOf "Car"): {_price = call life_impound_car;};
 				case (_vehicle isKindOf "Ship"): {_price = call life_impound_boat;};
 				case (_vehicle isKindOf "Air"): {_price = call life_impound_air;};
+				case (_vehicle isKindOf "Tank"): {_price = call life_impound_armor;};
 				case (typeOf _vehicle == "Box_IND_AmmoVeh_F"): {_price = 500;};
 			};
 

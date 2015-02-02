@@ -21,7 +21,7 @@ _escSync = {
 	_respawnButton ctrlEnable false;
 		
 		life_onDeath = true;
-		[8] call SOCK_fnc_updatePartial;
+	/* 	[8] call SOCK_fnc_updatePartial; */
 
 		waitUntil {
 			_abortButton ctrlSetText format[localize "STR_NOTF_AbortESC",[(_timeStamp - time),"SS.MS"] call BIS_fnc_secondsToString];
@@ -37,7 +37,7 @@ _escSync = {
 		_abortButton ctrlCommit 0;
 		_respawnButton ctrlCommit 0;
 		life_onDeath = false;
-		[8] call SOCK_fnc_updatePartial;		
+/* 		[8] call SOCK_fnc_updatePartial;		 */
 
 	};
 	

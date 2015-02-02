@@ -6,6 +6,8 @@
 	Figure it out again.
 */
 private["_val","_unit","_tax"];
+_cache = life_ozAtm;
+
 _val = parseNumber(ctrlText 2702);
 _unit = call compile format["%1",(lbData[2703,(lbCurSel 2703)])];
 if(isNull _unit) exitWith {};
@@ -19,6 +21,13 @@ _tax = [_val] call life_fnc_taxRate;
 if((_val + _tax) > life_ozAtm) exitWith {hint format[localize "STR_ATM_SentMoneyFail",_val,_tax]};
 
 life_ozAtm = life_ozAtm - (_val + _tax);
+
+if(life_ozAtm == _cache) then {
+	[[profileName,getPlayerUID player,"AtmHack"],"SPY_fnc_cookieJar",false,false] call life_fnc_MP;
+	[[profileName,"Cash Injection: Atm Hack"],"SPY_fnc_notifyAdmins",true,false] call life_fnc_MP;
+	closeDialog 0;
+	["SpyGlass",false,false] call compile PreProcessFileLineNumbers "\a3\functions_f\Misc\fn_endMission.sqf";
+};
 
 [[_val,profileName],"TON_fnc_clientWireTransfer",_unit,false] spawn life_fnc_MP;
 [] call life_fnc_atmMenu;

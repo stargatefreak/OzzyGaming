@@ -7,7 +7,6 @@
 3 "player setposatl" !"player setPosATL _pos"
 3 "player setposASL"
 3 "player allowDamage false" !"player allowDamage true; //whitelisted"
-3 "setHitPointDamage"
 3 " Menu" !"was trying to access commanding menu"
 3 ">>>" !"_message = format[\">>>MESSAGE FROM %1: %2\",_from,_msg];"
 3 "###"

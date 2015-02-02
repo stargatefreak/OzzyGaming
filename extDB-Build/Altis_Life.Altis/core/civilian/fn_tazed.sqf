@@ -15,10 +15,10 @@ if(_shooter isKindOf "Man" && alive player) then
 	if(!life_istazed) then
 	{
 		life_istazed = true;
-		/* 
 		_curWep = currentWeapon player;
 		_curMags = magazines player;
 		_attach = if(primaryWeapon player != "") then {primaryWeaponItems _unit} else {[]};
+		/* 
 		{player removeMagazine _x} foreach _curMags;
 		player removeWeapon _curWep;
 		player addWeapon _curWep;
@@ -40,7 +40,23 @@ if(_shooter isKindOf "Man" && alive player) then
 		[[0,format[localize "STR_NOTF_Tazed", _unit getVariable["realname",name _unit], _shooter getVariable["realname",name _shooter]]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
 		_unit attachTo [_obj,[0,0,0]];
 		disableUserInput true;
-		sleep 15;
+		switch (playerSide) do
+		{
+			case west:
+			{
+				sleep 10;
+			};
+			
+			case civilian:
+			{
+				sleep 25;
+			};
+			
+			case independent:
+			{
+				sleep 20;
+			};
+		};
 		[[player,"amovppnemstpsraswrfldnon"],"life_fnc_animSync",true,false] spawn life_fnc_MP;
 		if(!(player getVariable["Escorting",false])) then {
 			detach player;
