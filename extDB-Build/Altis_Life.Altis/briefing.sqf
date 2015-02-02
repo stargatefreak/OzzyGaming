@@ -14,6 +14,7 @@ player createDiarySubject ["medicrules","Medic Rules"];
 player createDiarySubject ["PMC","Private Military Coperation Rules"];
 player createDiarySubject ["gangrules","Gang and Rebel Rules"];
 player createDiarySubject ["ozzyfeatures","Unique OG Features"];
+player createDiarySubject ["pmcrules","PMC Rules"];
 /*  Example
 	player createDiaryRecord ["", //Subject Name
         [
@@ -1832,7 +1833,113 @@ Zift
                 "
         ]
     ];
+    /* PMC Rules*/
+	player createDiaryRecord ["pmcrules",
+        [
+            "General Rules",
+                "
+- Must abide by Server Rules at all time regardless of what the contract defines.<br />
+- Minimum of 7 players to become authorised as a Private Corporation. Each member must apply individually after the contracting group itself has been approved.<br />
+- PMC is an entity, not a singular figure. Much like rebels, they are recognised on a whole and must adhere to the same guidelines but have groups that run independently of one another.<br />
+- Contractors must be approved by the PMC Coordinator before they are licensed and allowed to operate. Operating as a PMC without being approved is a breach of Server Rules.<br />
+- When on a PMC contract, all members must identify themselves as on PMC duties to a member of staff.<br />
+- PMC is neutral. They are able to accept contracts from any faction; Police, Civilian, EMS.<br />
+- While on PMC duties, members are not to instigate hostile RP.<br />
+- Any issues related to PMC are to be reported to the PMC Coordinator.<br />
+- While on a contract, Corporations are not restricted from engaging one another.<br />
+                <br /><br />
+                "
+        ]
+    ];
     
+	player createDiaryRecord ["pmcrules",
+        [
+            "Contracts",
+                "
+- In the hierarchy of a corporation, the Commander is the only one with authorization to accept contracts. If the Colonel is not present, the Major is then authorized to take on the role of the leader
+  and accept the contract.<br />
+- It is within your right, as a corporation, to decline contracts.<br />
+- Once a contract has been accepted, the corporation MUST fulfill the specified task.<br />
+- Once a contract has been accepted, at no point is a corporation to change their allegiance for a higher price.<br />
+- All contracts must be reported back to the PMC Coordinator.<br />
+- Contracts can be charged through rates (X amount/kill or X amount/Xminutes) or a standard payment for the complexity of the mission.<br />
+- Contractors are not to disclose information about their employment status to anyone but their client and target.<br />
+- Contractors are required to inform their targets or opposition of their employment status before RP can initiate.<br />
+- All warnings must be descriptive and efficiently outline the goal of the contract.<br />
+- After a contract is complete, members must disengage themselves from PMC duties and return to general civilian roleplay status.<br />
+                <br /><br />
+                "
+        ]
+    ];
+    
+	player createDiaryRecord ["pmcrules",
+        [
+            "Police Contracts",
+                "
+- While on a police contract, contractors are to be pardoned for all crimes committed while employed by the Altis Police Department.*<br />
+- While employed by the Altis Police Derpartment, it is the senior officer's duty to inform all units of the current contract that is held with a certain Corporation.<br />
+- If a rebel is captured, it is the officer's decision to process him/her or order the execution of said rebel.<br />
+*Contractors are not exempt from crimes they commit, while still on the contract, that breaches the specifications of their employment.<br />
+                <br /><br />
+                "
+        ]
+    ];
+    
+	player createDiaryRecord ["pmcrules",
+        [
+            "Dress Code",
+                "
+- Each Corporation is required to have a set uniform, a combination of what is currently available in the server, that easily identifies their membership in a selected Corporation.<br />
+- The Corporations' uniform is required to be worn by it's contractors at all times in which they are on PMC duties.<br />
+- When on a police contract, contractors must not wear clothing that inhibits an officer's ability to identify them. (No balaclavas, bandannas etc.)<br />
+- When on a rebel contract, there are no restrictions to dress code.<br />
+- When out of PMC duties, uniform may not be used and should be disposed of.<br />
+                <br /><br />
+                "
+        ]
+    ];
+    
+	player createDiaryRecord ["pmcrules",
+        [
+            "Rules of Engagement",
+                "
+- You may open fire on a target you identify as the enemy unless they:<br />
+   a) Have surrended<br />
+   b) Are wounded<br />
+   c) Are Compliant<br />
+- You have the right to protect yourself and/or the person(s) whom you are required to protect with appropiate force.<br />
+- Whether acting in self defence or assaulting, you are to avoid indiscriminate use of firepower and must use the minimum amount of force necessary to achieve your goals.<br />
+- Minimum Force, in order of severity, includes:<br />
+   1. Open display of weaponry.<br />
+   2. Verbal and text warnings.<br />
+   3. Physical intimidation.<br />
+   4. The firing of weapons and use of explosives.<br />
+                <br /><br />
+                "
+        ]
+    ];
+    
+	player createDiaryRecord ["pmcrules",
+        [
+            "Ranking",
+                "
+-All Corporations are to follow the same ranking system.<br />
+ 
+-The Ranks are as follows, in ascending order:<br />
+   1. Pleb - Recently inducted.<br />
+   2. Trooper - Passed basic training and a trust member.<br />
+   3. Specialist - Allows access to special designations within the corporation such as LMG, Sniper, Spotter etc.<br />
+   4. Corporal - Leader of small squads.<br />
+   5. Segreant - 2IC to the Captain.<br />
+   6. Captain - Assumes command of all junior members.<br />
+   7. Major - 2IC to the commander of the Corporation.<br />
+   8. Colonel - Leader of the singular Corporation, responsible for all inter-corporation issues and relays all information to the Coordinator.<br />
+   9. PMC Coordinator - Coordinates all Corporations, deals with any PMC related issues and has final say over any topics.<br />
+                <br /><br />
+                "
+        ]
+    ];
+    /* End PMC Rules */
     
     /* CHANGELOG (changelog) */
     player createDiaryRecord ["changelog",
