@@ -14,7 +14,7 @@ _filter = [_this,0,0,[0]] call BIS_fnc_param;
 //Classname, Custom Display name (use nil for Cfg->DisplayName, price
 
 //Shop Title Name
-ctrlSetText[3103,"Altis Police Department Shop"];
+ctrlSetText[3103,"Altis Police Clothing Shop"];
 
 _ret = [];
 switch (_filter) do
@@ -22,24 +22,60 @@ switch (_filter) do
 	//Uniforms
 	case 0:
 	{
+        // Rank 0 - Public
 		_ret = [
-            ["U_Rangemaster","Cop Uniform",25]
+            ["U_Rangemaster","Cop Uniform", 100]
         ];
 		
-        if(__GETC__(life_ozCoplvl) > 0) then //Whitelisted
-        {
-            _ret pushBack ["U_B_Wetsuit","Wetsuit",100];
+        // WHITELISTED
+        // Rank 1 - Cadet
+        if(__GETC__(life_ozCoplvl) >= 1) then {
         };
-		if(__GETC__(life_ozCoplvl) > 3) then
-        {
+
+        // DUTY OFFICERS
+        // Rank 2 - Probationary Constable
+        if(__GETC__(life_ozCoplvl) >= 2) then {
+            _ret pushBack ["U_B_Wetsuit","Wetsuit",500];
+        }
+        // Rank 3 - Constable
+        if(__GETC__(life_ozCoplvl) >= 3) then {
+        };
+        // Rank 4 - Senior Constable
+        if(__GETC__(life_ozCoplvl) >= 4) then {
             _ret pushBack ["U_B_HeliPilotCoveralls","Blue Uniform",100];
         };
-		if(__GETC__(life_ozCoplvl) > 4) then
-        {
+
+        // JUNIOR NCO
+        // Rank 5 - 
+        if(__GETC__(life_ozCoplvl) >= 5) then {
+        }
+
+        // NCOs
+        // Rank 6 - Sergeant
+        if(__GETC__(life_ozCoplvl) >= 6) then {
             _ret pushBack ["U_B_CombatUniform_mcam_worn","SWAT Uniform",100];
-        };
-        if(__GETC__(life_ozCoplvl) > 6) then
-        {
+        }
+        // Rank 7 - Senior Sergeant
+        if(__GETC__(life_ozCoplvl) >= 7) then {
+        }
+        // Rank 8 - 
+        if(__GETC__(life_ozCoplvl) >= 8) then {
+        }
+
+        // JUNIOR OFFICER
+        // Rank 9 - 2nd Lieutenant
+        if(__GETC__(life_ozCoplvl) >= 9) then {
+        }
+
+        // OFFICERS
+        // Rank 10 - 1st Lieutenant
+        if(__GETC__(life_ozCoplvl) >= 10) then {
+        }
+        // Rank 11 - Captain
+        if(__GETC__(life_ozCoplvl) >= 11) then {
+        }
+        // Rank 12 - Inspector
+		if(__GETC__(life_ozCoplvl) >= 12) then {
             _ret pushBack ["U_C_Hunterbody_grn","The Hunters Look",100];
             _ret pushBack ["U_C_Poloshirt_blue","Poloshirt Blue",100];
             _ret pushBack ["U_C_Poloshirt_burgundy","Poloshirt Burgundy",100];
@@ -55,36 +91,87 @@ switch (_filter) do
             _ret pushBack ["U_IG_leader","Guerilla Leader",100];
             _ret pushBack ["U_I_CombatUniform","Combat Fatigues",2500];
             _ret pushBack ["U_B_CombatUniform_wdl_vest","Recon Fatigues",2500];
+        }
+
+        // SENIOR OFFICERS
+        // Rank 20 - Lead Inspector, Deputy Chief, Chief, Deputy Commissioner, Comissioner
+        if(__GETC__(life_ozCoplvl) >= 20) then {
         };
 	};
 	
 	//Hats
 	case 1:
 	{
-		_ret = [
-			["H_Cap_police",nil,100]
-		];
-		if(__GETC__(life_ozCoplvl) > 0) then //Whitelisted
-        {
-            _ret pushBack ["H_HelmetB_plain_blk",nil,100]; 
+		        // Rank 0 - Public
+        _ret = [
+            ["H_Cap_police",nil,100]
+        ];
+        
+        // WHITELISTED
+        // Rank 1 - Cadet
+        if(__GETC__(life_ozCoplvl) >= 1) then {
         };
-        if(__GETC__(life_ozCoplvl) > 3) then
-        {
+
+        // DUTY OFFICERS
+        // Rank 2 - Probationary Constable
+        if(__GETC__(life_ozCoplvl) >= 2) then {
+            _ret pushBack ["H_HelmetB_plain_blk",nil,100];
+        }
+        // Rank 3 - Constable
+        if(__GETC__(life_ozCoplvl) >= 3) then {
+        };
+        // Rank 4 - Senior Constable
+        if(__GETC__(life_ozCoplvl) >= 4) then {
+        };
+
+        // JUNIOR NCO
+        // Rank 5 - 
+        if(__GETC__(life_ozCoplvl) >= 5) then {
             _ret pushBack ["H_HelmetB_light_black",nil,100];
-        };
-        if(__GETC__(life_ozCoplvl) > 6) then
-        {
-            _ret pushBack ["H_Hat_tan",nil,100];
-			_ret pushBack ["H_Beret_blk_POLICE",nil,100];
+        }
+
+        // NCOs
+        // Rank 6 - Sergeant
+        if(__GETC__(life_ozCoplvl) >= 6) then {
+        }
+        // Rank 7 - Senior Sergeant
+        if(__GETC__(life_ozCoplvl) >= 7) then {
+        }
+        // Rank 8 - 
+        if(__GETC__(life_ozCoplvl) >= 8) then {
+        }
+
+        // JUNIOR OFFICER
+        // Rank 9 - 2nd Lieutenant
+        if(__GETC__(life_ozCoplvl) >= 9) then {
+        }
+
+        // OFFICERS
+        // Rank 10 - 1st Lieutenant
+        if(__GETC__(life_ozCoplvl) >= 10) then {
+            _ret pushBack ["H_Beret_blk_POLICE",nil,100];
+        }
+        // Rank 11 - Captain
+        if(__GETC__(life_ozCoplvl) >= 11) then {
+        }
+        // Rank 12 - Inspector
+        if(__GETC__(life_ozCoplvl) >= 12) then {
             _ret pushBack ["H_Watchcap_blk",nil,1500];
             _ret pushBack ["H_Booniehat_dirty",nil,1500];
             _ret pushBack ["H_Booniehat_dgtl",nil,1500];
+            _ret pushBack ["H_Hat_tan",nil,100];
+        }
+
+        // SENIOR OFFICERS
+        // Rank 20 - Lead Inspector, Deputy Chief, Chief, Deputy Commissioner, Comissioner
+        if(__GETC__(life_ozCoplvl) >= 20) then {
         };
 	};
 	
 	//Glasses
 	case 2:
 	{
+        // Rank 0 - Public
 		_ret = 
 		[
 			["G_Shades_Black",nil,25],
@@ -99,41 +186,125 @@ switch (_filter) do
 			["G_Combat",nil,55]
 		];
 
-		if(__GETC__(life_ozCoplvl) > 0) then //Whitelisted
+        // WHITELISTED
+        // Rank 1 - Cadet
+
+        // DUTY OFFICERS
+        // Rank 2 - Probationary Constable
+		if(__GETC__(life_ozCoplvl) >= 2) then
         {
             _ret pushBack ["G_Diving",nil,250];
         };
+        // Rank 3 - Constable
+        // Rank 4 - Senior Constable
+
+        // JUNIOR NCO
+        // Rank 5 - 
+
+        // NCOs
+        // Rank 6 - Sergeant
+        // Rank 7 - Senior Sergeant
+        // Rank 8 - 
+
+        // JUNIOR OFFICER
+        // Rank 9 - 2nd Lieutenant
+
+        // OFFICERS
+        // Rank 10 - 1st Lieutenant
+        // Rank 11 - Captain
+        // Rank 12 - Inspector
+
+        // SENIOR OFFICERS
+        // Rank 20 - Lead Inspector, Deputy Chief, Chief, Deputy Commissioner, Comissioner
 	};
 	
 	//Vest
 	case 3:
 	{
-		_ret =
-        [
+        // Rank 0 - Public
+        _ret = [
             ["V_Rangemaster_belt",nil,800],
-            ["V_HarnessO_brn",nil,1500]
+        ];
+        
+        // WHITELISTED
+        // Rank 1 - Cadet
+        if(__GETC__(life_ozCoplvl) >= 1) then {
+            _ret pushBack ["V_TacVest_blk_POLICE",nil,2500];
+        };
+
+        // DUTY OFFICERS
+        // Rank 2 - Probationary Constable
+        if(__GETC__(life_ozCoplvl) >= 2) then {
+            _ret pushBack ["V_RebreatherB",nil,2500];
+        }
+        // Rank 3 - Constable
+        // Rank 4 - Senior Constable
+
+        // JUNIOR NCO
+        // Rank 5 - 
+
+        // NCOs
+        // Rank 6 - Sergeant
+        // Rank 7 - Senior Sergeant
+        // Rank 8 - 
+
+        // JUNIOR OFFICER
+        // Rank 9 - 2nd Lieutenant
+        if(__GETC__(life_ozCoplvl) >= 9) then {
+            _ret pushBack ["V_PlateCarrier2_rgr" ,nil,4000];
+        }
+
+        // OFFICERS
+        // Rank 10 - 1st Lieutenant
+        // Rank 11 - Captain
+        // Rank 12 - Inspector
+        if(__GETC__(life_ozCoplvl) >= 12) then {
+            _ret pushBack ["V_HarnessO_brn", nil,1500];
+            _ret pushBack ["V_PlateCarrierIA2_dgtl", nil,4000];
+        }
+
+        // SENIOR OFFICERS
+        // Rank 20 - Lead Inspector, Deputy Chief, Chief, Deputy Commissioner, Comissioner
+    };
+    
+    //Backpacks
+    case 4:
+    {
+        // Rank 0 - Public
+        _ret =
+        [
+            ["B_Bergen_blk",nil,2500],
+            ["B_Parachute",nil,10000]
         ];
 
-		if(__GETC__(life_ozCoplvl) > 0) then //Whitelisted
-        {
-            _ret pushBack ["V_TacVest_blk_POLICE",nil,2500];
-            _ret pushBack ["V_RebreatherB",nil,2500];
-        };
-        if(__GETC__(life_ozCoplvl) > 6) then {
-            _ret pushBack ["V_PlateCarrierIA2_dgtl", nil,4000];
-            _ret pushBack ["V_PlateCarrier2_rgr" ,nil,4000];
-        };
+        // WHITELISTED
+        // Rank 1 - Cadet
+
+        // DUTY OFFICERS
+        // Rank 2 - Probationary Constable
+        // Rank 3 - Constable
+        // Rank 4 - Senior Constable
+
+        // JUNIOR NCO
+        // Rank 5 - 
+
+        // NCOs
+        // Rank 6 - Sergeant
+        // Rank 7 - Senior Sergeant
+        // Rank 8 - 
+
+        // JUNIOR OFFICER
+        // Rank 9 - 2nd Lieutenant
+
+        // OFFICERS
+        // Rank 10 - 1st Lieutenant
+        // Rank 11 - Captain
+        // Rank 12 - Inspector
+        _ret pushBack ["B_Bergen_sgg", nil,4000];
+
+        // SENIOR OFFICERS
+        // Rank 20 - Lead Inspector, Deputy Chief, Chief, Deputy Commissioner, Comissioner
     };
-	
-	//Backpacks
-	case 4:
-	{
-		_ret =
-		[
-			["B_Bergen_blk",nil,2500],
-			["B_Parachute",nil,10000]
-		];
-	};
 };
 
 _ret;
