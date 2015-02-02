@@ -567,11 +567,7 @@ case (playerSide != civilian): {"You are not a civ!"};
 case (!license_civ_rebel): {"You don't have a Rebel training license!"};
 default
 {
-<<<<<<< HEAD
 ["Jihadi Weapons Market",
-=======
-["Millers's Jihadi Shop",
->>>>>>> 2467a767fb4ab432f7322bcb2cc6010dfd483728
 [
 ["hgun_Pistol_Signal_F","Flare Gun",3000],
 ["arifle_TRG21_F",nil,35000],
@@ -637,11 +633,7 @@ default
 ["Chemlight_green",nil,400],
 ["Chemlight_red",nil,400],
 ["Chemlight_yellow",nil,400],
-<<<<<<< HEAD
 ["Chemlight_blue",nil,400],
-=======
-["Chemlight_blue",nil,400]
->>>>>>> 2467a767fb4ab432f7322bcb2cc6010dfd483728
 ["SatchelCharge_Remote_Mag","Explosive Satchel",500000]
 ]
 ];
@@ -719,11 +711,7 @@ case (__GETC__(life_Ozdonator) == 2):
 [
 ["arifle_TRG21_F",nil,22400],
 ["30Rnd_556x45_Stanag_Tracer_Yellow",nil,192],
-<<<<<<< HEAD
 ["arifle_Katiba_F",nil,192000],
-=======
-["arifle_Katiba_F",nil,19200],
->>>>>>> 2467a767fb4ab432f7322bcb2cc6010dfd483728
 ["30Rnd_65x39_caseless_green_mag_Tracer",nil,150],
 ["srifle_DMR_01_F",nil,32000],
 ["10Rnd_762x51_Mag",nil,320],
