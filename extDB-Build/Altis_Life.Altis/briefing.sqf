@@ -11,7 +11,7 @@ player createDiarySubject ["laws","General Laws"];
 player createDiarySubject ["fines","Fines and Punishments"];
 player createDiarySubject ["policerules","Police Rules"];
 player createDiarySubject ["medicrules","Medic Rules"];
-player createDiarySubject ["PMC","Private Military Coperation Rules"];
+player createDiarySubject ["PMC","Private Military Company Rules"];
 player createDiarySubject ["gangrules","Gang and Rebel Rules"];
 player createDiarySubject ["ozzyfeatures","Unique OG Features"];
 player createDiarySubject ["pmcrules","PMC Rules"];
@@ -1217,14 +1217,15 @@ Medics should be on teamspeak at all times to assist with communications.<br /><
     /* PMC RULES */
     player createDiaryRecord ["PMC", 
 	[
-		"PMC GENERAL INFORMATION",
+		"PMC General Information",
 	"
-	- PMCs (Private Military Corporations) are militarised companies that provide armed security services. The services and expertise offered by PMCs are typically similar to those of governmental 
+	- PMCs (Private Military Companies) are militarised companies that provide armed security services. The services and expertise offered by PMCs are typically similar to those of governmental 
 	security, military or police forces, most often on a smaller scale. While PMCs can provide service to governments, they can also be employed privately to provide bodyguards for key individuals
-	or protection of company premises, especially in hostile territories. Generally, PMCs do not instigate hostile action in foreign territories but have been known to accept such contracts. PMCs 
-	only accept people whom have experience in various military forces from around the globe, most of the contractors that are currently employed by PMCs are ex-special services or of the same 
-	class. Anyone who is good at war doesn’t fight for their country anymore.<br /><br />
-	- PMC is an entity, not a singular figure. It houses it’s own corporations that act independently of one another nor are they forced into any allegiance. <br />
+	or protection of company premises, especially in hostile territories.<br />
+    Generally, PMCs do not instigate hostile action in foreign territories but have been known to accept such contracts. PMCs only accept people whom have experience in various military forces
+    from around the globe, most of the contractors that are currently employed by PMCs are ex-special forces or of the same class. Anyone who is good at war doesn’t fight for their country anymore.<br /><br />
+	
+    - PMC is an entity, not a singular figure. It houses it’s own corporations that act independently of one another nor are they forced into any allegiance. <br />
 	- Becoming a member of PMC does NOT require a player to surrender his/her rank or position in any other roleplay group such as the police or medic. <br />
 	"
 		]
@@ -1232,7 +1233,7 @@ Medics should be on teamspeak at all times to assist with communications.<br /><
 	
 	Player createDiaryRecord ["PMC",
 		[
-			"STAFF OVERSEERS",
+			"PMC Managers",
 				"
 				- Kaelan - PMC Coordinator <br />
 				- Miller <br />
@@ -1243,7 +1244,7 @@ Medics should be on teamspeak at all times to assist with communications.<br /><
 	
 	Player createDiaryRecord["PMC",
 		[
-			" NUMBER OF CORPORATIONS",
+			"PMC Company Quantity Limitations",
 			"
 			- As of initialisation, PMC will have a limit of three corporations. This is to encourage growth and competition amongst to avoid excessive numbers of small groups cluttering the server. <br />
 			"
@@ -1252,10 +1253,10 @@ Medics should be on teamspeak at all times to assist with communications.<br /><
 		
 	Player createDiaryRecord["PMC",
 			[
-			"APPLICATION",
+			"Application for PMC",
 			"		
 			- The founder of a corporation must apply for authorization via direct communication with the PMC Coordinator. <br />
-			- Players wishing to join PMC must go through to application processes. <br />
+			- Players wishing to join PMC must go through the application processes. <br />
 			- Application to become eligible to join a corporation. <br />
 			- Application to join chosen corporation. <br />
 			"
@@ -1264,7 +1265,7 @@ Medics should be on teamspeak at all times to assist with communications.<br /><
 		
 	Player createDiaryRecord["PMC",
 		[
-		"PMC GENERAL RULES",
+		"PMC General Rules",
 	"
 	- Server rules apply at all times. <br />
 	- Every situation is to be roleplayed to full extent. No shortcuts are to be taken that disregard the fundamentals of roleplay. <br />
@@ -1280,7 +1281,7 @@ Medics should be on teamspeak at all times to assist with communications.<br /><
 	
 	Player createDiaryRecord["PMC",
 		[
-		"CONTRACTS",
+		"Contracts",
 		"
 		- If a contract appears to breach server rules, it is to be declined. <br />
 		- In the hierarchy of a corporation, the Major and Colonel are the only members with authorisation to accept contracts.<br />
@@ -1325,7 +1326,7 @@ Medics should be on teamspeak at all times to assist with communications.<br /><
 		
 	Player createDiaryRecord["PMC",
 		[
-		"DRESS CODE",
+		"Dress Code",
 		"
 		- Each Corporation is required to have a set uniform, a combination of what is available in civilian stores, that easily identifies a players employment of said corporation.<br />
 		- The Corporations' uniform is required to be worn by it's contractors at all times in which they are on PMC duties.<br />
@@ -1338,7 +1339,7 @@ Medics should be on teamspeak at all times to assist with communications.<br /><
 		
 	Player createDiaryRecord["PMC",
 	[
-	"RULES OF ENGAGEMENT",
+	"Rules of Engagement",
 	"
 		- You may open fire on a target you identify as the enemy unless they are compliant and have surrendered their weapon(s).<br />
 		- You have the right to protect yourself and/or the person(s) whom you are required to protect with appropriate force.<br />
@@ -1354,7 +1355,7 @@ Medics should be on teamspeak at all times to assist with communications.<br /><
 	];
 	Player createDiaryRecord["PMC",
 	[
-	"RANKING",
+	"Ranking Structure",
 	"
 		-All Corporations are to adhere to the following ranking system.*<br /><br />
  
