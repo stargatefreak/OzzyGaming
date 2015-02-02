@@ -29,8 +29,6 @@ switch (_filter) do
 		
         // WHITELISTED
         // Rank 1 - Cadet
-        if(__GETC__(life_ozCoplvl) >= 1) then {
-        };
 
         // DUTY OFFICERS
         // Rank 2 - Probationary Constable
@@ -38,8 +36,6 @@ switch (_filter) do
             _ret pushBack ["U_B_Wetsuit","Wetsuit",500];
         }
         // Rank 3 - Constable
-        if(__GETC__(life_ozCoplvl) >= 3) then {
-        };
         // Rank 4 - Senior Constable
         if(__GETC__(life_ozCoplvl) >= 4) then {
             _ret pushBack ["U_B_HeliPilotCoveralls","Blue Uniform",100];
@@ -47,8 +43,6 @@ switch (_filter) do
 
         // JUNIOR NCO
         // Rank 5 - 
-        if(__GETC__(life_ozCoplvl) >= 5) then {
-        }
 
         // NCOs
         // Rank 6 - Sergeant
@@ -56,24 +50,14 @@ switch (_filter) do
             _ret pushBack ["U_B_CombatUniform_mcam_worn","SWAT Uniform",100];
         }
         // Rank 7 - Senior Sergeant
-        if(__GETC__(life_ozCoplvl) >= 7) then {
-        }
         // Rank 8 - 
-        if(__GETC__(life_ozCoplvl) >= 8) then {
-        }
 
         // JUNIOR OFFICER
         // Rank 9 - 2nd Lieutenant
-        if(__GETC__(life_ozCoplvl) >= 9) then {
-        }
 
         // OFFICERS
         // Rank 10 - 1st Lieutenant
-        if(__GETC__(life_ozCoplvl) >= 10) then {
-        }
         // Rank 11 - Captain
-        if(__GETC__(life_ozCoplvl) >= 11) then {
-        }
         // Rank 12 - Inspector
 		if(__GETC__(life_ozCoplvl) >= 12) then {
             _ret pushBack ["U_C_Hunterbody_grn","The Hunters Look",100];
@@ -95,22 +79,18 @@ switch (_filter) do
 
         // SENIOR OFFICERS
         // Rank 20 - Lead Inspector, Deputy Chief, Chief, Deputy Commissioner, Comissioner
-        if(__GETC__(life_ozCoplvl) >= 20) then {
-        };
 	};
 	
 	//Hats
 	case 1:
 	{
-		        // Rank 0 - Public
+		// Rank 0 - Public
         _ret = [
             ["H_Cap_police",nil,100]
         ];
         
         // WHITELISTED
         // Rank 1 - Cadet
-        if(__GETC__(life_ozCoplvl) >= 1) then {
-        };
 
         // DUTY OFFICERS
         // Rank 2 - Probationary Constable
@@ -118,11 +98,7 @@ switch (_filter) do
             _ret pushBack ["H_HelmetB_plain_blk",nil,100];
         }
         // Rank 3 - Constable
-        if(__GETC__(life_ozCoplvl) >= 3) then {
-        };
         // Rank 4 - Senior Constable
-        if(__GETC__(life_ozCoplvl) >= 4) then {
-        };
 
         // JUNIOR NCO
         // Rank 5 - 
@@ -132,19 +108,11 @@ switch (_filter) do
 
         // NCOs
         // Rank 6 - Sergeant
-        if(__GETC__(life_ozCoplvl) >= 6) then {
-        }
         // Rank 7 - Senior Sergeant
-        if(__GETC__(life_ozCoplvl) >= 7) then {
-        }
         // Rank 8 - 
-        if(__GETC__(life_ozCoplvl) >= 8) then {
-        }
 
         // JUNIOR OFFICER
         // Rank 9 - 2nd Lieutenant
-        if(__GETC__(life_ozCoplvl) >= 9) then {
-        }
 
         // OFFICERS
         // Rank 10 - 1st Lieutenant
@@ -152,8 +120,6 @@ switch (_filter) do
             _ret pushBack ["H_Beret_blk_POLICE",nil,100];
         }
         // Rank 11 - Captain
-        if(__GETC__(life_ozCoplvl) >= 11) then {
-        }
         // Rank 12 - Inspector
         if(__GETC__(life_ozCoplvl) >= 12) then {
             _ret pushBack ["H_Watchcap_blk",nil,1500];
@@ -164,8 +130,17 @@ switch (_filter) do
 
         // SENIOR OFFICERS
         // Rank 20 - Lead Inspector, Deputy Chief, Chief, Deputy Commissioner, Comissioner
-        if(__GETC__(life_ozCoplvl) >= 20) then {
-        };
+
+        // --- --- ---
+
+        /*
+        if (__GETC__(life_ozCopPilotLvl) >= 1){
+            _ret pushBack ["H_CrewHelmetHeli_B","Crewman Helmet",1000];
+        }
+        if (__GETC__(life_ozCopPilotLvl) >= 2){
+            _ret pushBack ["H_PilotHelmetHeli_B","Pilot Helmet",1000];
+        }
+        */
 	};
 	
 	//Glasses
