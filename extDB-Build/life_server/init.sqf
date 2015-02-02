@@ -6,39 +6,39 @@ publicVariable "life_server_isReady";
 
 [] execVM "\life_server\functions.sqf";
 [] execVM "\life_server\eventhandlers.sqf";
-
-//I am aiming to confuse people including myself, ignore the ui checks it's because I test locally.
-_extDBversion = "extDB" callExtension "9:VERSION";
+["Database2","DB_RAW_V2"] call DB_fnc_init;
+//OLD DATABASE INITIALISATION SCRIPT
+/* /I am aiming to confuse people including myself, ignore the ui checks it's because I test locally.
+_extDB2version = "extDB2" callExtension "9:VERSION";
 if(isNil {uiNamespace getVariable "life_sql_id"}) then {
 	life_sql_id = round(random(9999));
 	__CONST__(life_sql_id,life_sql_id);
 	uiNamespace setVariable ["life_sql_id",life_sql_id];
 	
-	//Only need to setup extDB once.
-	//  If mission is reloaded, will tell clients extDB is not loaded.
+	//Only need to setup extDB2 once.
+	//  If mission is reloaded, will tell clients extDB2 is not loaded.
 	//     Todo: Is it possible first client is loaded before this PV is sent ?
-	if(_extDBversion == "") exitWith {diag_log "extDB: Error, check extDB/logs for more info"; life_server_extDB_notLoaded = true; publicVariable "life_server_extDB_notLoaded";};
+	if(_extDB2version == "") exitWith {diag_log "extDB2: Error, check extDB2/logs for more info"; life_server_extDB2_notLoaded = true; publicVariable "life_server_extDB2_notLoaded";};
 	//Initialize the database
-	_extDBconnected = "extDB" callExtension "9:DATABASE:Database2";
-	_extDBconnected2 = "extDB" callExtension format["9:ADD:DB_RAW_V2:%1",(call life_sql_id)];
-	if(_extDBconnected != "[1]") exitWith {diag_log "extDB: Database error, check extDB/logs for more info"; life_server_extDB_notLoaded = true; publicVariable "life_server_extDB_notLoaded";};
-	if(_extDBconnected2 != "[1]") exitWith {diag_log "extDB: Database error, check extDB/logs for more info"; life_server_extDB_notLoaded = true; publicVariable "life_server_extDB_notLoaded";};
-	"extDB" callExtension "9:LOCK";
+	_extDB2connected = "extDB2" callExtension "9:DATABASE:Database2";
+	_extDB2connected2 = "extDB2" callExtension format["9:ADD:DB_RAW_V2:%1",(call life_sql_id)];
+	if(_extDB2connected != "[1]") exitWith {diag_log "extDB2: Database error, check extDB2/logs for more info"; life_server_extDB2_notLoaded = true; publicVariable "life_server_extDB2_notLoaded";};
+	if(_extDB2connected2 != "[1]") exitWith {diag_log "extDB2: Database error, check extDB2/logs for more info"; life_server_extDB2_notLoaded = true; publicVariable "life_server_extDB2_notLoaded";};
+	"extDB2" callExtension "9:LOCK";
 } else {
 	life_sql_id = uiNamespace getVariable "life_sql_id";
 	__CONST__(life_sql_id,life_sql_id);
 };
-
+ */
 //Run procedures for SQL cleanup on mission start.
 /* ["CALL resetLifeVehicles",1] spawn DB_fnc_asyncCall;
 ["CALL deleteDeadVehicles",1] spawn DB_fnc_asyncCall;
 ["CALL deleteOldHouses",1] spawn DB_fnc_asyncCall;
-["CALL deleteOldGangs",1] spawn DB_fnc_asyncCall; //Maybe delete old gangs
+["CALL deleteOldGangs",1] spawn DB_fnc_asyncCall; //Maybe delete old gangs */
 
-waitUntil {!DB_Async_Active};
-["DELETE FROM vehicles WHERE alive = 0",1] call DB_fnc_asyncCall; */
-["UPDATE vehicles SET active = 0 WHERE active = 1 and alive = 1",1] call DB_fnc_asyncCall;
-
+/* waitUntil {!DB_Async_Active}; */
+/* ["DELETE FROM vehicles WHERE alive = 0",1] call DB_fnc_asyncCall; */
+["UPDATE ozzylife.vehicles SET active = 0 WHERE active = 1",1] call DB_fnc_asyncCall;
 //Custom Content
 [] execVM "\life_server\Functions\Custom\fn_spawnGold2.sqf";
 

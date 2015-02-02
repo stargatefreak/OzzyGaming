@@ -41,7 +41,7 @@ if(_mode == 2) then {
 		_uid = _dbInfo select 0;
 		_plate = _dbInfo select 1;
 
-		_query = format["UPDATE vehicles SET active='0', alive='1' WHERE pid='%1' AND plate='%2'",_uid,_plate];
+		_query = format["UPDATE vehicles SET active='0', alive='0' WHERE pid='%1' AND plate='%2'",_uid,_plate];
 		waitUntil {!DB_Async_Active};
 		_sql = [_query,1] call DB_fnc_asyncCall;
 	};

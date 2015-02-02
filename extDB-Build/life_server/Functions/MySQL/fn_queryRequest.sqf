@@ -28,7 +28,7 @@ _query = switch(_side) do {
 	case independent: {_returnCount = 10; format["SELECT playerid, name, cash, bankacc, adminlevel, donatorlvl, med_licenses, mediclevel, med_gear, medCounter FROM players WHERE playerid='%1'",_uid];};
 };
 
-waitUntil{sleep (random 0.3); !DB_Async_Active};
+/* waitUntil{sleep (random 0.3); !DB_Async_Active}; */
 _tickTime = diag_tickTime;
 _queryResult = [_query,2] call DB_fnc_asyncCall;
 
@@ -46,7 +46,7 @@ if(count _queryResult == 0) exitWith {
 	[[],"SOCK_fnc_insertPlayerInfo",_ownerID,false,true] spawn life_fnc_MP;
 };
 
-//Blah conversion thing from a2net->extdb
+//Blah conversion thing from a2net->extDB2
 private["_tmp"];
 _tmp = _queryResult select 2;
 _queryResult set[2,[_tmp] call DB_fnc_numberSafe];

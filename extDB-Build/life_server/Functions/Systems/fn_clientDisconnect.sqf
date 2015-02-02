@@ -16,14 +16,14 @@ _name = _this select 2;
 		{deleteVehicle _x;} foreach _containers; //Delete the containers.
 		deleteVehicle _x; //Get rid of the corpse.
 	};
-	_query2 = format["SELECT onDeath, bankacc FROM players where playerid = '%1'",_uid];
+	/* _query2 = format["SELECT onDeath, bankacc FROM players where playerid = '%1'",_uid];
 	waitUntil {!DB_Async_Active};
 	_queryResult2 = [_query2,2] call DB_fnc_asyncCall;
 	_tmp = parseNumber (_queryResult2 select 0);
 	_value = ([_tmp,1] call DB_fnc_bool);
 	_queryResult2 set[0,_value];
 	_tmp1 = parseNumber str(_queryResult2 select 1);
-	/* _value = [_tmp1] call DB_fnc_numberSafe; */
+	_value = [_tmp1] call DB_fnc_numberSafe;
 	_queryResult2 set[1,_tmp1];
 	_bank = _queryResult2 select 1;
 
@@ -34,7 +34,7 @@ _name = _this select 2;
 		_query2 = format["UPDATE players SET bankacc=(bankacc * 0.75), lastonline = NOW(), med_gear = '""[]""', civ_gear = '""[]""', cop_gear = '""[]""', onDeath = 0 WHERE playerid='%1'",_uid];
 		waitUntil {!DB_Async_Active};
 		[_query2,1] call DB_fnc_asyncCall;
-	};
+	}; */
 } foreach allDeadMen;
 
 _uid spawn TON_fnc_houseCleanup;
