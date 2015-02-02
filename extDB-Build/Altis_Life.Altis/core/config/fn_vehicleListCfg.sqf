@@ -100,41 +100,47 @@ switch (_shop) do
 
     case "cop_car":
     {
-        switch(true) do {
-            case (__GETC__(life_ozCoplvl) == 0):
-			{
-                _return = [
-                    ["C_Offroad_01_F",5000]
-                ];
-			};
-            case ((__GETC__(life_ozCoplvl) > 0) AND (__GETC__(life_ozCoplvl) < 5)):
-			{
-                _return = [
-                    ["C_Offroad_01_F",4500],
-                    ["C_SUV_01_F",10000],
-                    ["C_Hatchback_01_sport_F",20000]
-                ];
-			};
-            case ((__GETC__(life_ozCoplvl) > 4) AND (__GETC__(life_ozCoplvl) < 7)):
-			{
-                _return = [
-                    ["C_Offroad_01_F",4000],
-                    ["C_SUV_01_F",9000],
-                    ["C_Hatchback_01_sport_F",17000],
-                    ["B_MRAP_01_F",70000]
-                ];
-			};
-            case (__GETC__(life_ozCoplvl) > 6):
-			{
-                _return = [
-                    ["C_Offroad_01_F",3500],
-                    ["C_SUV_01_F",8000],
-                    ["C_Hatchback_01_sport_F",14000],
-                    ["B_MRAP_01_F",60000],
-                    ["B_APC_Tracked_01_rcws_F",120000]
-                ];
-			};
+                // Rank 0 - Public
+        _return = [
+            ["C_Offroad_01_F",5000]
+        ];
+        
+        // WHITELISTED
+        // Rank 1 - Cadet
+        if(__GETC__(life_ozCoplvl) >= 1) then {
         };
+
+        // DUTY OFFICERS
+        // Rank 2 - Probationary Constable
+        if(__GETC__(life_ozCoplvl) >= 2) then {
+            _return pushBack ["C_SUV_01_F",10000];
+            _return pushBack ["C_Hatchback_01_sport_F",20000];
+        }
+        // Rank 3 - Constable
+        // Rank 4 - Senior Constable
+
+        // JUNIOR NCO
+        // Rank 5 - 
+
+        // NCOs
+        // Rank 6 - Sergeant
+        // Rank 7 - Senior Sergeant
+        // Rank 8 - 
+
+        // JUNIOR OFFICER
+        // Rank 9 - 2nd Lieutenant
+
+        // OFFICERS
+        // Rank 10 - 1st Lieutenant
+        if(__GETC__(life_ozCoplvl) >= 10) then {
+            _return pushBack ["B_MRAP_01_F",70000];
+            /*_return pushBack ["B_APC_Tracked_01_rcws_F",120000];*/
+        }
+        // Rank 11 - Captain
+        // Rank 12 - Inspector
+
+        // SENIOR OFFICERS
+        // Rank 20 - Lead Inspector, Deputy Chief, Chief, Deputy Commissioner, Comissioner
     };
 
     case "civ_air":
@@ -144,46 +150,80 @@ switch (_shop) do
             ["C_Heli_Light_01_civil_F",425000],
             ["O_Heli_Light_02_unarmed_F",1000000],
             ["I_Heli_Transport_02_F",3200000],
-			["B_Heli_Transport_03_unarmed_F",2800000],
-			["O_Heli_Transport_04_F",1500000],
-			["O_Heli_Transport_04_covered_F",1900000]
+            ["B_Heli_Transport_03_unarmed_F",2800000],
+            ["O_Heli_Transport_04_F",1500000],
+            ["O_Heli_Transport_04_covered_F",1900000]
         ];
     };
 
-    case "cop_air":
-    {
-        switch(true) do {
-            case ((__GETC__(life_ozCoplvl) > 1) AND (__GETC__(life_ozCoplvl) < 6)):
-			{
-                _return = [
-				["B_Heli_Light_01_F",80000],
-				["C_Heli_Light_01_civil_F",80000]
-				];
-			};
-            
-            case (__GETC__(life_ozCoplvl) >= 6):
-			{
-                _return = [
-                    ["B_Heli_Light_01_F",70000],
-                    ["C_Heli_Light_01_civil_F",70000],
-                    ["B_Heli_Transport_01_F",150000],
-					["B_Heli_Transport_03_unarmed_F",2200000],
-					["O_Heli_Transport_04_F",1100000],
-					["O_Heli_Transport_04_covered_F",1500000]
-                ];
-			};
-            default { _return = ""; };
+    case "cop_air": {
+                // Rank 0 - Public
+        _return = [
+        ];
+        
+        /*
+        if (__GETC__(life_ozCopPilotLvl) = 0){
+        */
+            // WHITELISTED
+            // Rank 1 - Cadet
+
+            // DUTY OFFICERS
+            // Rank 2 - Probationary Constable
+            // Rank 3 - Constable
+            if(__GETC__(life_ozCoplvl) >= 3) then {
+                _return pushBack ["C_Heli_Light_01_civil_F",100000];
+            };
+            // Rank 4 - Senior Constable
+
+            // JUNIOR NCO
+            // Rank 5 - 
+
+            // NCOs
+            // Rank 6 - Sergeant
+            // Rank 7 - Senior Sergeant
+            // Rank 8 - 
+
+            // JUNIOR OFFICER
+            // Rank 9 - 2nd Lieutenant
+
+            // OFFICERS
+            // Rank 10 - 1st Lieutenant
+            // Rank 11 - Captain
+            if(__GETC__(life_ozCoplvl) >= 11) then {
+                _return pushBack ["B_Heli_Transport_01_F",500000];
+            }
+            // Rank 12 - Inspector
+
+            // SENIOR OFFICERS
+            // Rank 20 - Lead Inspector, Deputy Chief, Chief, Deputy Commissioner, Comissioner
+        /*
+        } else {
+            // Pilot Trainee
+            if (__GETC__(life_ozCopPilotLvl) >= 1){
+                _return pushBack ["C_Heli_Light_01_F",85000];
+                _return pushBack ["C_Heli_Light_01_civil_F",65000];
+            }
+            // Pilot
+            if (__GETC__(life_ozCopPilotLvl) >= 2){
+                _return pushBack ["B_Heli_Transport_01_F",400000];
+                _return pushBack ["I_Heli_light_03_unarmed_F",500000];
+            }
+            // Senior Pilot
+            if (__GETC__(life_ozCopPilotLvl) >= 3){
+                _return pushBack ["B_Heli_Transport_03_unarmed_F",1500000];
+                _return pushBack ["O_Heli_Transport_04_F",2000000];
+                _return pushBack ["O_Heli_Transport_04_covered_F",2500000];
+            }
         };
-        if (__GETC__(life_ozCoplvl) >= 4) then {
-        _return pushBack ["I_Heli_light_03_unarmed_F",800000];
-        }
+        */
     };
 
     case "cop_airhq":
     {
+    // Can we remove this one and just use "cop_air"
         switch(true) do {
             case ((__GETC__(life_ozCoplvl) > 1) AND (__GETC__(life_ozCoplvl) < 6)):
-			{
+            {
                 _return = [
 				["B_Heli_Light_01_F",80000],
 				["C_Heli_Light_01_civil_F",80000]
@@ -219,28 +259,43 @@ switch (_shop) do
 
     case "cop_ship":
     {
-		switch(true) do {
-			case (__GETC__(life_ozCoplvl) < 2):
-			{
-                _return = [["B_Boat_Transport_01_F",5000]];
-			};
-			case (__GETC__(life_ozCoplvl) == 2):
-			{
-                _return = [
-                    ["B_Boat_Transport_01_F",5000],
-                    ["C_Boat_Civil_01_police_F",5000]
-                ];
-			};
-			case (__GETC__(life_ozCoplvl) > 2):
-			{
-                _return = [
-                    ["B_Boat_Transport_01_F",5000],
-                    ["C_Boat_Civil_01_police_F",5000],
-                    ["B_SDV_01_F",5000]
-                ];
-			};
-            default { _return = ""; };
+        // Rank 0 - Public
+        _return = [
+            ["B_Boat_Transport_01_F",5000]
+        ];
+        
+        // WHITELISTED
+        // Rank 1 - Cadet
+
+        // DUTY OFFICERS
+        // Rank 2 - Probationary Constable
+        if(__GETC__(life_ozCoplvl) >= 2) then {
+        _return pushBack ["C_Boat_Civil_01_police_F",8000];
+        }
+        // Rank 3 - Constable
+        if(__GETC__(life_ozCoplvl) >= 3) then {
+        _return pushBack ["B_SDV_01_F",4000];
         };
+        // Rank 4 - Senior Constable
+
+        // JUNIOR NCO
+        // Rank 5 - 
+
+        // NCOs
+        // Rank 6 - Sergeant
+        // Rank 7 - Senior Sergeant
+        // Rank 8 - 
+
+        // JUNIOR OFFICER
+        // Rank 9 - 2nd Lieutenant
+
+        // OFFICERS
+        // Rank 10 - 1st Lieutenant
+        // Rank 11 - Captain
+        // Rank 12 - Inspector
+
+        // SENIOR OFFICERS
+        // Rank 20 - Lead Inspector, Deputy Chief, Chief, Deputy Commissioner, Comissioner
     };
 	case "donator_1":
 	{
