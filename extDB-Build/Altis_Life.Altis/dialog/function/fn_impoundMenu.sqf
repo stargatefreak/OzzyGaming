@@ -26,7 +26,7 @@ lbClear _control;
 
 {
 	_vehicleInfo = [_x select 2] call life_fnc_fetchVehInfo;
-	if(_vehicleInfo select 2 in (__GETC__(typeHeli)) && (life_ozCopPilotGround == 0 or life_ozMedPilotGround == 0)) then {
+	if(_vehicleInfo select 2 in (__GETC__(typeHeli)) && (((__GETC__(life_ozCopPilotGround)) == 0 && playerside == west) or ((__GETC__(life_ozMedPilotGround)) == 0 && playerside == independent))) then {
 	_control lbAdd (_vehicleInfo select 3);
 	_tmp = [_x select 2,_x select 8];
 	_tmp = str(_tmp);

@@ -134,7 +134,7 @@ switch (_shop) do
         // Rank 10 - 1st Lieutenant
         if(__GETC__(life_ozCoplvl) >= 10) then {
             _return pushBack ["B_MRAP_01_F",70000];
-            /*_return pushBack ["B_APC_Tracked_01_rcws_F",120000];*/
+            _return pushBack ["B_APC_Tracked_01_rcws_F",120000];
         };
         // Rank 11 - Captain
         // Rank 12 - Inspector
@@ -156,7 +156,7 @@ switch (_shop) do
         ];
     };
 
-    case "cop_air": {
+    case ("cop_air" or "cop_airhq"): {
                 // Rank 0 - Public
 			_return = [];
         if (__GETC__(life_ozCopPilotGround) == 1) exitwith {hint "Your Grounded mister"};
@@ -197,7 +197,7 @@ switch (_shop) do
         } else {
             // Pilot Trainee
             if (__GETC__(life_ozCopPilotLvl) >= 1) then {
-                _return pushBack ["C_Heli_Light_01_F",85000];
+                _return pushBack ["B_Heli_Light_01_F",85000];
                 _return pushBack ["C_Heli_Light_01_civil_F",65000];
             };
             // Pilot
@@ -213,35 +213,6 @@ switch (_shop) do
             };
         };
 	};
-
-    case "cop_airhq":
-    {
-    // Can we remove this one and just use "cop_air"
-        switch(true) do {
-            case ((__GETC__(life_ozCoplvl) > 1) AND (__GETC__(life_ozCoplvl) < 6)):
-            {
-                _return = [
-				["B_Heli_Light_01_F",80000],
-				["C_Heli_Light_01_civil_F",80000]
-				];
-			};
-            case (__GETC__(life_ozCoplvl) >= 6):
-			{
-                _return = [
-                    ["B_Heli_Light_01_F",70000],
-                    ["C_Heli_Light_01_civil_F",70000],
-                    ["B_Heli_Transport_01_F",150000],
-					["B_Heli_Transport_03_unarmed_F",2200000],
-					["O_Heli_Transport_04_F",1100000],
-					["O_Heli_Transport_04_covered_F",1500000]
-                ];
-			};
-            default { _return = ""; };
-        };
-        if (__GETC__(life_ozCoplvl) >= 4) then {
-        _return pushBack ["I_Heli_light_03_unarmed_F",800000];
-        };
-    };
 
     case "civ_ship":
     {
