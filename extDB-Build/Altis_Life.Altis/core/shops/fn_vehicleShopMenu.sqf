@@ -5,7 +5,7 @@
 	Description:
 	Blah
 */
-private["_shop","_sideCheck","_spawnPoints","_shopFlag","_disableBuy"];
+private["_shop","_sideCheck","_spawnPoints","_shopFlag","_disableBuy","_sPrice"];
 _shop = [(_this select 3),0,"",[""]] call BIS_fnc_param;
 _sideCheck = [(_this select 3),1,sideUnknown,[civilian]] call BIS_fnc_param;
 _spawnPoints = [(_this select 3),2,"",["",[]]] call BIS_fnc_param;
@@ -31,6 +31,14 @@ if(_disableBuy) then {
 
 //Fetch the shop config.
 _vehicleList = [_shop] call life_fnc_vehicleListCfg;
+
+//Checks if the Buy Price is greater then the sell price and if it is less then the sell price it will auto adjust the buy price to be equal to the sell price
+{
+	_sPrice = [_x select 0,__GETC__(life_garage_sell)] call TON_fnc_index;
+	if (_x select 1 < _sPrice) then {
+		_x set[1,_sPrice];
+	};
+} forEach _vehicleList;
 
 _control = ((findDisplay 2300) displayCtrl 2302);
 lbClear _control; //Flush the list.
