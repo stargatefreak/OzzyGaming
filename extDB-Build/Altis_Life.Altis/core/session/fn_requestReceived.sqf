@@ -89,7 +89,7 @@ switch(playerSide) do {
 };
 
 if(count (_this select 19) > 0) then {
-	{life_vehicles pushBack _x;} foreach (_this select 12);
+	{life_vehicles pushBack _x;} foreach (_this select 19);
 };
 
 if(__GETC__(life_Ozdonator) < 5) then {

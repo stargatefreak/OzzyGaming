@@ -7,13 +7,14 @@
 	Not actually a impound menu, may act as confusion to some but that is what I wanted.
 	The purpose of this menu is it is now called a 'Garage' where vehicles are stored (persistent ones).
 */
-private["_vehicles","_control"];
+private["_vehicles","_control","_grounded"];
 disableSerialization;
 _vehicles = [_this,0,[],[[]]] call BIS_fnc_param;
 
 ctrlShow[2803,false];
 ctrlShow[2830,false];
 waitUntil {!isNull (findDisplay 2800)};
+
 
 if(count _vehicles == 0) exitWith
 {
@@ -22,11 +23,30 @@ if(count _vehicles == 0) exitWith
 
 _control = ((findDisplay 2800) displayCtrl 2802);
 lbClear _control;
+_grounded = false;
 
+switch (playerSide) do
+{
+	case west:
+	{
+		if(__GETC__(life_ozCopPilotGround) == 1) then {
+			_grounded = true;
+		};
+	};
+	case civilian:
+	{
+	};
+	case independent:
+	{
+		if(__GETC__(life_ozMedPilotGround) == 1) then {
+			_grounded = true;
+		};
+	};
+};
 
 {
 	_vehicleInfo = [_x select 2] call life_fnc_fetchVehInfo;
-	if(_vehicleInfo select 2 in (__GETC__(typeHeli)) && (((__GETC__(life_ozCopPilotGround)) == 0 && playerside == west) or ((__GETC__(life_ozMedPilotGround)) == 0 && playerside == independent))) then {
+	if((_vehicleInfo select 2 in (__GETC__(typeHeli)) && !_grounded) or !(_vehicleInfo select 2 in (__GETC__(typeHeli)))) then {
 	_control lbAdd (_vehicleInfo select 3);
 	_tmp = [_x select 2,_x select 8];
 	_tmp = str(_tmp);

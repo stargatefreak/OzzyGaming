@@ -60,7 +60,6 @@ if((_vehicle isKindOf "Car") || (_vehicle isKindOf "Air") || (_vehicle isKindOf 
 				case (_vehicle isKindOf "Tank"): {_price = call life_impound_armor;};
 				case (typeOf _vehicle == "Box_IND_AmmoVeh_F"): {_price = 500;};
 			};
-			if(isNull _price or _price == 0) then {_price = 100};
 			
 			life_impound_inuse = true;
 			if(_vehicle getVariable["purpose",""] == "truck_mission") then

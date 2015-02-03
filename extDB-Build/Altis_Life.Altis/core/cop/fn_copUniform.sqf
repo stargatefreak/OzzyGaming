@@ -5,6 +5,8 @@
 	Quick Edit: Me
 	Created for www.altisliferpg.com
 */
+waitUntil{life_session_completed};
+
 if (playerSide == west) then 
 {
 	if ((__GETC__(life_ozCoplvl) < 2) && ((uniform player) == "U_Rangemaster")) then {
