@@ -13,7 +13,7 @@ _shop = [_this,0,"",[""]] call BIS_fnc_param;
 if(_shop == "") exitWith {closeDialog 0}; //Bad shop type passed.
 switch(_shop) do {
     case "med_basic": {
-        if (playerSide != independent) {
+        if (playerSide != independent) then {
             "Only medics can access this store."
         } else {
             ["Hospital EMS Shop",
@@ -234,10 +234,10 @@ switch(_shop) do {
         };
     };
     case "rebel":{
-        if (playerSide != civilian) {
+        if (playerSide != civilian) then {
             "Only civilians can access this store."
         } else {
-            if (!license_civ_rebel) {
+            if (!license_civ_rebel) then {
                 "You must have a Rebel Training license to use this store!"
             } else {
                 ["Jihadi Weapons Market",
@@ -314,10 +314,10 @@ switch(_shop) do {
         };
     };
     case "gun": {
-        if (playerSide != civilian) {
+        if (playerSide != civilian) then {
             "You are not a civ!"
         } else {
-            if (!license_civ_gun) {
+            if (!license_civ_gun) then {
                 "You don't have a Firearms license!"
             } else {
                 ["Billy Joe's Firearms",
@@ -489,7 +489,7 @@ switch(_shop) do {
         };
     };
     case "gang":{
-        if (playerSide != civilian) {
+        if (playerSide != civilian) then {
             "Only civilians can access this store."
         } else {
             ["Gang Hideout Armament",

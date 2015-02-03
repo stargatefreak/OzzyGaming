@@ -159,8 +159,8 @@ switch (_shop) do
     case "cop_air": {
                 // Rank 0 - Public
 			_return = [];
-        if (__GETC__(life_ozCopPilotGround) = 1) exitwith {hint "Your Grounded mister"};
-        if (__GETC__(life_ozCopPilotLvl) = 0) then {
+        if (__GETC__(life_ozCopPilotGround) == 1) exitwith {hint "Your Grounded mister"};
+        if (__GETC__(life_ozCopPilotLvl) == 0) then {
        
             // WHITELISTED
             // Rank 1 - Cadet

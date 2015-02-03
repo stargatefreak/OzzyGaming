@@ -196,7 +196,7 @@ switch (_filter) do
 	{
         // Rank 0 - Public
         _ret = [
-            ["V_Rangemaster_belt",nil,800],
+            ["V_Rangemaster_belt",nil,800]
         ];
         
         // WHITELISTED
