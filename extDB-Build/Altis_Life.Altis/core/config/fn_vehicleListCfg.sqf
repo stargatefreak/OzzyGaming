@@ -134,7 +134,7 @@ switch (_shop) do
         // Rank 10 - 1st Lieutenant
         if(__GETC__(life_ozCoplvl) >= 10) then {
             _return pushBack ["B_MRAP_01_F",105000];
-            /*_return pushBack ["B_APC_Tracked_01_rcws_F",500000];*/
+            _return pushBack ["B_APC_Tracked_01_rcws_F",500000];
         };
         // Rank 11 - Captain
         // Rank 12 - Inspector
@@ -156,7 +156,7 @@ switch (_shop) do
         ];
     };
 
-    case "cop_air": {
+    case ("cop_air" or "cop_airhq"): {
                 // Rank 0 - Public
 			_return = [];
         if (__GETC__(life_ozCopPilotGround) == 1) exitwith {hint "You have been grounded. No aircraft for you."};
@@ -197,7 +197,7 @@ switch (_shop) do
         } else {
             // Pilot Trainee
             if (__GETC__(life_ozCopPilotLvl) >= 1) then {
-                _return pushBack ["C_Heli_Light_01_F",128000];
+                _return pushBack ["B_Heli_Light_01_F",128000];
                 _return pushBack ["C_Heli_Light_01_civil_F",98000];
             };
             // Pilot
@@ -213,69 +213,6 @@ switch (_shop) do
             };
         };
 	};
-
-    case "cop_airhq":
-    {
-
-    // REMOVE THIS!!!
-    // JUST USE "cop_air"
-
-        // Rank 0 - Public
-        _return = [];
-        if (__GETC__(life_ozCopPilotGround) == 1) exitwith {hint "You have been grounded. No aircraft for you."};
-        if (__GETC__(life_ozCopPilotLvl) == 0) then {
-       
-            // WHITELISTED
-            // Rank 1 - Cadet
-
-            // DUTY OFFICERS
-            // Rank 2 - Probationary Constable
-            // Rank 3 - Constable
-            if(__GETC__(life_ozCoplvl) >= 3) then {
-                _return pushBack ["C_Heli_Light_01_civil_F",150000];
-            };
-            // Rank 4 - Senior Constable
-
-            // JUNIOR NCO
-            // Rank 5 - 
-
-            // NCOs
-            // Rank 6 - Sergeant
-            // Rank 7 - Senior Sergeant
-            // Rank 8 - 
-
-            // JUNIOR OFFICER
-            // Rank 9 - 2nd Lieutenant
-
-            // OFFICERS
-            // Rank 10 - 1st Lieutenant
-            // Rank 11 - Captain
-            if(__GETC__(life_ozCoplvl) >= 11) then {
-                _return pushBack ["B_Heli_Transport_01_F",750000];
-            };
-            // Rank 12 - Inspector
-
-            // SENIOR OFFICERS
-            // Rank 20 - Lead Inspector, Deputy Chief, Chief, Deputy Commissioner, Comissioner
-        } else {
-            // Pilot Trainee
-            if (__GETC__(life_ozCopPilotLvl) >= 1) then {
-                _return pushBack ["C_Heli_Light_01_F",128000];
-                _return pushBack ["C_Heli_Light_01_civil_F",98000];
-            };
-            // Pilot
-            if (__GETC__(life_ozCopPilotLvl) >= 2) then {
-                _return pushBack ["B_Heli_Transport_01_F",600000];
-                _return pushBack ["I_Heli_light_03_unarmed_F",750000];
-            };
-            // Senior Pilot
-            if (__GETC__(life_ozCopPilotLvl) >= 3) then {
-                _return pushBack ["B_Heli_Transport_03_unarmed_F",2000000];
-                _return pushBack ["O_Heli_Transport_04_F",3000000];
-                _return pushBack ["O_Heli_Transport_04_covered_F",3500000];
-            };
-        };
-    };
 
     case "civ_ship":
     {
