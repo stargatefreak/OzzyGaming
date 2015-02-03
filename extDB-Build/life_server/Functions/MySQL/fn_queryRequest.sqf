@@ -23,7 +23,7 @@ _ownerID = owner _ownerID;
 	The other part is well the SQL statement.
 */
 _query = switch(_side) do {
-	case west: {_returnCount = 13; format["SELECT playerid, name, cash, bankacc, adminlevel, donatorlvl, cop_licenses, coplevel, cop_gear, copBlacklist, copCounter, copPilotLevel, copPilotGrounded FROM players WHERE playerid='%1'",_uid];};
+	case west: {_returnCount = 13; format["SELECT playerid, name, cash, bankacc, adminlevel, donatorlvl, cop_licenses, coplevel, cop_gear, blacklist, copCounter, copPilotLevel, copPilotGrounded FROM players WHERE playerid='%1'",_uid];};
 	case civilian: {_returnCount = 10; format["SELECT playerid, name, cash, bankacc, adminlevel, donatorlvl, civ_licenses, arrested, civ_gear, civCounter FROM players WHERE playerid='%1'",_uid];};
 	case independent: {_returnCount = 12; format["SELECT playerid, name, cash, bankacc, adminlevel, donatorlvl, med_licenses, mediclevel, med_gear, medCounter, medicBlacklist, medicPilotGrounded FROM players WHERE playerid='%1'",_uid];};
 };
@@ -89,6 +89,6 @@ switch (_side) do {
 };
 
 _keyArr = missionNamespace getVariable [format["%1_KEYS_%2",_uid,_side],[]];
-_queryResult set[12,_keyArr];
+_queryResult set[19,_keyArr];
 
 [_queryResult,"SOCK_fnc_requestReceived",_ownerID,false] spawn life_fnc_MP;

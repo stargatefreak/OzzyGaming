@@ -518,5 +518,5 @@ typeHeli =
 "B_Heli_Transport_03_unarmed_F",
 "O_Heli_Transport_04_F",
 "O_Heli_Transport_04_covered_F"
-]
+];
 __CONST__(typeHeli,typeHeli);

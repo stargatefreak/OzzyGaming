@@ -83,12 +83,12 @@ switch(playerSide) do {
 	case independent: {
 		medicTimer = _this select 9;
 		__CONST__(life_ozMediclvl, parseNumber(_this select 7));
-		__CONST__(life_ozMedPilotGround, parseNumber(_this select 12));
+		__CONST__(life_ozMedPilotGround, parseNumber(_this select 11));
 		__CONST__(life_ozCoplvl,0);
 	};
 };
 
-if(count (_this select 12) > 0) then {
+if(count (_this select 19) > 0) then {
 	{life_vehicles pushBack _x;} foreach (_this select 12);
 };
 
