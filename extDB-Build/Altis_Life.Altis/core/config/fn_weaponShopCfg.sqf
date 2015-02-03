@@ -34,7 +34,7 @@ switch(_shop) do {
     };
     case "cop_basic": {
         // Kill execution if not a cop.
-        if (playerSide != west){
+        if (playerSide != west) then {
             "Only the police may access this store!"
         } else {
             //Initialise our arrays for gear
@@ -68,7 +68,7 @@ switch(_shop) do {
 
             // WHITELISTED
             // Rank 1  - Cadet
-            if (__GETC__(life_ozCoplvl) >= 1){
+            if (__GETC__(life_ozCoplvl) >= 1) then {
                 _copWeapons = _copWeapons + [
                     ["hgun_PDW2000_F",nil,10000]
                 ];
@@ -82,7 +82,7 @@ switch(_shop) do {
 
             // DUTY OFFICERS
             // Rank 2  - Probationary Constable
-            if (__GETC__(life_ozCoplvl) >= 2){
+            if (__GETC__(life_ozCoplvl) >= 2) then {
                 _copWeapons = _copWeapons + [
                     ["hgun_Rook40_F",nil,5000],
                     ["arifle_MX_F",nil,22000]
@@ -99,7 +99,7 @@ switch(_shop) do {
                 ];
             };
             // Rank 3  - Constable
-            if (__GETC__(life_ozCoplvl) >= 3){
+            if (__GETC__(life_ozCoplvl) >= 3) then {
                 _copGear = _copGear + [
                     ["Minedetector",nil,1000]
                 ];
@@ -120,7 +120,7 @@ switch(_shop) do {
                 ];
             };
             // Rank 4  - Senior Constable
-            if (__GETC__(life_ozCoplvl) >= 4){
+            if (__GETC__(life_ozCoplvl) >= 4) then {
                 _copWeapons = _copWeapons + [
                     ["arifle_Katiba_F",nil,38000]
                 ];
@@ -140,7 +140,7 @@ switch(_shop) do {
 
             // JUNIOR NCO
             // Rank 5 - 
-            if (__GETC__(life_ozCoplvl) >= 5){
+            if (__GETC__(life_ozCoplvl) >= 5) then {
                 _copGear = _copGear + [
                     ["Rangefinder",nil,3000]
                 ];
@@ -154,7 +154,7 @@ switch(_shop) do {
 
             // NCOs
             // Rank 6  - Sergeant
-            if (__GETC__(life_ozCoplvl) >= 6){
+            if (__GETC__(life_ozCoplvl) >= 6) then {
                 _copWeapons = _copWeapons + [
                     ["hgun_Pistol_Signal_F",nil,1500]
                 ];
@@ -169,7 +169,7 @@ switch(_shop) do {
                 ];
             };
             // Rank 7  - Senior Sergeant
-            if (__GETC__(life_ozCoplvl) >= 7){
+            if (__GETC__(life_ozCoplvl) >= 7) then {
                 _copWeapons = _copWeapons + [
                     ["srifle_DMR_01_F",nil,50000]
                 ];
@@ -181,12 +181,12 @@ switch(_shop) do {
                 ];
             };
             // Rank 8  - 
-            if (__GETC__(life_ozCoplvl) >= 8){
+            if (__GETC__(life_ozCoplvl) >= 8) then {
             };
 
             // JUNIOR OFFICER
             // Rank 9  - 2nd Lieutenant
-            if (__GETC__(life_ozCoplvl) >= 9){
+            if (__GETC__(life_ozCoplvl) >= 9) then {
                 _copWeapons = _copWeapons + [
                     ["srifle_EBR_F",nil,70000]
                 ];
@@ -197,7 +197,7 @@ switch(_shop) do {
 
             // Officers
             // Rank 10 - 1st Lieutenant
-            if (__GETC__(life_ozCoplvl) >= 10){
+            if (__GETC__(life_ozCoplvl) >= 10) then {
                 _copWeapons = _copWeapons + [
                     ["srifle_LRR_F",nil,500000]
                 ];
@@ -209,7 +209,7 @@ switch(_shop) do {
                 ];
             };
             // Rank 11 - Captain
-            if (__GETC__(life_ozCoplvl) >= 11){
+            if (__GETC__(life_ozCoplvl) >= 11) then {
                 _copWeapons = _copWeapons + [
                     ["LMG_Mk200_F",nil,250000]
                 ];
@@ -220,12 +220,12 @@ switch(_shop) do {
                 ];
             };
             // Rank 12 - Inspector
-            if (__GETC__(life_ozCoplvl) >= 12){
+            if (__GETC__(life_ozCoplvl) >= 12) then {
             };
 
             // Senior Officers
             // Rank 20 - Lead Inspector, Deputy Chief, Chief, Dept Commissioner, Commissioner
-            if (__GETC__(life_ozCoplvl) >= 20){
+            if (__GETC__(life_ozCoplvl) >= 20) then {
             };
 
             // Return the gear

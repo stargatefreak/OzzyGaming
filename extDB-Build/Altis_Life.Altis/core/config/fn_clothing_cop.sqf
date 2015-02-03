@@ -133,10 +133,10 @@ switch (_filter) do
 
         // --- --- ---
 
-        if (__GETC__(life_ozCopPilotLvl) >= 1){
+        if (__GETC__(life_ozCopPilotLvl) >= 1) then {
             _ret pushBack ["H_CrewHelmetHeli_B","Crewman Helmet",1000];
         };
-        if (__GETC__(life_ozCopPilotLvl) >= 2){
+        if (__GETC__(life_ozCopPilotLvl) >= 2) then {
             _ret pushBack ["H_PilotHelmetHeli_B","Pilot Helmet",1000];
         };
 	};
