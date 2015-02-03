@@ -95,7 +95,7 @@ switch(_shop) do {
                     ["optic_ACO_grn",nil,800],
                     ["optic_MRD",nil,700],
                     ["optic_Holosight",nil,1000],
-                    ["acc_flashlight",nil,1000],
+                    ["acc_flashlight",nil,1000]
                 ];
             };
             // Rank 3  - Constable
