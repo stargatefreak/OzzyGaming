@@ -26,12 +26,14 @@ lbClear _control;
 
 {
 	_vehicleInfo = [_x select 2] call life_fnc_fetchVehInfo;
+	if(_vehicleInfo select 2 in (__GETC__(typeHeli)) && (life_ozCopPilotGround == 0 or life_ozMedPilotGround == 0)) then {
 	_control lbAdd (_vehicleInfo select 3);
 	_tmp = [_x select 2,_x select 8];
 	_tmp = str(_tmp);
 	_control lbSetData [(lbSize _control)-1,_tmp];
 	_control lbSetPicture [(lbSize _control)-1,_vehicleInfo select 2];
 	_control lbSetValue [(lbSize _control)-1,_x select 0];
+	};
 } foreach _vehicles;
 
 ctrlShow[2810,false];

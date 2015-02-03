@@ -15,9 +15,10 @@ _vid = lbValue[2802,(lbCurSel 2802)];
 _pid = getPlayerUID player;
 _unit = player;
 if(isNil "_vehicle") exitWith {hint localize "STR_Garage_Selection_Error"};
-if((!isNull life_cooldown) && life_cooldown > 1) exitWith {};
-life_cooldown = 3;
-[] spawn life_fnc_cooldown;
+
+if((!isNull life_cooldown) && life_cooldown > 0) exitWith {closeDialog 0;};
+[3] spawn life_fnc_cooldown;
+
 _price = [_vehicle,__GETC__(life_garage_sell)] call TON_fnc_index;
 if(_price == -1) then {_price = 1000;} else {_price = (__GETC__(life_garage_sell) select _price) select 1;};
 

@@ -239,6 +239,7 @@ class Life_Client_Core
 		class crashSite {};
 		class sonar {};
 		class randomRound {};
+		class cooldown {};
 	};
 	
 	class Network

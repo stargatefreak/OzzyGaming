@@ -76,6 +76,7 @@ life_ozCash = 0;
 __CONST__(life_impound_car,350);
 __CONST__(life_impound_boat,250);
 __CONST__(life_impound_air,850);
+__CONST__(life_impound_armor,800);
 life_istazed = false;
 life_my_gang = ObjNull;
 life_vehicles = [];
@@ -507,3 +508,15 @@ typeHouses =
 "Land_i_Stone_HouseSmall_V1_F",
 "Land_i_Stone_HouseSmall_V3_F"
 ];
+
+typeHeli = 
+[
+"I_Heli_light_03_unarmed_F",,
+"I_Heli_Transport_02_F",
+"B_Heli_Light_01_F",,
+"O_Heli_Light_02_unarmed_F",
+"B_Heli_Transport_03_unarmed_F",
+"O_Heli_Transport_04_F",
+"O_Heli_Transport_04_covered_F",
+]
+__CONST__(typeHeli,typeHeli);

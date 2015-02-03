@@ -60,13 +60,21 @@ if((_vehicle isKindOf "Car") || (_vehicle isKindOf "Air") || (_vehicle isKindOf 
 				case (_vehicle isKindOf "Tank"): {_price = call life_impound_armor;};
 				case (typeOf _vehicle == "Box_IND_AmmoVeh_F"): {_price = 500;};
 			};
-
+			if(isNull _price or _price == 0) then {_price = 100};
+			
 			life_impound_inuse = true;
 			if(_vehicle getVariable["purpose",""] == "truck_mission") then
 			{
-				_price = 50000;
-				hint format["You have impounded a delivery truck.\n\nYou have received $%1 for cleaning up the streets!",_price];
-				[[0,format["%1 has impounded a delivery truck",name player]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
+				if(_vehicle getVariable["type",""] == "legal") then {
+					_price = 10000;
+					hint format["You have impounded a Legal delivery truck.\n\nYou have received $%1 for cleaning up the streets!",_price];
+					[[0,format["%1 has impounded a legal delivery truck",name player]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
+					};
+				if(_vehicle getVariable["type",""] == "illegal") then {
+					_price = 50000;
+					hint format["You have impounded an ILLEGAL delivery truck.\n\nYou have received $%1 for cleaning up the streets!",_price];
+					[[0,format["%1 has impounded an ILLEGAL delivery truck",name player]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
+				};
 				life_ozAtm = life_ozAtm + _price;
 				deleteVehicle _vehicle;
 			}
