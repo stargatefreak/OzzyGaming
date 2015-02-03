@@ -78,7 +78,7 @@ switch(_shop) do {
                 _copAttachments = _copAttachments + [
                     ["optic_ACO_grn_smg",nil,700]
                 ];
-            }
+            };
 
             // DUTY OFFICERS
             // Rank 2  - Probationary Constable
@@ -97,7 +97,7 @@ switch(_shop) do {
                     ["optic_Holosight",nil,1000],
                     ["acc_flashlight",nil,1000],
                 ];
-            }
+            };
             // Rank 3  - Constable
             if (__GETC__(life_ozCoplvl) >= 3){
                 _copGear = _copGear + [
@@ -118,7 +118,7 @@ switch(_shop) do {
                     ["Chemlight_yellow",nil,500],
                     ["Chemlight_blue",nil,500]
                 ];
-            }
+            };
             // Rank 4  - Senior Constable
             if (__GETC__(life_ozCoplvl) >= 4){
                 _copWeapons = _copWeapons + [
@@ -136,7 +136,7 @@ switch(_shop) do {
                     ["muzzle_snds_M",nil,5000],
                     ["muzzle_snds_B",nil,5000]
                 ];
-            }
+            };
 
             // JUNIOR NCO
             // Rank 5 - 
@@ -150,7 +150,7 @@ switch(_shop) do {
                 _copAmmo = _copAmmo + [
                     ["20Rnd_556x45_UW_mag",nil,2500]
                 ];
-            }
+            };
 
             // NCOs
             // Rank 6  - Sergeant
@@ -167,7 +167,7 @@ switch(_shop) do {
                     ["SmokeShellYellow",nil,500],
                     ["SmokeShellGreen","Tear Gas Grenade",1500]
                 ];
-            }
+            };
             // Rank 7  - Senior Sergeant
             if (__GETC__(life_ozCoplvl) >= 7){
                 _copWeapons = _copWeapons + [
@@ -179,10 +179,10 @@ switch(_shop) do {
                 _copAttachments = _copAttachments + [
                     ["optic_SOS",nil,6000]
                 ];
-            }
+            };
             // Rank 8  - 
             if (__GETC__(life_ozCoplvl) >= 8){
-            }
+            };
 
             // JUNIOR OFFICER
             // Rank 9  - 2nd Lieutenant
@@ -193,7 +193,7 @@ switch(_shop) do {
                 _copAmmo = _copAmmo + [
                     ["20Rnd_762x51_Mag",nil,3500]
                 ];
-            }
+            };
 
             // Officers
             // Rank 10 - 1st Lieutenant
@@ -207,7 +207,7 @@ switch(_shop) do {
                 _copAttachments = _copAttachments + [
                     ["optic_NVS",nil,8000]
                 ];
-            }
+            };
             // Rank 11 - Captain
             if (__GETC__(life_ozCoplvl) >= 11){
                 _copWeapons = _copWeapons + [
@@ -218,15 +218,15 @@ switch(_shop) do {
                     ["200Rnd_65x39_cased_Box_Tracer",nil,15000],
                     ["SatchelCharge_Remote_Mag",nil,100000]
                 ];
-            }
+            };
             // Rank 12 - Inspector
             if (__GETC__(life_ozCoplvl) >= 12){
-            }
+            };
 
             // Senior Officers
             // Rank 20 - Lead Inspector, Deputy Chief, Chief, Dept Commissioner, Commissioner
             if (__GETC__(life_ozCoplvl) >= 20){
-            }
+            };
 
             // Return the gear
             _cop = _copGear + _copWeapons + _copAmmo + _copThrowables;
