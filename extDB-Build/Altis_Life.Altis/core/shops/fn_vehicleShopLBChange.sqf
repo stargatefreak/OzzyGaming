@@ -19,10 +19,16 @@ _vehicleList = [life_veh_shop select 0] call life_fnc_vehicleListCfg; _basePrice
 _vehicleInfo = [_className] call life_fnc_fetchVehInfo;
 _trunkSpace = [_className] call life_fnc_vehicleWeightCfg;
 
+//Checks if the Buy Price is greater then the sell price and if it is less then the sell price it will auto adjust the buy price to be equal to the sell price
+_sPrice = [_basePrice,__GETC__(life_garage_sell)] call TON_fnc_index;
+if (_basePrice < _sPrice) then {
+	_basePrice = sPrice;
+};
+
 ctrlShow [2330,true];
 (getControl(2300,2303)) ctrlSetStructuredText parseText format[
 (localize "STR_Shop_Veh_UI_Rental")+ " <t color='#8cff9b'>$%1</t><br/>" +(localize "STR_Shop_Veh_UI_Ownership")+ " <t color='#8cff9b'>$%2</t><br/>" +(localize "STR_Shop_Veh_UI_MaxSpeed")+ " %3 km/h<br/>" +(localize "STR_Shop_Veh_UI_HPower")+ " %4<br/>" +(localize "STR_Shop_Veh_UI_PSeats")+ " %5<br/>" +(localize "STR_Shop_Veh_UI_Trunk")+ " %6<br/>" +(localize "STR_Shop_Veh_UI_Fuel")+ " %7<br/>" +(localize "STR_Shop_Veh_UI_Armor")+ " %8",
-[round(_basePrice * 0.15)] call life_fnc_numberText,
+[round(_basePrice * 0.6)] call life_fnc_numberText,
 [round(_basePrice)] call life_fnc_numberText,
 _vehicleInfo select 8,
 _vehicleInfo select 11,
