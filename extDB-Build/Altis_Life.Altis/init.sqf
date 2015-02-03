@@ -5,27 +5,25 @@ X_Client = false;
 X_JIP = false;
 StartProgress = false;
 
-if (isNil ”paramsArray” ) then { paramsArray = [0,0,0]};
+if (isNil "paramsArray" ) then { paramsArray = [0,0,0]};
 if (paramsArray select 0 == 1) then {
     if (isServer) then {
         HCPresent = true;
-        publicVariable ”HCPresent”;
+        publicVariable "HCPresent";
     };
 
         if (!hasInterface && !isServer ) then {
-            HCName = name player ;
-            publicVariable ”HCName” ;
+            HCName = name player;
+            publicVariable "HCName";
     };
 } else {
     if (isServer) then {
         HCPresent = false;
-        HCName = ”NOONE” ;
-        publicVariable ”HCPresent”;
-        publicVariable ”HCName”;
+        HCName = "NOONE";
+        publicVariable "HCPresent";
+        publicVariable "HCName";
     };
 };
-
-
 
 if(!isDedicated) then { X_Client = true;};
 enableSaving[false,false];
