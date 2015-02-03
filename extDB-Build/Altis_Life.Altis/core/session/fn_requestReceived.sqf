@@ -58,6 +58,8 @@ switch(playerSide) do {
 		__CONST__(life_ozMediclvl,0);
 		life_blacklisted = _this select 9;
 		copTimer = _this select 10;
+		__CONST__(life_ozCopPilotLvl, parseNumber(_this select 11));
+		__CONST__(life_ozCopPilotGround, parseNumber(_this select 12));
 	};
 	
 	case civilian: {
@@ -81,6 +83,7 @@ switch(playerSide) do {
 	case independent: {
 		medicTimer = _this select 9;
 		__CONST__(life_ozMediclvl, parseNumber(_this select 7));
+		__CONST__(life_ozMedPilotGround, parseNumber(_this select 12));
 		__CONST__(life_ozCoplvl,0);
 	};
 };

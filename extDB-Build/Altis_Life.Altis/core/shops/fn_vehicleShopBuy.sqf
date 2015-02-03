@@ -11,7 +11,7 @@ if((lbCurSel 2302) == -1) exitWith {hint localize "STR_Shop_Veh_DidntPick"};
 _className = lbData[2302,(lbCurSel 2302)];
 _vIndex = lbValue[2302,(lbCurSel 2302)];
 _vehicleList = [life_veh_shop select 0] call life_fnc_vehicleListCfg; _basePrice = (_vehicleList select _vIndex) select 1;
- if(_mode) then {_basePrice = round(_basePrice * 1.5)};
+ if(!_mode) then {_basePrice = round(_basePrice * 0.5)};
 _colorIndex = lbValue[2304,(lbCurSel 2304)];
 
 //Series of checks (YAY!)
@@ -51,7 +51,7 @@ if((life_veh_shop select 0) == "med_air_hs") then {
 	[_vehicle] call life_fnc_clearVehicleAmmo;
 	[[_vehicle,"trunk_in_use",false,true],"TON_fnc_setObjVar",false,false] spawn life_fnc_MP;
 	[[_vehicle,"vehicle_info_owners",[[getPlayerUID player,profileName]],true],"TON_fnc_setObjVar",false,false] spawn life_fnc_MP;
-	_vehicle disableTIEquipment true; //No Thermals.. They're cheap but addictive.
+	_vehicle disableTIEquipment true; //No Thermals.. Theyre cheap but addictive.
 } else {
 	_vehicle = createVehicle [_className, (getMarkerPos _spawnPoint), [], 0, "NONE"];
 	waitUntil {!isNil "_vehicle"}; //Wait?
@@ -64,7 +64,7 @@ if((life_veh_shop select 0) == "med_air_hs") then {
 	[_vehicle] call life_fnc_clearVehicleAmmo;
 	[[_vehicle,"trunk_in_use",false,true],"TON_fnc_setObjVar",false,false] spawn life_fnc_MP;
 	[[_vehicle,"vehicle_info_owners",[[getPlayerUID player,profileName]],true],"TON_fnc_setObjVar",false,false] spawn life_fnc_MP;
-	_vehicle disableTIEquipment true; //No Thermals.. They're cheap but addictive.
+	if (!((life_veh_shop select 0) == "cop_air" && _className == "I_Heli_light_03_unarmed_F")) then {_vehicle disableTIEquipment true;}; //No Thermals.. They're cheap but addictive.
 	if(_className == "C_SUV_01_F") then {_vehicle setCenterOfMass [-0.011,-0.0507,-1]};
 };
 

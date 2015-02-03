@@ -86,6 +86,5 @@ class Life_vehicle_shop {
 			w = (10 / 40);
 			h = (1 / 25);
 		};
-
 	};
 };

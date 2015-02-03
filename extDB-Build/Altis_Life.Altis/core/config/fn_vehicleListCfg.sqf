@@ -115,7 +115,7 @@ switch (_shop) do
         if(__GETC__(life_ozCoplvl) >= 2) then {
             _return pushBack ["C_SUV_01_F",10000];
             _return pushBack ["C_Hatchback_01_sport_F",20000];
-        }
+        };
         // Rank 3 - Constable
         // Rank 4 - Senior Constable
 
@@ -135,7 +135,7 @@ switch (_shop) do
         if(__GETC__(life_ozCoplvl) >= 10) then {
             _return pushBack ["B_MRAP_01_F",70000];
             /*_return pushBack ["B_APC_Tracked_01_rcws_F",120000];*/
-        }
+        };
         // Rank 11 - Captain
         // Rank 12 - Inspector
 
@@ -158,12 +158,10 @@ switch (_shop) do
 
     case "cop_air": {
                 // Rank 0 - Public
-        _return = [
-        ];
-        
-        /*
-        if (__GETC__(life_ozCopPilotLvl) = 0){
-        */
+			_return = [];
+        if (__GETC__(life_ozCopPilotGround) = 1) exitwith {hint "Your Grounded mister"};
+        if (__GETC__(life_ozCopPilotLvl) = 0) then {
+       
             // WHITELISTED
             // Rank 1 - Cadet
 
@@ -191,32 +189,30 @@ switch (_shop) do
             // Rank 11 - Captain
             if(__GETC__(life_ozCoplvl) >= 11) then {
                 _return pushBack ["B_Heli_Transport_01_F",500000];
-            }
+            };
             // Rank 12 - Inspector
 
             // SENIOR OFFICERS
             // Rank 20 - Lead Inspector, Deputy Chief, Chief, Deputy Commissioner, Comissioner
-        /*
         } else {
             // Pilot Trainee
-            if (__GETC__(life_ozCopPilotLvl) >= 1){
+            if (__GETC__(life_ozCopPilotLvl) >= 1) then {
                 _return pushBack ["C_Heli_Light_01_F",85000];
                 _return pushBack ["C_Heli_Light_01_civil_F",65000];
-            }
+            };
             // Pilot
-            if (__GETC__(life_ozCopPilotLvl) >= 2){
+            if (__GETC__(life_ozCopPilotLvl) >= 2) then {
                 _return pushBack ["B_Heli_Transport_01_F",400000];
                 _return pushBack ["I_Heli_light_03_unarmed_F",500000];
-            }
+            };
             // Senior Pilot
-            if (__GETC__(life_ozCopPilotLvl) >= 3){
+            if (__GETC__(life_ozCopPilotLvl) >= 3) then {
                 _return pushBack ["B_Heli_Transport_03_unarmed_F",1500000];
                 _return pushBack ["O_Heli_Transport_04_F",2000000];
                 _return pushBack ["O_Heli_Transport_04_covered_F",2500000];
-            }
+            };
         };
-        */
-    };
+	};
 
     case "cop_airhq":
     {
@@ -244,7 +240,7 @@ switch (_shop) do
         };
         if (__GETC__(life_ozCoplvl) >= 4) then {
         _return pushBack ["I_Heli_light_03_unarmed_F",800000];
-        }
+        };
     };
 
     case "civ_ship":
@@ -271,7 +267,7 @@ switch (_shop) do
         // Rank 2 - Probationary Constable
         if(__GETC__(life_ozCoplvl) >= 2) then {
         _return pushBack ["C_Boat_Civil_01_police_F",8000];
-        }
+        };
         // Rank 3 - Constable
         if(__GETC__(life_ozCoplvl) >= 3) then {
         _return pushBack ["B_SDV_01_F",4000];
