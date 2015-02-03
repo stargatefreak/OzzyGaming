@@ -1014,6 +1014,14 @@
 			<Italian>Non c'è alcun veicolo vicino all'NPC.</Italian>
 			<Portuguese>Não existe um veículo proximo ao NPC</Portuguese>
 		</Key>
+		<Key ID="STR_Garage_Cooldown">
+			<Original>You cant sell another vehicle for another %1 seconds</Original>
+			<English>You cant sell another vehicle for another %1 seconds</English>
+			<German>Du kannst nicht ein anderes Fahrzeug für weitere %1 Sekunden verkaufen</German>
+			<French>Vous ne pouvez pas vendre un autre véhicule pendant %1 secondes</French>
+			<Italian>Non puoi vendere un altro veicolo per altri %1 secondi</Italian>
+			<Portuguese>Você não pode vender um outro veículo por mais %1 segundo</Portuguese>
+		</Key>
 	</Package>
 	<Package name="Key_Chain">
 		<Key ID="STR_Keys_Title">

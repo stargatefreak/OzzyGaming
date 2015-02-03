@@ -16,7 +16,7 @@ _pid = getPlayerUID player;
 _unit = player;
 if(isNil "_vehicle") exitWith {hint localize "STR_Garage_Selection_Error"};
 
-if((!isNull life_cooldown) && life_cooldown > 0) exitWith {closeDialog 0;};
+if((!isNull life_cooldown) && life_cooldown > 0) exitWith {hint format[localise "STR_Garage_Cooldown",life_cooldown]};
 [3] spawn life_fnc_cooldown;
 
 _price = [_vehicle,__GETC__(life_garage_sell)] call TON_fnc_index;
@@ -26,4 +26,3 @@ if(_price == -1) then {_price = 1000;} else {_price = (__GETC__(life_garage_sell
 [[1,format[localize "STR_Garage_SoldCar",_price]],"life_fnc_broadcast",player,false] spawn life_fnc_MP;
 life_ozAtm = life_ozAtm + _price;
 };
-closeDialog 0;
