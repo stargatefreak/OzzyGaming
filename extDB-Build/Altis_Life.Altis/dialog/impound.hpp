@@ -84,7 +84,7 @@ class Life_impound_menu
 		{
 			idc = -1;
 			text = "$STR_Global_Sell";
-			onButtonClick = "if(isNull life_cooldown or life_cooldown == 0) then {[] call life_fnc_sellGarage;} else {hint format["You cant sell another vehicle for another %1 seconds",life_cooldown];};";
+			onButtonClick = "if(isNull life_cooldown or life_cooldown == 0) then {[] call life_fnc_sellGarage;} else {hint format[""You cant sell another vehicle for another %1 seconds"",life_cooldown];};";
 			x = 0.26 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
 			y = 0.9 - (1 / 25);
 			w = (6.25 / 40);
