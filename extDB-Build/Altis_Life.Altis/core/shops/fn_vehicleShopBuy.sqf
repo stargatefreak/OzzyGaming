@@ -11,14 +11,15 @@ if((lbCurSel 2302) == -1) exitWith {hint localize "STR_Shop_Veh_DidntPick"};
 _className = lbData[2302,(lbCurSel 2302)];
 _vIndex = lbValue[2302,(lbCurSel 2302)];
 _vehicleList = [life_veh_shop select 0] call life_fnc_vehicleListCfg; _basePrice = (_vehicleList select _vIndex) select 1;
- if(!_mode) then {_basePrice = round(_basePrice * 0.6)};
-_colorIndex = lbValue[2304,(lbCurSel 2304)];
 
 //Checks if the Buy Price is greater then the sell price and if it is less then the sell price it will auto adjust the buy price to be equal to the sell price
 _sPrice = [_basePrice,__GETC__(life_garage_sell)] call TON_fnc_index;
 if (_basePrice < _sPrice) then {
 	_basePrice = sPrice;
 };
+
+ if(!_mode) then {_basePrice = round(_basePrice * 0.6)};
+_colorIndex = lbValue[2304,(lbCurSel 2304)];
 
 //Series of checks (YAY!)
 if(_basePrice < 0) exitWith {}; //Bad price entry
