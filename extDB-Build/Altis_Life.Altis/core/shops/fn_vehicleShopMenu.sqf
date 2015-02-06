@@ -5,12 +5,13 @@
 	Description:
 	Blah
 */
-private["_shop","_sideCheck","_spawnPoints","_shopFlag","_disableBuy","_sPrice","_className","_basePrice"];
+private["_shop","_sideCheck","_spawnPoints","_shopFlag","_disableBuy","_sPrice","_className","_basePrice","_sellArray"];
 _shop = [(_this select 3),0,"",[""]] call BIS_fnc_param;
 _sideCheck = [(_this select 3),1,sideUnknown,[civilian]] call BIS_fnc_param;
 _spawnPoints = [(_this select 3),2,"",["",[]]] call BIS_fnc_param;
 _shopFlag = [(_this select 3),3,"",[""]] call BIS_fnc_param;
 _disableBuy = [(_this select 3),5,false,[true]] call BIS_fnc_param;
+_sellArray = call life_garage_sell;
 
 disableSerialization;
 //Long boring series of checks
@@ -41,7 +42,7 @@ ctrlShow [2304,false];
 {
 	_className = _x select 0;
 	_basePrice = _x select 1;
-	_sPrice = [_className,__GETC__(life_garage_sell)] call TON_fnc_index;
+	_sPrice = [_className,_sellArray] call TON_fnc_index;
 	if (_basePrice < _sPrice) then {
 		_basePrice = _sPrice;
 	};

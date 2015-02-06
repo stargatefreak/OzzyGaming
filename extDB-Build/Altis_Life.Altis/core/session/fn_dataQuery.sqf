@@ -14,5 +14,4 @@ _side = playerSide;
 cutText[format[localize "STR_Session_Query",_uid],"BLACK FADED"];
 0 cutFadeOut 999999999;
 
-_query = [[_uid,_side,_sender],"DB_fnc_queryRequest",false,false] spawn life_fnc_MP;
-waitUntil{scriptDone _query};
+[[_uid,_side,_sender],"DB_fnc_queryRequest",false,false] spawn life_fnc_MP;
