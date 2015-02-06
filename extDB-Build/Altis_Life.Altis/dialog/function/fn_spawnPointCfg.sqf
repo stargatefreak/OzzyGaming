@@ -18,24 +18,28 @@ _return = [];
 _minDistance = 5000;
 
 _copSpawnlist = [
-	["cop_spawn_1","Kavala HQ","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
-	["cop_spawn_2","Pyrgos HQ","\a3\ui_f\data\map\MapControl\fuelstation_ca.paa"],
-	["cop_spawn_3","Athira HQ","\a3\ui_f\data\map\GroupIcons\badge_rotate_0_gs.paa"],
-	["cop_spawn_4","Air HQ","\a3\ui_f\data\map\Markers\NATO\b_air.paa"],
-	["cop_spawn_5","HW Patrol","\a3\ui_f\data\map\GroupIcons\badge_rotate_0_gs.paa"]
+	["cop_spawn_1","Pyrgos Police HQ","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
+	["cop_spawn_2","Kavala Station","\a3\ui_f\data\map\MapControl\fuelstation_ca.paa"],
+	["cop_spawn_3","Athira Station","\a3\ui_f\data\map\GroupIcons\badge_rotate_0_gs.paa"],
+	["cop_spawn_4","Police Airbase","\a3\ui_f\data\map\Markers\NATO\b_air.paa"],
+	["cop_spawn_5","Highway Patrol","\a3\ui_f\data\map\GroupIcons\badge_rotate_0_gs.paa"],
+	["cop_spawn_6","Training HQ","\a3\ui_f\data\map\GroupIcons\badge_rotate_0_gs.paa"]
 ];
 
 _civSpawnlist = [
-	["civ_spawn_1","Kavala",_cityimg],
-	["civ_spawn_2","Pyrgos",_cityimg],
+	["civ_spawn_1","Pyrgos",_cityimg],
+	["civ_spawn_2","Kavala",_cityimg],
 	["civ_spawn_3","Athira",_cityimg],
 	["civ_spawn_4","Sofia",_cityimg]
 ];
 
 _medSpawnlist = [
-	["medic_spawn_1","Kavala Hospital",_hospitalimg],
-	["medic_spawn_2","Athira Regional",_hospitalimg],
-	["medic_spawn_3","Pygros Hospital",_hospitalimg]
+	["medic_spawn_1","Pygros Hospital",_hospitalimg],
+	["medic_spawn_2","Kavala Hospital",_hospitalimg],
+	["medic_spawn_3","Athira Hospital",_hospitalimg],
+	["medic_spawn_4","West Ambo Station",_hospitalimg],
+	["medic_spawn_5","South Ambo Station",_hospitalimg],
+	["medic_spawn_6","East Ambo Station",_hospitalimg]
 ];
 
 _rebSpawnlist = [
