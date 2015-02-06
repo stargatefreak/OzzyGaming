@@ -8,19 +8,20 @@
 	displays various bits of information about the vehicle.
 */
 disableSerialization;
-private["_control","_index","_className","_basePrice","_vehicleInfo","_colorArray","_ctrl"];
+private["_control","_index","_className","_basePrice","_vehicleInfo","_colorArray","_ctrl","_sellArray"];
 _control = _this select 0;
 _index = _this select 1;
 
 //Fetch some information.
 _className = _control lbData _index;
 _vIndex = _control lbValue _index;
+_sellArray = call life_garage_sell;
 _vehicleList = [life_veh_shop select 0] call life_fnc_vehicleListCfg; _basePrice = (_vehicleList select _vIndex) select 1;
 _vehicleInfo = [_className] call life_fnc_fetchVehInfo;
 _trunkSpace = [_className] call life_fnc_vehicleWeightCfg;
 
 //Checks if the Buy Price is greater then the sell price and if it is less then the sell price it will auto adjust the buy price to be equal to the sell price
-_sPrice = [_basePrice,__GETC__(life_garage_sell)] call TON_fnc_index;
+_sPrice = [_basePrice,_sellArray] call TON_fnc_index;
 if (_basePrice < _sPrice) then {
 	_basePrice = sPrice;
 };

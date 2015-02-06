@@ -5,15 +5,16 @@
 	Description:
 	Does something with vehicle purchasing.
 */
-private["_mode","_spawnPoints","_className","_basePrice","_colorIndex","_spawnPoint","_vehicle"];
+private["_mode","_spawnPoints","_className","_basePrice","_colorIndex","_spawnPoint","_vehicle","_sellArray"];
 _mode = _this select 0;
 if((lbCurSel 2302) == -1) exitWith {hint localize "STR_Shop_Veh_DidntPick"};
 _className = lbData[2302,(lbCurSel 2302)];
 _vIndex = lbValue[2302,(lbCurSel 2302)];
+_sellArray = call life_garage_sell;
 _vehicleList = [life_veh_shop select 0] call life_fnc_vehicleListCfg; _basePrice = (_vehicleList select _vIndex) select 1;
 
 //Checks if the Buy Price is greater then the sell price and if it is less then the sell price it will auto adjust the buy price to be equal to the sell price
-_sPrice = [_basePrice,__GETC__(life_garage_sell)] call TON_fnc_index;
+_sPrice = [_basePrice,_sellArray] call TON_fnc_index;
 if (_basePrice < _sPrice) then {
 	_basePrice = sPrice;
 };
