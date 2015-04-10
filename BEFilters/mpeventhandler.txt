@@ -1,1 +1,0 @@
-3 "" !"[_this,"bis_fnc_curatorrespawn",false] call bis_fnc_mp"
