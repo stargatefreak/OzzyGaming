@@ -157,7 +157,7 @@ switch(_shop) do {
                     ["6Rnd_GreenSignal_F",nil,500],
                     ["6Rnd_RedSignal_F",nil,500],
                     ["30Rnd_556x45_Stanag_Tracer_Yellow",nil,2000],
-                    ["10Rnd_762x51_Mag",nil,3000]
+                    ["10Rnd_762x54_Mag",nil,3000]
                 ];
                 _copThrowables = _copThrowables + [
                     ["SmokeShellYellow",nil,500],
@@ -396,7 +396,7 @@ switch(_shop) do {
                         ["optic_Hamr",nil,7500],
                         ["30Rnd_9x21_Mag",nil,200],
                         ["30Rnd_556x45_Stanag",nil,300],
-                        ["10Rnd_762x51_Mag",nil,500],
+                        ["10Rnd_762x54_Mag",nil,500],
                         ["30Rnd_65x39_caseless_green",nil,275],
                         ["30Rnd_65x39_caseless_mag",nil,100],
                         ["20Rnd_556x45_UW_mag",nil,325],
@@ -515,7 +515,7 @@ switch(_shop) do {
                         ["arifle_Katiba_F",nil,192000],
                         ["30Rnd_65x39_caseless_green_mag_Tracer",nil,150],
                         ["srifle_DMR_01_F",nil,32000],
-                        ["10Rnd_762x51_Mag",nil,320],
+                        ["10Rnd_762x54_Mag",nil,320],
                         ["20Rnd_762x51_Mag",nil,5760],
                         ["hgun_Rook40_F",nil,4160],
                         ["16Rnd_9x21_Mag",nil,32],
@@ -568,7 +568,7 @@ switch(_shop) do {
                         ["200Rnd_65x39_cased_Box_Tracer",nil,40960],
                         ["200Rnd_65x39_cased_Box",nil,40960],
                         ["srifle_DMR_01_F",nil,25600],
-                        ["10Rnd_762x51_Mag",nil,256],
+                        ["10Rnd_762x54_Mag",nil,256],
                         ["arifle_TRG21_F",nil,17920],
                         ["30Rnd_556x45_Stanag_Tracer_Yellow",nil,153],
                         ["arifle_Katiba_F",nil,15360],
@@ -644,7 +644,7 @@ switch(_shop) do {
                     ["optic_Hamr",nil,7500],
                     ["30Rnd_9x21_Mag",nil,200],
                     ["30Rnd_556x45_Stanag",nil,300],
-                    ["10Rnd_762x51_Mag",nil,500],
+                    ["10Rnd_762x54_Mag",nil,500],
                     ["30Rnd_65x39_caseless_green",nil,275],
                     ["20Rnd_556x45_UW_mag",nil,325],
                     ["SmokeShell",nil,100],
