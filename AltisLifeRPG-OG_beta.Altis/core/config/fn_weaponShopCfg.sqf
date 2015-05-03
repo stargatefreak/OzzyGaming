@@ -510,9 +510,9 @@ switch(_shop) do {
                 ["OzzyGaming Donator Shop T2",
                     [
                         ["ItemRadio",nil,0],
-						["arifle_TRG21_F",nil,22400],
+			["arifle_TRG21_F",nil,22400],
                         ["30Rnd_556x45_Stanag_Tracer_Yellow",nil,192],
-                        ["arifle_Katiba_F",nil,192000],
+                        ["arifle_Katiba_F",nil,19200],
                         ["30Rnd_65x39_caseless_green_mag_Tracer",nil,150],
                         ["srifle_DMR_01_F",nil,32000],
                         ["10Rnd_762x54_Mag",nil,320],
@@ -562,7 +562,7 @@ switch(_shop) do {
                 ["OzzyGaming Donator Shop T3",
                     [
                         ["ItemRadio",nil,0],
-						["srifle_LRR_F",nil,614400],
+			["srifle_LRR_F",nil,614400],
                         ["7Rnd_408_Mag",nil,51200],
                         ["LMG_Mk200_F",nil,512000],
                         ["200Rnd_65x39_cased_Box_Tracer",nil,40960],
