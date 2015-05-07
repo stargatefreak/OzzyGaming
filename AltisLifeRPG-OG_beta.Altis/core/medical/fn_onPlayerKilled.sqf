@@ -68,9 +68,9 @@ _unit spawn
 
 if(!isNull _killer && _killer != _unit) then {
 	if(vehicle _killer isKindOf "LandVehicle") then {
-		[[name _killer,name _unit,str(vehicle _unit)],"OG_fnc_killLog",false,false] spawn life_fnc_MP;
+		[[name _killer,side _killer,str(getPosATL _killer),name _unit,side _unit,str(getPosASL _unit),str(vehicle _unit)],"OG_fnc_killLog",false,false] spawn life_fnc_MP;
 	} else {
-        [[name _killer,name _unit,str(currentWeapon _unit)],"OG_fnc_killLog",false,false] spawn life_fnc_MP;
+        [[name _killer,side _killer,str(getPosATL _killer),name _unit,side _unit,str(getPosASL _unit),str(currentWeapon _unit)],"OG_fnc_killLog",false,false] spawn life_fnc_MP;
 	};
 };
 if(!isNull _killer && {_killer != _unit} && {side _killer != west} && {alive _killer}) then {
