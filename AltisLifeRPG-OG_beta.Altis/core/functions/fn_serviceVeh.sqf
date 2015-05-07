@@ -16,7 +16,7 @@ switch (true) do
     case (_vehicle isKindOf "Tank"): {_price = call life_impound_armor;};
 };
 _price = _price * 3;
-if (_price < life_ogCash415 || _price < life_ogBank415)) exitwith {format["The service of this vehicle requires $%1 which you don't have",[_price] call life_fnc_numberText]};
+if (_price < life_ogCash415 || _price < life_ogBank415)) exitwith {format["The service of this vehicle requires $%1 which you don't have",[_price] call life_fnc_numberText];};
 if(_price > life_ogCash415) then {
     life_ogBank415 = life_ogBank415 - _price;
 } else {
