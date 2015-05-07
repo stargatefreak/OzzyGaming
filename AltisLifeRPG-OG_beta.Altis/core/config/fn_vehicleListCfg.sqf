@@ -174,13 +174,15 @@ switch (_shop) do
         // Rank 9 - Captain
         if(__GETC__(life_ozCoplvl) >= 9) then {
             _return pushBack ["B_MRAP_01_F",105000];
-            _return pushBack ["B_APC_Tracked_01_rcws_F",500000];
         };
         // Rank 10 - Inspector
         // Rank 11 - Chief Inspector
 
         // SENIOR OFFICERS
         // Rank 20 - Superintendant, Chief Superintendant, Assistant Commissioner, Deputy Commissioner, Commissioner, Police Minister
+        if(__GETC__(life_ozCoplvl) >= 20) then {
+            _return pushBack ["B_APC_Tracked_01_rcws_F",500000];
+        };
     };
 
     case "civ_air":

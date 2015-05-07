@@ -106,7 +106,6 @@ switch(_shop) do {
                     ["30Rnd_65x39_caseless_mag",nil,2000]
                 ];
                 _copThrowables = _copThrowables + [
-                    ["HandGrenade_Stone","Flashbang Grenade",1500],
                     ["SmokeShellRed",nil,500],
                     ["Chemlight_yellow",nil,500],
                     ["Chemlight_blue",nil,500]
@@ -181,6 +180,9 @@ switch(_shop) do {
                 _copAttachments = _copAttachments + [
                     ["optic_SOS","(18-75x) SOS",6000],
                     ["optic_NVS","(10x) NVS",8000]
+                ];
+                _copThrowables = _copThrowables + [
+                    ["HandGrenade_Stone","Flashbang Grenade",1500]
                 ];
             };
             // Rank 8  - Senior Sergeant
