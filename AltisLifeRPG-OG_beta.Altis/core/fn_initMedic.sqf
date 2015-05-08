@@ -30,10 +30,8 @@ switch(__GETC__(life_ozMediclvl)) do
 	case 4: {life_ogPayday415 = life_ogPayday415 + 6000;};
 };
 
-if(isNull OZ_medicGroup) then {
-    OZ_medicGroup = (group player);
-    publicVariable "OZ_medicGroup";
-};
+OZ_medicGroup = (group player);
+publicVariable "OZ_medicGroup";
 
 if("ItemRadio" in assignedItems player) then {
     [player] join OZ_medicGroup;
