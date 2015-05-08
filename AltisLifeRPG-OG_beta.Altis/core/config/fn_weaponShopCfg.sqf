@@ -372,9 +372,9 @@ switch(_shop) do {
             if (!license_civ_rebel) then {
                 "You must have a Rebel Training license to use this store!"
             } else {
+                // Goes: Gear, Sidearms, Rifles, Heavy Weapons, Sights, Silencers, Attachments, Throwables
                 ["Jihadi Weapons Market",
                     [
-                        // Gear
                         ["ItemRadio",nil,0],
                         ["Rangefinder",nil,1562],
                         ["MineDetector",nil,1562],
@@ -383,7 +383,7 @@ switch(_shop) do {
                         ["Medikit",nil,1000],
                         ["NVGoggles",nil,1500],
                         ["ItemGPS",nil,1000],
-                        // Sidearms
+
                         ["hgun_Pistol_Signal_F","Flare Gun",3000],
                         ["hgun_Rook40_F",nil,6000],
                         ["hgun_PDW2000_F",nil,12500],
@@ -393,7 +393,7 @@ switch(_shop) do {
                         ["UGL_FlareWhite_F",nil,1000],
                         ["16Rnd_9x21_Mag",nil,25],
                         ["30Rnd_9x21_Mag",nil,200],
-                        // Rifles
+
                         ["SMG_02_F",nil,35000],
                         ["arifle_TRG21_F",nil,35000],
                         ["arifle_TRG21_GL_F",nil,40000],
@@ -411,14 +411,14 @@ switch(_shop) do {
                         ["30Rnd_556x45_Stanag_Tracer_Yellow",nil,300],
                         ["30Rnd_65x39_caseless_green_mag_Tracer",nil,250],
                         ["1Rnd_SmokeGreen_Grenade_shell",nil,300],
-                        // Heavy Weapons
+
                         ["20Rnd_762x51_Mag",nil,9000],
                         ["srifle_LRR_F",nil,1200000],
                         ["LMG_Mk200_F",nil,1000000],
                         ["7Rnd_408_Mag",nil,100000],
                         ["200Rnd_65x39_cased_Box_Tracer",nil,80000],
                         ["200Rnd_65x39_cased_Box",nil,80000],
-                        // Attachments - Sights
+
                         ["optic_ACO_grn",nil,3500],
                         ["optic_ACO_grn_smg",nil,3600],
                         ["optic_Holosight",nil,3600],
@@ -429,16 +429,16 @@ switch(_shop) do {
                         ["optic_NVS",nil,30000],
                         ["optic_SOS",nil,39100],
                         ["optic_Hamr",nil,7500],
-                        // Attachments - Silencers
+
                         ["muzzle_snds_H",nil,12000],
                         ["muzzle_snds_L",nil,12000],
                         ["muzzle_snds_M",nil,12000],
                         ["muzzle_snds_B",nil,12000],
                         ["muzzle_snds_acp",nil,12000],
                         ["muzzle_snds_H_MG",nil,12000],
-                        // Attachments - Other
+
                         ["acc_flashlight",nil,1000],
-                        // Throwables
+
                         ["SmokeShell",nil,500],
                         ["SmokeShellRed",nil,500],
                         ["SmokeShellYellow",nil,500],
@@ -482,9 +482,9 @@ switch(_shop) do {
         switch(true) do {
             case (__GETC__(life_Ozdonator) == 0): {"You are not a donator!"};
             case (__GETC__(life_Ozdonator) == 1): {
+                // Goes: Gear, Sidearms, Rifles, Heavy Weapons, Sights, Throwables
                 ["OzzyGaming Donator Shop T1",
                     [
-                        // Gear
                         ["ItemRadio",nil,0],
                         ["Rangefinder",nil,1400],
                         ["MineDetector",nil,1400],
@@ -493,7 +493,7 @@ switch(_shop) do {
                         ["Medikit",nil,1000],
                         ["NVGoggles",nil,1350],
                         ["ItemGPS",nil,1000],
-                        // Pistols
+
                         ["hgun_Pistol_Signal_F","Flare Gun",2400],
                         ["hgun_Rook40_F",nil,5200],
                         ["hgun_ACPC2_F",nil,9200],
@@ -506,20 +506,20 @@ switch(_shop) do {
                         ["30Rnd_9x21_Mag",nil,160],
                         ["UGL_FlareGreen_F",nil,800],
                         ["UGL_FlareRed_F",nil,800],
-                        // Rifles
+
                         ["arifle_TRG21_F",nil,32000],
                         ["arifle_Mk20C_plain_F",nil,40000],
                         ["30Rnd_556x45_Stanag",nil,240],
                         ["30Rnd_556x45_Stanag_Tracer_Yellow",nil,240],
-                        // Heavy Weapons
+
                         ["srifle_LRR_F",nil,960000],
                         ["7Rnd_408_Mag",nil,80000],
-                        // Sights
+
                         ["optic_Holosight",nil,2880],
                         ["optic_ACO_grn_smg",nil,2880],
                         ["optic_Hamr",nil,6000],
                         ["optic_MRCO",nil,24000],
-                        // Throwables
+
                         ["Chemlight_green",nil,500],
                         ["Chemlight_red",nil,500],
                         ["Chemlight_yellow",nil,500],
@@ -528,9 +528,9 @@ switch(_shop) do {
                 ];
             };
             case (__GETC__(life_Ozdonator) == 2): {
+                // Goes: Gear, Sidearms, Rifles, Heavy Weapons, Sights, Silencers, Attachments, Throwables
                 ["OzzyGaming Donator Shop T2",
                     [
-                        // Gear
                         ["ItemRadio",nil,0],
                         ["Rangefinder",nil,1300],
                         ["MineDetector",nil,1300],
@@ -539,7 +539,7 @@ switch(_shop) do {
                         ["Medikit",nil,1000],
                         ["NVGoggles",nil,1150],
                         ["ItemGPS",nil,900],
-                        // Pistols
+
                         ["hgun_Rook40_F",nil,4160],
                         ["hgun_ACPC2_F",nil,7360],
                         ["hgun_Pistol_heavy_02_F",nil,6304],
@@ -549,7 +549,7 @@ switch(_shop) do {
                         ["6Rnd_45ACP_Cylinder",nil,32],
                         ["16Rnd_9x21_Mag",nil,32],
                         ["30Rnd_9x21_Mag",nil,128],
-                        // Rifles
+
                         ["arifle_TRG21_F",nil,22400],
                         ["arifle_Katiba_F",nil,19200],
                         ["srifle_DMR_01_F",nil,32000],
@@ -559,23 +559,23 @@ switch(_shop) do {
                         ["30Rnd_65x39_caseless_green_mag_Tracer",nil,150],
                         ["10Rnd_762x54_Mag",nil,320],
                         ["20Rnd_762x51_Mag",nil,5760],
-                        // Heavy
+
                         ["srifle_LRR_F",nil,900000],
                         ["7Rnd_408_Mag",nil,70000],
-                        // Sights
+
                         ["optic_Holosight",nil,2304],
                         ["optic_ACO_grn_smg",nil,2304],
                         ["optic_MRCO",nil,19200],
                         ["optic_DMS",nil,16000],
                         ["optic_Yorris",nil,6400],
                         ["optic_NVS",nil,19200],
-                        // Silencers
+
                         ["muzzle_snds_H",nil,7680],
                         ["muzzle_snds_L",nil,7680],
                         ["muzzle_snds_M",nil,7680],
                         ["muzzle_snds_B",nil,7680],
                         ["muzzle_snds_acp",nil,7680],
-                        // Throwables
+
                         ["SmokeShell",nil,320],
                         ["SmokeShellRed",nil,320],
                         ["SmokeShellYellow",nil,320],
@@ -590,9 +590,9 @@ switch(_shop) do {
                 ];
             };
             case (__GETC__(life_Ozdonator) >= 3):{
+                // Goes: Gear, Sidearms, Rifles, Heavy Weapons, Sights, Silencers, Attachments, Throwables
                 ["OzzyGaming Donator Shop T3",
                     [
-                        // Gear
                         ["ItemRadio",nil,0],
                         ["Rangefinder",nil,1100],
                         ["MineDetector",nil,1100],
@@ -601,7 +601,7 @@ switch(_shop) do {
                         ["Medikit",nil,1000],
                         ["NVGoggles",nil,1000],
                         ["ItemGPS",nil,800],
-                        // Pistols
+
                         ["hgun_Rook40_F",nil,3328],
                         ["hgun_ACPC2_F",nil,5888],
                         ["hgun_Pistol_heavy_02_F",nil,5888],
@@ -611,7 +611,7 @@ switch(_shop) do {
                         ["9Rnd_45ACP_Mag",nil,23],
                         ["16Rnd_9x21_Mag",nil,13],
                         ["30Rnd_9x21_Mag",nil,13],
-                        // Rifles
+
                         ["arifle_Katiba_F",nil,15360],
                         ["arifle_TRG21_F",nil,17920],
                         ["srifle_DMR_01_F",nil,25600],
@@ -623,13 +623,13 @@ switch(_shop) do {
                         ["30Rnd_65x39_caseless_mag",nil,52],
                         ["10Rnd_762x54_Mag",nil,256],
                         ["20Rnd_762x51_Mag",nil,4608],
-                        // Heavy
+
                         ["srifle_LRR_F",nil,614400],
                         ["LMG_Mk200_F",nil,512000],
                         ["7Rnd_408_Mag",nil,51200],
                         ["200Rnd_65x39_cased_Box_Tracer",nil,40960],
                         ["200Rnd_65x39_cased_Box",nil,40960],
-                        // Scopes
+
                         ["optic_Holosight",nil,1843],
                         ["optic_ACO_grn_smg",nil,1792],
                         ["optic_MRCO",nil,15360],
@@ -638,14 +638,14 @@ switch(_shop) do {
                         ["optic_Yorris",nil,5120],
                         ["optic_MRD",nil,7500],
                         ["optic_NVS",nil,15360],
-                        // Silencers
+
                         ["muzzle_snds_H",nil,6144],
                         ["muzzle_snds_L",nil,6144],
                         ["muzzle_snds_M",nil,6144],
                         ["muzzle_snds_B",nil,6144],
                         ["muzzle_snds_H_MG",nil,6144],
                         ["muzzle_snds_acp",nil,6144],
-                        // Throwables
+
                         ["SmokeShell",nil,256],
                         ["SmokeShellRed",nil,256],
                         ["SmokeShellYellow",nil,256],
@@ -654,8 +654,8 @@ switch(_shop) do {
                         ["Chemlight_green",nil,204],
                         ["Chemlight_red",nil,204],
                         ["Chemlight_yellow",nil,204],
-                        ["Chemlight_blue",nil,204]
-                        ["SatchelCharge_Remote_Mag",nil,256000],
+                        ["Chemlight_blue",nil,204],
+                        ["SatchelCharge_Remote_Mag",nil,256000]
                     ]
                 ];
             };
