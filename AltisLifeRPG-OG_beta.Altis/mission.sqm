@@ -4002,7 +4002,7 @@ class Mission
 				class Item154
 				{
 					position[]={16353.798,-0.00010478609,12875.258};
-					azimut=-249.52982;
+					azimut=-249.53;
 					special="NONE";
 					id=252;
 					side="WEST";
@@ -4125,7 +4125,7 @@ class Mission
 				class Item165
 				{
 					position[]={25910.957,22.256792,21535.117};
-					azimut=3.2919416;
+					azimut=3.29194;
 					special="NONE";
 					id=263;
 					side="GUER";
@@ -4169,7 +4169,7 @@ class Mission
 				class Item169
 				{
 					position[]={3736.8848,18.863775,12979.669};
-					azimut=0.0011406352;
+					azimut=0.00114064;
 					special="NONE";
 					id=267;
 					side="GUER";
@@ -4230,7 +4230,7 @@ class Mission
 					side="GUER";
 					vehicle="I_soldier_F";
 					skill=0.60000002;
-					init="removeHeadgear this; removeBackpack this; removeVest this; removeAllWeapons this; removeGoggles this; this addHeadgear ""H_Cap_blu""; this unassignItem ""NVGoggles_INDEP""; this removeItem ""NVGoggles_INDEP""; this addUniform ""U_I_CombatUniform""; this setObjectTextureGlobal [0,""textures\medic\med_uniform.jpg""]; this enableSimulation false; this allowDamage false; this addAction[""Boat Shop"",life_fnc_vehicleShopMenu,[""med_ship"",indepenent,""med_ship_2"",""med"",""Pyrgos Medic Boat Store""]]; this addAction[""Boat Garage"",  {   [[getPlayerUID player,playerSide,""Ship"",player],""TON_fnc_getVehicles"",false,false] spawn life_fnc_MP; createDialog ""Life_impound_menu"";   disableSerialization;   ctrlSetText[2802,""Fetching Vehicles....""];   life_garage_sp = ""med_ship_2""; life_garage_type = ""Ship"";  },"""",0,false,false,"""",'playerSide == indepenent']; this addAction[""Store vehicle in Garage"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store'];this setPosATL [getPosATL this select 0, getPosATL this select 1, (getPosATL this select 2) + 0]; this setPosATL [getPosATL this select 0, getPosATL this select 1, (getPosATL this select 2) + 1.5];";
+					init="removeHeadgear this; removeBackpack this; removeVest this; removeAllWeapons this; removeGoggles this; this addHeadgear ""H_Cap_blu""; this unassignItem ""NVGoggles_INDEP""; this removeItem ""NVGoggles_INDEP""; this addUniform ""U_I_CombatUniform""; this setObjectTextureGlobal [0,""textures\medic\med_uniform.jpg""]; this enableSimulation false; this allowDamage false; this addAction[""Boat Shop"",life_fnc_vehicleShopMenu,[""med_ship"",indepenent,""med_ship_1"",""med"",""Kavala Medic Boat Store""]]; this addAction[""Boat Garage"",  {   [[getPlayerUID player,playerSide,""Ship"",player],""TON_fnc_getVehicles"",false,false] spawn life_fnc_MP; createDialog ""Life_impound_menu"";   disableSerialization;   ctrlSetText[2802,""Fetching Vehicles....""];   life_garage_sp = ""med_ship_1""; life_garage_type = ""Ship"";  },"""",0,false,false,"""",'playerSide == indepenent ']; this addAction[""Store vehicle in Garage"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store'];this setPosATL [getPosATL this select 0, getPosATL this select 1, (getPosATL this select 2) + 0]; this setPosATL [getPosATL this select 0, getPosATL this select 1, (getPosATL this select 2) + 1.5];";
 				};
 				class Item175
 				{
@@ -4241,7 +4241,7 @@ class Mission
 					side="GUER";
 					vehicle="I_soldier_F";
 					skill=0.60000002;
-					init="removeHeadgear this; removeBackpack this; removeVest this; removeAllWeapons this; removeGoggles this; this addHeadgear ""H_Cap_blu""; this unassignItem ""NVGoggles_INDEP""; this removeItem ""NVGoggles_INDEP""; this addUniform ""U_I_CombatUniform""; this setObjectTextureGlobal [0,""textures\medic\med_uniform.jpg""]; this enableSimulation false; this allowDamage false; this addAction[""Boat Shop"",life_fnc_vehicleShopMenu,[""med_ship"",indepenent,""med_ship_2"",""med"",""Pyrgos Medic Boat Store""]]; this addAction[""Boat Garage"",  {   [[getPlayerUID player,playerSide,""Ship"",player],""TON_fnc_getVehicles"",false,false] spawn life_fnc_MP; createDialog ""Life_impound_menu"";   disableSerialization;   ctrlSetText[2802,""Fetching Vehicles....""];   life_garage_sp = ""med_ship_2""; life_garage_type = ""Ship"";  },"""",0,false,false,"""",'playerSide == indepenent']; this addAction[""Store vehicle in Garage"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store'];this setPosATL [getPosATL this select 0, getPosATL this select 1, (getPosATL this select 2) + 0]; this setPosATL [getPosATL this select 0, getPosATL this select 1, (getPosATL this select 2) + 2.2];";
+					init="removeHeadgear this; removeBackpack this; removeVest this; removeAllWeapons this; removeGoggles this; this addHeadgear ""H_Cap_blu""; this unassignItem ""NVGoggles_INDEP""; this removeItem ""NVGoggles_INDEP""; this addUniform ""U_I_CombatUniform""; this setObjectTextureGlobal [0,""textures\medic\med_uniform.jpg""]; this enableSimulation false; this allowDamage false; this addAction[""Boat Shop"",life_fnc_vehicleShopMenu,[""med_ship"",indepenent,""med_ship_2"",""med"",""Pyrgos Medic Boat Store""]]; this addAction[""Boat Garage"",  {   [[getPlayerUID player,playerSide,""Ship"",player],""TON_fnc_getVehicles"",false,false] spawn life_fnc_MP; createDialog ""Life_impound_menu"";   disableSerialization;   ctrlSetText[2802,""Fetching Vehicles....""];   life_garage_sp = ""med_ship_2""; life_garage_type = ""Ship"";  },"""",0,false,false,"""",'playerSide == indepenent ']; this addAction[""Store vehicle in Garage"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store'];this setPosATL [getPosATL this select 0, getPosATL this select 1, (getPosATL this select 2) + 0]; this setPosATL [getPosATL this select 0, getPosATL this select 1, (getPosATL this select 2) + 2.2];";
 				};
 				class Item176
 				{
@@ -4252,7 +4252,7 @@ class Mission
 					side="GUER";
 					vehicle="I_soldier_F";
 					skill=0.60000002;
-					init="removeHeadgear this; removeBackpack this; removeVest this; removeAllWeapons this; removeGoggles this; this addHeadgear ""H_Cap_blu""; this unassignItem ""NVGoggles_INDEP""; this removeItem ""NVGoggles_INDEP""; this addUniform ""U_I_CombatUniform""; this setObjectTextureGlobal [0,""textures\medic\med_uniform.jpg""]; this enableSimulation false; this allowDamage false; this addAction[""Boat Shop"",life_fnc_vehicleShopMenu,[""med_ship"",indepenent,""med_ship_2"",""med"",""Pyrgos Medic Boat Store""]]; this addAction[""Boat Garage"",  {   [[getPlayerUID player,playerSide,""Ship"",player],""TON_fnc_getVehicles"",false,false] spawn life_fnc_MP; createDialog ""Life_impound_menu"";   disableSerialization;   ctrlSetText[2802,""Fetching Vehicles....""];   life_garage_sp = ""med_ship_2""; life_garage_type = ""Ship"";  },"""",0,false,false,"""",'playerSide == indepenent']; this addAction[""Store vehicle in Garage"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store'];this setPosATL [getPosATL this select 0, getPosATL this select 1, (getPosATL this select 2) + 0]; this setPosATL [getPosATL this select 0, getPosATL this select 1, (getPosATL this select 2) + 3.95];";
+					init="removeHeadgear this; removeBackpack this; removeVest this; removeAllWeapons this; removeGoggles this; this addHeadgear ""H_Cap_blu""; this unassignItem ""NVGoggles_INDEP""; this removeItem ""NVGoggles_INDEP""; this addUniform ""U_I_CombatUniform""; this setObjectTextureGlobal [0,""textures\medic\med_uniform.jpg""]; this enableSimulation false; this allowDamage false; this addAction[""Boat Shop"",life_fnc_vehicleShopMenu,[""med_ship"",indepenent,""med_ship_3"",""med"",""North Medic Boat Store""]]; this addAction[""Boat Garage"",  {   [[getPlayerUID player,playerSide,""Ship"",player],""TON_fnc_getVehicles"",false,false] spawn life_fnc_MP; createDialog ""Life_impound_menu"";   disableSerialization;   ctrlSetText[2802,""Fetching Vehicles....""];   life_garage_sp = ""med_ship_3""; life_garage_type = ""Ship"";  },"""",0,false,false,"""",'playerSide == indepenent ']; this addAction[""Store vehicle in Garage"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store'];this setPosATL [getPosATL this select 0, getPosATL this select 1, (getPosATL this select 2) + 0]; this setPosATL [getPosATL this select 0, getPosATL this select 1, (getPosATL this select 2) + 3.95];";
 				};
 			};
 		};
@@ -6059,7 +6059,7 @@ class Mission
 					vehicle="I_soldier_F";
 					leader=1;
 					skill=0.60000002;
-					init="removeHeadgear this; removeBackpack this; removeVest this; removeAllWeapons this; removeGoggles this; this addHeadgear ""H_Cap_blu""; this unassignItem ""NVGoggles_INDEP""; this removeItem ""NVGoggles_INDEP""; this addUniform ""U_I_CombatUniform""; this setObjectTextureGlobal [0,""textures\medic\med_uniform.jpg""]; this enableSimulation false; this allowDamage false; this addAction[""Boat Shop"",life_fnc_vehicleShopMenu,[""med_ship"",indepenent,""med_ship_2"",""med"",""Pyrgos Medic Boat Store""]]; this addAction[""Boat Garage"",  {   [[getPlayerUID player,playerSide,""Ship"",player],""TON_fnc_getVehicles"",false,false] spawn life_fnc_MP; createDialog ""Life_impound_menu"";   disableSerialization;   ctrlSetText[2802,""Fetching Vehicles....""];   life_garage_sp = ""med_ship_2""; life_garage_type = ""Ship"";  },"""",0,false,false,"""",'playerSide == indepenent']; this addAction[""Store vehicle in Garage"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store'];";
+					init="removeHeadgear this; removeBackpack this; removeVest this; removeAllWeapons this; removeGoggles this; this addHeadgear ""H_Cap_blu""; this unassignItem ""NVGoggles_INDEP""; this removeItem ""NVGoggles_INDEP""; this addUniform ""U_I_CombatUniform""; this setObjectTextureGlobal [0,""textures\medic\med_uniform.jpg""]; this enableSimulation false; this allowDamage false; this addAction[""Boat Shop"",life_fnc_vehicleShopMenu,[""med_ship"",indepenent,""med_ship_4"",""med"",""East Medic Boat Store""]]; this addAction[""Boat Garage"",  {   [[getPlayerUID player,playerSide,""Ship"",player],""TON_fnc_getVehicles"",false,false] spawn life_fnc_MP; createDialog ""Life_impound_menu"";   disableSerialization;   ctrlSetText[2802,""Fetching Vehicles....""];   life_garage_sp = ""med_ship_4""; life_garage_type = ""Ship"";  },"""",0,false,false,"""",'playerSide == indepenent ']; this addAction[""Store vehicle in Garage"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store'];";
 				};
 			};
 		};
