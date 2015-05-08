@@ -35,7 +35,7 @@ if(visibleMap) then {
 	// == == == == ==
 	// Medic Markers
 	// == == == == ==
-	{if (side _x == "independent") then { _medics pushBack _x; }} forEach (playableUnits);
+	{if((side _x == independent) /*&& ("ItemRadio" in assignedItems _x)*/) then {_medics pushBack _x;}} foreach playableUnits;
 
 	//Create markers
 	{
