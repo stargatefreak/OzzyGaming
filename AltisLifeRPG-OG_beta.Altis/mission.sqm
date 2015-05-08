@@ -10033,7 +10033,7 @@ class Mission
 			side="EMPTY";
 			vehicle="SignAd_Sponsor_Fuel_white_F";
 			skill=0.60000002;
-			init="this enableSimulation false; this allowDamage false; this setObjectTextureGlobal [0,""textures\signs\carshop1.paa""];";
+			init="this enableSimulation false; this allowDamage false; this setObjectTextureGlobal [0,""textures\signs\shop\carshop1.paa""];";
 		};
 		class Item340
 		{
@@ -24855,7 +24855,7 @@ class Mission
 			side="EMPTY";
 			vehicle="SignAd_SponsorS_F";
 			skill=0.60000002;
-			init="this allowDamage false; this setObjectTextureGlobal [0,""textures\signs\airarea_novehicles.jpg""]; this setPosATL [getPosATL this select 0, getPosATL this select 1, (getPosATL this select 2) - 1];";
+			init="this allowDamage false; this setObjectTextureGlobal [0,""textures\signs\aircraftNoVehicles.paa""]; this setPosATL [getPosATL this select 0, getPosATL this select 1, (getPosATL this select 2) - 1];";
 		};
 		class Item1699
 		{
@@ -24866,7 +24866,7 @@ class Mission
 			side="EMPTY";
 			vehicle="SignAd_SponsorS_F";
 			skill=0.60000002;
-			init="this allowDamage false; this setObjectTextureGlobal [0,""textures\signs\airarea_novehicles.jpg""]; this setPosATL [getPosATL this select 0, getPosATL this select 1, (getPosATL this select 2) - 1];";
+			init="this allowDamage false; this setObjectTextureGlobal [0,""textures\signs\aircraftNoVehicles.paa""]; this setPosATL [getPosATL this select 0, getPosATL this select 1, (getPosATL this select 2) - 1];";
 		};
 		class Item1700
 		{
@@ -38188,7 +38188,7 @@ class Mission
 			side="EMPTY";
 			vehicle="SignAd_SponsorS_F";
 			skill=0.60000002;
-			init="this allowDamage false; this setObjectTextureGlobal [0,""textures\signs\airarea_novehicles.jpg""]; this setPosATL [getPosATL this select 0, getPosATL this select 1, (getPosATL this select 2) - 1];";
+			init="this allowDamage false; this setObjectTextureGlobal [0,""textures\signs\aircraftNoVehicles.paa""]; this setPosATL [getPosATL this select 0, getPosATL this select 1, (getPosATL this select 2) - 1];";
 		};
 		class Item2962
 		{
