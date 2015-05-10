@@ -37,7 +37,7 @@ _units = _units - [player];
 		};
 		_sPos = worldToScreen _pos;
 		_distance = _pos distance player;
-		if(count _sPos > 1 && {_distance < 15} && ((_x distance (getMarkerPos "police_hq_1") < 20) OR  (_x distance (getMarkerPos "police_hq_2") < 20) OR (_x distance (getMarkerPos "cop_spawn_3") < 20) OR (_x distance (getMarkerPos "cop_spawn_5") < 20))) then {
+		if(count _sPos > 1 && {_distance < 15} && ((_x distance (getMarkerPos "police_hq_1") < 20) OR  (_x distance (getMarkerPos "police_hq_2") < 20) OR (_x distance (getMarkerPos "police_hq_3") < 20) OR (_x distance (getMarkerPos "police_hq_4") < 20) OR (_x distance (getMarkerPos "police_hq_5") < 20) OR (_x distance (getMarkerPos "police_hq_6") < 20) OR (_x distance (getMarkerPos "police_hq_7") < 20) OR (_x distance (getMarkerPos "police_hq_8") < 20))) then {
 			_text = switch (true) do {
 				case (_x in (units grpPlayer) && playerSide == civilian): {format["<t color='#00FF00'>%1</t>",(_x getVariable ["realname",name _x])];};
 				case (!isNil {(_x getVariable "rank")}): {format["<img image='%1' size='1'></img> <t color='#FF0000'>%2</t>",switch ((_x getVariable "rank")) do {

@@ -8,6 +8,8 @@ OG_Webstore_active3 = false;
 life_server_isReady = false;
 publicVariable "life_server_isReady";
 OG_WebStore_PID=[];
+life_animals_array = [];
+life_animals_spawned = false;
 GLB_ServerVerify = true;
 publicVariable "GLB_ServerVerify";
 OZG_Debug = false;
@@ -128,5 +130,7 @@ for "_i" from 1 to 3 do {_dome setVariable[format["bis_disabled_Door_%1",_i],1,t
 _rsb setVariable["bis_disabled_Door_1",1,true];
 _rsb allowDamage false;
 _dome allowDamage false;
+
+// [true] spawn TON_fnc_huntingZone;
 life_server_isReady = true;
 publicVariable "life_server_isReady";

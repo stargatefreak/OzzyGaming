@@ -35,6 +35,7 @@ life_god = false;
 life_frozen = false;
 life_drink = 0;
 OZ_medRequest = false;
+life_vehicle_sellCache = [];
 //Persistent Saving
 __CONST__(life_save_civ,TRUE); //Save weapons for civs?
 __CONST__(life_save_yinv,TRUE); //Save Y-Inventory for players?

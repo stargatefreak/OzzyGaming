@@ -45,7 +45,7 @@ switch (_filter) do
 			_ret pushBack ["U_B_CTRG_2",nil,50000];
 		};
 		if (__GETC__(life_ozPmclvl) >= 5) then {
-			_ret pushBack ["U_BG_Guerilla_6_1",nil,50000];
+			_ret pushBack ["U_BG_Guerrilla_6_1",nil,50000];
 			_ret pushBack ["U_O_OfficerUniform_ocamo",nil,75000];
 			_ret pushBack ["U_I_OfficerUniform",nil,75000];
 		};
@@ -62,18 +62,6 @@ switch (_filter) do
 			["H_Cap_blk_ION",nil,2500],
 			["H_Cap_press",nil,2500],
 			["H_MilCap_gry",nil,2500]
-		];
-	};
-	
-	//Glasses
-	case 2:
-	{
-		_ret = [
-			["G_Shades_Black",nil,500],
-			["G_Shades_Blue",nil,500],
-			["G_Tactical_Clear",nil,1000],
-			["G_Sport_BlackWhite",nil,500],
-			["G_Sport_Red",nil,500]
 		];
 
 		if (__GETC__(life_ozPmclvl) >= 2) then {
@@ -95,6 +83,18 @@ switch (_filter) do
 			_ret pushBack ["H_HelmetB_camo",nil,30000];
 			_ret pushBack ["H_Beret_Colonel",nil,2500];
 		};
+	};
+	
+	//Glasses
+	case 2:
+	{
+		_ret = [
+			["G_Shades_Black",nil,500],
+			["G_Shades_Blue",nil,500],
+			["G_Tactical_Clear",nil,1000],
+			["G_Sport_BlackWhite",nil,500],
+			["G_Sport_Red",nil,500]
+		];
 	};
 	
 	//Vest
