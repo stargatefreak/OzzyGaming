@@ -39772,7 +39772,7 @@ class Mission
 			side="EMPTY";
 			vehicle="SignAd_SponsorS_F";
 			skill=0.60000002;
-			init="this allowDamage false; this setObjectTextureGlobal [0,""textures\signs\chiefpolice.jpg""]; this setPosATL [getPosATL this select 0, getPosATL this select 1, (getPosATL this select 2)-1];";
+			init="this allowDamage false; this setObjectTextureGlobal [0,""textures\signs\cop\pdChiefProtocol.paa""]; this setPosATL [getPosATL this select 0, getPosATL this select 1, (getPosATL this select 2)-1];";
 		};
 		class Item3113
 		{
@@ -41060,7 +41060,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Noticeboard_F";
 			skill=0.60000002;
-			init="this enableSimulation false; this allowDamage false; this setObjectTextureGlobal [0,""textures\salesparking.paa""];";
+			init="this enableSimulation false; this allowDamage false; this setObjectTextureGlobal [0,""textures\signs\shop\salesparking.paa""];";
 		};
 		class Item3230
 		{
@@ -41235,7 +41235,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Noticeboard_F";
 			skill=0.60000002;
-			init="this enableSimulation false; this allowDamage false; this setObjectTextureGlobal [0,""textures\salesparking.paa""];";
+			init="this enableSimulation false; this allowDamage false; this setObjectTextureGlobal [0,""textures\signs\shop\salesparking.paa""];";
 		};
 		class Item3247
 		{
