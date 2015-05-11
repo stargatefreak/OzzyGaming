@@ -52,19 +52,19 @@ if (playerSide == independent) then
 	if(uniform player == "U_I_CombatUniform") then {
 		// Technician/Recruit
 		if (__GETC__(life_ozMediclvl) <= 1) then {
-			player setObjectTextureGlobal [0, "textures\medic\med_uniform_blank.jpg"];
+			player setObjectTextureGlobal [0, "textures\medic\med_uniform_tech.paa"];
 		};
 		// Paramedic
 		if (__GETC__(life_ozMediclvl) == 2) then {
-			player setObjectTextureGlobal [0, "textures\medic\med_uniform.jpg"];
+			player setObjectTextureGlobal [0, "textures\medic\med_uniform.paa"];
 		};
 		// Intensive Care Paramedic
 		if (__GETC__(life_ozMediclvl) >= 3) then {
-			player setObjectTextureGlobal [0, "textures\medic\med_uniform_icp.jpg"];
+			player setObjectTextureGlobal [0, "textures\medic\med_uniform_icp.paa"];
 		};
 	};
 
 	if((backpack player) == "B_AssaultPack_khk") then {
-		(unitbackpack player) setObjectTextureGlobal[0,"textures\medic\med_backpack.jpg"];
+		(unitbackpack player) setObjectTextureGlobal[0,"textures\medic\med_backpack.paa"];
 	};
 };
