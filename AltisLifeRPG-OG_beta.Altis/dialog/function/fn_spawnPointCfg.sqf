@@ -24,7 +24,9 @@ _copSpawnlist = [
 	["cop_spawn_3","Athira Station","\a3\ui_f\data\map\GroupIcons\badge_rotate_0_gs.paa"],
 	["cop_spawn_4","Police Airbase","\a3\ui_f\data\map\Markers\NATO\b_air.paa"],
 	["cop_spawn_5","Highway Patrol","\a3\ui_f\data\map\GroupIcons\badge_rotate_0_gs.paa"],
-	["cop_spawn_6","Training HQ","\a3\ui_f\data\map\GroupIcons\badge_rotate_0_gs.paa"]
+	["cop_spawn_6","Training HQ","\a3\ui_f\data\map\GroupIcons\badge_rotate_0_gs.paa"],
+	["cop_spawn_7","Zaros Station","\a3\ui_f\data\map\GroupIcons\badge_rotate_0_gs.paa"],
+	["cop_spawn_8","Sofia Station","\a3\ui_f\data\map\GroupIcons\badge_rotate_0_gs.paa"]
 ];
 
 _civSpawnlist = [

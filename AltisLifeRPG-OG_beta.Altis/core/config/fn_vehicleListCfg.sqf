@@ -211,6 +211,7 @@ switch (_shop) do
             // Rank 2 - Probationary Constable
             // Rank 3 - Constable
             if(__GETC__(life_ozCoplvl) >= 3) then {
+                _return pushBack ["B_Heli_Light_01_F",150000];
                 _return pushBack ["C_Heli_Light_01_civil_F",150000];
             };
             // Rank 4 - Senior Constable
@@ -398,6 +399,9 @@ switch (_shop) do
 		};
 		if (__GETC__(life_ozPmclvl) >= 4) then {
 			_return pushBack ["B_MRAP_01_F",500000];
+		};
+		if (__GETC__(life_ozPmclvl) >= 7) then {
+			_return pushBack ["I_G_Offroad_01_armed_F",3800000];
 		};
     };
     case "pmc_air":{

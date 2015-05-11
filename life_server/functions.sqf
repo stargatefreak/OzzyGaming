@@ -7,6 +7,28 @@ compileFinal "
 
 publicVariable "life_fnc_sidechat";
 
+OG_fnc_garageVehicle =
+compileFinal "
+    private[""_nearVehicle"",""_filteredVehicle""];
+    if(_this select 1) then {
+        _nearVehicle = nearestObjects[(getMarkerPos (_this select 0)),[""Car"",""Ship"",""Air""],35];
+    } else {
+        _nearVehicle = nearestObjects[(getPos (_this select 0)),[""Car"",""Ship"",""Air""],35];
+    };
+    {
+        if(!(typeof _x in [""PortableHelipadLight_01_green_F""])) then {_filteredVehicle pushBack _x};
+    } forEach _nearVehicle;
+    _nearVehicle = _filteredVehicle select 0;
+    if(isNil ""_nearVehicle"") exitWith {
+        hint ""There isn't a vehicle near this NPC."";
+    };
+    [[_nearVehicle,false,(_this select 1)],""TON_fnc_vehicleStore"",false,false] spawn life_fnc_MP;
+    hint ""The server is trying to store the vehicle please wait...."";
+    life_garage_store = true;
+";
+
+publicVariable "OG_fnc_nearVehicle";
+
 TON_fnc_index =
 compileFinal "
 	private[""_item"",""_stack""];
