@@ -32,11 +32,13 @@ publicVariable "OG_fnc_garageVehicle";
 OG_fnc_earPlugs_down =
 compileFinal "
     if (OG_budVolume > 20) then {
-            1 fadeSound (OG_budVolume - 20);
-            titleText[format[""You have lowered your ambient volume to: %1"",_message],""PLAIN""];
+        OG_budVolume = OG_budVolume - 20;
+        1 fadeSound (OG_budVolume / 100);
+        titleText[format[""You have lowered your ambient volume to: %1"",OG_budVolume],""PLAIN""];
     };
     if (OG_budVolume <= 20) then {
-            1 fadeSound 0.2;
+        OG_budVolume = 20;
+        1 fadeSound 0.2;
     };
 ";
 
@@ -45,11 +47,13 @@ publicVariable "OG_fnc_earPlugs_down";
 OG_fnc_earPlugs_up =
 compileFinal "
     if (OG_budVolume < 100) then {
-            1 fadeSound (OG_budVolume + 20);
-            titleText[format[""You have raised your ambient volume to: %1"",_message],""PLAIN""];
+        OG_budVolume = OG_budVolume + 20;
+        1 fadeSound (OG_budVolume / 100);
+        titleText[format[""You have raised your ambient volume to: %1"",OG_budVolume],""PLAIN""];
     };
     if (OG_budVolume >= 100) then {
-            1 fadeSound 1;
+        OG_budVolume = 100;
+        1 fadeSound 1;
     };
 ";
 

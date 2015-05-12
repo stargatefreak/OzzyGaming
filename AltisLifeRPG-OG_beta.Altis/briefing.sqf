@@ -273,8 +273,8 @@ Left Windows - Main interaction key (pickup money/cases, interact with vehicles/
 Left Shift + G - Surrender (hands up)<br />
 Left Shift + H - Holsters a handgun. Handguns will not be saved whilst holstered<br />
 Left Ctrl + H - Unholsters a handgun <br /><br />
-PAGE UP - Raise Ambient Volume <br />
-PAGE DOWN - Lower Ambient Volume <br />
+Left Shift + PAGE UP - Raise Ambient Volume <br />
+Left Shift + PAGE DOWN - Lower Ambient Volume <br />
                 "
         ]
     ];
