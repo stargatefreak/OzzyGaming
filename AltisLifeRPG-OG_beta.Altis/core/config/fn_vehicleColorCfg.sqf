@@ -66,7 +66,7 @@ switch (_vehicle) do
 			[_path + "hatchback_01_ext_sport05_co.paa","civ"],
 			[_path + "hatchback_01_ext_sport06_co.paa","civ"],
 			["textures\cop\hatch_cop_sport.jpg","cop","textures\cop\hatch_cop_sport.jpg"],
-            ["textures\medic\med_hatchback.jpg","med"]
+            ["textures\medic\med_hatchback.paa","med"]
 		];
 	};
 		
@@ -82,7 +82,7 @@ switch (_vehicle) do
 			["\A3\soft_F\Offroad_01\Data\offroad_01_ext_BASE05_CO.paa","civ"],
 			["#(argb,8,8,3)color(0.6,0.3,0.01,1)","civ"],
 			["textures\cop\police_offroad.jpg","cop","textures\cop\police_offroad.jpg"],
-			["textures\medic\med_offroad.jpg","med"]
+			["textures\medic\med_offroad.paa","med"]
 		];
 	};
 	
@@ -119,7 +119,7 @@ switch (_vehicle) do
 			["\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_04_co.paa","cop"],
 			["textures\cop\hwp_suv.jpg","cop","textures\cop\hwp_suv.jpg"],
 			["textures\civ\suv_red-black2.jpg","civ","textures\civ\suv_red-black2.jpg"],
-			["textures\medic\med_suv.jpg","med"]
+			["textures\medic\med_suv.paa","med"]
 		];
 	};
 	
@@ -129,7 +129,7 @@ switch (_vehicle) do
 		[
 			["\a3\soft_f_gamma\Van_01\Data\van_01_ext_co.paa","civ"],
 			["\a3\soft_f_gamma\Van_01\Data\van_01_ext_red_co.paa","civ"],
-			["textures\medic\med_boxer_front.jpg","med","textures\medic\med_boxer_back.jpg"]
+			["textures\medic\med_boxer_front.paa","med","textures\medic\med_boxer_back.paa"]
 		];
 	};
 	
@@ -176,7 +176,7 @@ switch (_vehicle) do
 			["\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_vrana_co.paa","civ"],
 			["\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_wave_co.paa","civ"],
 			["\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_digital_co.paa","reb"],
-			["textures\medic\med_hummingbird.jpg","med"]
+			["textures\medic\med_hummingbird.paa","med"]
 		];
 	};
 	
@@ -198,7 +198,7 @@ switch (_vehicle) do
 			["\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_vrana_co.paa","civ"],
 			["\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_wave_co.paa","civ"],
 			["\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_digital_co.paa","reb"],
-			["textures\medic\med_hummingbird.jpg","med"]
+			["textures\medic\med_hummingbird.paa","med"]
 		];
 	};
 	
@@ -210,7 +210,7 @@ switch (_vehicle) do
 			["\a3\air_f\Heli_Light_02\Data\heli_light_02_ext_civilian_co.paa","civ"],
 			["\a3\air_f\Heli_Light_02\Data\heli_light_02_ext_indp_co.paa","donate"],
 			["\a3\air_f\Heli_Light_02\Data\heli_light_02_ext_opfor_co.paa","reb"],
-			["textures\medic\med_orca.jpg","med"]
+			["textures\medic\med_orca.paa","med"]
 		];
 	};
 	
@@ -229,7 +229,7 @@ switch (_vehicle) do
 		[
 			["\A3\Soft_F_Beta\Truck_02\data\truck_02_kab_co.paa","civ","\a3\soft_f_beta\Truck_02\data\truck_02_kuz_co.paa"],
 			["#(argb,8,8,3)color(0.05,0.05,0.05,1)","fed"],
-			["textures\medic\med_zamak_front.jpg","med","textures\medic\med_zamak_back.jpg"]
+			["textures\medic\med_zamak_front.paa","med","textures\medic\med_zamak_back.paa"]
 		];
 	};
 	
