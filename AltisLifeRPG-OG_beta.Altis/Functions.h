@@ -125,6 +125,7 @@ class Life_Client_Core
 		class gatherGoldbar {};
 		class takeOrgans {};
 		class serviceVehicle {};
+        class surrender {};
 	};
 	
 	class Housing

@@ -128,8 +128,28 @@ switch (_code) do
 		};
 	};
 	
-	//Knock out, this is experimental and yeah...
+    //surrender... shift + g
 	case 34:
+	{
+		if(_shift) then {_handled = true;};
+
+		if (_shift) then
+		{
+			if (vehicle player == player && !(player getVariable ["restrainedCiv", false]) && !(player getVariable ["restrained", false]) && !(cursorTarget getVariable "Escorting") && (animationState player) != "Incapacitated" && !life_istazed) then
+			{
+				if (player getVariable ["surrender", false]) then
+				{
+					player setVariable ["surrender", false, true];
+				} else
+				{
+					[] spawn life_fnc_surrender;
+				};
+			};
+		};
+	};
+    
+	//Knock out, this is experimental and yeah... SHIFT + J
+	case 36:
 	{
 		if(_shift) then {_handled = true;};
 		if(_shift && playerSide == civilian && !isNull cursorTarget && cursorTarget isKindOf "Man" && isPlayer cursorTarget && alive cursorTarget && cursorTarget distance player < 4 && speed cursorTarget < 1) then
