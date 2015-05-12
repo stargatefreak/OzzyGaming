@@ -27,7 +27,26 @@ if(life_ogBank415 > (call life_revive_fee)) then {
 
 //Retexturing of units clothing, vanilla files only retexture the EMS unit.
 switch(playerSide) do {
-	case independent: {[[player,0,"textures\medic\med_uniform.jpg"],"life_fnc_setTexture",true,false] spawn life_fnc_MP;};
+	case independent: {
+		if(uniform player == "U_I_CombatUniform") then {
+			// Technician/Recruit
+			if (__GETC__(life_ozMediclvl) <= 1) then {
+				player setObjectTextureGlobal [0, "textures\medic\med_uniform_tech.paa"];
+			};
+			// Paramedic
+			if (__GETC__(life_ozMediclvl) == 2) then {
+				player setObjectTextureGlobal [0, "textures\medic\med_uniform.paa"];
+			};
+			// Intensive Care Paramedic
+			if (__GETC__(life_ozMediclvl) >= 3) then {
+				player setObjectTextureGlobal [0, "textures\medic\med_uniform_icp.paa"];
+			};
+		};
+
+		if((backpack player) == "B_AssaultPack_khk") then {
+			(unitbackpack player) setObjectTextureGlobal[0,"textures\medic\med_backpack.paa"];
+		};
+	};
 };
 
 //Bring me back to life.

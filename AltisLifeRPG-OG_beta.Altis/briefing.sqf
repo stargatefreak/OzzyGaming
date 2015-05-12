@@ -528,7 +528,13 @@ Breaking these rules may result in admin punishment.<br /><br />
 - Stealing helicopters without warning and without giving the owner enough time to lock the vehicle (4 seconds after disembark)<br />
 - Hovering over a player without reason to harass them with the arma effects (blurry vision, dust, etc)<br />
 - Shooting down a helicopter without giving the pilot warning and having an RP reason to engage<br />
-- Dropping vehicles from a helicopter from an altitude above 15m
+- Dropping vehicles from a helicopter from an altitude above 15m<br /><br />
+
+- Landing within major cities or cities with helipads/heliports, landing may only be on the helipads<br />
+- Once landed at a helipad/heliport inside a major city, if you are remaining on the ground for longer then a minute or two, you must power down<br />
+- Civilian landing on the hospital helipads, ambulance station helipads, or police helipads is not permitted<br />
+- Landing within major cities without helipads/heliports is not allowed without prior permission from police<br />
+(Note that within specific circumstances, ambulance and police vehicles may be exempt from the above landing criteria)
 <br /><br />
                 "
         ]
