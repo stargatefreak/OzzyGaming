@@ -82,8 +82,18 @@ if(_seco != "") then {_handle = [_seco,true,false,false,false] spawn life_fnc_ha
     };
 } foreach (_hItems);
 
-if(playerSide == independent && {uniform player == "U_Rangemaster"}) then {
-	[[player,0,"textures\medic\med_uniform.jpg"],"life_fnc_setTexture",true,false] spawn life_fnc_MP;
+if(playerSide == independent && {uniform player == "U_I_CombatUniform"}) then {
+	if (__GETC__(life_ozMediclvl) <= 1) then {
+                [[player,0,"textures\medic\med_uniform_tech.paa"],"life_fnc_setTexture",true,false] spawn life_fnc_MP;
+        };
+        // Paramedic
+        if (__GETC__(life_ozMediclvl) == 2) then {
+                [[player,0,"textures\medic\med_uniform.paa"],"life_fnc_setTexture",true,false] spawn life_fnc_MP;
+        };
+        // Intensive Care Paramedic
+        if (__GETC__(life_ozMediclvl) >= 3) then {
+                [[player,0,"textures\medic\med_uniform_icp.paa"],"life_fnc_setTexture",true,false] spawn life_fnc_MP;
+        };
 };
 
 [] call life_fnc_copUniform;
