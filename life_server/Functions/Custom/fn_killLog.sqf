@@ -9,13 +9,11 @@ _victimSide = [_this,4,objNull] call BIS_fnc_param;
 _victimPos = [_this,5,objNull] call BIS_fnc_param;
 
 _with = [_this,6,0] call BIS_fnc_param;
+_killerUID = [_this,7,0] call BIS_fnc_param;
+_victimUID = [_this,8,0] call BIS_fnc_param;
 
 if(isNull _killer) exitWith{diag_log "KILL LOG ERROR : Killer is objNull"};
 if(isNull _victim) exitWith{diag_log "KILL LOG ERROR : Victim is objNull"};
 if(_type == 0) exitWith{diag_log "KILL LOG ERROR : Type is Nil"};
 
-if(vehicle _killer != _killer && (driver vehicle _killer) == _killer) then {
-    diag_log format["%1 (%2, %3) killed %4 (%5, %6) with %7",_killer, _killerPos, _killerSide, _victim, _victimPos, _victimSide, typeOf (vehicle _killer)];
-} else {
-    diag_log format["%1 (%2, %3) killed %4 (%5, %6) with %7",_killer, _killerPos, _killerSide, _victim, _victimPos, _victimSide, _with];
-};
+diag_log format["%8:%1 (%2, %3) killed %9:%4 (%5, %6) with %7",_killer, _killerPos, _killerSide, _victim, _victimPos, _victimSide, _with, _killerUID, _victimUID];
