@@ -273,6 +273,8 @@ Left Windows - Main interaction key (pickup money/cases, interact with vehicles/
 Left Shift + G - Surrender (hands up)<br />
 Left Shift + H - Holsters a handgun. Handguns will not be saved whilst holstered<br />
 Left Ctrl + H - Unholsters a handgun <br /><br />
+PAGE UP - Raise Ambient Volume <br />
+PAGE DOWN - Lower Ambient Volume <br />
                 "
         ]
     ];
@@ -1657,6 +1659,27 @@ If you can find it, you can grab the gold for yourself and sell it to the treasu
 
 Please note that it can take some time to find, as it is a large area, and in order to see the wreck, you need to be in close proximity to the wreck before it becomes visible.
 <br /><br />
+                "
+        ]
+    ];
+    
+    player createDiaryRecord ["ozzyfeatures",
+        [
+            "Gold Industry",
+                "
+The Gold industry is a new industry that is an OzzyGaming designed system.<br /><br />
+That Means what you may think you know forget it because this is very much different.<br /><br />
+To do this you will need 4 things.<br />
+ - A backpack.<br />
+ - A Pickaxe.<br />
+ - Several Water bottles Id say at least 5.<br />
+ - And of cause a vehicle.<br /><br />
+There are 5 stages to doing this.<br /><br /><br />
+FIRST, You will need to mine the Ore itself from the Mine.<br /><br />
+SECOND, You will need to wash each pile of gold you collect from the mine with a bottle of water. (1 bottle per wash)<br /><br />
+THIRD Take it to the Rock and Gold Processor to crush the 'Washed Gold Ore' into 'Crushed Gold Ore'<br /><br />
+FOURTH, Smelt the 'Crushed Gold Ore' at the Gold Smeltery near Kavala.<br /><br />
+FIFTH, Sell it at the Gold and Diamond Exchange<br />
                 "
         ]
     ];

@@ -27,7 +27,33 @@ compileFinal "
     life_garage_store = true;
 ";
 
-publicVariable "OG_fnc_nearVehicle";
+publicVariable "OG_fnc_garageVehicle";
+
+OG_fnc_earPlugs_down =
+compileFinal "
+    if (OG_budVolume > 20) then {
+            1 fadeSound (OG_budVolume - 20);
+            titleText[format[""You have lowered your ambient volume to: %1"",_message],""PLAIN""];
+    };
+    if (OG_budVolume <= 20) then {
+            1 fadeSound 0.2;
+    };
+";
+
+publicVariable "OG_fnc_earPlugs_down";
+
+OG_fnc_earPlugs_up =
+compileFinal "
+    if (OG_budVolume < 100) then {
+            1 fadeSound (OG_budVolume + 20);
+            titleText[format[""You have raised your ambient volume to: %1"",_message],""PLAIN""];
+    };
+    if (OG_budVolume >= 100) then {
+            1 fadeSound 1;
+    };
+";
+
+publicVariable "OG_fnc_earPlugs_up";
 
 TON_fnc_index =
 compileFinal "

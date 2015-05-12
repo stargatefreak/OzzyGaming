@@ -58,6 +58,22 @@ switch (_code) do
 		}; */
 	};
 	
+	//Ambient Sounds Up - PAGEUP
+	case 201:
+	{
+        if (OG_budVolume < 100) then {
+            [] spawn OG_fnc_earPlugs_up;
+        };
+	};
+	
+	//Ambient Sounds Down - PAGEDOWN
+	case 209:
+	{
+        if (OG_budVolume > 20) then {
+            [] spawn OG_fnc_earPlugs_down;
+        };
+	};
+	
 	//Map Key
 	case _mapKey:
 	{
