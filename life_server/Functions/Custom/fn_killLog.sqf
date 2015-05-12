@@ -14,4 +14,8 @@ if(isNull _killer) exitWith{diag_log "KILL LOG ERROR : Killer is objNull"};
 if(isNull _victim) exitWith{diag_log "KILL LOG ERROR : Victim is objNull"};
 if(_type == 0) exitWith{diag_log "KILL LOG ERROR : Type is Nil"};
 
-diag_log format["%1 (%2, %3) killed %4 (%5, %6) with %7",_killer, _killerPos, _killerSide, _victim, _victimPos, _victimSide, _with];
+if(vehicle _killer != _killer && (driver vehicle _killer) == _killer) then {
+    diag_log format["%1 (%2, %3) killed %4 (%5, %6) with %7",_killer, _killerPos, _killerSide, _victim, _victimPos, _victimSide, typeOf (vehicle _killer)];
+} else {
+    diag_log format["%1 (%2, %3) killed %4 (%5, %6) with %7",_killer, _killerPos, _killerSide, _victim, _victimPos, _victimSide, _with];
+};
