@@ -30,7 +30,7 @@ switch(playerSide) do {
 	case independent: {
 		if(uniform player == "U_I_CombatUniform") then {
 			// Technician/Recruit
-			if (__GETC__(life_ozMediclvl) <= 1) then {
+			if ((__GETC__(life_ozMediclvl)) <= 1) then {
 				player setObjectTextureGlobal [0, "textures\medic\med_uniform_tech.paa"];
 			};
 			// Paramedic
