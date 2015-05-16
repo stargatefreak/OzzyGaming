@@ -76,9 +76,9 @@ waitUntil {!life_nlrtimer_running};
 
 if(!isNull _killer && _killer != _unit) then {
     if(vehicle _killer != _killer && (driver vehicle _killer) == _killer) then {
-		[[name _killer,side _killer,str(getPosATL _killer),name _unit,side _unit,str(getPosASL _unit),typeOf (vehicle _killer),getPlayerUID _killer,getPlayerUID _unit],"OG_fnc_killLog",false,false] spawn life_fnc_MP;
+		[[name _killer,side _killer,str(getPosATL _killer),name _unit,side _unit,str(getPosASL _unit),typeOf (vehicle _killer),getPlayerUID _killer,getPlayerUID _unit, mapGridPosition _killer, mapGridPosition _unit],"OG_fnc_killLog",false,false] spawn life_fnc_MP;
 	} else {
-        [[name _killer,side _killer,str(getPosATL _killer),name _unit,side _unit,str(getPosASL _unit),str(currentWeapon _killer),getPlayerUID _killer,getPlayerUID _unit],"OG_fnc_killLog",false,false] spawn life_fnc_MP;
+        [[name _killer,side _killer,str(getPosATL _killer),name _unit,side _unit,str(getPosASL _unit),str(currentWeapon _killer),getPlayerUID _killer,getPlayerUID _unit, mapGridPosition _killer, mapGridPosition _unit],"OG_fnc_killLog",false,false] spawn life_fnc_MP;
 	};
 };
 if(!isNull _killer && {_killer != _unit} && {side _killer != west} && {alive _killer}) then {
