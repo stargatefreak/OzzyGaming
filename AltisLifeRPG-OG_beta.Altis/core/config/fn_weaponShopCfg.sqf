@@ -385,6 +385,8 @@ switch(_shop) do {
                         ["ItemGPS",nil,1000],
 
                         ["hgun_Pistol_Signal_F","Flare Gun",3000],
+                        ["6Rnd_GreenSignal_F",nil,750],
+                        ["6Rnd_RedSignal_F",nil,750],
                         ["hgun_Rook40_F",nil,6000],
                         ["hgun_PDW2000_F",nil,12500],
                         ["UGL_FlareGreen_F",nil,1000],
