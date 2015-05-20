@@ -10,8 +10,7 @@ private["_itemArray","_uniform","_vest","_backpack","_goggles","_headgear","_ite
 _itemArray = life_gear;
 waitUntil {!(isNull (findDisplay 46))};
 
-_handle = [] spawn life_fnc_stripDownPlayer;
-waitUntil {scriptDone _handle};
+[] call life_fnc_stripDownPlayer;
 
 if(count _itemArray == 0) exitWith
 {

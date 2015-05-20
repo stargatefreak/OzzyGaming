@@ -116,6 +116,7 @@ life_fnc_garageRefund = compileFinal
 // Init automatically saving gear
 [] spawn life_fnc_autoSave;
 diag_log "Initialized AutoSave";
+
 [] execVM "scripts\fn_statusBar.sqf";
 diag_log "Initialized StatusBar";
 [] spawn life_fnc_crashSite;
