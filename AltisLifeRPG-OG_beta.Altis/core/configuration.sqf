@@ -38,6 +38,8 @@ OZ_medRequest = false;
 life_vehicle_sellCache = [];
 life_nlrtimer_stop = false;
 life_nlrtimer_running = false;
+life_ticketTimer_stop = false;
+life_ticketTimer_running = false;
 OG_budVolume = 100;
 //Persistent Saving
 __CONST__(life_save_civ,TRUE); //Save weapons for civs?
