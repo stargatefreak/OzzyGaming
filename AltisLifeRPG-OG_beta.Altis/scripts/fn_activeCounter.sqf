@@ -40,18 +40,21 @@ waitUntil {!(isNull (findDisplay 46))};
 	};
 };
 
-[] spawn
-{
-    private["_loadObject","_veh"];
-    while {true} do {
-        waitUntil{vehicle player != player};
-        [] call {
-            _veh = vehicle player;
-            while{_veh != player} do {
-                waitUntil {_loadObject = getSlingLoad _veh; _loadObject getVariable ["purpose",""] == "truck_mission"};
-                _veh setSlingLoad objNull;
-                titleText ["You are not allowed to sling load Truck Missions", "PLAIN"];
+
+//if(playerSide == civilian) then {
+    [] spawn
+    {
+        private["_loadObject","_veh"];
+        while {true} do {
+            waitUntil{vehicle player != player};
+            [] call {
+                _veh = vehicle player;
+                while{_veh != player} do {
+                    waitUntil {_loadObject = getSlingLoad _veh; _loadObject getVariable ["purpose",""] == "truck_mission"};
+                    _veh setSlingLoad objNull;
+                    titleText ["You are not allowed to sling load Truck Missions", "PLAIN"];
+                };
             };
         };
     };
-};
+//};
