@@ -39,3 +39,24 @@ waitUntil {!(isNull (findDisplay 46))};
 		};
 	};
 };
+
+[] spawn
+{
+    private["_loadObject","_veh"];
+    while{true} do {
+        waitUntil{vehicle player != player};
+        [] spawn {
+            _veh = vehicle player;
+            while{_veh != player} do {
+                waitUntil {_loadObject = objNull; getSlingLoad _veh != objNull};
+                _loadObject = getSlingLoad _veh;
+                if(_loadObject getVariable ["purpose",""] == "truck_mission") then {
+                    _veh setSlingLoad objNull;
+                    titleText "You are not allowed to transport Truck Missions";
+                };
+                sleep 1.5;
+            };
+        };
+        waitUntil{vehicle player == player};
+    };
+};
