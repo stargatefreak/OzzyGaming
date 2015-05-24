@@ -50,7 +50,7 @@ waitUntil {!(isNull (findDisplay 46))};
             while{_veh != player} do {
                 waitUntil {_loadObject = getSlingLoad _veh; _loadObject getVariable ["purpose",""] == "truck_mission"};
                 _veh setSlingLoad objNull;
-                titleText "You are not allowed to sling load Truck Missions";
+                titleText ["You are not allowed to sling load Truck Missions", "PLAIN"];
             };
         };
     };
