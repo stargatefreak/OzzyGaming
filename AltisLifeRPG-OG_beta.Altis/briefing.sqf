@@ -1505,7 +1505,8 @@ Landing zones<br />
 - Do not land at police stations without permission<br />
 - Do not leave helicopter on the spawn helipads (blocking spawn)<br />
 - When possible, do not land on roads unless required for an emergency<br />
-- Medics may use the hospital courtyard area as a landing zone as long as they do not block the road<br /><br />
+- Medics may use the hospital courtyard area as a landing zone as long as they do not block the road<br />
+- Medics may land wherever is required when on an emergency call, but must remove the helicopter after the call has been completed<br /><br />
 
 Other<br />
 - Always fly with collision lights on<br />
@@ -1520,6 +1521,52 @@ Other<br />
             "Vehicle transportation rules",
                 "
 Medics have permission to carry abandoned vehicles to police HQ for impound as long as they contact the police prior to collecting the vehicle
+<br /><br />
+                "
+        ]
+    ];
+
+    player createDiaryRecord ["medicrules",
+        [
+            "Medic Activities",
+                "
+In downtime (when no one requires revival or healing etc), medics may partake in a few miscellaneous activities to help pass the time.<br /><br />
+
+Some activities that medics may do of their own volition:<br />
+- Setting up aid stations<br />
+- Setting up small roadblocks for disease control (Must not interfere with existing roleplay)<br />
+- Responding to virtual emergencies (As long as it does not put any player or property at risk)<br />
+- Partaking in normal RP (As long as the medic's role does not breach the medic rules)
+<br />
+
+Assisting players take priority.<br />
+So if someone requires a revive, or requests EMS for a legitamate reason, an available medic must be dispatched.<br />
+If the only available medic is running a downtime activity, they are to cease that activity and respond to the call.<br /><br />
+
+At a later point in time, scripted activities for medics will be added :)
+<br /><br />
+                "
+        ]
+    ];
+
+    player createDiaryRecord ["medicrules",
+        [
+            "Police and Medic Interaction",
+                "
+Police may fine medics for:<br />
+- Acting irresponsibly<br />
+- Breaking the law when NOT on an emergency call<br />
+<br />
+
+A reminder to police:<br />
+- An emergency call (when in a land vehicle) is usually identified by the activation of the emergency lighting<br />
+- If you believe someone is running around with emergency lighting on 'just for the sake of it', please contact one of the medical administration.<br />
+- Speeding is allowed when running with emergency lighting when on an emergency call<br />
+- Parking illegally or landing illegally is is allowed when on an emergency call<br />
+- Driving on the wrong side of the road, and other such driving offences are allowed if safe and when running with emergency lighting when on an emergency call<br />
+<br />
+
+Police may not arrest medics.
 <br /><br />
                 "
         ]
