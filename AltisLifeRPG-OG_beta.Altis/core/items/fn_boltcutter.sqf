@@ -13,7 +13,7 @@ if((nearestObject [[16019.5,16952.9,0],"Land_Dome_Big_F"]) == _building OR (near
     if(OG_FederalSecurty)exitWith{hint parseText "<t size = 2><t align=center><t color='#FF0000'>Federal Bank Security<br /><t color='#00FF00'>Active<br /><br /><t size = 1><t color='#000000'>You must wait"};
 	[[[1,2],localize "STR_ISTR_Bolt_AlertFed"],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
 } else {
-	[[0,format[localize "STR_ISTR_Bolt_AlertHouse",(_house getVariable "house_owner") select 1]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
+	[[0,format[localize "STR_ISTR_Bolt_AlertHouse",(_building getVariable "house_owner") select 1]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
 };
 
 _doors = 1;
