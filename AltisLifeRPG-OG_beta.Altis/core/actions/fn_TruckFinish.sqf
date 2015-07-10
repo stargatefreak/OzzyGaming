@@ -5,7 +5,7 @@
 	Description:
 	Finishes the legal/illegal truck Mission and calculates the money earned based on flat rate of risk of job.
 */
-private["_yard","_price","_type","_deliveryTruck","_startYard","_dis","_legLength","_vid"];
+private["_yard","_price","_type","_deliveryTruck","_startYard","_dis","_legLength","_vid","_insurPrice"];
 _yard = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
 
 if(vehicle player != player) then
@@ -72,7 +72,9 @@ if(!isNil "_deliveryTruck") then
 	["DeliverySucceeded",[format[(localize "STR_NOTF_Earned_1"),[_price] call life_fnc_numberText]]] call bis_fnc_showNotification;
 	life_cur_task setTaskState "Succeeded";
 	player removeSimpleTask life_cur_task;
-	life_ogCash415 = life_ogCash415 + _price;
+    
+	_insurPrice = _deliveryTruck getVariable["value",0];
+	life_ogCash415 = life_ogCash415 + _price + _insurPrice;
 
 
 	if(_vid == "1") then

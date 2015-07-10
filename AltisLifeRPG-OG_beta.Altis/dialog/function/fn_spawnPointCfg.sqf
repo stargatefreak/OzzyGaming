@@ -9,11 +9,10 @@
 	Return:
 	[Spawn Marker,Spawn Name,Image Path]
 */
-private["_side","_return","_len1","_len","_left","_donatorlvl","_cityimg","_rebelimg","_donatorimg","_hospitalimg","_minDistance","_copSpawnlist","_civSpawnlist","_medSpawnlist","_rebSpawnlist","_donSpawnlist"];
+private["_side","_return","_len1","_len","_left","_donatorlvl","_cityimg","_rebelimg","_donatorimg","_hospitalimg","_minDistance","_copSpawnlist","_civSpawnlist","_medSpawnlist","_rebSpawnlist"];
 _side = [_this,0,civilian,[civilian]] call BIS_fnc_param;
 _cityimg = "\a3\ui_f\data\map\MapControl\watertower_ca.paa";
 _rebelimg = "\a3\ui_f\data\map\Diary\Icons\playereast_ca.paa";
-_donatorimg = "icons\donator.paa";
 _hospitalimg = "\a3\ui_f\data\map\MapControl\hospital_ca.paa";
 _return = [];
 _minDistance = 5000;
@@ -51,11 +50,6 @@ _rebSpawnlist = [
 	["reb_spawn_1","Rebel (Nth Abdera)",_rebelimg],
 	["reb_spawn_2","Rebel (Sth Vikos)",_rebelimg],
 	["reb_spawn_3","Rebel (Gang Area)",_rebelimg]
-];
-
-_donSpawnlist = [
-	["donator_area_1","Nth Donator",_donatorimg],
-	["donator_area_2","Sth Donator",_donatorimg]
 ];
 
 //Spawn Marker, Spawn Name, PathToImage
@@ -96,11 +90,6 @@ switch (_side) do
 		/* 	}; */
 		} forEach _rebSpawnlist;
 		
-		{
-		/* 	if(life_death_pos distance getMarkerPos (_x select 0) > _minDistance) then { */
-			_return pushBack _x;
-		/* 	}; */
-		} forEach _donSpawnlist;
 	};
 	
 	case independent: {

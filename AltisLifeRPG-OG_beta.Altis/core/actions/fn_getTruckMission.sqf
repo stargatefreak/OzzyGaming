@@ -79,7 +79,7 @@ else
     } else {
         _value = random (200000) + 50000;
     };
-    _newTruck setVariable["value",,true];
+    _newTruck setVariable["value",_value,true];
 	_newTruck setVariable["type","illegal",true];
 	
 	hint "You have chosen an illegal mission. This means the cops have been alerted to your activities. Completing the mission will immediately clear it from your record. RUN!!. ";
