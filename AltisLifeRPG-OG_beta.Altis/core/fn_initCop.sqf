@@ -33,13 +33,18 @@ if(!(str(player) in ["cop_1","cop_2","cop_3","cop_4"])) then {
 // Set Paycheck for Police
 switch(__GETC__(life_ozCoplvl)) do
 {
-	case 1: {life_ogPayday415 = life_ogPayday415 + 1000;};
-	case 2: {life_ogPayday415 = life_ogPayday415 + 1500;};
-	case 3: {life_ogPayday415 = life_ogPayday415 + 2000;};
-	case 4: {life_ogPayday415 = life_ogPayday415 + 2500;};
-	case 5: {life_ogPayday415 = life_ogPayday415 + 3000;};
-	case 6: {life_ogPayday415 = life_ogPayday415 + 3500;};
-	case 7: {life_ogPayday415 = life_ogPayday415 + 4000;};
+	case 1: {life_ogPayday415 = life_ogPayday415 + 1000;};  // Cadet
+	case 2: {life_ogPayday415 = life_ogPayday415 + 1500;};  // Prob Const
+	case 3: {life_ogPayday415 = life_ogPayday415 + 1500;};  // Constable
+	case 4: {life_ogPayday415 = life_ogPayday415 + 2000;};  // Senr Const
+	case 5: {life_ogPayday415 = life_ogPayday415 + 2000;};  // Lead Const
+	case 6: {life_ogPayday415 = life_ogPayday415 + 2500;};  // Sergeant
+	case 7: {life_ogPayday415 = life_ogPayday415 + 2500;};  // Incr Serg
+	case 8: {life_ogPayday415 = life_ogPayday415 + 3000;};  // Snr Serg
+	case 9: {life_ogPayday415 = life_ogPayday415 + 3500;};  // Captain
+	case 10: {life_ogPayday415 = life_ogPayday415 + 3500;}; // Inspector
+	case 11: {life_ogPayday415 = life_ogPayday415 + 4000;}; // Chief Insp
+	case 20: {life_ogPayday415 = life_ogPayday415 + 5000;}; // Starred
 };
 
 OZ_policeGroup = (group player);
