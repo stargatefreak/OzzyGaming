@@ -23,9 +23,9 @@ _ownerID = owner _ownerID;
 	The other part is well the SQL statement.
 */
 _query = switch(_side) do {
-	case west: {_returnCount = 11; format["SELECT playerid, name, cash, bankacc, adminlevel, 1, cop_licenses, cop_gear, copCounter, (civCounter + medCounter), aliases, coplevel, copPilotLevel, copPilotGrounded, copBlacklist FROM players WHERE playerid='%1'",_uid];};
-	case civilian: {_returnCount = 10; format["SELECT playerid, name, cash, bankacc, adminlevel, 1, civ_licenses, civ_gear, civCounter, (copCounter + medCounter), aliases, pmclevel, arrested FROM players WHERE playerid='%1'",_uid];};
-	case independent: {_returnCount = 10; format["SELECT playerid, name, cash, bankacc, adminlevel, 1, med_licenses, med_gear, medCounter, (civCounter + copCounter), aliases, mediclevel, medicPilotGrounded, medicBlacklist FROM players WHERE playerid='%1'",_uid];};
+	case west: {_returnCount = 11; format["SELECT playerid, name, cash, bankacc, adminlevel, 0, cop_licenses, cop_gear, copCounter, (civCounter + medCounter), aliases, coplevel, copPilotLevel, copPilotGrounded, copBlacklist FROM players WHERE playerid='%1'",_uid];};
+	case civilian: {_returnCount = 10; format["SELECT playerid, name, cash, bankacc, adminlevel, 0, civ_licenses, civ_gear, civCounter, (copCounter + medCounter), aliases, pmclevel, arrested FROM players WHERE playerid='%1'",_uid];};
+	case independent: {_returnCount = 10; format["SELECT playerid, name, cash, bankacc, adminlevel, 0, med_licenses, med_gear, medCounter, (civCounter + copCounter), aliases, mediclevel, medicPilotGrounded, medicBlacklist FROM players WHERE playerid='%1'",_uid];};
 };
 
 /* waitUntil{sleep (random 0.3); !DB_Async_Active}; */
