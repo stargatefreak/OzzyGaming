@@ -74,9 +74,15 @@ if(_type == "legal") then
 }
 else
 {
+    if ((life_ogBank415 + life_ogCash415) < 250000) then {
+        _value = (life_ogBank415 + life_ogCash415) * 0.8;
+    } else {
+        _value = random (200000) + 50000;
+    };
+    _newTruck setVariable["value",,true];
 	_newTruck setVariable["type","illegal",true];
 	
-	hint "You have chosen an illegal mission. This means the cops have been alerted to your activities. Completing the mission will immediately clear it from your record. RUN!!";
+	hint "You have chosen an illegal mission. This means the cops have been alerted to your activities. Completing the mission will immediately clear it from your record. RUN!!. ";
 	[[format["%1 has accepted an illegal truck mission. They are leaving from the freight yard now. Catch them!",name player], "Anonymous Tipper",1],"TON_fnc_clientMessage",true,false] spawn life_fnc_MP;
 	[[getPlayerUID player,name player,"485"],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;
 };

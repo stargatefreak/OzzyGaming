@@ -30,13 +30,22 @@ _value = 0;
 	};
 } foreach (_vehicleInfo select 0);
 
+if (_vehicle getVariable "type" == "illegal") then {
+    _value = random (200000) + 50000;
+};
+
 if(_value > 0) then
 {
-	[[0,format[localize "STR_NOTF_VehContraband",[_value] call life_fnc_numberText]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
+    if (_vehicle getVariable "type" == "illegal") then {
+        hint "The search of the Delivery Truck turned up illicit materials";
+        [[0,format["Altis Transport truck searched by Police turned up $%1 of stolen goods",[_value] call life_fnc_numberText]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
+    } else {
+        [[0,format[localize "STR_NOTF_VehContraband",[_value] call life_fnc_numberText]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
+    };
 	life_ogBank415 = life_ogBank415 + _value;
 	_vehicle setVariable["Trunk",[],true];
 }
 	else
 {
-	hint localize "STR_Cop_NoIllegalVeh";
+        hint localize "STR_Cop_NoIllegalVeh";
 };

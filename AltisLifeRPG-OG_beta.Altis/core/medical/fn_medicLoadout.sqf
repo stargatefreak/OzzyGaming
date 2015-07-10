@@ -6,9 +6,7 @@
 	Description:
 	Loads the medic out with the default gear.
 */
-private["_handle"];
-_handle = [] spawn life_fnc_stripDownPlayer;
-waitUntil {scriptDone _handle};
+[] call life_fnc_stripDownPlayer;
 
 //player addUniform "U_Rangemaster";
 player addUniform "U_I_CombatUniform";

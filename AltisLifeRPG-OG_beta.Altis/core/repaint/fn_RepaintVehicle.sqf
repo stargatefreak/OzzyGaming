@@ -35,14 +35,13 @@ if ((getPlayerUID player) != _vehOwner) exitWith {hint "You are not the owner of
 		life_action_inUse = true;  //<---------MOVE THIS TO HERE
 		player say3D "spraycan";
 		
+        animationInProgress = false;
+        [] spawn OG_fnc_animPlayer;
+
 		while{true} do
 		{
-			if(animationState player != "AinvPknlMstpSnonWnonDnon_medic_1") then {
-				[[player,"AinvPknlMstpSnonWnonDnon_medic_1"],"life_fnc_animSync",true,false] spawn life_fnc_MP;
-				player playMoveNow "AinvPknlMstpSnonWnonDnon_medic_1";
-			};						
+            animationInProgress = true;
 			sleep 0.29;
-
 			_cP = _cP + 0.01;
 			_progress progressSetPosition _cP;
 			_pgText ctrlSetText format["%3 (%1%2)...",round(_cP * 100),"%",_upp];			
@@ -55,6 +54,7 @@ if ((getPlayerUID player) != _vehOwner) exitWith {hint "You are not the owner of
 		life_action_inUse = false;
 		
 		5 cutText ["","PLAIN"];
+        animationInProgress = false;
 		player playActionNow "stop";
 		if(life_interrupted) exitWith {life_interrupted = false; titleText["Canceled!","PLAIN"]; life_action_inUse = false;};
 		if(player != vehicle player) exitWith {titleText["You got to get out of the vehicle to be able to paint it!","PLAIN"];};

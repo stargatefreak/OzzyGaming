@@ -7,58 +7,6 @@ compileFinal "
 
 publicVariable "life_fnc_sidechat";
 
-OG_fnc_garageVehicle =
-compileFinal "
-    private[""_nearVehicle"",""_filteredVehicle""];
-    if(_this select 1) then {
-        _nearVehicle = nearestObjects[(getMarkerPos (_this select 0)),[""Car"",""Ship"",""Air""],35];
-    } else {
-        _nearVehicle = nearestObjects[(getPos (_this select 0)),[""Car"",""Ship"",""Air""],35];
-    };
-    {
-        if(!(typeof _x in [""PortableHelipadLight_01_green_F""])) then {_filteredVehicle pushBack _x};
-    } forEach _nearVehicle;
-    _nearVehicle = _filteredVehicle select 0;
-    if(isNil ""_nearVehicle"") exitWith {
-        hint ""There isn't a vehicle near this NPC."";
-    };
-    [[_nearVehicle,false,(_this select 1)],""TON_fnc_vehicleStore"",false,false] spawn life_fnc_MP;
-    hint ""The server is trying to store the vehicle please wait...."";
-    life_garage_store = true;
-";
-
-publicVariable "OG_fnc_garageVehicle";
-
-OG_fnc_earPlugs_down =
-compileFinal "
-    if (OG_budVolume > 20) then {
-        OG_budVolume = OG_budVolume - 20;
-        1 fadeSound (OG_budVolume / 100);
-        titleText[format[""You have lowered your ambient volume to: %1"",OG_budVolume],""PLAIN""];
-    };
-    if (OG_budVolume <= 20) then {
-        OG_budVolume = 20;
-        1 fadeSound 0.2;
-    };
-";
-
-publicVariable "OG_fnc_earPlugs_down";
-
-OG_fnc_earPlugs_up =
-compileFinal "
-    if (OG_budVolume < 100) then {
-        OG_budVolume = OG_budVolume + 20;
-        1 fadeSound (OG_budVolume / 100);
-        titleText[format[""You have raised your ambient volume to: %1"",OG_budVolume],""PLAIN""];
-    };
-    if (OG_budVolume >= 100) then {
-        OG_budVolume = 100;
-        1 fadeSound 1;
-    };
-";
-
-publicVariable "OG_fnc_earPlugs_up";
-
 TON_fnc_index =
 compileFinal "
 	private[""_item"",""_stack""];

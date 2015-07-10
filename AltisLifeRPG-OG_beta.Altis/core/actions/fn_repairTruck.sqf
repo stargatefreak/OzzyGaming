@@ -25,13 +25,13 @@ if((_veh isKindOf "Car") OR (_veh isKindOf "Ship") OR (_veh isKindOf "Air")) the
 		_pgText ctrlSetText format["%2 (1%1)...","%",_upp];
 		_progress progressSetPosition 0.01;
 		_cP = 0.01;
+        
+        animationInProgress = false;
+        [] spawn OG_fnc_animPlayer;
 		
 		while{true} do
 		{
-			if(animationState player != "AinvPknlMstpSnonWnonDnon_medic_1") then {
-				[[player,"AinvPknlMstpSnonWnonDnon_medic_1"],"life_fnc_animSync",true,false] spawn life_fnc_MP;
-				player playMoveNow "AinvPknlMstpSnonWnonDnon_medic_1";
-			};
+            animationInProgress = true;
 			sleep 0.27;
 			_cP = _cP + 0.01;
 			_progress progressSetPosition _cP;
@@ -43,6 +43,7 @@ if((_veh isKindOf "Car") OR (_veh isKindOf "Ship") OR (_veh isKindOf "Air")) the
 		};
 		
 		life_action_inUse = false;
+        animationInProgress = false;
 		5 cutText ["","PLAIN"];
 		player playActionNow "stop";
 		if(life_interrupted) exitWith {life_interrupted = false; titleText[localize "STR_NOTF_ActionCancel","PLAIN"]; life_action_inUse = false;};
