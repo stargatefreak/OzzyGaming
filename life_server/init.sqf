@@ -16,6 +16,7 @@ OZG_Debug = false;
 publicVariable "OZG_Debug";
 
 [] execVM "\life_server\functions.sqf";
+[] execVM "\life_server\Functions\Custom\OG_functions.sqf";
 [] execVM "\life_server\eventhandlers.sqf";
 ["Database2","DB_RAW_V2"] call DB_fnc_init;
 //OLD DATABASE INITIALISATION SCRIPT

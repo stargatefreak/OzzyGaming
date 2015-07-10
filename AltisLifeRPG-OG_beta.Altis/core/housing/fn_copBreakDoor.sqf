@@ -32,12 +32,12 @@ _cpRate = 0.0092;
 
 [[2,format[localize "STR_House_Raid_NOTF",(_house getVariable "house_owner") select 1]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
 
+animationInProgress = false;
+[] spawn OG_fnc_animPlayer;
+
 while {true} do
 {
-	if(animationState player != "AinvPknlMstpSnonWnonDnon_medic_1") then {
-		[[player,"AinvPknlMstpSnonWnonDnon_medic_1"],"life_fnc_animSync",true,false] spawn life_fnc_MP;
-		player playMoveNow "AinvPknlMstpSnonWnonDnon_medic_1";
-	};
+    animationInProgress = true;
 	sleep 0.26;
 	if(isNull _ui) then {
 		5 cutRsc ["life_progress","PLAIN"];
@@ -51,6 +51,7 @@ while {true} do
 };
 
 //Kill the UI display and check for various states
+animationInProgress = false;
 5 cutText ["","PLAIN"];
 player playActionNow "stop";
 if(!alive player) exitWith {life_action_inUse = false;};

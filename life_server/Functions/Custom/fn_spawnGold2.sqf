@@ -27,3 +27,48 @@ goldZones = [];
 
 publicVariable "goldZonesCfg";
 publicVariable "goldZones";
+
+[] spawn {
+    private["_pos","_dir","_buildingSearch","_typeOf"];
+    oldBuildingTypes = [
+        "Land_u_Shop_01_V1_F",
+        "Land_u_Shop_02_V1_F",
+        "Land_u_Shop_01_V1_dam_F",
+        "Land_u_Shop_02_V1_dam_F",
+        "Land_Shop_01_V1_ruins_F",
+        "Land_Shop_02_V1_ruins_F"
+    ];
+    ruinsTypes = [
+        "Land_Shop_01_V1_ruins_F",
+        "Land_Shop_02_V1_ruins_F"
+    ];
+
+    newBuildingTypes = [
+        "Land_i_Shop_01_V1_F",
+        "Land_i_Shop_02_V1_F",
+        "Land_i_Shop_01_V1_dam_F",
+        "Land_i_Shop_02_V1_dam_F",
+        "Land_i_Shop_01_V1_F",
+        "Land_i_Shop_02_V1_F"
+    ];
+    buildingArray = [];
+    _buildingSearch = nearestObjects [getMarkerPos "civ_spawn_2",oldBuildingTypes,2000];
+    {
+        oldBuilding = _x;
+        buildingArray pushBack _x;
+        _typeOf = typeOf oldBuilding;
+        _pos = getPosATL oldBuilding;
+        _dir = getDir oldBuilding;
+        index = oldBuildingTypes find (typeOf oldBuilding);
+     
+        hideObject oldBuilding;
+        hideObjectGlobal oldBuilding;
+        
+        newBuilding = (newBuildingTypes select index) createVehicle [0,0,0];
+        newBuilding allowDamage false;
+        newBuilding setDir _dir;
+        newBuilding setPosATL _pos;
+        newBuilding setVectorUp [0,0,1];
+    } forEach _buildingSearch;
+    publicVariable "buildingArray";
+};
