@@ -217,6 +217,7 @@ switch (_vehicle) do
 		{
 			case 0: {_color = "Police"};
 			case 1: {_color = "SWAT"};
+            case 2: {_color = "PMC"};
 		};
 	};
 	
