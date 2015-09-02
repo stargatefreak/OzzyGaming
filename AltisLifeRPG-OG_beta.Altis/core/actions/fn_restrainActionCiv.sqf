@@ -10,7 +10,7 @@ _unit = cursorTarget;
 if(isNull _unit) exitWith {}; //Not valid
 if((_unit getVariable "restrainedCiv")) exitWith {};
 if(player == _unit) exitWith {};
-if(!(animationState _unit in ["Incapacitated","amovpercmstpsnonwnondnon_amovpercmstpssurwnondnon"])) exitWith { hint "Victim must first be knocked out or surrendered"; };
+if(!(animationState _unit in ["incapacitated","unconscious","amovpercmstpsnonwnondnon_amovpercmstpssurwnondnon"])) exitWith { hint "Victim must first be knocked out or surrendered"; };
 if((player getVariable["surrender",FALSE])) then { player setVariable["surrender",FALSE,TRUE]; player switchMove ""; };
 if(life_inv_ziptie < 1) exitWith {hint "You need zipties!"};
 if(!isPlayer _unit) exitWith {};
