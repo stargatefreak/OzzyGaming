@@ -59,19 +59,19 @@ while {OG_Active} do {
 				playSound3D [OG_fedLockdown_lockdownAlarm, objNull, false,[16015.7,16956.1,13.6565], 1, 1, 200];
 				OG_Active = false;
 				[[0,format["FEDERAL SECURITY ACTIVATED: BANK IS SECURE AND GAS HAS BEEN RELEASED!"]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
-				_players = nearestobjects [OG_fedLockdown_pos,["man"],OG_fedLockdown_bankRad];
+				_players = nearestobjects [OG_fedLockdown_pos,["civilian","west","","man"],OG_fedLockdown_bankRad];
 				[_players] spawn {
 					private["_players"];
 					_players = [_this,0,[],[[]]] call BIS_fnc_param;
 					{
 						[[2,format["YOU ARE NOW LOCKED IN AND BEING GASSED!"]],"life_fnc_broadcast",_x,false] spawn life_fnc_MP;
-						if(side _players in ["west","civilian","independent"]) then {
+						if(side _x in ["west","civilian","independent"]) then {
 							while{alive _x} do {
 								_x setDamage (getDammage player + 0.2);
 								sleep 0.5;
 							};	
 						};
-					} forEach _players
+					} forEach _players;
 				};
 			};
 		};
