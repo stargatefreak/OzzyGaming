@@ -6,7 +6,10 @@
 	Description:
 	Teleport to chosen position.
 */
+private ["_oldPos"];
 if(__GETC__(life_ogAdminlvl415) == 0) exitWith {closeDialog 0;};
+
+_oldPos = str (getPosATL player);
 
 [] spawn {
   while {dialog} do {
@@ -21,6 +24,9 @@ tele={
 	onMapSingleClick "";
 	openMap [false, false];
 	hint "You have teleported to your selected position";
+	
+/* Temporary logging */
+[[name player,side player,"teleported self",str (getPosATL player), _oldPos],"OG_fnc_adminLog",false,false] spawn life_fnc_MP;
 };
 openMap [true, false];
 onMapSingleClick "[_pos select 0, _pos select 1, _pos select 2] call tele";

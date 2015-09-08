@@ -9,7 +9,7 @@ if((vehicle player isKindOf "Ship") OR (vehicle player isKindOf "Air")) exitWith
 private ["_limit","_speed","_driver","_ticket","_ticketWL"];
 _driver = _this select 0;
 _speed = _this select 1;
-_limit = _this select 2;
+_limit = (_this select 2) + 5;
 //_ticket = 1500;//perm set amount ticket
 _ticket = (_speed - _limit) * 40;//variable ticket for licensed driver
 _ticketWL = (_speed - _limit) * 120;//variable ticket for unlicensed driver

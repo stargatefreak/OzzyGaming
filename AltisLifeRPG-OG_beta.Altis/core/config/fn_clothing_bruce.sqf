@@ -32,7 +32,8 @@ switch (_filter) do
 		["U_C_WorkerCoveralls","Mechanic Coveralls",2500],
 		["U_OrestesBody","Surfing On Land",1100],
 		["U_NikosAgedBody","Casual Wears",5000],
-		["U_I_G_Story_Protagonist_F","Workers Camos",5000]
+		["U_I_G_Story_Protagonist_F","Workers Camos",5000],
+		["U_C_Journalist","Press Uniform",5000]
 		];
 	};
 	
@@ -62,7 +63,8 @@ switch (_filter) do
 			["H_Cap_tan",nil,150],
 			["H_Cap_blk_CMMG","Guns Club",150],
 			["H_Cap_blk_ION","ION Supporter",150],
-			["H_Cap_tan",nil,150]
+			["H_Cap_tan",nil,150],
+			["H_Cap_press","Press Hat",400]
 		];
 	};
 	
@@ -89,7 +91,8 @@ switch (_filter) do
 	case 3:
 	{
 		[
-            ["V_Rangemaster_belt",nil,850]
+            ["V_Rangemaster_belt",nil,850],
+            ["V_Press_F","Press Vest",5000]
 		];
 	};
 	

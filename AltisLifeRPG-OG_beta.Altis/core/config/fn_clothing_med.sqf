@@ -53,7 +53,8 @@ switch (_filter) do
 	case 3:
 	{
 		[
-            ["V_RebreatherB",nil,2000]
+            ["V_RebreatherB",nil,2000],
+            ["V_Rangemaster_belt",nil,2000]
 		];
 	};
 	

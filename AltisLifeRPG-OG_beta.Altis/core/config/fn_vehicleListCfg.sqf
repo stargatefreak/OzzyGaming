@@ -54,12 +54,14 @@ switch (_shop) do
                     ["C_Van_01_box_F",4000],
                     ["I_Truck_02_covered_F",30000],
                     ["C_Hatchback_01_sport_F",50000],
-                    ["C_SUV_01_F",6000]
+                    ["C_SUV_01_F",6000],
+					["B_MRAP_01_F",100000]
                 ];
             };
         };
     };
 
+	// Hospital Shops
     case "med_air_hs": 
     {
 		if (__GETC__(life_ozMedicGrounded) == 1) exitWith {};
@@ -75,6 +77,43 @@ switch (_shop) do
                     ["B_Heli_Light_01_F",90000],
                     ["C_Heli_Light_01_civil_F",60000],
                     ["O_Heli_Light_02_unarmed_F",200000]
+                ];
+            };
+            case ((__GETC__(life_ozMediclvl)) > 2): {
+				_return = [
+                    ["B_Heli_Light_01_F",90000],
+                    ["C_Heli_Light_01_civil_F",60000],
+                    ["O_Heli_Light_02_unarmed_F",200000],
+                    ["I_Heli_light_03_unarmed_F",200000]
+                ];
+            };
+        };
+    };
+	
+	// Non-Hospital
+	case "med_air": 
+    {
+		if (__GETC__(life_ozMedicGrounded) == 1) exitWith {};
+        switch (true) do {
+            case ((__GETC__(life_ozMediclvl)) == 1): {
+                _return = [
+                    ["B_Heli_Light_01_F",90000],
+                    ["C_Heli_Light_01_civil_F",60000] 
+                ];
+            };
+            case ((__GETC__(life_ozMediclvl)) > 1): {
+                _return = [
+                    ["B_Heli_Light_01_F",90000],
+                    ["C_Heli_Light_01_civil_F",60000],
+                    ["O_Heli_Light_02_unarmed_F",200000]
+                ];
+            };
+            case ((__GETC__(life_ozMediclvl)) > 1): {
+				_return = [
+                    ["B_Heli_Light_01_F",90000],
+                    ["C_Heli_Light_01_civil_F",60000],
+                    ["O_Heli_Light_02_unarmed_F",200000],
+                    ["I_Heli_light_03_unarmed_F",200000]
                 ];
             };
         };
@@ -151,7 +190,7 @@ switch (_shop) do
         ];
         
         // WHITELISTED
-        // Rank 1 - Cadet
+        // Rank 1 - Student
         if(__GETC__(life_ozCoplvl) >= 1) then {
         };
 
@@ -159,29 +198,35 @@ switch (_shop) do
         // Rank 2 - Probationary Constable
         if(__GETC__(life_ozCoplvl) >= 2) then {
             _return pushBack ["C_SUV_01_F",15000];
-            _return pushBack ["C_Hatchback_01_sport_F",30000];
         };
         // Rank 3 - Constable
+        if(__GETC__(life_ozCoplvl) >= 3) then {
+            _return pushBack ["C_Hatchback_01_sport_F",60000];
+		};
         // Rank 4 - Senior Constable
-        // Rank 5 - Leading Senior Constable
 
         // NCOs
-        // Rank 6 - Sergeant
-        // Rank 7 - Incremental Sergeant
-        // Rank 8 - Senior Sergeant
+        // Rank 5 - Sergeant
+        // Rank 6 - Incremental Sergeant
+        // Rank 7 - Senior Sergeant
 
         // OFFICERS
+		// Rank 8 - Lieutenant
         // Rank 9 - Captain
-        if(__GETC__(life_ozCoplvl) >= 9) then {
-            _return pushBack ["B_MRAP_01_F",105000];
-        };
         // Rank 10 - Inspector
+        if(__GETC__(life_ozCoplvl) >= 10) then {
+            _return pushBack ["B_MRAP_01_F",200000];
+            _return pushBack ["B_Quadbike_01_F",5000];
+            _return pushBack ["C_Van_01_box_F",40000];
+            _return pushBack ["C_Van_01_transport_F",40000];
+            _return pushBack ["B_Truck_01_transport_F",100000];
+        };
         // Rank 11 - Chief Inspector
 
         // SENIOR OFFICERS
         // Rank 20 - Superintendant, Chief Superintendant, Assistant Commissioner, Deputy Commissioner, Commissioner, Police Minister
         if(__GETC__(life_ozCoplvl) >= 20) then {
-            _return pushBack ["B_APC_Tracked_01_rcws_F",500000];
+            // _return pushBack ["B_APC_Tracked_01_rcws_F",500000];
         };
     };
 
@@ -232,22 +277,26 @@ switch (_shop) do
 
             // SENIOR OFFICERS
             // Rank 20 - Superintendant, Chief Superintendant, Assistant Commissioner, Deputy Commissioner, Commissioner, Police Minister
+            if(__GETC__(life_ozCoplvl) >= 10) then {
+                _return pushBack ["I_Heli_light_03_unarmed_F",500000];
+				_return pushBack ["B_Heli_Transport_03_unarmed_F",2000000];
+                _return pushBack ["O_Heli_Transport_04_covered_F",3000000];
+			};
         } else {
             // Pilot Trainee
             if (__GETC__(life_ozCopPilotLvl) >= 1) then {
-                _return pushBack ["B_Heli_Light_01_F",128000];
-                _return pushBack ["C_Heli_Light_01_civil_F",98000];
+                _return pushBack ["B_Heli_Light_01_F",130000];
+                _return pushBack ["C_Heli_Light_01_civil_F",80000];
             };
             // Pilot
             if (__GETC__(life_ozCopPilotLvl) >= 2) then {
                 _return pushBack ["B_Heli_Transport_01_F",600000];
-                _return pushBack ["I_Heli_light_03_unarmed_F",750000];
+                _return pushBack ["I_Heli_light_03_unarmed_F",500000];
             };
             // Senior Pilot
             if (__GETC__(life_ozCopPilotLvl) >= 3) then {
                 _return pushBack ["B_Heli_Transport_03_unarmed_F",2000000];
-                _return pushBack ["O_Heli_Transport_04_F",3000000];
-                _return pushBack ["O_Heli_Transport_04_covered_F",3500000];
+                _return pushBack ["O_Heli_Transport_04_covered_F",3000000];
             };
         };
 	};
@@ -401,14 +450,14 @@ switch (_shop) do
 			_return pushBack ["B_MRAP_01_F",500000];
 		};
 		if (__GETC__(life_ozPmclvl) >= 7) then {
-			_return pushBack ["I_G_Offroad_01_armed_F",3800000];
+			// _return pushBack ["I_G_Offroad_01_armed_F",3800000];
 		};
     };
     case "pmc_air":{
         _return = [
         ];
 		if (__GETC__(life_ozPmclvl) >= 4) then {
-			_return pushBack ["B_Heli_Light_01_F",800000];
+			_return pushBack ["B_Heli_Light_01_F",400000];
 		};
 		if (__GETC__(life_ozPmclvl) >= 5) then {
 			_return pushBack ["O_Heli_Transport_04_F",2200000];

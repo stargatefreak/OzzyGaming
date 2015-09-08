@@ -11,7 +11,7 @@ _sideCheck = [(_this select 3),1,sideUnknown,[civilian]] call BIS_fnc_param;
 _spawnPoints = [(_this select 3),2,"",["",[]]] call BIS_fnc_param;
 _shopFlag = [(_this select 3),3,"",[""]] call BIS_fnc_param;
 _disableBuy = [(_this select 3),5,false,[true]] call BIS_fnc_param;
-if(_shop in ["cop_air","med_air_hs"]) then {
+if(_shop in ["cop_air","med_air_hs","med_air"]) then {
     switch(playerSide) do {
         case west: {
             if((call life_ozCopGrounded) == 1) exitWith {

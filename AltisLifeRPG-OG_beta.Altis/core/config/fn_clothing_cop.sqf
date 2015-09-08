@@ -28,7 +28,7 @@ switch (_filter) do
         ];
 		
         // WHITELISTED
-        // Rank 1 - Cadet
+        // Rank 1 - Student
 
         // DUTY OFFICERS
         // Rank 2 - Probationary Constable
@@ -37,16 +37,21 @@ switch (_filter) do
         };
         // Rank 3 - Constable
         // Rank 4 - Senior Constable
-        // Rank 5 - Leading Senior Constable
 
         // NCOs
-        // Rank 6 - Sergeant
-        if(__GETC__(life_ozCoplvl) >= 6) then {
+        // Rank 5 - Sergeant
+        // Rank 6 - Incremental Sergeant
+        // Rank 7 - Senior Sergeant
+
+        // OFFICERS
+		// Rank 8 - Lieutenant
+        // Rank 9 - Captain
+		if(__GETC__(life_ozCoplvl) >= 9) then {
             _ret pushBack ["U_B_CombatUniform_mcam_worn","SPG Black Uniform",100];
             _ret pushBack ["U_B_CombatUniform_mcam","SPG Multicam Uniform",100];
         };
-        // Rank 7 - Incremental Sergeant
-        if(__GETC__(life_ozCoplvl) >= 7) then {
+        // Rank 10 - Inspector
+		if(__GETC__(life_ozCoplvl) >= 10) then {
             _ret pushBack ["U_C_Hunterbody_grn","The Hunters Look",100];
             _ret pushBack ["U_C_Poloshirt_blue","Poloshirt Blue",100];
             _ret pushBack ["U_C_Poloshirt_burgundy","Poloshirt Burgundy",100];
@@ -63,11 +68,6 @@ switch (_filter) do
             _ret pushBack ["U_I_CombatUniform","Combat Fatigues",2500];
             _ret pushBack ["U_B_CombatUniform_wdl_vest","Recon Fatigues",2500];
         };
-        // Rank 8 - Senior Sergeant
-
-        // OFFICERS
-        // Rank 9 - Captain
-        // Rank 10 - Inspector
         // Rank 11 - Chief Inspector
 		
 
@@ -99,23 +99,27 @@ switch (_filter) do
         };
         // Rank 3 - Constable
         // Rank 4 - Senior Constable
-        // Rank 5 - Leading Senior Constable
 
         // NCOs
-        // Rank 6 - Sergeant
-        // Rank 7 - Incremental Sergeant
-        if(__GETC__(life_ozCoplvl) >= 7) then {
-            _ret pushBack ["H_Watchcap_blk","Sniper Beanie",1500];
-            _ret pushBack ["H_HelmetSpecB_blk","SPG Helmet Black",1500];
+        // Rank 5 - Sergeant
+        // Rank 6 - Incremental Sergeant
+        // Rank 7 - Senior Sergeant
+		if(__GETC__(life_ozCoplvl) >= 7) then {
+			_ret pushBack ["H_Watchcap_blk","Sniper Beanie",1500];
+		};
+
+        // OFFICERS
+		// Rank 8 - Lieutenant
+        // Rank 9 - Captain
+		if(__GETC__(life_ozCoplvl) >= 9) then {
+			_ret pushBack ["H_HelmetSpecB_blk","SPG Helmet Black",1500];
+		};
+        // Rank 10 - Inspector
+		if(__GETC__(life_ozCoplvl) >= 10) then {
             _ret pushBack ["H_Booniehat_dirty",nil,1500];
             _ret pushBack ["H_Booniehat_dgtl",nil,1500];
             _ret pushBack ["H_Hat_tan",nil,100];
         };
-        // Rank 8 - Senior Sergeant
-
-        // OFFICERS
-        // Rank 9 - Captain
-        // Rank 10 - Inspector
         // Rank 11 - Chief Inspector
         
 
@@ -154,7 +158,7 @@ switch (_filter) do
 		];
 
         // WHITELISTED
-        // Rank 1 - Cadet
+        // Rank 1 - Student
 
         // DUTY OFFICERS
         // Rank 2 - Probationary Constable
@@ -163,19 +167,26 @@ switch (_filter) do
         };
         // Rank 3 - Constable
         // Rank 4 - Senior Constable
-        // Rank 5 - Leading Senior Constable
 
         // NCOs
-        // Rank 6 - Sergeant
-        // Rank 7 - Incremental Sergeant
+        // Rank 5 - Sergeant
+        // Rank 6 - Incremental Sergeant
         if(__GETC__(life_ozCoplvl) >= 7) then {
             _ret pushBack ["G_tactical_black",nil,100];
-        }
-        // Rank 8 - Senior Sergeant
+        };
+        // Rank 7 - Senior Sergeant
 
         // OFFICERS
+		// Rank 8 - Lieutenant
         // Rank 9 - Captain
         // Rank 10 - Inspector
+		if(__GETC__(life_ozCoplvl) >= 10) then {
+            _ret pushBack ["G_Bandanna_beast",nil,100];
+            _ret pushBack ["G_Bandanna_aviator",nil,100];
+            _ret pushBack ["G_Bandanna_sport",nil,100];
+            _ret pushBack ["G_Balaclava_lowprofile",nil,100];
+            _ret pushBack ["G_Balaclava_oli",nil,100];
+        };
         // Rank 11 - Chief Inspector
 
         // SENIOR OFFICERS
@@ -191,7 +202,7 @@ switch (_filter) do
         ];
         
         // WHITELISTED
-        // Rank 1 - Cadet
+        // Rank 1 - Student
         if(__GETC__(life_ozCoplvl) >= 1) then {
             _ret pushBack ["V_TacVest_blk_POLICE",nil,2500];
         };
@@ -203,24 +214,26 @@ switch (_filter) do
         };
         // Rank 3 - Constable
         // Rank 4 - Senior Constable
-        // Rank 5 - Leading Senior Constable
 
         // NCOs
-        // Rank 6 - Sergeant
-        // Rank 7 - Incremental Sergeant
-        if(__GETC__(life_ozCoplvl) >= 7) then {
-            _ret pushBack ["V_PlateCarrier2_rgr", "SPG Vest",4000];
-            _ret pushBack ["V_PlateCarrier1_blk", "SPG Vest 2",4000];
-            _ret pushBack ["V_PlateCarrier1_rgr", "Unmarked Vest",4000];
-            _ret pushBack ["V_BandollierB_rgr", "Unmarked Bandolier",4000];
-            _ret pushBack ["V_HarnessO_brn", nil,4000];
-        };
-        // Rank 8 - Senior Sergeant
+        // Rank 5 - Sergeant
+        // Rank 6 - Incremental Sergeant
+        // Rank 7 - Senior Sergeant
         
 
         // OFFICERS
-        // Rank 9 - Captain
+        // Rank 8 - Lieutenant
+		// Rank 9 - Captain
+        if(__GETC__(life_ozCoplvl) >= 9) then {
+            _ret pushBack ["V_PlateCarrier2_rgr", "SPG Vest",4000];
+            _ret pushBack ["V_PlateCarrier1_blk", "SPG Vest 2",4000];
+        };
         // Rank 10 - Inspector
+        if(__GETC__(life_ozCoplvl) >= 10) then {
+            _ret pushBack ["V_HarnessO_brn", nil,4000];
+            _ret pushBack ["V_BandollierB_rgr", "Unmarked Bandolier",4000];
+            _ret pushBack ["V_PlateCarrier1_rgr", "Unmarked Vest",4000];
+        };
         // Rank 11 - Chief Inspector
 
         // SENIOR OFFICERS
@@ -238,27 +251,29 @@ switch (_filter) do
         ];
 
         // WHITELISTED
-        // Rank 1 - Cadet
+        // Rank 1 - Student
 
         // DUTY OFFICERS
         // Rank 2 - Probationary Constable
         // Rank 3 - Constable
         // Rank 4 - Senior Constable
-        // Rank 5 - Leading Senior Constable
 
         // NCOs
-        // Rank 6 - Sergeant
-        // Rank 7 - Incremental Sergeant
-        if(__GETC__(life_ozCoplvl) >= 7) then {
-            _ret pushBack ["B_Bergen_sgg", "SPG Backpack",4000];
-            _ret pushBack ["G_AssaultPack", "Unmarked Backpack",4000];
-        }
-        // Rank 8 - Senior Sergeant
+        // Rank 5 - Sergeant
+        // Rank 6 - Incremental Sergeant
+        // Rank 7 - Senior Sergeant
 
         // OFFICERS
-        // Rank 10 - Captain
-        // Rank 11 - Inspector
-        // Rank 12 - Chief Inspector
+		// Rank 8 - Lieutenant
+        // Rank 9 - Captain
+        if(__GETC__(life_ozCoplvl) >= 7) then {
+            _ret pushBack ["B_Bergen_sgg", "SPG Backpack",4000];
+        };
+        // Rank 10 - Inspector
+        if(__GETC__(life_ozCoplvl) >= 7) then {
+            _ret pushBack ["G_AssaultPack", "Unmarked Backpack",4000];
+        };
+        // Rank 11 - Chief Inspector
 
         // SENIOR OFFICERS
         // Rank 20 - Superintendant, Chief Superintendant, Assistant Commissioner, Deputy Commissioner, Commissioner, Police Minister

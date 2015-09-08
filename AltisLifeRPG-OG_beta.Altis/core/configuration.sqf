@@ -40,6 +40,19 @@ life_nlrtimer_stop = false;
 life_nlrtimer_running = false;
 life_ticketTimer_stop = false;
 life_ticketTimer_running = false;
+
+// AutoFed Configs
+OG_fedLockdown_startTimer = 1800;                                 // Time since blasting charge detonation (default: 1800 = 30 Minutes)
+OG_fedLockdown_firstNotify = 1500;                                // Timer Status for first Notification (default: 1500 = 25 Minutes)
+OG_fedLockdown_finalNotify = 300;                                 // Final Warning before lockdown (default: 300 = 5 Minutes)
+OG_fedLockdown_lockdownAlarm = "sounds\fedLockdown\siren.ogg";    // Path to the audio of siren (default: "sounds\fedLockdown\siren.ogg")
+OG_fedLockdown_fedMarker = "fed_reserve";                         // Marker name for the Federal Reserve building
+OG_fedLockdown_notifyRad = 300;                       			// Notification radius
+OG_fedLockdown_poisonGas = true;									// Does the Federal Reserve have poison gas as its defence
+OG_fedLockdown_bankRad = 22.43;		
+OG_fedLockdown_vaultType = "Land_Research_house_V1_F";
+OG_fedLockdown_bankType = "Land_Dome_Big_F";
+
 OG_budVolume = 100;
 //Persistent Saving
 __CONST__(life_save_civ,TRUE); //Save weapons for civs?
@@ -94,7 +107,7 @@ switch (playerSide) do
 case west:
 {
 life_ogBank415 = 60000; //Starting Bank Money
-life_ogPayday415 = 1400; //Paycheck Amount
+life_ogPayday415 = 2000; //Paycheck Amount
 };
 case civilian:
 {

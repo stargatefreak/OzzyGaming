@@ -114,14 +114,14 @@ if(__GETC__(life_Ozdonator) < 5) then {
 	life_ogPayday415 = life_ogPayday415 + ((__GETC__(life_Ozdonator) * 1500) - 3000);
 };
 
-// 1: Helpdesk, 2: Moderator, 3: Admin, 4: Serv Admin, 5: Ops
+// 1: Helpdesk, 2: Moderator, 3: Admin, 4: Serv Admin, 5: Manager
 if (__GETC__(life_ogAdminlvl415) > 1) then {
-	if (__GETC__(life_ogAdminlvl415) > 3) then {
-		// Server Admins and Operators
-		life_ogPayday415 = life_ogPayday415 + 5000;
+	if (__GETC__(life_ogAdminlvl415) > 2) then {
+		// Server Admins and Managers
+		life_ogPayday415 = life_ogPayday415 + 6000;
 	} else {
 		// Moderators and Admins
-		life_ogPayday415 = life_ogPayday415 + 2000;
+		life_ogPayday415 = life_ogPayday415 + 3000;
 	};
 };
 

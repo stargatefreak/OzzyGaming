@@ -129,7 +129,8 @@ switch (_vehicle) do
 		[
 			["\a3\soft_f_gamma\Van_01\Data\van_01_ext_co.paa","civ"],
 			["\a3\soft_f_gamma\Van_01\Data\van_01_ext_red_co.paa","civ"],
-			["textures\medic\med_boxer_front.paa","med","textures\medic\med_boxer_back.paa"]
+			["textures\medic\med_boxer_front.paa","med","textures\medic\med_boxer_back.paa"],
+			["\a3\soft_f_gamma\Van_01\Data\van_01_ext_co.paa","cop"]
 		];
 	};
 	
@@ -138,7 +139,8 @@ switch (_vehicle) do
 		_ret = 
 		[
 			["\a3\soft_f_gamma\Van_01\Data\van_01_ext_co.paa","civ"],
-			["\a3\soft_f_gamma\Van_01\Data\van_01_ext_red_co.paa","civ"]
+			["\a3\soft_f_gamma\Van_01\Data\van_01_ext_red_co.paa","civ"],
+			["\a3\soft_f_gamma\Van_01\Data\van_01_ext_co.paa","cop"]
 		];
 	};
 	
@@ -264,7 +266,8 @@ switch (_vehicle) do
 		[
 			["textures\cop\police_hellcat.jpg","cop"],
 			["textures\civ\heli_light_03.jpg","civ"],
-			["textures\cop\news7.jpg","civ"]
+			["textures\cop\news7.jpg","civ"],
+			["textures\medic\med_hellcat.paa","med"]
 		];
 	};
 	

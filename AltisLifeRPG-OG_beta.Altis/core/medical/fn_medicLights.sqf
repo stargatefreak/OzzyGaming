@@ -69,6 +69,13 @@ _lightBackRight setVelocity velocity _vehicle;
 // Position lights
 switch (typeOf _vehicle) do
 {
+	case "B_MRAP_01_F":
+	{
+		_lightFrontLeft lightAttachObject [_vehicle, [-0.37,1.6,-0.8]];
+		_lightFrontRight lightAttachObject [_vehicle, [0.37,1.6,-0.8]];
+		_lightBackLeft lightAttachObject [_vehicle, [-0.37, -1.9, 0.7]];
+		_lightBackRight lightAttachObject [_vehicle, [0.37, -1.9, 0.7]];
+	};
 	case "C_Offroad_01_F": {
 		_lightFrontLeft lightAttachObject [_vehicle, [-0.32,2.6,-0.54]];
 		_lightFrontRight lightAttachObject [_vehicle, [0.32,2.6,-0.54]];

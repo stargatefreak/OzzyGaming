@@ -33,7 +33,9 @@ switch (_filter) do
 			["U_B_PilotCoveralls",nil,15610],
 			["U_IG_leader","Guerilla Leader",15340],
 			["U_O_GhillieSuit",nil,50000],
-			["U_I_GhillieSuit",nil,50000]
+			["U_I_GhillieSuit",nil,50000],
+			["U_B_FullGhillie_lsh",nil,65000],
+			["U_I_FullGhillie_sard",nil,65000]
 		];
 	};
 	
@@ -41,6 +43,7 @@ switch (_filter) do
 	case 1:
 	{
 		[
+			["H_Beret_red",nil,1000],
 			["H_ShemagOpen_tan",nil,850],
 			["H_Shemag_olive",nil,850],
 			["H_ShemagOpen_khk",nil,800],

@@ -32,7 +32,7 @@ _control ctrlSetStructuredText parseText format["<t align='center'><t size='.8px
 		[[1,format[localize "STR_Cop_Ticket_Refuse",profileName]],"life_fnc_broadcast",life_ticket_cop,false] spawn life_fnc_MP;
 	};
 };
-
+/*
 [_timeout] spawn
 {
     private["_timeout"];
@@ -77,3 +77,4 @@ waitUntil {!life_ticketTimer_running};
     life_ticketTimer_running = false;
     7 cutText["","PLAIN"];
 };
+*/

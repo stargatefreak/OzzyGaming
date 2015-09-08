@@ -82,6 +82,7 @@ class Life_Client_Core
 		class medicSiren {};
 		class kidneyOperation {};
         class newLifeRule {};
+		class pulloutDead {};
 	};
 	
 	class Actions

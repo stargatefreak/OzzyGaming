@@ -15,3 +15,6 @@ if(isNull _unit) exitWith {};
 if(_unit == player) exitWith {hint localize "STR_ANOTF_Error";};
 
 [[player],"life_fnc_freezePlayer",_unit,false] spawn life_fnc_MP;
+
+/* Temporary logging */
+[[name player,side player,"Toggled freeze",name _unit,side _unit, str getPosATL player, str getPosATL _unit],"OG_fnc_adminLog",false,false] spawn life_fnc_MP;

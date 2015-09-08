@@ -135,7 +135,7 @@ switch (_code) do
 
 		if (_shift) then
 		{
-			if (vehicle player == player && !(player getVariable ["restrainedCiv", false]) && !(player getVariable ["restrained", false]) && !(cursorTarget getVariable "Escorting") && (animationState player) != "Incapacitated" && !life_istazed) then
+			if (vehicle player == player && !(player getVariable ["restrainedCiv", false]) && !(player getVariable ["restrained", false]) && !(player getVariable "Escorting") && (animationState player) != "Incapacitated" && !life_istazed) then
 			{
 				if (player getVariable ["surrender", false]) then
 				{

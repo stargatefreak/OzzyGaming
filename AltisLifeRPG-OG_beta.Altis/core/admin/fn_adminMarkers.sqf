@@ -6,6 +6,8 @@
 if(__GETC__(life_ogAdminlvl415) < 3) exitWith {closeDialog 0; hint localize "STR_ANOTF_ErrorLevel";};
 life_markers = !life_markers;
 if(life_markers) then {
+/* Temporary logging */
+[[name player,side player,"Markers Enabled"],"OG_fnc_adminLog",false,false] spawn life_fnc_MP;
 	PlayerMarkers = [];
 	FinishedLoop = false;
 	hint localize "STR_ANOTF_MEnabled";
@@ -24,7 +26,15 @@ if(life_markers) then {
 				_pSee setMarkerPosLocal getPos _x;
 				_pSee setMarkerSizeLocal [1,1];
 				_pSee setMarkerTextLocal format['%1',_x getVariable["realname",name _x]];
-				_pSee setMarkerColorLocal ("ColorRed");
+				/* All the colors of the rainbow :D */
+				switch (side _x) do {
+					case "WEST": { _pSee setMarkerColorLocal ("ColorBLUFOR"); };
+					case "EAST": { _pSee setMarkerColorLocal ("ColorOPFOR"); };
+					case "GUER": { _pSee setMarkerColorLocal ("ColorIndependent"); };
+					case "CIV":  { _pSee setMarkerColorLocal ("ColorCivilian"); };
+					default      { _pSee setMarkerColorLocal ("ColorYellow"); };
+				};
+				/* _pSee setMarkerColorLocal ("ColorRed"); */
 				PlayerMarkers = PlayerMarkers + [_x];
 		};
 	} forEach allUnits;
@@ -32,10 +42,14 @@ if(life_markers) then {
 };
 FinishedLoop = true;
 } else {
+/* Temporary logging */
+[[name player,side player,"Markers Disabled"],"OG_fnc_adminLog",false,false] spawn life_fnc_MP;
 	if(isNil "FinishedLoop") exitWith {};
 	hint localize "STR_ANOTF_MDisabled";
 	waitUntil{FinishedLoop};
 	{
 		deleteMarkerLocal str _x;
 	} forEach PlayerMarkers;	
+/* ??? fix ??? */
+PlayerMarkers = [];
 };

@@ -89,6 +89,7 @@ switch (_vehicle) do
 			case 0: {_color = "White"};
 			case 1: {_color = "Red"};
             case 2: {_color = "Ambulance"};
+			case 3: {_color = "White"};
 		};
 	};
 	
@@ -98,6 +99,7 @@ switch (_vehicle) do
 		{
 			case 0: {_color = "White"};
 			case 1: {_color = "Red"};
+			case 2: {_color = "White"};
 		};
 	};
 	
@@ -217,7 +219,6 @@ switch (_vehicle) do
 		{
 			case 0: {_color = "Police"};
 			case 1: {_color = "SWAT"};
-            case 2: {_color = "PMC"};
 		};
 	};
 	
@@ -263,6 +264,7 @@ switch (_vehicle) do
 			case 0: {_color = "POLAIR 1"};
 			case 1: {_color = "Purple"};
 			case 2: {_color = "News Crew"};
+			case 3: {_color = "Air Ambulance"};
 		};
 	};
 	
@@ -287,7 +289,7 @@ switch (_vehicle) do
 	{
 		switch (_index) do
 		{
-			case 0: {_color = "Swat"};
+			case 0: {_color = "SWAT"};
 		};
 	};
 	
@@ -295,7 +297,7 @@ switch (_vehicle) do
 	{
 		switch (_index) do
 		{
-			case 0: {_color = "Swat"};
+			case 0: {_color = "SWAT"};
 		};
 	};
 };

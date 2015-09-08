@@ -26,8 +26,8 @@ switch(__GETC__(life_ozMediclvl)) do
 {
 	case 1: {life_ogPayday415 = life_ogPayday415 + 0;};
 	case 2: {life_ogPayday415 = life_ogPayday415 + 3000;};
-	case 3: {life_ogPayday415 = life_ogPayday415 + 5000;};
-	case 4: {life_ogPayday415 = life_ogPayday415 + 6000;};
+	case 3: {life_ogPayday415 = life_ogPayday415 + 6000;};
+	case 4: {life_ogPayday415 = life_ogPayday415 + 7000;};
 };
 
 OZ_medicGroup = (group player);
