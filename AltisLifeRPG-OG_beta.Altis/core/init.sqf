@@ -125,5 +125,7 @@ diag_log "Initialized crashsites";
 diag_log "Initialized sonar";
 [] spawn life_fnc_faultyVeh;
 diag_log "Initialized Faulty Vehicles";
+[] spawn OG_fnc_firstaid;
+diag_log "Initialized First Aid Kits";
 
 __CONST__(life_ogPayday415,life_ogPayday415); //Make the paycheck static.

@@ -145,6 +145,7 @@ class CfgFunctions
 			file = "\life_server\Functions\Custom";
 			class killLog {};
 			class autoFed {};
+			class varChange {};
 		};
 	};
 };

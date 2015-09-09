@@ -15,20 +15,6 @@ publicVariable "GLB_ServerVerify";
 OZG_Debug = false;
 publicVariable "OZG_Debug";
 
-// AutoFed Configs
-OG_fedLockdown_Timer = 0;
-OG_fedLockdown_startTimer = 900;									// Time since blasting charge detonation (default: 1800 = 30 Minutes)
-OG_fedLockdown_firstNotify = 300;									// Timer Status for first Notification (default: 1500 = 25 Minutes)
-OG_fedLockdown_finalNotify = 120;									// Final Warning before lockdown (default: 300 = 5 Minutes)
-OG_fedLockdown_lockdownAlarm = "A3\Sounds_F\sfx\alarm_independent.wss";    // Path to the audio of siren (default: "sounds\fedLockdown\siren.ogg")
-OG_fedLockdown_fedMarker = "fed_reserve";							// Marker name for the Federal Reserve building
-OG_fedLockdown_notifyRad = 300;										// Notification radius
-OG_fedLockdown_poisonGas = true;									// Does the Federal Reserve have poison gas as its defence
-OG_fedLockdown_bankRad = 30;										// Building radius from the centerpoint (default: 22.43)
-OG_fedLockdown_vaultType = "Land_Research_house_V1_F";
-OG_fedLockdown_bankType = "Land_Dome_Big_F";
-OG_fedLockdown_pos = [16015.7,16956.1,13.6565];
-
 [] execVM "\life_server\functions.sqf";
 [] execVM "\life_server\Functions\Custom\OG_functions.sqf";
 [] execVM "\life_server\eventhandlers.sqf";
@@ -149,3 +135,8 @@ _dome allowDamage false;
 // [true] spawn TON_fnc_huntingZone;
 life_server_isReady = true;
 publicVariable "life_server_isReady";
+
+OG_FederalSecurty = false;
+publicVariable "OG_FederalSecurty";
+[] spawn OG_fnc_autoFed;
+

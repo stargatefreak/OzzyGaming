@@ -69,6 +69,7 @@ compileFinal "
         player playMove _anim;
         sleep 0.85;
     };
+	[[player,_last],""life_fnc_animSync"",true,false] spawn life_fnc_MP;
     player playMove _last;
 ";
 publicVariable "OG_fnc_animPlayer";
@@ -124,4 +125,17 @@ compileFinal "
 ";
 
 publicVariable "OG_fnc_earPlugs_up";
+
+OG_fnc_firstaid =
+compileFinal "
+   private[""_damage""];
+	while {true} do {
+		waitUntil{animationState player in [""ainvpknlmstpslaywnondnon_medic""]};
+		_damage= getDammage player;
+		waitUntil{animationState player in [""ainvpknlmstpslaywnondnon_medicout""]};
+		player setDamage (_damage - 0.35);
+	};
+";
+
+publicVariable "OG_fnc_firstaid";
 

@@ -29,5 +29,3 @@ fed_bank setVariable["safe_open",true,true];
 hint localize "STR_ISTR_Blast_Opened";
 _rscLayer = "osefStatusBar" call BIS_fnc_rscLayer;
 _rscLayer cutRsc["osefStatusBar","PLAIN"];
-
-[[],"OG_fnc_autoFed",false,false] spawn life_fnc_MP;

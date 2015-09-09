@@ -10,7 +10,9 @@ if(isNull _building) exitWith {};
 if(!(_building isKindOf "House_F")) exitWith {hint "You are not looking at a house door."};
 if(isNil "life_boltcutter_uses") then {life_boltcutter_uses = 0;};
 if((nearestObject [[16019.5,16952.9,0],"Land_Dome_Big_F"]) == _building OR (nearestObject [[16019.5,16952.9,0],"Land_Research_house_V1_F"]) == _building) then {
-    if(OG_FederalSecurty)exitWith{hint parseText "<t size = 2><t align=center><t color='#FF0000'>Federal Bank Security<br /><t color='#00FF00'>Active<br /><br /><t size = 1><t color='#000000'>You must wait"};
+    if(OG_FederalSecurty) exitWith {
+		hint parseText "<t size = 2><t align=center><t color='#FF0000'>Federal Bank Security<br /><t color='#00FF00'>Active<br /><br /><t size = 1><t color='#FFFF00'>You must wait 30 minutes between robberies to try again"
+	};
 	[[[1,2],localize "STR_ISTR_Bolt_AlertFed"],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
 } else {
 	[[0,format[localize "STR_ISTR_Bolt_AlertHouse",name(player)]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
@@ -69,6 +71,7 @@ while {true} do
 	if(_cP >= 1 OR !alive player) exitWith {};
 	if(life_istazed) exitWith {}; //Tazed
 	if(life_interrupted) exitWith {};
+	if((typeOf _building == "Land_Dome_Big_F" || "Land_Research_house_V1_F") && OG_FederalSecurty) exitWith {};
 };
 
 //Kill the UI display and check for various states
