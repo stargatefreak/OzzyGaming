@@ -33,29 +33,60 @@ compileFinal "
     private[""_value"",""_bank"",""_cash"",""_fromBank""];
     _value = [_this,0,0] call BIS_fnc_param;
     _fromBank = [_this,1,true] call BIS_fnc_param;
+    _allowTenders = [_this,2,true] call BIS_fnc_param;
     _bank = life_ogBank415;
     _cash = life_ogCash415;
     
-    switch(_fromBank) do {
-        case true: {
-            if(_bank < _value) then {
-                life_ogCash415 = life_ogCash415 - (_bank - _value);
-                life_ogBank415 = 0;
-            } else {
-                life_ogBank415 = life_ogBank415 - _value;
-            };
-        };
-        case false: {
-            if(_cash < _value) then {
-                life_ogBank415 = life_ogBank415 - (_cash - _value);
-                life_ogCash415 = 0;
-            } else {
-                life_ogCash415 = life_ogCash415 - _value;
-            };
-        };        
-    };
+    switch(_allowTenders) do {
+		case true: {
+			switch(_fromBank) do {
+				case true: {
+					if(_bank < _value) then {
+						if(_cash < _value) exitWith {false};
+						life_ogCash415 = life_ogCash415 - (_bank - _value);
+						life_ogBank415 = 0;
+						true;
+					} else {
+						life_ogBank415 = life_ogBank415 - _value;
+						true;
+					};
+				};
+				case false: {
+					if(_cash < _value) then {
+						if(_bank < _value) exitWith {false};
+						life_ogBank415 = life_ogBank415 - (_cash - _value);
+						life_ogCash415 = 0;
+						true;
+					} else {
+						life_ogCash415 = life_ogCash415 - _value;
+						true;
+					};
+				};        
+			};
+		};
+		case false: {
+			switch(_fromBank) do {
+				case true: {
+					if(_bank > _value) then {
+						life_ogBank415 = life_ogBank415 - _value;
+						true;
+					} else {
+						false;
+					};
+				};
+				case false: {
+					if(_cash > _value) then {
+						life_ogCash415 = life_ogCash415 - _value;
+						true;
+					} else {
+						false;
+					};
+				};        
+			};
+		
+		};	
+	};
 ";
-
 publicVariable "OG_fnc_payment";
 
 OG_fnc_animPlayer =

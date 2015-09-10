@@ -125,7 +125,7 @@ if(side _curTarget == west) then {
     _Btn6 ctrlShow false;
     _Btn7 ctrlShow false;
     _Btn8 ctrlShow false;
-    if(!(_curTarget getVariable "comms")) then {
+    if(!(_curTarget getVariable ["comms",true])) then {
         _Btn1 ctrlEnable true;
         _Btn1 buttonSetAction "[life_pInact_curTarget] call life_fnc_issueComms";
     };

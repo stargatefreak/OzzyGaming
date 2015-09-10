@@ -6,7 +6,7 @@
 	Description:
 	services the vehicle nearby.
 */
-private["_nearVehicles","_vehicle","_price","_vehData","_vehOwner"];
+private["_nearVehicles","_vehicle","_price","_vehData","_vehOwner","_pass"];
 if(vehicle player != player) then
 {
 	_vehicle = vehicle player;
@@ -41,8 +41,9 @@ switch (true) do
     case (_vehicle isKindOf "Tank"): {_price = call life_impound_armor;};
 };
 _price = _price * 3;
-if ((_price > life_ogCash415) || (_price > life_ogBank415)) exitwith {hint format["The service of this vehicle requires $%1 in either in hand or in your bank",[_price] call life_fnc_numberText]};
+_pass = [_price,false] call OG_fnc_payment;
+if (!_pass) exitwith {hint format["The service of this vehicle requires $%1 in either in hand or in your bank",[_price] call life_fnc_numberText]};
 
-[[_vehicle,(_this select 1),false],"TON_fnc_vehicleService",false,false] spawn life_fnc_MP;
+[[_vehicle,(_this select 1),false,[_price] call life_fnc_numberText],"TON_fnc_vehicleService",false,false] spawn life_fnc_MP;
 hint "The server is trying to service the vehicle...";
 life_garage_service = true;
