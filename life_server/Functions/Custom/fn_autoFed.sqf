@@ -74,13 +74,14 @@ OG_fedLockdown_Timer = 0;
 				waitUntil{OG_fedLockdown_Timer != OG_fedLockdown_Timer_serverside};
 				[] call {
 					OG_fedLockdown_Timer = OG_fedLockdown_Timer_serverside;
+					publicVariable "OG_fedLockdown_Timer";
 					switch (true) do {
 						case (OG_fedLockdown_Timer == OG_fedLockdown_firstNotify || OG_fedLockdown_Timer == OG_fedLockdown_finalNotify): {
 							[[0,format["FEDERAL SECURITY ACTIVATED: %1 minutes till lockup",OG_fedLockdown_Timer / 60]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
-							playSound3D [OG_fedLockdown_lockdownAlarm, objNull, false,[16015.7,16956.1,13.6565], 1, 1, 200];
+							playSound3D [OG_fedLockdown_lockdownAlarm, objNull, false,OG_fedLockdown_pos, 1, 1, 200];
 						};
 						case (OG_fedLockdown_Timer in [20,13,6]): {
-							playSound3D [OG_fedLockdown_lockdownAlarm, objNull, false,[16015.7,16956.1,13.6565], 1, 1, 200];
+							playSound3D [OG_fedLockdown_lockdownAlarm, objNull, false,OG_fedLockdown_pos, 1, 1, 200];
 						};
 						case (OG_fedLockdown_Timer == 0): {
 							_v = nearestObjects [OG_fedLockdown_pos,[OG_fedLockdown_vaultType],30] select 0; 
@@ -95,8 +96,8 @@ OG_fedLockdown_Timer = 0;
 							_v animate["door_1_rot",0];
 							_v setVariable["bis_disabled_Door_1",1,true];
 							
-							_v1 setVariable["chargeplaced",false,false];
-							_v1 setVariable["safe_open",false,false];
+							_v1 setVariable["chargeplaced",false,true];
+							_v1 setVariable["safe_open",false,true];
 						};
 						case (OG_fedLockdown_Timer == -1): {
 
@@ -147,8 +148,9 @@ OG_fedLockdown_Timer = 0;
 						};
 					};
 				};
+			sleep 1;
 			};
 		};
-		sleep 1;
+	sleep 1;
 	};
 };
