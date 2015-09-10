@@ -18,4 +18,4 @@ _unit setVariable["restrainedCiv",true,true];
 [[player], "life_fnc_restrainCiv", _unit, false] spawn life_fnc_MP;
 player say3d "Ziptie";
 hint "You have ziptied this citizen";
-life_inv_ziptie = life_inv_ziptie - 1;
+[false,"ziptie",1] call life_fnc_handleInv;

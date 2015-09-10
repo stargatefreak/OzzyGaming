@@ -5,8 +5,8 @@
     removes them from a group
  */
 private["_target","_holder"];
-_remover = [this, 0, objNull,[objNull]] call BIS_fnc_param;
-_target = [this, 1, objNull,[objNull]] call BIS_fnc_param;
+_remover = [_this, 0, objNull,[objNull]] call BIS_fnc_param;
+_target = [_this, 1, objNull,[objNull]] call BIS_fnc_param;
 
 if(side _target != west) exitWith {};
 if(!isNull _target) exitWith {

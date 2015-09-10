@@ -17,6 +17,7 @@ _error2 = false;
 //unprocessed item,processed item, cost if no license,Text to display (I.e Processing  (percent) ...",processing 2Items?, (only for processing with 2) second Item.
 _itemInfo = switch (_type) do
 {
+	case "uranium": {["uranium","euranium",9000,"Enriching Uranium",false];};
 	case "oil": {["oilu","oilp",1200,(localize "STR_Process_Oil"),false];};
 	case "diamond": {["diamond","diamondc",1350,(localize "STR_Process_Diamond"),false];};
 	case "heroin": {["heroinu","heroinp",1750,(localize "STR_Process_Heroin"),false];};

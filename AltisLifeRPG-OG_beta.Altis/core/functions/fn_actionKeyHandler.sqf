@@ -9,8 +9,7 @@
 */
 private["_curTarget","_isWater"];
 _curTarget = cursorTarget;
-
-if(player getVariable["restrained",false] or player getVariable["restrainedCiv",false]) exitWith {closeDialog 0; hint "You can't do that while your restrained"}; //Checks to see if player is restrained themselves
+if(OG_gatherProtection != 0 || life_action_inUse) then {OG_gatherProtection = 0; exit} else {OG_gatherProtection = 0}; //Action is in use, exit to prevent spamming.if(player getVariable["restrained",false] or player getVariable["restrainedCiv",false]) exitWith {closeDialog 0; hint "You can't do that while your restrained"}; //Checks to see if player is restrained themselves
 if(life_action_inUse) exitWith {}; //Action is in use, exit to prevent spamming.
 if(life_interrupted) exitWith {life_interrupted = false;};
 _isWater = surfaceIsWater (getPosASL player);
@@ -18,11 +17,11 @@ if(isNull _curTarget) exitWith {
 	if(_isWater) then {
 		private["_fish"];
 		_fish = (nearestObjects[getPos player,["Fish_Base_F"],3]) select 0;
-		if(!isNil "_fish") then {
+		if(!isNil "_fish" && OG_gatherProtection == 0) then {
 			[_fish] call life_fnc_catchFish;
 		};
 	} else {
-		if(playerSide == civilian) then {
+		if(playerSide == civilian && OG_gatherProtection == 0) then {
 			[] call life_fnc_gather;
 		};
 	};

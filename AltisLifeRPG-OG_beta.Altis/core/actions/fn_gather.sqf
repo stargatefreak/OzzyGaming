@@ -7,10 +7,12 @@
 */
 private["_gather","_itemWeight","_diff","_itemName","_val","_resourceZones","_zone","_mineZones"];
 _resourceZones = ["apple_1","apple_2","apple_3","apple_4","apple_5","peaches_1","peaches_2","peaches_3","peaches_4","peaches_5","heroin_1","cocaine_1","weed_1","rye_1","rye_2","hops_1","hops_2","yeast_1","yeast_2","corn_1","corn_2"];
-_mineZones = ["lead_1","iron_1","gold_1","salt_1","sand_1","diamond_1","oil_1","oil_2","rock_1"];
+_mineZones = ["lead_1","iron_1","gold_1","salt_1","sand_1","diamond_1","oil_1","oil_2","rock_1","uranium_1"];
 _zone = "";
-
+if(OG_gatherProtection != 0 || life_action_inUse) then {OG_gatherProtection = 0; exit} else {OG_gatherProtection = 0}; //Action is in use, exit to prevent spamming.
+OG_gatherProtection = OG_gatherProtection + 1;
 if(life_action_inUse) exitWith {}; //Action is in use, exit to prevent spamming.
+life_action_inUse = true;
 
 //Find out what zone we're near
 {
@@ -23,10 +25,14 @@ if(life_action_inUse) exitWith {}; //Action is in use, exit to prevent spamming.
 
 if(_zone == "") exitWith {
 	life_action_inUse = false;
+	OG_gatherProtection = OG_gatherProtection - 1;
+	if(OG_gatherProtection < 0) then {
+		OG_gatherProtection = 0;
+	};
 };
 
 if(_zone in _mineZones) exitWith {
-    [] spawn life_fnc_pickAxeUse;
+    [_zone] spawn life_fnc_pickAxeUse;
 };
 
 //Get the resource that will be gathered from the zone name...
@@ -43,11 +49,23 @@ switch(true) do {
 	default {""};
 };
 //gather check??
-if(vehicle player != player) exitWith {};
+if(vehicle player != player) exitWith {
+	life_action_inUse = false;
+	OG_gatherProtection = OG_gatherProtection - 1;
+	if(OG_gatherProtection < 0) then {
+		OG_gatherProtection = 0;
+	};
+};
 
 _diff = [_gather,_val,life_carryWeight,life_maxWeight] call life_fnc_calWeightDiff;
-if(_diff == 0) exitWith {hint localize "STR_NOTF_InvFull"};
-life_action_inUse = true;
+if(_diff == 0) exitWith {
+	hint localize "STR_NOTF_InvFull";
+	life_action_inUse = false;
+	OG_gatherProtection = OG_gatherProtection - 1;
+	if(OG_gatherProtection < 0) then {
+		OG_gatherProtection = 0;
+	};
+};
 for "_i" from 0 to 2 do
 {
 	player playMove "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";
@@ -62,3 +80,10 @@ if(([true,_gather,_diff] call life_fnc_handleInv)) then
 };
 
 life_action_inUse = false;
+OG_gatherProtection = OG_gatherProtection - 1;
+if(OG_gatherProtection < 0) then {
+	OG_gatherProtection = 0;
+};
+if(OG_gatherProtection > 0 && !life_action_inUse) then {
+	OG_gatherProtection = 0;
+};

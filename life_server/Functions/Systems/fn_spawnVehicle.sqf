@@ -92,6 +92,7 @@ _vehicle lock 2;
 //Reskin the vehicle 
 [[_vehicle,_vInfo select 8],"life_fnc_colorVehicle",nil,false] spawn life_fnc_MP;
 _vehicle setVariable["vehicle_info_owners",[[_pid,_name]],true];
+_vehicle setVariable["type","private",true];
 _vehicle setVariable["dbInfo",[(_vInfo select 4),_vInfo select 7]];
 _vehicle setVariable["faulty",_faulty,true];
 _vehicle setVariable["garageLoc",getPos _vehicle,true];

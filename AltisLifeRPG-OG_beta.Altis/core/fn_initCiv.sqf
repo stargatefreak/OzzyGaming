@@ -6,7 +6,20 @@
 	Initializes the civilian.
 */
 private["_spawnPos"];
-_buildinglist = ["Land_u_house_small_01_v1_f","Land_u_house_small_02_v1_f","Land_u_House_Big_01_V1_F","Land_u_House_Big_02_V1_F","Land_Unfinished_Building_01_F","Land_Unfinished_Building_02_F","Land_i_Stone_Shed_V1_F","Land_i_Stone_Shed_V2_F","Land_i_Stone_Shed_V3_F","Land_i_Stone_HouseBig_V1_F","Land_i_Stone_HouseBig_V2_F","Land_i_Stone_HouseBig_V3_F","Land_i_Stone_HouseSmall_V1_F","Land_i_Stone_HouseSmall_V2_F","Land_i_Stone_HouseSmall_V3_F"];
+_buildinglist = [
+	"Land_u_house_small_01_v1_f",
+	"Land_u_house_small_02_v1_f",
+	"Land_u_House_Big_01_V1_F",
+	"Land_u_House_Big_02_V1_F",
+	"Land_Unfinished_Building_01_F",
+	"Land_Unfinished_Building_02_F",
+	"Land_i_Stone_Shed_V1_F",
+	"Land_i_Stone_Shed_V2_F",
+	"Land_i_Stone_Shed_V3_F",
+	"Land_i_Stone_HouseBig_V1_F",
+	"Land_i_Stone_HouseBig_V2_F",
+	"Land_i_Stone_HouseBig_V3_F"
+];
 
 civ_spawn_1 = nearestObjects[getMarkerPos  "civ_spawn_1", _buildinglist,250];
 civ_spawn_2 = nearestObjects[getMarkerPos  "civ_spawn_2", _buildinglist,250];

@@ -60,11 +60,11 @@ if((_curTarget getVariable["Escorting",false])) then {
 _Btn3 ctrlSetText localize "STR_pInAct_PutInCar";
 _Btn3 buttonSetAction "[life_pInact_curTarget] call life_fnc_putInCar;";
 
-_Btn4 ctrlSetText localize "STR_pInAct_StealOrgans";
+_Btn4 ctrlSetText "Steal Organs";
 _Btn4 buttonSetAction "[life_pInact_curTarget] call life_fnc_takeOrgans; closeDialog 0;";
 
 if(side _curTarget == west) then {
-        _Btn5 ctrlEnable false;
+        _Btn5 ctrlEnable true;
         _Btn5 ctrlShow true;
         _Btn5 ctrlSetText "Take Comms";
         _Btn5 buttonSetAction "[player,life_pInact_curTarget] call life_fnc_removeComms";

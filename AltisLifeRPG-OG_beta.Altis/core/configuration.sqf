@@ -81,6 +81,7 @@ life_carryWeight = 0; //Represents the players current inventory weight (MUST ST
 ****** Life Variables *******
 *****************************
 */
+OG_gatherProtection = 0;
 life_net_dropped = false;
 life_hit_explosive = false;
 life_siren_active = false;
@@ -220,6 +221,7 @@ life_licenses =
 ["license_cop_air","cop"],
 ["license_cop_swat","cop"],
 ["license_cop_cg","cop"],
+["license_med_air","med"],
 ["license_civ_driver","civ"],
 ["license_civ_air","civ"],
 ["license_civ_heroin","civ"],
@@ -239,7 +241,6 @@ life_licenses =
 ["license_civ_sand","civ"],
 ["license_civ_salt","civ"],
 ["license_civ_cement","civ"],
-["license_med_air","med"],
 ["license_civ_home","civ"],
 ["license_civ_stiller","civ"],
 ["license_civ_liquor","civ"],

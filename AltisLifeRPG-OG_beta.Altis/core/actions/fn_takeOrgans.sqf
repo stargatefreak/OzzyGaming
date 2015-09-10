@@ -7,9 +7,9 @@
 private["_unit"];
 _unit = cursorTarget;
 if(isNull _unit) exitWith {}; //if unit is null, than NO
-if((_unit getVariable ["missingOrgan",FALSE])) exitWith {};
-if((player getVariable ["hasOrgan",FALSE])) exitWith {};
-if((animationState _unit != "Incapacitated")) exitWith {};
+if(_unit getVariable ["missingOrgan",FALSE]) exitWith {};
+if(player getVariable ["hasOrgan",FALSE]) exitWith {};
+if(!(_unit getVariable ["restrainedCiv",FALSE])) exitWith {};
 if(player == _unit) exitWith {};
 if(!isPlayer _unit) exitWith {};
 if(life_inv_kidney >= 2) exitWith {hint "You can't possibly need that many organs!"};

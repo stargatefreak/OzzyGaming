@@ -54,6 +54,7 @@ switch (_mode) do
 			case "bottledwhiskey": {_var = "license_civ_bottler"};
 			case "bottler": {_var = "license_civ_bottler"};
 			case "glassbottle": {_var = "license_civ_bottler"};
+			case "uranium": {_var = "license_civ_uranium"};
 			case "pmc": {_var = "license_pmc_basic"};
 			default {_var = ""};
 		};
@@ -88,6 +89,7 @@ switch (_mode) do
 			case "license_civ_cement": {_var = "cement"};
 			case "license_med_air": {_var = "mair"};
 			case "license_civ_home": {_var = "home"};
+			case "license_civ_uranium": {_var = "uranium"};
 			case "license_pmc_basic": {_var = "pmc"};
 			default {_var = ""};
 		};
