@@ -21,6 +21,11 @@ switch(playerSide) do
 	{
 		ctrlShow[2012,false];
 	};
+	
+	case independent:
+	{
+		ctrlShow[2011,false];
+	};
 };
 
 if(__GETC__(life_ogAdminlvl415) < 1) then
