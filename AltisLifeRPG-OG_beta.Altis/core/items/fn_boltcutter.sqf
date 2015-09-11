@@ -76,9 +76,9 @@ while {true} do
 
 //Kill the UI display and check for various states
 animationInProgress = false;
-if(typeOf _building in ["Land_Dome_Big_F","Land_Research_house_V1_F"] && OG_FederalSecurty) exitWith {life_action_inUse = false;};
 5 cutText ["","PLAIN"];
 player playActionNow "stop";
+if(typeOf _building in ["Land_Dome_Big_F","Land_Research_house_V1_F"] && OG_FederalSecurty) exitWith {life_action_inUse = false;};
 if(!alive player OR life_istazed) exitWith {life_action_inUse = false;};
 if((player getVariable["restrained",false])) exitWith {life_action_inUse = false;};
 if(life_interrupted) exitWith {life_interrupted = false; titleText[localize "STR_NOTF_ActionCancel","PLAIN"]; life_action_inUse = false;};
