@@ -6,7 +6,8 @@
 	Description:
 	Opens and manages the bank menu.
 */
-private["_display","_text","_units","_type"];
+private["_display","_text","_units","_type","_prevSel","_index"];
+_prevSel = [_this,0,objNull,[objNull]] call BIS_fnc_param;
 
 if(!life_use_atm) exitWith
 {
@@ -36,12 +37,13 @@ _text ctrlSetStructuredText parseText format["<img size='1.7' image='icons\bank.
 			case civilian: {_type = "Civ"};
 			case independent: {_type = "EMS"};
 		};
+		if(_prevSel == _x) then {_index = lbSize _units;} else {_index = 0;};
 		_units lbAdd format["%1 (%2)",_x getVariable["realname",name _x],_type];
 		_units lbSetData [(lbSize _units)-1,str(_x)];
 	};
 } foreach playableUnits;
 
-lbSetCurSel [2703,0];
+lbSetCurSel [2703,_index];
 
 if(isNil {(grpPlayer getVariable "gang_bank")}) then {
 	(getControl(2700,2705)) ctrlEnable false;

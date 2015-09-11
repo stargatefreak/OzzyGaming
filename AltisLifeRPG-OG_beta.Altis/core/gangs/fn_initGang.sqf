@@ -8,6 +8,7 @@ private["_exitLoop","_group","_wait"];
 if(playerSide != civilian) exitWith {}; //What in the hell?
 [player] join (createGroup civilian);
 player setVariable["OZ_Group",grpNull,true];
+player setVariable["activeInvite",false,true];
 
 if(count life_gangData == 0) exitWith {}; //Dafuq?
 

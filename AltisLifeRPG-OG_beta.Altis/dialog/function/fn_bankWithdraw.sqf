@@ -5,11 +5,11 @@ private["_val","_cache"];
 _val = parseNumber(ctrlText 2702);
 _cache = life_ogBank415;
 
-if(_val > 999999) exitWith {hint localize "STR_ATM_WithdrawMax";};
+if(_val > 9999999) exitWith {hint localize "STR_ATM_WithdrawMax";};
 if(_val < 0) exitwith {};
 if(!([str(_val)] call life_fnc_isnumeric)) exitWith {hint localize "STR_ATM_notnumeric"};
 if(_val > life_ogBank415) exitWith {hint localize "STR_ATM_NotEnoughFunds"};
-if(_val < 100 && life_ogBank415 > 20000000) exitWith {hint localize "STR_ATM_WithdrawMin"}; //Temp fix for something.
+if(_val < 100 && life_ogBank415 > 500000) exitWith {hint localize "STR_ATM_WithdrawMin"}; //Temp fix for something.
 
 life_ogCash415 = life_ogCash415 + _val;
 life_ogBank415 = life_ogBank415 - _val;

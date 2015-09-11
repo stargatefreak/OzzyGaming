@@ -28,10 +28,10 @@ if(playerSide == west) then {
     [] call life_fnc_copUniform;
     if("ItemRadio" in assignedItems player) then {
         [player] join OZ_policeGroup;
-        player setVariable ["comms",true,false];
+        player setVariable ["comms",true,true];
     } else {
         [player] join grpNull;
-        player setVariable ["comms",false,false];
+        player setVariable ["comms",false,true];
     };
 };
 

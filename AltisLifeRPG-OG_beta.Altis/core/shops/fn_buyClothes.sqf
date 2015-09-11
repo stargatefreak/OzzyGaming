@@ -45,6 +45,13 @@ if("ItemRadio" in assignedItems player) then {
     };
     player setVariable ["comms",true,false];
 } else {
-    [player] join grpNull;
+    switch(playerSide) do {
+        case independent: {
+            [player] join grpNull
+        };
+        case west: {
+            [player] join grpNull
+        };
+    };
     player setVariable ["comms",false,false];
 };

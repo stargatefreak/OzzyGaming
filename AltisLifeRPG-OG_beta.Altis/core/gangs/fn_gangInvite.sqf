@@ -10,7 +10,7 @@ _inviter = [_this,0,objNull,[objNull]] call BIS_fnc_param;
 _group = [_this,1,grpNull,[grpNull]] call BIS_fnc_param;
 _name = name _inviter;
 if(_inviter == objNull OR isNull _group OR _name == "") exitWith {}; //Fail horn anyone?
-if(!isNil {(group player) getVariable "gang_name"}) exitWith {hint "You are already in a gang"};
+if(!isNil {(group player) getVariable "gang_name"} || !isNull (player getVariable ["OZ_Group",true])) exitWith {hint "You are already in a gang"};
 
 _gangName = _group getVariable "gang_name";
 _action = [
@@ -35,6 +35,8 @@ if(_action) then {
 	_group setVariable["gang_members",_members2,true];
 	[[4,_group],"TON_fnc_updateGang",false,false] spawn life_fnc_MP;
     [[2,format["%1 has accepted your invite and has joined your gang",name player]],"life_fnc_broadcast",_inviter,false] spawn life_fnc_MP;
+	player setVariable ["activeInvite",false,true];
 } else {
     [[2,format["%1 has declined your invite to join your gang",name player]],"life_fnc_broadcast",_inviter,false] spawn life_fnc_MP;
+	player setVariable ["activeInvite",false,true];
 };

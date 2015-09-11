@@ -11,11 +11,9 @@ _clothings = ["U_C_Poloshirt_blue","U_C_Poloshirt_burgundy","U_C_Poloshirt_strip
 player addUniform (_clothings select (floor(random (count _clothings))));
 
 /* ITEMS */
-player addItem "ItemMap";
-player assignItem "ItemMap";
-player addItem "ItemCompass";
-player assignItem "ItemCompass";
-player addItem "ItemWatch";
-player assignItem "ItemWatch";
+player linkItem "ItemMap";
+player linkItem "ItemCompass";
+player linkItem "ItemWatch";
+player linkItem "ItemRadio";
 
 [] call life_fnc_saveGear;

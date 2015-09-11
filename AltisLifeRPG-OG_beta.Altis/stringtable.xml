@@ -222,12 +222,12 @@
 			<Portuguese>Transferir</Portuguese>
 		</Key>
 		<Key ID="STR_ATM_GreaterThan">
-			<Original>You can't deposit more then $999,999 at a time</Original>
-			<English>You can't deposit more then $999,999 at a time</English>
-			<German>Du kannst nicht mehr als $999,999 gleichzeitig einzahlen</German>
-			<French>Vous ne pouvez pas déposer plus de $999,999</French>
-			<Italian>Non puoi depositare più di €999,999 alla volta</Italian>
-			<Portuguese>Você não pode transferir mais de R$999,999 em uma transação</Portuguese>
+			<Original>You can't deposit more then $9,999,999 at a time</Original>
+			<English>You can't deposit more then $9,999,999 at a time</English>
+			<German>Du kannst nicht mehr als $9,999,999 gleichzeitig einzahlen</German>
+			<French>Vous ne pouvez pas déposer plus de $9,999,999</French>
+			<Italian>Non puoi depositare più di €9,999,999 alla volta</Italian>
+			<Portuguese>Você não pode transferir mais de R$9,999,999 em uma transação</Portuguese>
 		</Key>
 		<Key ID="STR_ATM_notnumeric">
 			<Original>The amount entered isn't a numeric value.</Original>
@@ -261,12 +261,12 @@
 			<Portuguese>O jogador selecionado parece não existir!</Portuguese>
  		</Key>
  		<Key ID="STR_ATM_TransferMax">
- 			<Original>You can't transfer more then $999,999</Original>
- 			<English>You can't transfer more then $999,999</English>
-			<German>Du kannst nicht mehr als $999,999 überweisen</German>
- 			<French>Vous ne pouvez pas transférer plus de $999,999</French>
-			<Italian>Non puoi trasferire più di €999.000 alla volta</Italian>
-			<Portuguese>Você pode trasferir no máximo R$999.999.</Portuguese>
+ 			<Original>You can't transfer more then $9,999,999</Original>
+ 			<English>You can't transfer more then $9,999,999</English>
+			<German>Du kannst nicht mehr als $9,999,999 überweisen</German>
+ 			<French>Vous ne pouvez pas transférer plus de $9,999,999</French>
+			<Italian>Non puoi trasferire più di €9,999.000 alla volta</Italian>
+			<Portuguese>Você pode trasferir no máximo R$9,999.999.</Portuguese>
  		</Key>
  		<Key ID="STR_ATM_NotEnoughFunds">
  			<Original>You don't have that much in your bank account!</Original>
@@ -293,12 +293,12 @@
 			<Portuguese>Você trasferiu R$%1 para %2.\n\nA taxa de trasferencia foi de R$%1.</Portuguese>
  		</Key>
  		<Key ID="STR_ATM_WithdrawMax">
- 			<Original>You can't withdraw more then $999,999</Original>
- 			<English>You can't withdraw more then $999,999</English>
-			<German>Du kannst nicht mehr als $999,999 abheben</German>
- 			<French>Vous ne pouvez pas retirer plus de $999,999</French>
-			<Italian>Non puoi prelevare più di €999.000 in una volta</Italian>
-			<Portuguese>Você pode sacar no máximo R$999.999</Portuguese>
+ 			<Original>You can't withdraw more then $9,999,999</Original>
+ 			<English>You can't withdraw more then $9,999,999</English>
+			<German>Du kannst nicht mehr als $9,999,999 abheben</German>
+ 			<French>Vous ne pouvez pas retirer plus de $9,999,999</French>
+			<Italian>Non puoi prelevare più di €9,999.000 in una volta</Italian>
+			<Portuguese>Você pode sacar no máximo R$9,999.999</Portuguese>
  		</Key>
  		<Key ID="STR_ATM_WithdrawMin">
  			<Original>You can't withdraw less then $100</Original>
