@@ -71,7 +71,7 @@ while {true} do
 	if(_cP >= 1 OR !alive player) exitWith {};
 	if(life_istazed) exitWith {}; //Tazed
 	if(life_interrupted) exitWith {};
-	if((typeOf _building == "Land_Dome_Big_F" || "Land_Research_house_V1_F") && OG_FederalSecurty) exitWith {};
+	if((typeOf _building == "Land_Dome_Big_F" || typeof _building == "Land_Research_house_V1_F") && OG_FederalSecurty) exitWith {};
 };
 
 //Kill the UI display and check for various states
