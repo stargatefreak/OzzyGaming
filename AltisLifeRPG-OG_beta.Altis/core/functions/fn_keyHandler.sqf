@@ -255,6 +255,9 @@ switch (_code) do
 				_veh = vehicle player;
 			};
 			
+			_veh setVehicleAmmo 0;
+			cursorTarget setVehicleAmmo 0;
+			
 			if(_veh isKindOf "House_F" && playerSide == civilian) then {
 				if(_veh in life_vehicles && player distance _veh < 8) then {
 					_door = [_veh] call life_fnc_nearestDoor;
