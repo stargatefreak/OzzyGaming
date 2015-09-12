@@ -9,7 +9,12 @@ private["_vehicle","_veh"];
 _vehicle = [_this,0,Objnull,[Objnull]] call BIS_fnc_param;
 if(isNull _vehicle) exitWith {}; //DAFUQ
 _veh = typeOf _vehicle;
-_magazines = getArray (configfile >> "CfgVehicles" >> _veh >> "magazines") + getArray (configfile >> "CfgVehicles" >> _veh >> "Turrets" >> "MainTurret" >> "magazines") + getArray (configfile >> "CfgVehicles" >> _veh >> "Turrets" >> "RightDoorGun");
+_magazines = (
+	getArray (configfile >> "CfgVehicles" >> _veh >> "magazines") + 
+	getArray (configfile >> "CfgVehicles" >> _veh >> "Turrets" >> "MainTurret" >> "magazines") + 
+	getArray (configfile >> "CfgVehicles" >> _veh >> "Turrets" >> "RightDoorGun") + 
+	getArray(configfile >> "CfgVehicles" >> _veh >> "Turrets" >> "M2_Turret" >> "magazines")
+);
 _whitelistedAmmo = [
 	"60Rnd_CMFlareMagazine",
 	"120Rnd_CMFlareMagazine",
