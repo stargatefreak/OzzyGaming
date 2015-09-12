@@ -13,6 +13,7 @@ life_action_inUse = true;
 
 if(_zone == "" || (missionNamespace getVariable (["pickaxe",0] call life_fnc_varHandle)) == 0) exitWith {
 	life_action_inUse = false;
+	hint "You require a pickaxe to mine here.";
 	OG_gatherProtection = OG_gatherProtection - 1;
 	if(OG_gatherProtection < 0) then {
 		OG_gatherProtection = 0;
