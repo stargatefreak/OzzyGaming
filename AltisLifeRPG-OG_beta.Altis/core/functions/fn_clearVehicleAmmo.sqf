@@ -1,6 +1,6 @@
 /*
-	File: fn_clearVehicleAmmo.sqf
-	Author: Bryan "Tonic" Boardwine
+	File: fn_clearVehicleAmmo.sqf		
+	Author: Aaron	(OzzyGaming.com)	
 	
 	Description:
 	Clears the vehicle of ammo types that we don't want.
@@ -9,6 +9,7 @@ private["_vehicle","_veh"];
 _vehicle = [_this,0,Objnull,[Objnull]] call BIS_fnc_param;
 if(isNull _vehicle) exitWith {}; //DAFUQ
 _veh = typeOf _vehicle;
+_magazines = getArray (configfile >> "CfgVehicles" >> _veh >> "magazines") + getArray (configfile >> "CfgVehicles" >> _veh >> "Turrets" >> "MainTurret" >> "magazines") + getArray (configfile >> "CfgVehicles" >> _veh >> "Turrets" >> "RightDoorGun");
 _whitelistedAmmo = [
 	"60Rnd_CMFlareMagazine",
 	"120Rnd_CMFlareMagazine",
@@ -19,19 +20,16 @@ _whitelistedAmmo = [
 	"192Rnd_CMFlare_Chaff_Magazine",
 	"168Rnd_CMFlare_Chaff_Magazine",
 	"300Rnd_CMFlare_Chaff_Magazine"
-	];
+];
 
 {
 	if!(_x in _whitelistedAmmo) then {
-		_vehicle removeMagazineTurret [_x,[-1]]
+		_vehicle removeMagazineTurret [_x,[-1]];
+		_vehicle removeMagazineTurret [_x,[0]];
+		_vehicle removeMagazineTurret [_x,[1]];
+		_vehicle removeMagazineTurret [_x,[2]];
 	}
-} forEach getArray (configfile >> "CfgVehicles" >> _veh >> "magazines");
-
-{
-	if!(_x in _whitelistedAmmo) then {
-		_vehicle removeMagazineTurret [_x,[0]]
-	}
-} forEach getArray (configfile >> "CfgVehicles" >> _veh >> "Turrets" >> "MainTurret" >> "magazines");
+} forEach _magazines;
 
 clearWeaponCargoGlobal _vehicle;
 clearMagazineCargoGlobal _vehicle;
