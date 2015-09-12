@@ -68,7 +68,7 @@ if((_vehicle isKindOf "Car") || (_vehicle isKindOf "Air") || (_vehicle isKindOf 
 				hint format["You have impounded a delivery truck.\n\nYou have received $%1 for cleaning up the streets!",_price];
 				[[0,format["%1 has impounded a delivery truck",name player]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
 				life_ogBank415 = life_ogBank415 + _price;
-				deleteVehicle _vehicle;
+				[[_vehicle],"OG_deleteVeh",false,false] spawn life_fnc_MP;
 			}
 			else
 			{

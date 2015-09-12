@@ -72,6 +72,8 @@ if((typeOf _building == "Land_Dome_Big_F") OR !(typeOf _building == "Land_Resear
 _building setVariable[format["bis_disabled_Door_%1",_door],0,true];
 _building animate [format["door_%1_rot",_door],0];
 _building setVariable[format["bis_disabled_Door_%1",_door],1,true]; //Unlock the door.
+fed_bank setVariable ["countCops",0,true];
+[[player,"OG_fedLockdown_active",false],"OG_fnc_varChange",false,false] spawn life_fnc_MP;
 } else {
 _building animate [format["door_%1_rot",_door],0];
 _building setVariable[format["bis_disabled_Door_%1",_door],1,true]; //Unlock the door.

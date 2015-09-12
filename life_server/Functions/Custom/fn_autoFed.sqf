@@ -152,5 +152,6 @@ OG_fedLockdown_Timer = 0;
 			};
 		};
 	sleep 1;
+	if(!OG_FederalSecurty) then {[[0,format["FEDERAL SECURITY ACTIVATED: BANK IS SECURE"]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;};
 	};
 };

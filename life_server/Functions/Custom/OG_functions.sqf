@@ -1,4 +1,4 @@
-OG_fnc_payment =
+OG_fnc_paymentOld =
 compileFinal "
     private[""_value"",""_bank"",""_cash"",""_fromBank""];
     _value = [_this,0,0] call BIS_fnc_param;
@@ -26,7 +26,7 @@ compileFinal "
     };
 ";
 
-publicVariable "OG_fnc_payment";
+publicVariable "OG_fnc_paymentOld";
 
 OG_fnc_payment =
 compileFinal "

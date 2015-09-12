@@ -33,8 +33,8 @@ life_gear = [];
 if(!isNull life_corpse) then {
 	private["_containers"];
 	life_corpse setVariable["Revive",TRUE,TRUE];
-	_containers = nearestObjects[life_corpse,["WeaponHolderSimulated"],5];
-	{deleteVehicle _x;} foreach _containers; //Delete the containers.
+	//_containers = nearestObjects[life_corpse,["WeaponHolderSimulated"],5];
+	//{deleteVehicle _x;} foreach _containers; //Delete the containers.
 	hideBody life_corpse;
 };
 

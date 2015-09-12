@@ -14,6 +14,8 @@ if((nearestObject [[16019.5,16952.9,0],"Land_Dome_Big_F"]) == _building OR (near
 		hint parseText "<t size = 2><t align=center><t color='#FF0000'>Federal Bank Security<br /><t color='#00FF00'>Active<br /><br /><t size = 1><t color='#FFFF00'>You must wait 30 minutes between robberies to try again"
 	};
 	[[[1,2],localize "STR_ISTR_Bolt_AlertFed"],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
+	if(west countside playableUnits < 5) exitWith {hint localize "STR_Civ_NotEnoughCops"};
+	fed_bank setVariable ["countCops",west countSide playableUnits,true];
 } else {
 	[[0,format[localize "STR_ISTR_Bolt_AlertHouse",name(player)]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
 };

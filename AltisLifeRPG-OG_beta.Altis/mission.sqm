@@ -13803,7 +13803,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_WoodenBox_F";
 			skill=0.60000002;
-			init="wokka= ""Land_Airport_Tower_F"" createVehicle position this; deleteVehicle this; this allowDamage false; wokka setdir 230";
+			init="wokka= ""Land_Airport_Tower_F"" createVehicle position this; [[this],""OG_deleteVeh"",false,false] spawn life_fnc_MP; this allowDamage false; wokka setdir 230";
 		};
 		class Item695
 		{
@@ -13812,7 +13812,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_WoodenBox_F";
 			skill=0.60000002;
-			init="wokka= ""Land_Radar_F"" createVehicle position this; deleteVehicle this; this allowDamage false; wokka setdir 230";
+			init="wokka= ""Land_Radar_F"" createVehicle position this; [[this],""OG_deleteVeh"",false,false] spawn life_fnc_MP; this allowDamage false; wokka setdir 230";
 		};
 		class Item696
 		{
@@ -27915,7 +27915,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_CncBarrierMedium4_F";
 			skill=0.60000002;
-			init="pos = getPos this; dir = getDir this; deleteVehicle this; wall = ""Land_Concrete_SmallWall_8m_F"" createvehicle [0,0,0]; wall setPos pos; wall setDir dir;";
+			init="pos = getPos this; dir = getDir this; [[this],""OG_deleteVeh"",false,false] spawn life_fnc_MP; wall = ""Land_Concrete_SmallWall_8m_F"" createvehicle [0,0,0]; wall setPos pos; wall setDir dir;";
 		};
 		class Item2015
 		{
@@ -27926,7 +27926,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_CncBarrierMedium4_F";
 			skill=0.60000002;
-			init="pos = getPos this; dir = getDir this; deleteVehicle this; wall = ""Land_Concrete_SmallWall_8m_F"" createvehicle [0,0,0]; wall setPos pos; wall setDir dir;";
+			init="pos = getPos this; dir = getDir this; [[this],""OG_deleteVeh"",false,false] spawn life_fnc_MP; wall = ""Land_Concrete_SmallWall_8m_F"" createvehicle [0,0,0]; wall setPos pos; wall setDir dir;";
 		};
 		class Item2016
 		{
@@ -27937,7 +27937,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_CncBarrierMedium4_F";
 			skill=0.60000002;
-			init="pos = getPos this; dir = getDir this; deleteVehicle this; wall = ""Land_Concrete_SmallWall_8m_F"" createvehicle [0,0,0]; wall setPos pos; wall setDir dir;";
+			init="pos = getPos this; dir = getDir this; [[this],""OG_deleteVeh"",false,false] spawn life_fnc_MP; wall = ""Land_Concrete_SmallWall_8m_F"" createvehicle [0,0,0]; wall setPos pos; wall setDir dir;";
 		};
 		class Item2017
 		{
@@ -27948,7 +27948,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_CncBarrierMedium4_F";
 			skill=0.60000002;
-			init="pos = getPos this; dir = getDir this; deleteVehicle this; wall = ""Land_Concrete_SmallWall_8m_F"" createvehicle [0,0,0]; wall setPos pos; wall setDir dir;";
+			init="pos = getPos this; dir = getDir this; [[this],""OG_deleteVeh"",false,false] spawn life_fnc_MP; wall = ""Land_Concrete_SmallWall_8m_F"" createvehicle [0,0,0]; wall setPos pos; wall setDir dir;";
 		};
 		class Item2018
 		{
@@ -27959,7 +27959,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_CncBarrierMedium4_F";
 			skill=0.60000002;
-			init="pos = getPos this; dir = getDir this; deleteVehicle this; wall = ""Land_Concrete_SmallWall_8m_F"" createvehicle [0,0,0]; wall setPos pos; wall setDir dir;";
+			init="pos = getPos this; dir = getDir this; [[this],""OG_deleteVeh"",false,false] spawn life_fnc_MP; wall = ""Land_Concrete_SmallWall_8m_F"" createvehicle [0,0,0]; wall setPos pos; wall setDir dir;";
 		};
 		class Item2019
 		{
@@ -27970,7 +27970,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_CncBarrierMedium4_F";
 			skill=0.60000002;
-			init="pos = getPos this; dir = getDir this; deleteVehicle this; wall = ""Land_Concrete_SmallWall_8m_F"" createvehicle [0,0,0]; wall setPos pos; wall setDir dir;";
+			init="pos = getPos this; dir = getDir this; [[this],""OG_deleteVeh"",false,false] spawn life_fnc_MP; wall = ""Land_Concrete_SmallWall_8m_F"" createvehicle [0,0,0]; wall setPos pos; wall setDir dir;";
 		};
 		class Item2020
 		{
@@ -27981,7 +27981,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_CncBarrierMedium4_F";
 			skill=0.60000002;
-			init="pos = getPos this; dir = getDir this; deleteVehicle this; wall = ""Land_Concrete_SmallWall_8m_F"" createvehicle [0,0,0]; wall setPos pos; wall setDir dir;";
+			init="pos = getPos this; dir = getDir this; [[this],""OG_deleteVeh"",false,false] spawn life_fnc_MP; wall = ""Land_Concrete_SmallWall_8m_F"" createvehicle [0,0,0]; wall setPos pos; wall setDir dir;";
 		};
 		class Item2021
 		{
@@ -27992,7 +27992,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_CncBarrierMedium4_F";
 			skill=0.60000002;
-			init="pos = getPos this; dir = getDir this; deleteVehicle this; wall = ""Land_Concrete_SmallWall_8m_F"" createvehicle [0,0,0]; wall setPos pos; wall setDir dir;";
+			init="pos = getPos this; dir = getDir this; [[this],""OG_deleteVeh"",false,false] spawn life_fnc_MP; wall = ""Land_Concrete_SmallWall_8m_F"" createvehicle [0,0,0]; wall setPos pos; wall setDir dir;";
 		};
 		class Item2022
 		{
@@ -28003,7 +28003,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_CncBarrierMedium4_F";
 			skill=0.60000002;
-			init="pos = getPos this; dir = getDir this; deleteVehicle this; wall = ""Land_Concrete_SmallWall_4m_F"" createvehicle [0,0,0]; wall setPos pos; wall setDir dir;";
+			init="pos = getPos this; dir = getDir this; [[this],""OG_deleteVeh"",false,false] spawn life_fnc_MP; wall = ""Land_Concrete_SmallWall_4m_F"" createvehicle [0,0,0]; wall setPos pos; wall setDir dir;";
 		};
 		class Item2023
 		{
@@ -28014,7 +28014,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Item_ItemRadio";
 			skill=0.60000002;
-			init="pos = getPos this; dir = getDir this; deleteVehicle this; wall = ""land_lampstreet_f"" createvehicle [0,0,0]; wall setPos pos; wall setDir dir;";
+			init="pos = getPos this; dir = getDir this; [[this],""OG_deleteVeh"",false,false] spawn life_fnc_MP; wall = ""land_lampstreet_f"" createvehicle [0,0,0]; wall setPos pos; wall setDir dir;";
 		};
 		class Item2024
 		{
@@ -28025,7 +28025,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Item_ItemRadio";
 			skill=0.60000002;
-			init="pos = getPos this; dir = getDir this; deleteVehicle this; wall = ""land_lampstreet_f"" createvehicle [0,0,0]; wall setPos pos; wall setDir dir;";
+			init="pos = getPos this; dir = getDir this; [[this],""OG_deleteVeh"",false,false] spawn life_fnc_MP; wall = ""land_lampstreet_f"" createvehicle [0,0,0]; wall setPos pos; wall setDir dir;";
 		};
 		class Item2025
 		{
@@ -28036,7 +28036,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Item_ItemRadio";
 			skill=0.60000002;
-			init="pos = getPos this; dir = getDir this; deleteVehicle this; wall = ""land_lampstreet_f"" createvehicle [0,0,0]; wall setPos pos; wall setDir dir;";
+			init="pos = getPos this; dir = getDir this; [[this],""OG_deleteVeh"",false,false] spawn life_fnc_MP; wall = ""land_lampstreet_f"" createvehicle [0,0,0]; wall setPos pos; wall setDir dir;";
 		};
 		class Item2026
 		{

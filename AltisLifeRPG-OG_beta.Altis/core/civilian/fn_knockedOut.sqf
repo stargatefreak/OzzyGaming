@@ -20,5 +20,5 @@ player attachTo [_obj,[0,0,0]];
 sleep 15;
 player playMoveNow "amovppnemstpsraswrfldnon";
 detach player;
-deleteVehicle _obj;
+[[_obj],"OG_deleteVeh",false,false] spawn life_fnc_MP;
 player setVariable["robbed",FALSE,TRUE];

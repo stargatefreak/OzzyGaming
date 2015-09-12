@@ -10,7 +10,7 @@ _building = nearestObjects [player, ["Land_i_House_Big_02_V1_F"], 30] select 0;
 if(!isNull _building) then {
 	switch(typeOf _building) do {
 		case "Land_i_House_Big_02_V1_F":{ 
-			_selBuilding = [[4.5,4.6],-5,9];
+			_selBuilding = [[-4.5,5],[4.5,5],[-4.5,-5],[4.5,-5],-5,9];
 		};
 		default {_selBuilding = [[0,0],0,0]};
 	};
