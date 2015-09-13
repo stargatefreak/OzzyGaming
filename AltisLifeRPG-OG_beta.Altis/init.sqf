@@ -16,6 +16,7 @@ life_versionInfo = "Altis Life RPG v3.5";
 [] execVM "scripts\DynWeather.sqf";
 [] execVM "scripts\fn_disableSnakes.sqf";
 [] execVM "scripts\fn_noSideVoice.sqf";
+[] execVM "scripts\fn_colorChange.sqf";
 [] execVM "KRON_Strings.sqf";
 /* [] execVM "scripts\clean.sqf"; */	
 

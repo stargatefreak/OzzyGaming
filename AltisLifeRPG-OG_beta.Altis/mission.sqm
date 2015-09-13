@@ -235,7 +235,7 @@ class Mission
 					skill=0.60000002;
 					text="cop_16";
 					init="removeBackpack this; removeAllWeapons this;";
-					description="WhiteListed - Cop 16";
+					description="Public Slot - Cop 1";
 				};
 				class Item1
 				{
@@ -249,7 +249,7 @@ class Mission
 					skill=0.60000002;
 					text="cop_17";
 					init="removeBackpack this; removeAllWeapons this;";
-					description="WhiteListed - Cop 17";
+					description="Public Slot - Cop 2";
 				};
 				class Item2
 				{
@@ -263,7 +263,7 @@ class Mission
 					skill=0.60000002;
 					text="cop_13";
 					init="removeBackpack this; removeAllWeapons this;";
-					description="WhiteListed - Cop 13";
+					description="Public Slot - Cop 3";
 				};
 				class Item3
 				{
@@ -277,7 +277,7 @@ class Mission
 					skill=0.60000002;
 					text="cop_6";
 					init="removeBackpack this; removeAllWeapons this;";
-					description="WhiteListed - Cop 6";
+					description="Public Slot - Cop 4";
 				};
 				class Item4
 				{
@@ -291,7 +291,7 @@ class Mission
 					skill=0.60000002;
 					text="cop_11";
 					init="removeBackpack this; removeAllWeapons this;";
-					description="WhiteListed - Cop 11";
+					description="WhiteListed - Cop 5";
 				};
 				class Item5
 				{
@@ -305,7 +305,7 @@ class Mission
 					skill=0.60000002;
 					text="cop_12";
 					init="removeBackpack this; removeAllWeapons this;";
-					description="WhiteListed - Cop 12";
+					description="WhiteListed - Cop 6";
 				};
 				class Item6
 				{
@@ -319,7 +319,7 @@ class Mission
 					skill=0.60000002;
 					text="cop_14";
 					init="removeBackpack this; removeAllWeapons this;";
-					description="WhiteListed - Cop 14";
+					description="WhiteListed - Cop 7";
 				};
 				class Item7
 				{
@@ -334,7 +334,7 @@ class Mission
 					skill=0.60000002;
 					text="cop_19";
 					init="removeBackpack this; removeAllWeapons this;";
-					description="WhiteListed - Bomb Squad 2";
+					description="WhiteListed - Cop 8";
 				};
 				class Item8
 				{
@@ -348,7 +348,7 @@ class Mission
 					skill=0.60000002;
 					text="cop_15";
 					init="removeBackpack this; removeAllWeapons this;";
-					description="WhiteListed - Cop 15";
+					description="WhiteListed - Cop 9";
 				};
 				class Item9
 				{
@@ -362,7 +362,7 @@ class Mission
 					skill=0.60000002;
 					text="cop_9";
 					init="removeBackpack this; removeAllWeapons this;";
-					description="WhiteListed - Cop 9";
+					description="WhiteListed - Cop 10";
 				};
 				class Item10
 				{
@@ -376,7 +376,7 @@ class Mission
 					skill=0.60000002;
 					text="cop_8";
 					init="removeBackpack this; removeAllWeapons this;";
-					description="WhiteListed - Cop 8";
+					description="WhiteListed - Cop 11";
 				};
 				class Item11
 				{
@@ -390,7 +390,7 @@ class Mission
 					skill=0.60000002;
 					text="cop_4";
 					init="removeBackpack this; removeAllWeapons this;";
-					description="Public Slot - Cop 4";
+					description="WhiteListed - Cop 12";
 				};
 				class Item12
 				{
@@ -404,7 +404,7 @@ class Mission
 					skill=0.60000002;
 					text="cop_2";
 					init="removeBackpack this; removeAllWeapons this;";
-					description="Public Slot - Cop 2";
+					description="WhiteListed - Cop 13";
 				};
 				class Item13
 				{
@@ -418,7 +418,7 @@ class Mission
 					skill=0.60000002;
 					text="cop_3";
 					init="removeBackpack this; removeAllWeapons this;";
-					description="Public Slot - Cop 3";
+					description="WhiteListed - Cop 14";
 				};
 				class Item14
 				{
@@ -432,7 +432,7 @@ class Mission
 					skill=0.60000002;
 					text="cop_5";
 					init="removeBackpack this; removeAllWeapons this;";
-					description="WhiteListed - Cop 5";
+					description="WhiteListed - Cop 15";
 				};
 				class Item15
 				{
@@ -446,7 +446,7 @@ class Mission
 					skill=0.60000002;
 					text="cop_10";
 					init="removeBackpack this; removeAllWeapons this;";
-					description="WhiteListed - Cop 10";
+					description="WhiteListed - Cop 16";
 				};
 				class Item16
 				{
@@ -461,7 +461,7 @@ class Mission
 					skill=0.60000002;
 					text="cop_1";
 					init="removeBackpack this; removeAllWeapons this;";
-					description="Public Slot - Cop 1";
+					description="WhiteListed - Cop 17";
 				};
 				class Item17
 				{
@@ -475,7 +475,7 @@ class Mission
 					skill=0.60000002;
 					text="cop_21";
 					init="removeBackpack this; removeAllWeapons this;";
-					description="Zeus - Cop 21";
+					description="WhiteListed - Cop 18";
 					syncId=0;
 					synchronizations[]={3};
 				};
@@ -491,7 +491,7 @@ class Mission
 					skill=0.60000002;
 					text="cop_20";
 					init="removeBackpack this; removeAllWeapons this;";
-					description="Zeus - Cop 20";
+					description="WhiteListed - Cop 19";
 					syncId=1;
 					synchronizations[]={2};
 				};
@@ -507,7 +507,7 @@ class Mission
 					skill=0.60000002;
 					text="cop_18";
 					init="removeBackpack this; removeAllWeapons this;";
-					description="WhiteListed - Bomb Squad 1";
+					description="WhiteListed - Cop 20";
 				};
 				class Item20
 				{
@@ -521,7 +521,7 @@ class Mission
 					skill=0.60000002;
 					text="cop_7";
 					init="removeBackpack this; removeAllWeapons this;";
-					description="WhiteListed - Cop 7";
+					description="WhiteListed - Cop 21";
 				};
 				class Item21
 				{
@@ -605,7 +605,7 @@ class Mission
 					skill=0.60000002;
 					text="cop_27";
 					init="removeBackpack this; removeAllWeapons this;";
-					description="WhiteListed - Cop 27";
+					description="WhiteListed - Bomb Squad 27";
 				};
 				class Item27
 				{
@@ -619,7 +619,7 @@ class Mission
 					skill=0.60000002;
 					text="cop_28";
 					init="removeBackpack this; removeAllWeapons this;";
-					description="WhiteListed - Cop 28";
+					description="WhiteListed - Bomb Squad 28";
 				};
 				class Item28
 				{
@@ -633,7 +633,7 @@ class Mission
 					skill=0.60000002;
 					text="cop_29";
 					init="removeBackpack this; removeAllWeapons this;";
-					description="WhiteListed - Cop 29";
+					description="Admin Only - Zues 1";
 				};
 				class Item29
 				{
@@ -647,7 +647,7 @@ class Mission
 					skill=0.60000002;
 					text="cop_30";
 					init="removeBackpack this; removeAllWeapons this;";
-					description="WhiteListed - Cop 30";
+					description="Admin Only - Zues 2";
 				};
 			};
 		};
