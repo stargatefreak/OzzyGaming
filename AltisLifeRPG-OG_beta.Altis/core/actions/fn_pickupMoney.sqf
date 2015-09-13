@@ -16,11 +16,11 @@ _obj = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
 _val = (_obj getVariable "item") select 1;
 if(isNil {_val}) exitWith {};
 if(isNull _obj || player distance _obj > 3) exitWith {if(!isNull _obj) then {_obj setVariable["inUse",false,true];};};
-if((_obj getVariable["PickedUp",false])) exitWith {[[_obj],"OG_deleteVeh",false,false] spawn life_fnc_MP;}; //Object was already picked up.
+if((_obj getVariable["PickedUp",false])) exitWith {[[_obj],"OG_fnc_deleteVeh",false,false] spawn life_fnc_MP;}; //Object was already picked up.
 _obj setVariable["PickedUp",TRUE,TRUE];
 if(!isNil {_val}) then
 {
-	[[_obj],"OG_deleteVeh",false,false] spawn life_fnc_MP;
+	[[_obj],"OG_fnc_deleteVeh",false,false] spawn life_fnc_MP;
 	//waitUntil {isNull _obj};
 	
 	//Stop people picking up huge values of money which should stop spreading dirty money.

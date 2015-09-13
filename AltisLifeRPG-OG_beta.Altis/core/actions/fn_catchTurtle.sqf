@@ -12,6 +12,6 @@ if(alive _obj) exitWith {}; //It's alive, don't take it charlie!
 
 if(([true,"turtle",1] call life_fnc_handleInv)) then
 {
-	[[_obj],"OG_deleteVeh",false,false] spawn life_fnc_MP;
+	[[_obj],"OG_fnc_deleteVeh",false,false] spawn life_fnc_MP;
 	titleText[localize "STR_NOTF_CaughtTurtle","PLAIN"];
 };

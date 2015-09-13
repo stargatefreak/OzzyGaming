@@ -6,16 +6,16 @@
 */
 private["_building","_door","_doors","_cpRate","_title","_progressBar","_titleText","_cp","_ui"];
 _building = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
+if((west countside playableUnits) < 5) exitWith {hint localize "STR_Civ_NotEnoughCops"};
 if(isNull _building) exitWith {};
 if(!(_building isKindOf "House_F")) exitWith {hint "You are not looking at a house door."};
 if(isNil "life_boltcutter_uses") then {life_boltcutter_uses = 0;};
 if((nearestObject [[16019.5,16952.9,0],"Land_Dome_Big_F"]) == _building OR (nearestObject [[16019.5,16952.9,0],"Land_Research_house_V1_F"]) == _building) then {
-    if(OG_FederalSecurty) exitWith {
+    if(OG_FederalSecurty && !(typeOf _building == "Land_Research_house_V1_F")) exitWith {
 		hint parseText "<t size = 2><t align=center><t color='#FF0000'>Federal Bank Security<br /><t color='#00FF00'>Active<br /><br /><t size = 1><t color='#FFFF00'>You must wait 30 minutes between robberies to try again"
 	};
+	if(typeOf _building == "Land_Dome_Big_F") then {fed_bank setVariable ["countCops",west countSide playableUnits,true];};
 	[[[1,2],localize "STR_ISTR_Bolt_AlertFed"],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
-	if(west countside playableUnits < 5) exitWith {hint localize "STR_Civ_NotEnoughCops"};
-	fed_bank setVariable ["countCops",west countSide playableUnits,true];
 } else {
 	[[0,format[localize "STR_ISTR_Bolt_AlertHouse",name(player)]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
 };

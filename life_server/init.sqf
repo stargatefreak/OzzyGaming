@@ -139,4 +139,3 @@ publicVariable "life_server_isReady";
 OG_FederalSecurty = false;
 publicVariable "OG_FederalSecurty";
 [] spawn OG_fnc_autoFed;
-
