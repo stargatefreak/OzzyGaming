@@ -28,7 +28,7 @@ if(!(str(player) in ["cop_1","cop_2","cop_3","cop_4"])) then {
 		["NotWhitelisted",false,true] call BIS_fnc_endMission;
 		sleep 35;
 	};
-};
+}
 
 // Set Paycheck for Police
 switch(__GETC__(life_ozCoplvl)) do
