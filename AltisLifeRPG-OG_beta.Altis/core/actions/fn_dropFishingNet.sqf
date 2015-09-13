@@ -30,7 +30,7 @@ if(count _fish == 0) exitWith {titleText[localize "STR_NOTF_NetDropFail","PLAIN"
 		
 		if(([true,_type,1] call life_fnc_handleInv)) then
 		{
-			[[_x],"OG_fnc_deleteVeh",false,false] spawn life_fnc_MP;
+			deleteVehicle _x;
 			titleText[format[(localize "STR_NOTF_Fishing"),_typeName],"PLAIN"];
 		};
 	};
