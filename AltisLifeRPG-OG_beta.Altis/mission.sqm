@@ -233,7 +233,7 @@ class Mission
 					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
-					text="cop_16";
+					text="cop_1";
 					init="removeBackpack this; removeAllWeapons this;";
 					description="Public Slot - Cop 1";
 				};
@@ -247,7 +247,7 @@ class Mission
 					vehicle="B_medic_F";
 					player="PLAY CDG";
 					skill=0.60000002;
-					text="cop_17";
+					text="cop_2";
 					init="removeBackpack this; removeAllWeapons this;";
 					description="Public Slot - Cop 2";
 				};
@@ -261,7 +261,7 @@ class Mission
 					vehicle="B_medic_F";
 					player="PLAY CDG";
 					skill=0.60000002;
-					text="cop_13";
+					text="cop_3";
 					init="removeBackpack this; removeAllWeapons this;";
 					description="Public Slot - Cop 3";
 				};
@@ -275,7 +275,7 @@ class Mission
 					vehicle="B_medic_F";
 					player="PLAY CDG";
 					skill=0.60000002;
-					text="cop_6";
+					text="cop_4";
 					init="removeBackpack this; removeAllWeapons this;";
 					description="Public Slot - Cop 4";
 				};
@@ -388,7 +388,7 @@ class Mission
 					vehicle="B_medic_F";
 					player="PLAY CDG";
 					skill=0.60000002;
-					text="cop_4";
+					text="cop_13";
 					init="removeBackpack this; removeAllWeapons this;";
 					description="WhiteListed - Cop 12";
 				};
@@ -402,7 +402,7 @@ class Mission
 					vehicle="B_medic_F";
 					player="PLAY CDG";
 					skill=0.60000002;
-					text="cop_2";
+					text="cop_17";
 					init="removeBackpack this; removeAllWeapons this;";
 					description="WhiteListed - Cop 13";
 				};
@@ -416,7 +416,7 @@ class Mission
 					vehicle="B_medic_F";
 					player="PLAY CDG";
 					skill=0.60000002;
-					text="cop_3";
+					text="cop_6";
 					init="removeBackpack this; removeAllWeapons this;";
 					description="WhiteListed - Cop 14";
 				};
@@ -459,7 +459,7 @@ class Mission
 					vehicle="B_medic_F";
 					player="PLAY CDG";
 					skill=0.60000002;
-					text="cop_1";
+					text="cop_16";
 					init="removeBackpack this; removeAllWeapons this;";
 					description="WhiteListed - Cop 17";
 				};
@@ -473,7 +473,7 @@ class Mission
 					vehicle="B_medic_F";
 					player="PLAY CDG";
 					skill=0.60000002;
-					text="cop_21";
+					text="cop_29";
 					init="removeBackpack this; removeAllWeapons this;";
 					description="WhiteListed - Cop 18";
 					syncId=0;
@@ -489,7 +489,7 @@ class Mission
 					vehicle="B_medic_F";
 					player="PLAY CDG";
 					skill=0.60000002;
-					text="cop_20";
+					text="cop_30";
 					init="removeBackpack this; removeAllWeapons this;";
 					description="WhiteListed - Cop 19";
 					syncId=1;
@@ -631,7 +631,7 @@ class Mission
 					vehicle="B_medic_F";
 					player="PLAY CDG";
 					skill=0.60000002;
-					text="cop_29";
+					text="cop_21";
 					init="removeBackpack this; removeAllWeapons this;";
 					description="Admin Only - Zues 1";
 				};
@@ -645,7 +645,7 @@ class Mission
 					vehicle="B_medic_F";
 					player="PLAY CDG";
 					skill=0.60000002;
-					text="cop_30";
+					text="cop_20";
 					init="removeBackpack this; removeAllWeapons this;";
 					description="Admin Only - Zues 2";
 				};

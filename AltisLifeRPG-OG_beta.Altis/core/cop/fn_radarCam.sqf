@@ -25,8 +25,8 @@ if (_speed > _limit) then {
 			"colorCorrections" ppEffectAdjust [1, 15, 0, [0.5, 0.5, 0.5, 0], [0.0, 0.5, 0.0, 1],[0.3, 0.3, 0.3, 0.05]];    
 			"colorCorrections" ppEffectCommit 0;  
 			sleep 0;   
-			"ColorCorrections" ppEffectAdjust [0.88, 0.88, 0, [0.2, 0.29, 0.4, -0.22], [1, 1, 1, 1.3], [0.15, 0.09, 0.09, 0.0]];
-			"ColorCorrections" ppEffectCommit 0;
+			"colorCorrections" ppEffectAdjust [1, 1, 0, [1, 1, 1, 0.0], [1, 1, 1, 1],  [1, 1, 1, 1]];    
+			"colorCorrections" ppEffectCommit 0.05;   
 			sleep 0.05;   
 			"colorCorrections" ppEffectEnable false;
 			sleep 0.1;
@@ -34,8 +34,8 @@ if (_speed > _limit) then {
 			"colorCorrections" ppEffectAdjust [1, 15, 0, [0.5, 0.5, 0.5, 0], [0.0, 0.5, 0.0, 1],[0.3, 0.3, 0.3, 0.05]];    
 			"colorCorrections" ppEffectCommit 0;  
 			sleep 0;   
-			"ColorCorrections" ppEffectAdjust [0.88, 0.88, 0, [0.2, 0.29, 0.4, -0.22], [1, 1, 1, 1.3], [0.15, 0.09, 0.09, 0.0]];
-			"ColorCorrections" ppEffectCommit 0;
+			"colorCorrections" ppEffectAdjust [1, 1, 0, [1, 1, 1, 0.0], [1, 1, 1, 1],  [1, 1, 1, 1]];    
+			"colorCorrections" ppEffectCommit 0.05;   
 			sleep 0.05;   
 			"colorCorrections" ppEffectEnable false;
 		if(license_civ_driver OR license_civ_truck ) then {
