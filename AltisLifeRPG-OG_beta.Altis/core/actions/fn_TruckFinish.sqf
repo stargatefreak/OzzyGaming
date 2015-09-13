@@ -67,7 +67,7 @@ if(!isNil "_deliveryTruck") then
 	};
 
 	_vid = _deliveryTruck getVariable["giveGarage","0"];
-	[[_deliveryTruck],"OG_fnc_deleteVeh",false,false] spawn life_fnc_MP;
+	deleteVehicle _deliveryTruck;
 
 	["DeliverySucceeded",[format[(localize "STR_NOTF_Earned_1"),[_price] call life_fnc_numberText]]] call bis_fnc_showNotification;
 	life_cur_task setTaskState "Succeeded";

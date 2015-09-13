@@ -14,7 +14,7 @@ _vehicle = call compile format["%1", _vehicle];
 _nearVehicles = nearestObjects [getMarkerPos life_chopShop,["Car","Truck","Air","Ship","Tank"],25];
 _vehicle = _nearVehicles select _vehicle;
 if(isNull _vehicle) exitWith {};
-if(_vehicle getVariable["purpose",""] == "truck_mission") exitWith {hint parseText "You are not allowed to Chop Shop a Truck Mission, And now you loose it. have fun walking"; [[_vehicle;};
+if(_vehicle getVariable["purpose",""] == "truck_mission") exitWith {hint parseText "You are not allowed to Chop Shop a Truck Mission, And now you loose it. have fun walking"; deleteVehicle _vehicle;};
 
 hint localize "STR_Shop_ChopShopSelling";
 life_action_inUse = true;
