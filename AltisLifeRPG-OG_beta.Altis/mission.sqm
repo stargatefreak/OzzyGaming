@@ -4471,7 +4471,7 @@ class Mission
 					skill=0.60000002;
 					text="medic_3";
 					init="removeBackpack this; removeAllWeapons this;";
-					description="Paramedic 3";
+					description="Paramedic 2";
 				};
 				class Item2
 				{
@@ -4485,7 +4485,7 @@ class Mission
 					skill=0.60000002;
 					text="medic_4";
 					init="removeBackpack this; removeAllWeapons this;";
-					description="Paramedic 4";
+					description="Paramedic 3";
 				};
 				class Item3
 				{
@@ -4499,7 +4499,7 @@ class Mission
 					skill=0.60000002;
 					text="medic_2";
 					init="removeBackpack this; removeAllWeapons this;";
-					description="Paramedic 2";
+					description="Paramedic 4";
 				};
 				class Item4
 				{
@@ -4569,7 +4569,7 @@ class Mission
 					skill=0.60000002;
 					text="medic_10";
 					init="removeBackpack this; removeAllWeapons this;";
-					description="Paramedic 10";
+					description="Paramedic 9";
 				};
 				class Item9
 				{
@@ -4583,7 +4583,7 @@ class Mission
 					skill=0.60000002;
 					text="medic_9";
 					init="removeBackpack this; removeAllWeapons this;";
-					description="Paramedic 9";
+					description="Paramedic 10";
 				};
 			};
 		};
