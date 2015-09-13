@@ -9,7 +9,7 @@ private["_obj","_itemInfo","_itemName","_illegal","_diff"];
 if((time - life_action_delay) < 2) exitWith {hint "You can't rapidly use action keys!"};
 _obj = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
 if(isNull _obj OR isPlayer _obj) exitWith {};
-if((_obj getVariable["PickedUp",false])) exitWith {[[_obj],"OG_deleteVeh",false,false] spawn life_fnc_MP;}; //Object was already picked up.
+if((_obj getVariable["PickedUp",false])) exitWith {[[_obj],"OG_fnc_deleteVeh",false,false] spawn life_fnc_MP;}; //Object was already picked up.
 if(player distance _obj > 3) exitWith {};
 _itemInfo = _obj getVariable "item";
 _itemName = [([_itemInfo select 0,0] call life_fnc_varHandle)] call life_fnc_varToStr;
@@ -18,7 +18,7 @@ if(playerSide == west && _illegal != -1) exitWith
 {
 	titleText[format[localize "STR_NOTF_PickedEvidence",_itemName,[(life_illegal_items select _illegal) select 1] call life_fnc_numberText],"PLAIN"];
 	life_ogBank415 = life_ogBank415 + ((life_illegal_items select _illegal) select 1);
-	[[_obj],"OG_deleteVeh",false,false] spawn life_fnc_MP;
+	[[_obj],"OG_fnc_deleteVeh",false,false] spawn life_fnc_MP;
 	//waitUntil {isNull _obj};
 	life_action_delay = time;
 };
@@ -41,7 +41,7 @@ if(_diff != _itemInfo select 1) then
 {
 	if(([true,_itemInfo select 0,_itemInfo select 1] call life_fnc_handleInv)) then
 	{
-		[[_obj],"OG_deleteVeh",false,false] spawn life_fnc_MP;
+		[[_obj],"OG_fnc_deleteVeh",false,false] spawn life_fnc_MP;
 		//waitUntil{isNull _obj};
 		player playmove "AinvPknlMstpSlayWrflDnon";
 		sleep 0.5;

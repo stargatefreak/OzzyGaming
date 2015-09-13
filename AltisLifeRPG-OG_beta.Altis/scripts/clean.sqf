@@ -91,7 +91,7 @@ while {deleteManagerPublic} do {
 		if ((count allDeadMen) > _deadMenLimit) then {
 			while {(((count allDeadMen) - _deadMenLimit) > 0)} do {
 				detach (allDeadMen select 0);
-				[[allDeadMen select 0],"OG_deleteVeh",false,false] spawn life_fnc_MP;
+				[[allDeadMen select 0],"OG_fnc_deleteVeh",false,false] spawn life_fnc_MP;
 				sleep 0.5;
 			};
 		} else {
@@ -99,7 +99,7 @@ while {deleteManagerPublic} do {
 				{
 					if ([_x,_deadMenDist,(playableUnits + switchableUnits)] call _isHidden) then {
 						detach _x;
-						[[_x],"OG_deleteVeh",false,false] spawn life_fnc_MP;
+						[[_x],"OG_fnc_deleteVeh",false,false] spawn life_fnc_MP;
 					};
 				} count allDeadMen;
 			};
@@ -110,14 +110,14 @@ while {deleteManagerPublic} do {
 	if (!(_deadVehiclesLimit isEqualTo -1)) then {
 		if ((count (allDead - allDeadMen)) > _deadVehiclesLimit) then {
 			while {(((count (allDead - allDeadMen)) - _deadVehiclesLimit) > 0)} do {
-				[[(allDead - allDeadMen) select 0],"OG_deleteVeh",false,false] spawn life_fnc_MP;
+				[[(allDead - allDeadMen) select 0],"OG_fnc_deleteVeh",false,false] spawn life_fnc_MP;
 				sleep 0.5;
 			};
 		} else {
 			if (_deadVehicleDistCheck) then {
 				{
 					if ([_x,_deadVehicleDist,(playableUnits + switchableUnits)] call _isHidden) then {
-						[[_x],"OG_deleteVeh",false,false] spawn life_fnc_MP;
+						[[_x],"OG_fnc_deleteVeh",false,false] spawn life_fnc_MP;
 					};
 				} count (allDead - allDeadMen);
 			};
@@ -128,14 +128,14 @@ while {deleteManagerPublic} do {
 	if (!(_craterLimit isEqualTo -1)) then {
 		if ((count (allMissionObjects "CraterLong")) > _craterLimit) then {
 			while {(((count (allMissionObjects "CraterLong")) - _craterLimit) > 0)} do {
-				[[(allMissionObjects "CraterLong") select 0],"OG_deleteVeh",false,false] spawn life_fnc_MP;
+				[[(allMissionObjects "CraterLong") select 0],"OG_fnc_deleteVeh",false,false] spawn life_fnc_MP;
 				sleep 0.5;
 			};
 		} else {
 			if (_craterDistCheck) then {
 				{
 					if ([_x,_craterDist,(playableUnits + switchableUnits)] call _isHidden) then {
-						[[_x],"OG_deleteVeh",false,false] spawn life_fnc_MP;
+						[[_x],"OG_fnc_deleteVeh",false,false] spawn life_fnc_MP;
 					};
 				} count (allMissionObjects "CraterLong");
 			};
@@ -146,14 +146,14 @@ while {deleteManagerPublic} do {
 	if (!(_weaponHolderLimit isEqualTo -1)) then {
 		if ((count (allMissionObjects "WeaponHolder")) > _weaponHolderLimit) then {
 			while {(((count (allMissionObjects "WeaponHolder")) - _weaponHolderLimit) > 0)} do {
-				[[(allMissionObjects "WeaponHolder") select 0],"OG_deleteVeh",false,false] spawn life_fnc_MP;
+				[[(allMissionObjects "WeaponHolder") select 0],"OG_fnc_deleteVeh",false,false] spawn life_fnc_MP;
 				sleep 0.5;
 			};
 		} else {
 			if (_weaponHolderDistCheck) then {
 				{
 					if ([_x,_weaponHolderDist,(playableUnits + switchableUnits)] call _isHidden) then {
-						[[_x],"OG_deleteVeh",false,false] spawn life_fnc_MP;
+						[[_x],"OG_fnc_deleteVeh",false,false] spawn life_fnc_MP;
 					};
 				} count (allMissionObjects "WeaponHolder");
 			};
@@ -164,14 +164,14 @@ while {deleteManagerPublic} do {
 	if (!(_minesLimit isEqualTo -1)) then {
 		if ((count allMines) > _minesLimit) then {
 			while {(((count allMines) - _minesLimit) > 0)} do {
-				[[allMines select 0],"OG_deleteVeh",false,false] spawn life_fnc_MP;
+				[[allMines select 0],"OG_fnc_deleteVeh",false,false] spawn life_fnc_MP;
 				sleep 0.5;
 			};
 		} else {
 			if (_minesDistCheck) then {
 				{
 					if ([_x,_minesDist,allUnits] call _isHidden) then {
-						[[_x],"OG_deleteVeh",false,false] spawn life_fnc_MP;
+						[[_x],"OG_fnc_deleteVeh",false,false] spawn life_fnc_MP;
 					};
 				} count allMines;
 			};
@@ -182,14 +182,14 @@ while {deleteManagerPublic} do {
 	if (!(_staticsLimit isEqualTo -1)) then {
 		if ((count (allMissionObjects "StaticWeapon")) > _staticsLimit) then {
 			while {(((count (allMissionObjects "StaticWeapon")) - _staticsLimit) > 0)} do {
-				[[(allMissionObjects "StaticWeapon") select 0],"OG_deleteVeh",false,false] spawn life_fnc_MP;
+				[[(allMissionObjects "StaticWeapon") select 0],"OG_fnc_deleteVeh",false,false] spawn life_fnc_MP;
 				sleep 0.5;
 			};
 		} else {
 			if (_staticsDistCheck) then {
 				{
 					if ([_x,_staticsDist,allUnits] call _isHidden) then {
-						[[_x],"OG_deleteVeh",false,false] spawn life_fnc_MP;
+						[[_x],"OG_fnc_deleteVeh",false,false] spawn life_fnc_MP;
 					};
 				} count (allMissionObjects "StaticWeapon");
 			};
@@ -208,14 +208,14 @@ while {deleteManagerPublic} do {
 		if ((count _ruins) > _ruinsLimit) then {
 			while {(((count _ruins) - _ruinsLimit) > 0)} do {
 				_ruins resize (count _ruins - 1);
-				[[_ruins select 0],"OG_deleteVeh",false,false] spawn life_fnc_MP;
+				[[_ruins select 0],"OG_fnc_deleteVeh",false,false] spawn life_fnc_MP;
 				sleep 0.5;
 			};
 		} else {
 			if (_ruinsDistCheck) then {
 				{
 					if ([_x,_ruinsDist,(playableUnits + switchableUnits)] call _isHidden) then {
-						[[_x],"OG_deleteVeh",false,false] spawn life_fnc_MP;
+						[[_x],"OG_fnc_deleteVeh",false,false] spawn life_fnc_MP;
 					};
 				} count (allMissionObjects "Ruins");
 			};
@@ -226,7 +226,7 @@ while {deleteManagerPublic} do {
 	if (_orphanedTriggers) then {	
 		{
 			if ((_x distance [0,0,0]) < 1) then {
-				[[_x],"OG_deleteVeh",false,false] spawn life_fnc_MP;
+				[[_x],"OG_fnc_deleteVeh",false,false] spawn life_fnc_MP;
 			};
 		} count (allMissionObjects "EmptyDetector");
 	};

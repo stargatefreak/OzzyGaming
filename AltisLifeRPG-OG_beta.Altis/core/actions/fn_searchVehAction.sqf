@@ -6,7 +6,7 @@ _vehicle = cursorTarget;
 if((_vehicle isKindOf "Car") || !(_vehicle isKindOf "Air") || !(_vehicle isKindOf "Ship")) then
 {
 	_owners = _vehicle getVariable "vehicle_info_owners";
-	if(isNil {_owners}) exitWith {hint localize "STR_NOTF_VehCheat"; [[_vehicle],"OG_deleteVeh",false,false] spawn life_fnc_MP;};
+	if(isNil {_owners}) exitWith {hint localize "STR_NOTF_VehCheat"; [[_vehicle],"OG_fnc_deleteVeh",false,false] spawn life_fnc_MP;};
 	life_action_inUse = true;
 	hint localize "STR_NOTF_Searching";
 	sleep 3;
