@@ -261,12 +261,12 @@
 			<Portuguese>O jogador selecionado parece não existir!</Portuguese>
  		</Key>
  		<Key ID="STR_ATM_TransferMax">
- 			<Original>You can't transfer more then $9,999,999</Original>
- 			<English>You can't transfer more then $9,999,999</English>
-			<German>Du kannst nicht mehr als $9,999,999 überweisen</German>
- 			<French>Vous ne pouvez pas transférer plus de $9,999,999</French>
-			<Italian>Non puoi trasferire più di €9,999.000 alla volta</Italian>
-			<Portuguese>Você pode trasferir no máximo R$9,999.999.</Portuguese>
+ 			<Original>You can't transfer more then $10,000,000</Original>
+ 			<English>You can't transfer more then $10,000,000</English>
+			<German>Du kannst nicht mehr als $10,000,000 überweisen</German>
+ 			<French>Vous ne pouvez pas transférer plus de $10,000,000</French>
+			<Italian>Non puoi trasferire più di €10,000.000 alla volta</Italian>
+			<Portuguese>Você pode trasferir no máximo R$10,000.000.</Portuguese>
  		</Key>
  		<Key ID="STR_ATM_NotEnoughFunds">
  			<Original>You don't have that much in your bank account!</Original>
