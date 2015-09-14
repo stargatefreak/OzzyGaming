@@ -10,9 +10,9 @@ _value = parseNumber(ctrlText 2702);
 _cache = life_ogCash415;
 
 //Series of stupid checks
-if(_value > 9999999) exitWith {hint localize "STR_ATM_GreaterThan";};
+if(_value > 10000000) exitWith {hint localize "STR_ATM_GreaterThan";};
 if(_value < 0) exitWith {};
-if(!([[_val,0,true] call life_fnc_numberText] call life_fnc_isnumeric)) exitWith {hint localize "STR_ATM_notnumeric"};
+if(!([[_val,1,true] call life_fnc_numberText] call life_fnc_isnumeric)) exitWith {hint localize "STR_ATM_notnumeric"};
 if(_value > life_ogCash415) exitWith {hint localize "STR_ATM_NotEnoughCash"};
 
 life_ogCash415 = life_ogCash415 - _value;
