@@ -14,6 +14,7 @@
 #define Btn6 37455
 #define Btn7 37456
 #define Btn8 37457
+#define Btn9 37458
 #define Title 37401
 #define BtnClose 374002
 
@@ -37,6 +38,7 @@ if(_curTarget isKindOf "House_F") exitWith {
 		_Btn6 = _display displayCtrl Btn6;
 		_Btn7 = _display displayCtrl Btn7;
 		_Btn8 = _display displayCtrl Btn8;
+		_Btn9 = _display displayCtrl Btn9;
 		_BtnClose = _display displayCtrl BtnClose;
 		life_pInact_curTarget = _curTarget;
 		
@@ -51,6 +53,7 @@ if(_curTarget isKindOf "House_F") exitWith {
 		_Btn6 ctrlShow false;
 		_Btn7 ctrlShow false;
 		_Btn8 ctrlShow false;
+		_Btn9 ctrlShow false;
 	} else {
 		closeDialog 0;
 	};
@@ -66,6 +69,7 @@ _Btn5 = _display displayCtrl Btn5;
 _Btn6 = _display displayCtrl Btn6;
 _Btn7 = _display displayCtrl Btn7;
 _Btn8 = _display displayCtrl Btn8;
+_Btn9 = _display displayCtrl Btn9;
 _BtnClose = _display displayCtrl BtnClose;
 life_pInact_curTarget = _curTarget;
 
@@ -104,13 +108,12 @@ _Btn8 buttonSetAction "[[player],""life_fnc_breathalyzer"",life_pInact_curTarget
 //Check that you are near a place to jail them.
 if(!((player distance (getMarkerPos "police_hq_1") < 30) OR  (player distance (getMarkerPos "police_hq_2") < 30) OR (player distance (getMarkerPos "police_hq_3") < 30) OR (player distance (getMarkerPos "police_hq_4") < 30) OR (player distance (getMarkerPos "police_hq_5") < 30) OR (player distance (getMarkerPos "police_hq_6") < 30) OR (player distance (getMarkerPos "police_hq_7") < 30) OR (player distance (getMarkerPos "police_hq_8") < 30))) then 
 {
-_Btn6 ctrlEnable false;
-_Btn6 ctrlSetText "Disarm Player";
-_Btn6 buttonSetAction "[life_pInact_curTarget] call life_fnc_dropRebel;";
-} else {
 _Btn6 ctrlEnable true;
 _Btn6 ctrlSetText localize "STR_pInAct_Arrest";
 _Btn6 buttonSetAction "[life_pInact_curTarget] call life_fnc_arrestAction;";
+_Btn9 ctrlEnable true;
+_Btn9 ctrlSetText "Disarm Player";
+_Btn9 buttonSetAction "[life_pInact_curTarget] call life_fnc_dropRebel;";
 };
 		
 _BtnClose buttonSetAction "closeDialog 0;";
