@@ -1,7 +1,7 @@
 author = "Tonic";
 onLoadName = "OzzyGaming 3.1a";
 onLoadMission = "Altis Life by Tonic - modified by OzzyGaming";
-loadScreen = "textures\loadScreen.jpg"; 
+loadScreen = "textures\loadscreen.jpg"; 
 joinUnassigned = 1;
 respawn = BASE;
 respawndelay = 5;

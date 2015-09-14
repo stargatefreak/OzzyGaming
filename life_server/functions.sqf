@@ -62,7 +62,7 @@ compileFinal "
 	private[""_unit"",""_val"",""_from""];
 	_val = _this select 0;
 	_from = _this select 1;
-	if(!([str(_val)] call TON_fnc_isnumber)) exitWith {};
+	if(!([[_val,1,true] call life_fnc_numberText] call life_fnc_isnumeric)) exitWith {};
 	if(_from == """") exitWith {};
 	life_ogBank415 = life_ogBank415 + _val;
 	hint format[""%1 has wire transferred $%2 to you."",_from,[_val] call life_fnc_numberText];
@@ -74,7 +74,7 @@ compileFinal "
 	private[""_unit"",""_val"",""_from""];
 	_val = _this select 0;
 	_from = _this select 1;
-	if(!([str(_val)] call TON_fnc_isnumber)) exitWith {};
+	if(!([[_val,1,true] call life_fnc_numberText] call life_fnc_isnumeric)) exitWith {};
 	if(_from == """") exitWith {};
 	life_ogBank415 = life_ogBank415 + _val;
 	hint format[""Admin %1 has wired you a Comp of $%2"",_from,[_val] call life_fnc_numberText];
