@@ -106,14 +106,15 @@ _Btn8 ctrlSetText "Breathalyzer";
 _Btn8 buttonSetAction "[[player],""life_fnc_breathalyzer"",life_pInact_curTarget,FALSE] spawn life_fnc_MP; closeDialog 0;";
 
 //Check that you are near a place to jail them.
-if(!((player distance (getMarkerPos "police_hq_1") < 30) OR  (player distance (getMarkerPos "police_hq_2") < 30) OR (player distance (getMarkerPos "police_hq_3") < 30) OR (player distance (getMarkerPos "police_hq_4") < 30) OR (player distance (getMarkerPos "police_hq_5") < 30) OR (player distance (getMarkerPos "police_hq_6") < 30) OR (player distance (getMarkerPos "police_hq_7") < 30) OR (player distance (getMarkerPos "police_hq_8") < 30))) then 
+if(((player distance (getMarkerPos "police_hq_1") < 30) OR  (player distance (getMarkerPos "police_hq_2") < 30) OR (player distance (getMarkerPos "police_hq_3") < 30) OR (player distance (getMarkerPos "police_hq_4") < 30) OR (player distance (getMarkerPos "police_hq_5") < 30) OR (player distance (getMarkerPos "police_hq_6") < 30) OR (player distance (getMarkerPos "police_hq_7") < 30) OR (player distance (getMarkerPos "police_hq_8") < 30))) then 
 {
-_Btn6 ctrlEnable true;
-_Btn6 ctrlSetText localize "STR_pInAct_Arrest";
-_Btn6 buttonSetAction "[life_pInact_curTarget] call life_fnc_arrestAction;";
-_Btn9 ctrlEnable true;
-_Btn9 ctrlSetText "Disarm Player";
-_Btn9 buttonSetAction "[life_pInact_curTarget] call life_fnc_dropRebel;";
+	_Btn6 ctrlEnable true;
+	_Btn6 ctrlSetText localize "STR_pInAct_Arrest";
+	_Btn6 buttonSetAction "[life_pInact_curTarget] call life_fnc_arrestAction;";
+
+	_Btn9 ctrlEnable true;
+	_Btn9 ctrlSetText "Disarm Player";
+	_Btn9 buttonSetAction "[life_pInact_curTarget] call life_fnc_dropRebel;";
 };
 		
 _BtnClose buttonSetAction "closeDialog 0;";
@@ -128,6 +129,7 @@ if(side _curTarget == west) then {
     _Btn6 ctrlShow false;
     _Btn7 ctrlShow false;
     _Btn8 ctrlShow false;
+    _Btn9 ctrlShow false;
     if(!(_curTarget getVariable ["comms",true])) then {
         _Btn1 ctrlEnable true;
         _Btn1 buttonSetAction "[life_pInact_curTarget] call life_fnc_issueComms";
