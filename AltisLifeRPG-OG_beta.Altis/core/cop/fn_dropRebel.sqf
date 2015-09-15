@@ -5,110 +5,82 @@
 	Description:
 	Drops Mask and Equipped Weapons into a pile on the ground
 */
-private["_unit","_itemCount","_primary","_secondary","_secondaryWeapon","_secondarySupp","_secondaryAttach","_secondaryOptic","_secondaryAmmo","_secondaryAmmoArr","_secondaryAmmoCount","_primaryWeapon","_primarySupp","_primaryAttach","_primaryOptic","_primaryAmmo","_primaryAmmoArr","_primaryAmmoCount","_items","_holder","_masks","_headgear","_goggleslist","_headgearlist","_goggles","_whitelistedWeapons","_backpackItems","_vestItems","_uniformItems","_index"];
-_unit = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
+private["_unit","_itemCount","_weaponsArr","_weaponCargoArr","_weaponsSupp","_weaponsAtt","_weaponsOptics","_weaponsAmmo","_weaponCount","_holder","_headgear","_headgearlist","_goggleslist","_whitelistedWeapons"];
+
+_unit = [_this,0,player,[ObjNull]] call BIS_fnc_param;
 if(_unit distance player > 4) exitWith {hint "Player not close enough"};
 _itemCount = 0;
-_whitelistedWeapons = ["Binocular","Rangefinder","NVGoggles","NVGoggles_OPFOR","FirstAidKit","ToolKit","Medikit","Chemlight_blue","Chemlight_yellow","Chemlight_red","Chemlight_green","SmokeShellOrange","SmokeShellBlue","SmokeShellPurple","SmokeShellYellow","SmokeShellGreen","SmokeShellRed","SmokeShell"];
+_whitelistedWeapons = [""];
 _goggleslist = ["G_Balaclava_blk","G_Balaclava_combat","G_Balaclava_lowprofile","G_Balaclava_oli","G_Bandanna_aviator","G_Bandanna_beast","G_Bandanna_blk","G_Bandanna_khk","G_Bandanna_oli","G_Bandanna_shades","G_Bandanna_sport","G_Bandanna_tan"];
 _headgearlist = ["H_ShemagOpen_tan","H_Shemag_olive","H_ShemagOpen_khk","H_RacingHelmet_1_black_F","H_RacingHelmet_1_red_F","H_RacingHelmet_1_white_F","H_RacingHelmet_1_blue_F","H_RacingHelmet_1_yellow_F","H_RacingHelmet_1_green_F","H_RacingHelmet_1_F","H_RacingHelmet_2_F","H_RacingHelmet_3_F","H_RacingHelmet_4_F"];
 _headgear = format["Headgear_%1",headgear _unit]; 
 if(goggles _unit in _goggleslist) then {_goggles = goggles _unit};;
 
-_primary = [weaponsItems _unit,0,[],[[]]] call BIS_fnc_param;
-_secondary = [weaponsItems _unit,1,[],[[]]] call BIS_fnc_param;
-
-_secondaryWeapon = [_secondary,0,"Nil",[""]] call BIS_fnc_param;
-_secondarySupp = [_secondary,1,"Nil",[""]] call BIS_fnc_param;
-_secondaryAttach = [_secondary,2,"Nil",[""]] call BIS_fnc_param;
-_secondaryOptic = [_secondary,3,"Nil",[""]] call BIS_fnc_param;
-_secondaryAmmoArr = [_secondary,4,["Nil",0],[[]]] call BIS_fnc_param;
-_secondaryAmmo = [_secondaryAmmoArr,0,"Nil",[""]] call BIS_fnc_param;
-_secondaryAmmoCount = [_secondaryAmmoArr,1,0,[0]] call BIS_fnc_param;
-
-_primaryWeapon = [_primary,0,"Nil",[""]] call BIS_fnc_param;
-_primarySupp = [_primary,1,"Nil",[""]] call BIS_fnc_param;
-_primaryAttach = [_primary,2,"Nil",[""]] call BIS_fnc_param;
-_primaryOptic = [_primary,3,"Nil",[""]] call BIS_fnc_param;
-_primaryAmmoArr = [_primary,4,[],[[]]] call BIS_fnc_param;
-_primaryAmmo = [_primaryAmmoArr,0,"Nil",[""]] call BIS_fnc_param;
-_primaryAmmoCount = [_primaryAmmoArr,1,0,[0]] call BIS_fnc_param;
-
-_backpackItems = [[backpackItems player],0,[],[[]]] call BIS_fnc_param;
-_vestItems = [[vestItems player],0,[],[[]]] call BIS_fnc_param;
-_uniformItems = [[uniformItems player],0,[],[[]]] call BIS_fnc_param;
-
-
-_items = [_primaryAttach, _primarySupp, _primaryOptic, _secondaryAttach, _secondarySupp, _secondaryOptic];
+_weaponsArr = [];
+_weaponCargoArr = [];
+_weaponsSupp = [];
+_weaponsAtt = [];
+_weaponsOptics = [];
+_weaponsAmmo = [];
+_weaponCount = count weaponsItems _unit;
+if(count weaponsItems _unit > 0) then {
+	for "_i" from 0 to (count weaponsItems _unit - 1) do {
+		if(weaponsItems _unit select _i select 0 != "") then {
+			if(_i < 2) then {
+				_weaponsArr pushBack (weaponsItems _unit select _i select 0);
+			} else {
+				_weaponCargoArr pushBack (weaponsItems _unit select _i select 0);
+			};
+		};
+		if(weaponsItems _unit select _i select 1 != "" && (weaponsItems _unit select _i select 0 != "hgun_P07_snds_F")) then {
+			_weaponsSupp pushBack (weaponsItems _unit select _i select 1);
+		};
+		if(weaponsItems _unit select _i select 2 != "") then {
+			_weaponsAtt pushBack (weaponsItems _unit select _i select 2);
+		};
+		if(weaponsItems _unit select _i select 3 != "") then {
+			_weaponsOptics pushBack (weaponsItems _unit select _i select 3);
+		};
+		if([weaponsItems _unit select _i,4,[""],[[]]] call BIS_fnc_param select 0 != "") then {
+			_weaponsAmmo pushBack (weaponsItems _unit select _i select 4);
+		};
+	};
+};
 
 _holder = "groundweaponholder" createVehicle [0,0,0];
-_holder setPos (player modelToWorld [0,0.4,0]);
+_holder setPos (_unit modelToWorld [0,0.4,0]);
+
 {
-	if(!(_x == "Nil")) then {
+	if(!(_x in _whitelistedWeapons)) then {
 		_holder addWeaponCargoGlobal  [_x,1];
-		_itemCount = _itemCount + 1;
-	};
-} forEach [_primaryWeapon,_secondaryWeapon];
-if(!(_secondaryAmmo == "Nil")) then {
-	_holder addMagazineAmmoCargo [_secondaryAmmo,1,_secondaryAmmoCount];
-	_itemCount = _itemCount + 1;
-};
-if(!(_primaryAmmo == "Nil")) then {
-	_holder addMagazineAmmoCargo [_primaryAmmo,1,_primaryAmmoCount];
-	_itemCount = _itemCount + 1;
-};
+		_unit removeWeaponGlobal _x;
+	} else {_weaponCount = _weaponCount - 1};
+} forEach _weaponsArr;
 
-_index = 0;
 {
 	if(!(_x in _whitelistedWeapons)) then {
-		_index = _index + 1;
-		_holder addItemCargoGlobal _x;
-		_unit removeItemFromBackpack _x;
-		_itemCount = _itemCount + 1;
-	} else {
-		_backpackItems deleteAt _index;
-	};
-} forEach _backpackItems;
+	_holder addWeaponCargoGlobal  [_x,1];
+	_unit removeItemFromBackpack _x;
+	_unit removeItemFromUniform _x;
+	_unit removeItemFromVest _x;
+	} else {_weaponCount = _weaponCount - 1};
+} forEach _weaponCargoArr;
 
-_index = 0;
+{
+	_holder addMagazineAmmoCargo [_x select 0,1,_x select 1];
+} forEach _weaponsAmmo;
+
 {
 	if(!(_x in _whitelistedWeapons)) then {
-		_index = _index + 1;
-		_holder addItemCargoGlobal _x;
-		_unit removeItemFromVest _x;
-		_itemCount = _itemCount + 1;
-	} else {
-		_vestItems deleteAt _index;
-	};
-} forEach _vestItems;
-
-_index = 0;
-{
-	if(!(_x in _whitelistedWeapons)) then {
-		_index = _index + 1;
-		_holder addItemCargoGlobal _x;
-		_unit removeItemFromUniform _x;
-		_itemCount = _itemCount + 1;
-	} else {
-		_uniformItems deleteAt _index;
-	};
-} forEach _uniformItems;
-
-{
-	if(!(_x == "Nil")) then {
 		_holder addItemCargoGlobal [_x,1];
-		_itemCount = _itemCount + 1;
-	};
-} forEach _items;
+	} else {_weaponCount = _weaponCount - 1};
+} forEach (_weaponsSupp + _weaponsAtt + _weaponsOptics);
 
-if((headgear _unit) in _headgearlist) then {_headgear createVehicle getPos _holder; removeHeadgear _unit;_itemCount = _itemCount + 1;};
-if((goggles _unit) in _goggleslist) then {_holder addItemCargoGlobal [_goggles,1]; removeGoggles _unit;_itemCount = _itemCount + 1;};
+if((headgear _unit) in _headgearlist) then {_headgear createVehicle getPos _holder; removeHeadgear _unit};
+if((goggles _unit) in _goggleslist) then {_holder addItemCargoGlobal [_goggles,1]; removeGoggles _unit};
 
-_unit removeWeaponGlobal  _primaryWeapon;
-_unit removeWeaponGlobal  _secondaryWeapon;
-
-switch (_itemCount) do {
+switch (_weaponCount) do {
 	case 0: {hint format["No weapons were found on %1",name _unit];};
 	case 1: {hint format["The search on %1 turned up 1 weapon",name _unit];};
-	default {hint format["No weapons were found on %1",name _unit];};
+	default {hint format["%2 weapons were found and removed from %1",name _unit,_weaponCount];};
 };
