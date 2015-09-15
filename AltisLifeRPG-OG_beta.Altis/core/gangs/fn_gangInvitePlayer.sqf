@@ -12,8 +12,8 @@ if((lbCurSel 2632) == -1) exitWith {hint localize "STR_GNOTF_SelectPerson"};
 _unit = call compile format["%1",getSelData(2632)];
 if(isNull _unit) exitWith {}; //Bad unit?
 if(_unit == player) exitWith {hint localize "STR_GNOTF_InviteSelf"};
-if(!isNil {(group _unit) getVariable "gang_name"} || !isNull (_unit getVariable ["OZ_Group",true])) exitWith {hint "This player is already in a gang"}; //Added
-if(_unit getVariable ["activeInvite",false]) exitWith {hint "Player already has a pending invite";[[3,format["<t size='1.4' color='#e01010'>%1 <t color='#cccccc'>has attempted to invite you to their gang <t color='#ff7b02'>%2 <t color='#cccccc'>and failed due to you having an invitation already pending",name player,(group player) getVariable "gang_name"]],"life_fnc_broadcast",player,false] spawn life_fnc_MP};  // Player has active invite
+if(!isNil {(group _unit) getVariable "gang_name"}) exitWith {hint "This player is already in a gang"}; //Added
+if(_unit getVariable ["activeInvite",false]) exitWith {[[3,format["<t size='1.4' color='#cccccc'>You have attempted to invite <t color='#e01010'>%1 <t color='#cccccc'>to your gang <t color='#ff7b02'>%2 <t color='#cccccc'>and failed due to them having an invitation already pending",name _unit,(group player) getVariable "gang_name"]],"life_fnc_broadcast",player,false] spawn life_fnc_MP};  // Player has active invite
 if(count(grpPlayer getVariable ["gang_members",8]) == (grpPlayer getVariable ["gang_maxMembers",8])) exitWith {hint localize "STR_GNOTF_MaxSlot"};
 
 _action = [

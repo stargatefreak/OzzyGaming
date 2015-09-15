@@ -113,7 +113,7 @@ compileFinal "
 		life_my_gang = ObjNull;
 		[player] joinSilent grpNull;
 		hint format[""You have been kicked out of the %1 gang."",_group getVariable ""gang_name""];	
-		player setVariable [""OZ_Group"",grpNull,true])		
+		player setVariable [""OZ_Group"",grpNull,true];		
 	};
 ";
 publicVariable "TON_fnc_clientGangKick";
