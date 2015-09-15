@@ -146,7 +146,6 @@ class CfgFunctions
 			class killLog {};
 			class deleteVeh {};
 			class autoFed {};
-			class varChange {};
 		};
 	};
 };

@@ -7,7 +7,7 @@
 private["_building","_door","_doors","_cpRate","_title","_progressBar","_titleText","_cp","_ui"];
 _building = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
 if(isNull _building) exitWith {};
-if((west countside playableUnits < 5) && (fed_bank getVariable ["countCops",0] == 0)) exitWith {hint localize "STR_Civ_NotEnoughCops"};
+if(((west countside playableUnits) < 5) && (fed_bank getVariable ["countCops",0] == 0)) exitWith {hint localize "STR_Civ_NotEnoughCops"};
 if(!(_building isKindOf "House_F")) exitWith {hint "You are not looking at a house door."};
 if(isNil "life_boltcutter_uses") then {life_boltcutter_uses = 0;};
 if((nearestObject [[16019.5,16952.9,0],"Land_Dome_Big_F"]) == _building OR (nearestObject [[16019.5,16952.9,0],"Land_Research_house_V1_F"]) == _building) then {
@@ -73,14 +73,14 @@ while {true} do
 	if(_cP >= 1 OR !alive player) exitWith {};
 	if(life_istazed) exitWith {}; //Tazed
 	if(life_interrupted) exitWith {};
-	if(typeOf _building in ["Land_Dome_Big_F","Land_Research_house_V1_F"] && OG_FederalSecurty) exitWith {};
+	if(typeOf _building in ["Land_Dome_Big_F"] && OG_FederalSecurty) exitWith {};
 };
 
 //Kill the UI display and check for various states
 animationInProgress = false;
 5 cutText ["","PLAIN"];
 player playActionNow "stop";
-if(typeOf _building in ["Land_Dome_Big_F","Land_Research_house_V1_F"] && OG_FederalSecurty) exitWith {life_action_inUse = false;};
+if(typeOf _building in ["Land_Dome_Big_F"] && OG_FederalSecurty) exitWith {life_action_inUse = false;};
 if(!alive player OR life_istazed) exitWith {life_action_inUse = false;};
 if((player getVariable["restrained",false])) exitWith {life_action_inUse = false;};
 if(life_interrupted) exitWith {life_interrupted = false; titleText[localize "STR_NOTF_ActionCancel","PLAIN"]; life_action_inUse = false;};
