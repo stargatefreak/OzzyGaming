@@ -633,7 +633,7 @@ class Mission
 					skill=0.60000002;
 					text="cop_21";
 					init="removeBackpack this; removeAllWeapons this;";
-					description="Admin Only - Zues 1";
+					description="Admin Only - Zeus 1";
 				};
 				class Item29
 				{
@@ -647,7 +647,7 @@ class Mission
 					skill=0.60000002;
 					text="cop_20";
 					init="removeBackpack this; removeAllWeapons this;";
-					description="Admin Only - Zues 2";
+					description="Admin Only - Zeus 2";
 				};
 			};
 		};
