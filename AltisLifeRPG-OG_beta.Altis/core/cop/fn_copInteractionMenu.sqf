@@ -102,19 +102,24 @@ _Btn7 ctrlSetText localize "STR_pInAct_PutInCar";
 _Btn7 buttonSetAction "[life_pInact_curTarget] call life_fnc_putInCar;";
 
 //actually the Breathalyser button
-_Btn8 ctrlSetText "Breathalyzer";
-_Btn8 buttonSetAction "[[player],""life_fnc_breathalyzer"",life_pInact_curTarget,FALSE] spawn life_fnc_MP; closeDialog 0;";
+_Btn6 ctrlSetText "Breathalyzer";
+_Btn6 buttonSetAction "[[player],""life_fnc_breathalyzer"",life_pInact_curTarget,FALSE] spawn life_fnc_MP; closeDialog 0;";
 
 //Check that you are near a place to jail them.
 if(((player distance (getMarkerPos "police_hq_1") < 50) OR  (player distance (getMarkerPos "police_hq_2") < 50) OR (player distance (getMarkerPos "police_hq_3") < 50) OR (player distance (getMarkerPos "police_hq_4") < 50) OR (player distance (getMarkerPos "police_hq_5") < 50) OR (player distance (getMarkerPos "police_hq_6") < 50) OR (player distance (getMarkerPos "police_hq_7") < 50) OR (player distance (getMarkerPos "police_hq_8") < 50))) then 
 {
-	_Btn6 ctrlEnable true;
-	_Btn6 ctrlSetText localize "STR_pInAct_Arrest";
-	_Btn6 buttonSetAction "[life_pInact_curTarget] call life_fnc_arrestAction;";
+	_Btn8 ctrlEnable true;
+	_Btn8 ctrlSetText localize "STR_pInAct_Arrest";
+	_Btn8 buttonSetAction "[life_pInact_curTarget] call life_fnc_arrestAction;";
 
 	_Btn9 ctrlEnable true;
 	_Btn9 ctrlSetText "Disarm Player";
 	_Btn9 buttonSetAction "[life_pInact_curTarget] call life_fnc_dropRebel;";
+} else {
+	_Btn8 ctrlEnable false;
+	_Btn8 ctrlEnable false;
+	_Btn6 ctrlShow false;
+	_Btn9 ctrlShow false;
 };
 		
 _BtnClose buttonSetAction "closeDialog 0;";
