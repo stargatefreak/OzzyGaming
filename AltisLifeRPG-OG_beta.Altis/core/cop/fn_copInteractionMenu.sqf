@@ -117,8 +117,8 @@ if(((player distance (getMarkerPos "police_hq_1") < 50) OR  (player distance (ge
 	_Btn9 buttonSetAction "[life_pInact_curTarget] call life_fnc_dropRebel;";
 } else {
 	_Btn8 ctrlEnable false;
-	_Btn8 ctrlEnable false;
-	_Btn6 ctrlShow false;
+	_Btn8 ctrlShow false;
+	_Btn9 ctrlEnable false;
 	_Btn9 ctrlShow false;
 };
 		
